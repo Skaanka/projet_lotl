@@ -36,23 +36,63 @@
             <nav class="navbar navbar-inverse navbar-fixed-top">
                 <div class="container">
                     <div class="navbar-header">
-                        
+
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar">test1</span>
                             <span class="icon-bar">test2</span>
                             <span class="icon-bar">test3</span>
                         </button>
-                        
+
                         <a class="navbar-brand" href="#">The Lord of The Links</a>
+
+                    </div>
+
+                    <div id="navbar" class="container navbar-collapse collapse nav navbar-nav navbar-right">
                         
+
+
+                        <input type="submit" class="dropdown-toggle btn btn-info" data-toggle="modal" name="actu" value="Mon actu" data-target="#maFenetreModale">
+                        <input type="submit" class="dropdown-toggle" name="profil" value="profil">
+                        <input type="submit" class="dropdown-toggle" name="deconnexion" value="deconnexion">
+                                <div class="container">
+
+            <h1>Fenêtre modale (ou Lightbox)</h1>
+            
+            <!--Bouton qui permet de déclencher l'ouverture de la fenêtre modale-->
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#maFenetreModale">Ouvrir fenêtre modale</button>
+            
+            <!--Contenu de la fenêtre modale-->
+            <div id="maFenetreModale" class="modal fade" role="dialog">
+                
+                <div class="modal-dialog  modal-backdrop">
+                
+                    <!--contenu de la fenêtre à proprement parler-->
+                    <div class="modal-content">
+                    
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4>En-tête de la fenêtre modale</h4>
+                        </div>
+                        
+                        <div class="modal-body">
+                            <p>Contenu de la fenêtre modale</p>
+                        </div>
+                        
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                        </div>
+                    
                     </div>
                     
-                    <div id="navbar" class="navbar-collapse collapse nav navbar-nav navbar-right">
-                        
-                            <input type="submit" class="dropdown-toggle" name="actu" value="Mon actu">
-                            <input type="submit" class="dropdown-toggle" name="profil" value="profil">
-                            <input type="submit" class="dropdown-toggle" name="deconnexion" value="deconnexion">
+                
+                </div>
+            
+            
+            
+            </div>
+            
+        </div>
 
 
                     </div><!--/.navbar-collapse -->
@@ -61,20 +101,25 @@
 
         </form>
 
+
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron">
             <div class="container">
                 <section>
+
+
 
                     <?= $this->section('inscription') ?>
                     <?= $this->section('main_content') ?>
 
 
                 </section>
-
-
             </div>
         </div>
+
+
+
+
 
         <div class="container">
             <div class="left-bar"></div>
@@ -89,6 +134,7 @@
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <!-- <script src="../../dist/js/bootstrap.min.js"></script> -->
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
