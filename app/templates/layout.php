@@ -28,48 +28,59 @@
 <![endif]-->
     </head>
     <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Project name</a>
+
+
+
+
+        <form id="connexion" class="form-inline navbar-form" method="POST">
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar">test1</span>
+                            <span class="icon-bar">test2</span>
+                            <span class="icon-bar">test3</span>
+                        </button>
+                        
+                        <a class="navbar-brand" href="#">The Lord of The Links</a>
+                        
+                    </div>
+                    
+                    <div id="navbar" class="navbar-collapse collapse nav navbar-nav navbar-right">
+                        
+                            <input type="submit" class="dropdown-toggle" name="actu" value="Mon actu">
+                            <input type="submit" class="dropdown-toggle" name="profil" value="profil">
+                            <input type="submit" class="dropdown-toggle" name="deconnexion" value="deconnexion">
+
+
+                    </div><!--/.navbar-collapse -->
                 </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <form class="navbar-form navbar-right">
-                        <div class="form-group">
-                            <input type="text" placeholder="Email" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="password" placeholder="Password" class="form-control">
-                        </div>
-                        <button type="submit" class="btn btn-success">Sign in</button>
-                    </form>
-                </div><!--/.navbar-collapse -->
-            </div>
-        </nav>
+            </nav>
+
+        </form>
 
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron">
             <div class="container">
                 <section>
-			
-			     <?= $this->section('main_content') ?>
-		      </section>
-                
-                
+
+                    <?= $this->section('inscription') ?>
+                    <?= $this->section('main_content') ?>
+
+
+                </section>
+
+
             </div>
         </div>
 
         <div class="container">
             <div class="left-bar"></div>
-            
+
             <div class="right-bar"></div>
-            
+
         </div> <!-- /container -->
         <footer></footer>
 
@@ -78,8 +89,8 @@
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-        <script src="../../dist/js/bootstrap.min.js"></script>
+        <!-- <script src="../../dist/js/bootstrap.min.js"></script> -->
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+        <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
     </body>
 </html>
