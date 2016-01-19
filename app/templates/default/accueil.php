@@ -2,7 +2,7 @@
 
 <?php $this->start('main_content') ?>
 <div id="homeContent" class="row col-md-12 no-padding">
-    <section class="portfolio">
+    <section class="portfolio container-fluid">
       <div class="container">
         <div class="row">
 
@@ -16,7 +16,7 @@
               </figure>
             </li>
 
-            <li class="col-md-4 col-sm-4 col-xs-6" data-groups='["steam"]'>
+            <li class="col-md-4 col-sm-4 col-xs-6" data-groups='["steam", "psn"]'>
                 <figure class="portfolio-item">
                     <a href="#">
                         <img src="http://lorempixel.com/700/400/people/7" alt="" class="img-responsive">

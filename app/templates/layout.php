@@ -17,6 +17,8 @@
 		<link href="<?= $this->assetUrl('css/bootstrap/bootstrap.css') ?>" rel="stylesheet">
 		<link href="<?= $this->assetUrl('css/style.css') ?>" rel="stylesheet">
 
+		<!--Favicon trop stylé-->
+		<link rel="icon" href="<?= $this->assetUrl('img/sonic_ring.gif') ?>" />
 
 		<!--font awesome-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -34,58 +36,78 @@
 
 
 
-		<form id="connexion" class="form-inline" method="POST">
-			<?php 
-	if ( isset($_SESSION['user']) ) { 
-			?>
-			<nav class="navbar navbar-inverse navbar-fixed-top">
-				<div class="container">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-					</div>
-					<div id="navbar" class="navbar-collapse collapse">
-						<form class="navbar-form navbar-right">
-							<button type="submit" class="btn btn-success" name="profil">Profil</button>
-							<button type="submit" class="btn btn-success" name="post">Post actu</button>
-							<button type="submit" class="btn btn-success" name="deconnection">Déconnection</button>
-						</form>
-					</div><!--/.navbar-collapse -->
+
+
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">LOTL</a>
 				</div>
-			</nav>
-			<?php
-	} elseif ( empty($_SESSION['user']) )  {
-			?>
-			<nav class="navbar navbar-inverse navbar-fixed-top">
-				<div class="container">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
+				<div id="navbar" class="navbar-collapse collapse">
+					<form class="navbar-form navbar-right">
+						
+						<!-- Button trigger modal Profil -->
+						<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModalProfil">
+							Profil
 						</button>
-					</div>
-					<div id="navbar" class="navbar-collapse collapse">
-						<form class="navbar-form navbar-right">
-							<div class="form-group">
-								<input type="text" placeholder="Email" class="form-control">
+
+						<!-- Modal -->
+						<div class="modal fade" id="myModalProfil" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+										<h4 class="modal-title" id="myModalLabel">Mon profil</h4>
+									</div>
+									<div class="modal-body">
+										...
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+										<button type="button" class="btn btn-primary">Sauvegarder</button>
+									</div>
+								</div>
 							</div>
-							<div class="form-group">
-								<input type="password" placeholder="Password" class="form-control">
+						</div>
+						
+						
+						<!-- Button trigger modal -->
+						<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModalPost">
+							Post actu
+						</button>
+
+						<!-- Modal -->
+						<div class="modal fade" id="myModalPost" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+										<h4 class="modal-title" id="myModalLabel">Poster une nouvelle actualitée.</h4>
+									</div>
+									<div class="modal-body">
+										...
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+										<button type="button" class="btn btn-primary">Sauvegarder</button>
+									</div>
+								</div>
 							</div>
-							<button type="submit" class="btn btn-success">Connection</button>
-							<button type="submit" class="btn btn-success">Inscription</button>
-						</form>
-					</div><!--/.navbar-collapse -->
-				</div>
-			</nav>
-			<?php } ?>
-		</form>
+						</div>
+						
+						<button type="submit" class="btn btn-success" name="deconnection">Déconnection</button>
+					</form>
+				</div><!--/.navbar-collapse -->
+			</div>
+		</nav>
+
+
 
 		<div id="header" class="container-fluid no-padding"><img src="<?php echo $this->assetUrl('img/bandeau.jpg') ?>" alt="" class="img-reponsive col-xs-12 no-padding"></div>
 
@@ -93,11 +115,9 @@
 		<div class="container-fluid" id="menu-nav">
 
 			<div class="btn-group">
-				<a href="index.php">
-					<button type="button" class="dropdown-toggle"> 
-						<img src="<?= $this->assetUrl('img/icons/ring.png') ?>" id="home">
-					</button>
-				</a>
+				<button type="button" data-group="all" class="dropdown-toggle active portfolio-sorting  list-inline"> 
+					<img src="<?= $this->assetUrl('img/icons/ring.png') ?>" id="home" >
+				</button>
 			</div>
 
 			<!-- bouton divertissement -->
@@ -152,8 +172,8 @@
 
 		<div class="container-fluid no-padding">
 
-			
-			<div id="content" class="col-md-10 no-padding">
+
+			<div id="content" class="col-md-12 no-padding">
 				<?= $this->section('main_content') ?>
 			</div>
 
