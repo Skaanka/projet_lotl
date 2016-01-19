@@ -1,0 +1,9 @@
+Competences = ...
+diplomes = diplomes
+experience_pros =
+fil_actus = actu_perso
+membres = membres
+portfolios = ...
+reseaux_divertissements = divertissements
+reseaux_pros = pro
+reseaux_socials = reseaux
