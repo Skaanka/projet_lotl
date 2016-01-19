@@ -89,3 +89,5 @@ $(document).ready(function()
                   {
     melanger.init(); //filtrer le portfolio
 });
+
+$('.carousel').carousel();
