@@ -22,6 +22,15 @@ class DefaultController extends Controller
 		$this->show('default/inscription');
 	}
     
+    public function inscription2() {
+		$this->show('default/inscription2');
+	}
+    
+    public function inscription3() {
+		$this->show('default/inscription3');
+	}
+    
+    
     public function profil() {
 		$this->show('default/profil');
 	}
