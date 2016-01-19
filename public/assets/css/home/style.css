@@ -1,0 +1,57 @@
+/* 
+TODO :
+
+
+*/
+
+/* LES HAUTEURS */
+
+html, body {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+}
+
+#homeContent { /*image*/
+    min-height: 95%;
+}
+
+/* class generaliste */
+
+.no-padding{
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    color: white;
+}
+
+
+/* Contenu central */
+ #homeContent {
+     padding-top: 40px;
+     background: url(../../img/comeon2.jpg) no-repeat center;
+     overflow-x: hidden;
+     background-size: cover;
+}
+
+#titleHome {
+    padding-top: 100px;
+}
+
+/* A MODIFIER UNE FOIS CONTENU AJOUTER DANS LA PAGE*/
+blockquote { 
+  padding: 300px 20px 20px 10px;
+}
+
+/* FOOTER Layout_Home */
+#footerHome {
+    min-height: 5%;
+    background: #222222;
+}
+
+.hauteurFooter {
+    padding-top: 10px;
+}

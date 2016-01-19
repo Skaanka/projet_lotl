@@ -2,7 +2,7 @@
 	
 	$w_routes = array(
         
-        ['GET', '/', 'Default#home', 'home'], // lorsque l'utilisateur est connecté
+        ['GET', '/', 'Home#home', 'home'], // lorsque l'utilisateur est connecté
 		['GET', '/accueil', 'Default#accueil', 'accueil'], // quand l'utilisateur n'est pas connecté
         
 		['GET', '/inscription', 'Default#inscription', 'inscription'], // formulaire d'inscription

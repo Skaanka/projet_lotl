@@ -2,7 +2,7 @@
 /*============*/
 body {
     display: block;
-    background: url(../img/lotl_background.jpg) no-repeat, center;
+    background: url(../img/back_blue.jpg) no-repeat, center;
     background-size: cover;
     
 }
@@ -20,16 +20,10 @@ body {
 
 #footer {
     background: black;
-    height: 50px;
+    height: 150px;
 }
 /* Fin de structure du site */
 /*============*/
-
-
-/* Cheats pour le modal */
-.modal-backdrop {
-  z-index: 0;
-}
 
 
 
@@ -257,7 +251,10 @@ body {
 /* Page principale */
 /*============*/
  #homeContent {
+     background: url(../img/comeon2.jpg) no-repeat center;
      height: 1200px;
+     overflow-x: hidden;
+     background-size: cover;
 }
 
 #homeContent h1 {
