@@ -1,0 +1,15 @@
+localhost réel :
+
+modifier :
+C:\xampp\apache\conf\extra\httpd-vhosts.conf
+
+<VirtualHost *:80>
+    DocumentRoot "C:/xampp/htdocs/projet_lotl/public"
+    ServerName projet_lotl
+</VirtualHost>
+
+
+modifier :
+C:\Windows\System32\drivers\etc\hosts ->ouvrir bloc note en admin
+
+127.0.0.1       projet_lotl
