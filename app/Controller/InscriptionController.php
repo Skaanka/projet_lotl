@@ -3,6 +3,7 @@
 namespace Controller;
 
 use \W\Controller\Controller;
+use \W\Manager\UserManager;
 
 class InscriptionController extends Controller
 {
@@ -37,6 +38,7 @@ class InscriptionController extends Controller
 		if(isset($_POST['valider'])) {
 			$_SESSION['inscription_3'] = $_POST['inscription_3'];
             $inscription = array_merge($_SESSION['inscription_1'], $_SESSION['inscription_2'], $_SESSION['inscription_3']); // session 1 + 2 + 3
+            debug($inscription); die();
             $manager = new UserManager();
 			$manager->insert($inscription);
 			$this->redirectToRoute('inscription_resumer');
