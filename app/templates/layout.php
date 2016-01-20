@@ -65,7 +65,7 @@
             <!--Contenu de la fenêtre modale-->
             <div id="maFenetreModale" class="modal fade" role="dialog">
                 
-                <div class="modal-dialog  modal-backdrop">
+                <div class="modal-dialog">
                 
                     <!--contenu de la fenêtre à proprement parler-->
                     <div class="modal-content">

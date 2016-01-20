@@ -3,105 +3,6 @@
 <?php $this->start('main_content') ?>
 	
 	
-        <div id="connexionbar" class="col-md-8 col-md-offset-2">
-            
-            <form method="POST" id="connexion" class="form-inline" method="POST">
-                <?php 
-                if (isset($_SESSION['user']) ) { 
-                ?>
-                    <div class="form-group">
-                        <label for="profil">Bienvenue <?php echo $_SESSION['user']['prenom'] . " " . $_SESSION['user']['nom'] ; ?></label> <!-- TODO STYLE ECHO NOM PRENOM -->
-                        <input type="submit" id="profil" class="btn btn-default btn-xs" name="profil" value="profil" formaction=".php">
-                        <input type="submit" class="btn btn-default btn-xs" name="deconnexion" value="déconnexion" formaction="../../php/logoff.php">
-                    </div>
-                <?php
-                } elseif ( empty($_SESSION['user']) )  {
-                ?>
-                    <div class="form-group">
-                        <label class="sr-only" for="mail">Email address</label>
-                        <input type="email" class="mail" id="mail" placeholder="Email" name="mail">
-                    </div>
-                    <div class="form-group">
-                        <label class="sr-only" for="password">Password</label>
-                        <input type="password" class="" id="password" placeholder="Password" name="mot_de_passe">
-                    </div>
-
-                     <input type="submit" class="dropdown-toggle" name="connexion" value="connexion" formaction="../../php/login.php">
-                    <input type="submit" class="dropdown-toggle" name="" formaction="formulaire.php" value="Inscription">
-                <?php
-                    //echo $login_erreur; // TODO affiche message d'erreur : "erreur email ou mot de passe, veuillez réessayer" 
-                }
-                ?>
-            </form>
-        </div>
-
-        <div id="header" class="col-md-8 col-md-offset-2">
-
-        </div>
-        
-        
-        <!-- menu navbar en dropdown -->
-        <div class="row col-md-8 col-md-offset-2" id="menu-nav">
-            
-            <a href="../../index.php">
-                <button type="button" class="dropdown-toggle" >
-                    <img src="../../img/icons/ring.png" id="home">
-                </button>
-            </a>
-            
-            <!-- bouton divertissement -->
-            <div class="btn-group" >
-              <button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Divertissement <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a href="index.php<?php echo "?divCat=" . 0 ; ?>"><img src="../../img/icons/PSN_logo.png" class="iconMini">&nbsp;PSN</a></li>
-                <li><a href="index.php<?php echo "?divCat=" . 1 ; ?>"><img src="../../img/icons/Xbox_logo.png" class="iconMini">&nbsp;XboxLive</a></li>
-                <li><a href="index.php<?php echo "?divCat=" . 2 ; ?>"><img src="../../img/icons/Steam_logo.png" class="iconMini">&nbsp;Steam</a></li>
-                <li><a href="index.php<?php echo "?divCat=" . 3 ; ?>"><img src="../../img/icons/battlenet_logo.png" class="iconMini">&nbsp;Battle.net</a></li>
-                <li><a href="index.php<?php echo "?divCat=" . 4 ; ?>"><img src="../../img/icons/nintendo_logo.png" class="iconMini">&nbsp;Nintendo</a></li>
-                <li><a href="index.php<?php echo "?divCat=" . 5 ; ?>"><img src="../../img/icons/origin1_logo.png" class="iconMini">&nbsp;Origin</a></li>
-              </ul>
-            </div>
-
-            <!-- bouton réseaux pro -->
-            <div class="btn-group">
-            <button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Réseaux pro. <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a href="index.php<?php echo "?proCat=" . 0 ; ?>"><img src="../../img/icons/linkedin_logo.png" class="iconMini">&nbsp;LinkedIn</a></li>
-                <li><a href="index.php<?php echo "?proCat=" . 1 ; ?>"><img src="../../img/icons/viadeo_logo.png" class="iconMini">&nbsp;Viadeo</a></li>
-                <li><a href="index.php<?php echo "?proCat=" . 2 ; ?>"><img src="../../img/icons/xing_logo.png" class="iconMini">&nbsp;xing</a></li>
-                <li><a href="index.php<?php echo "?proCat=" . 3 ; ?>"><img src="../../img/icons/muxi_logo.jpg" class="iconMini">&nbsp;Muxy</a></li>
-                <li><a href="index.php<?php echo "?proCat=" . 4 ; ?>"><img src="../../img/icons/github_logo.png" class="iconMini">&nbsp;GitHub</a></li>
-              </ul>
-            </div>
-            
-            <!-- bouton réseaux sociaux-->
-            <div class="btn-group">
-            <button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Réseaux sociaux <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a href="<?php echo "?resCat=" . 0 ; ?>"><img src="../../img/icons/FB_logo.png" class="iconMini">&nbsp;Facebook</a></li>
-                <li><a href="<?php echo "?resCat=" . 1 ; ?>"><img src="../../img/icons/Twitter-logo.png" class="iconMini">&nbsp;Twitter</a></li>
-                <li><a href="<?php echo "?resCat=" . 2 ; ?>"><img src="../../img/icons/YouTube-logo.png" class="iconMini">&nbsp;Youtube</a></li>
-                <li><a href="<?php echo "?resCat=" . 3 ; ?>"><img src="../../img/icons/googleplus_logo.png" class="iconMini">&nbsp;Google+</a></li>
-                <li><a href="<?php echo "?resCat=" . 4 ; ?>"><img src="../../img/icons/Skype_logo.png" class="iconMini">&nbsp;Skype</a></li>
-                <li><a href="<?php echo "?resCat=" . 5 ; ?>"><img src="../../img/icons/instagram_logo.png" class="iconMini">&nbsp;Instagram</a></li>
-                <li><a href="<?php echo "?resCat=" . 6 ; ?>"><img src="../../img/icons/pinterest-logo.png" class="iconMini">&nbsp;Pinterest</a></li>
-                <li><a href="<?php echo "?resCat=" . 7 ; ?>"><img src="../../img/icons/Deezer_logo.png" class="iconMini">&nbsp;Deezer</a></li>
-                <li><a href="<?php echo "?resCat=" . 8 ; ?>"><img src="../../img/icons/Spotify_logo.png" class="iconMini">&nbsp;Spotify</a></li>
-                <li><a href="<?php echo "?resCat=" . 9 ; ?>"><img src="../../img/icons/Viber-logo.png" class="iconMini">&nbsp;Viber</a></li>
-              </ul>
-            </div>
-            
-        </div><!-- Fin de menu navbar -->
-
-
-
-
 
 
         <div id="wrapper" class="col-md-8 col-md-offset-2">
@@ -279,13 +180,14 @@
 
                 <div id="bouton" class="row">
                     <div class="">
-                        <input type="submit" class="btn btn-default col-md-offset-1" value="Page précédente" name="return" formaction="formulaire2.php">
-                        <input type="submit" class="btn btn-default col-md-offset-5" value="Page suivante" name="submit" formaction="formulaire_post3.php">
+                        <input type="submit" class="btn btn-default col-md-offset-1" value="Page précédente" name="precedent2">
+                        <input type="submit" class="btn btn-default col-md-offset-5" value="valider" name="valider">
                     </div>
                 </div>
 
             </form>   
 
         </div>
+ <?php debug($_SESSION['inscription_2']); ?>
 
 <?php $this->stop('main_content') ?>
