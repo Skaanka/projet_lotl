@@ -13,7 +13,6 @@ body {
     display: block;
     background: url(../img/lotl_background.jpg) no-repeat, center;
     background-size: cover;
-    
 }
 
 .no-padding{
@@ -38,6 +37,20 @@ body {
 /* Cheats pour le modal */
 .modal-backdrop {
   z-index: 0;
+}
+
+#wrapCar {
+	background: url(../img/bandeau.jpg) no-repeat center;
+	margin-top: 51px;
+}
+
+#wrapCar .item {
+	height: 500px;
+	color: white;
+}
+
+#wrapCar .item h1 {
+	padding-top: 10%;
 }
 
 
@@ -74,8 +87,9 @@ body {
     background: grey;
     padding-top: 10px;
     padding-bottom: 10px;
-    background: url(../img/decor01.jpg) no-repeat;
+    background: url(../img/decor01.jpg) center no-repeat;
     background-size: cover;
+	border-radius: 5px;
 }
 
 .iconMini {
