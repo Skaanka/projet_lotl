@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 19 Janvier 2016 à 13:26
+-- Généré le :  Jeu 21 Janvier 2016 à 13:50
 -- Version du serveur :  5.6.25
 -- Version de PHP :  5.6.11
 
@@ -82,25 +82,22 @@ CREATE TABLE IF NOT EXISTS `fil_actus` (
 
 CREATE TABLE IF NOT EXISTS `membres` (
   `id` int(11) NOT NULL,
-  `nom` varchar(80) NOT NULL,
   `prenom` varchar(80) NOT NULL,
   `ddn` date NOT NULL,
   `avatar` varchar(50) NOT NULL,
   `adresse` varchar(150) NOT NULL,
   `cp` int(5) NOT NULL,
   `ville` varchar(150) NOT NULL,
-  `mail` varchar(150) NOT NULL,
   `phone` int(11) NOT NULL,
-  `siteWeb` varchar(150) NOT NULL,
-  `mot_de_passe` varchar(255) NOT NULL
+  `siteWeb` varchar(150) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `membres`
 --
 
-INSERT INTO `membres` (`id`, `nom`, `prenom`, `ddn`, `avatar`, `adresse`, `cp`, `ville`, `mail`, `phone`, `siteWeb`, `mot_de_passe`) VALUES
-(1, 'Istrateur', 'Admin', '0000-01-01', '', 'adresse Admin Istrateur', 6660, 'adminCity', 'admin@mail.fr', 1234567890, 'mon.site-web.com', '123');
+INSERT INTO `membres` (`id`, `prenom`, `ddn`, `avatar`, `adresse`, `cp`, `ville`, `phone`, `siteWeb`) VALUES
+(1, 'Admin', '0000-01-01', '', 'adresse Admin Istrateur', 6660, 'adminCity', 1234567890, 'mon.site-web.com');
 
 -- --------------------------------------------------------
 
@@ -169,6 +166,21 @@ CREATE TABLE IF NOT EXISTS `reseaux_socials` (
   `viber` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `wusers`
+--
+
+CREATE TABLE IF NOT EXISTS `wusers` (
+  `id` int(11) NOT NULL,
+  `id_membres` int(11) NOT NULL,
+  `nom` varchar(255) NOT NULL,
+  `mail` varchar(255) NOT NULL,
+  `mot_de_passe` varchar(255) NOT NULL,
+  `role` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Index pour les tables exportées
 --
@@ -228,6 +240,12 @@ ALTER TABLE `reseaux_socials`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Index pour la table `wusers`
+--
+ALTER TABLE `wusers`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT pour les tables exportées
 --
 
@@ -275,6 +293,11 @@ ALTER TABLE `reseaux_pros`
 -- AUTO_INCREMENT pour la table `reseaux_socials`
 --
 ALTER TABLE `reseaux_socials`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT pour la table `wusers`
+--
+ALTER TABLE `wusers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
