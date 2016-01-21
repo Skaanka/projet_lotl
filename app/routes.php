@@ -14,4 +14,8 @@
 		['GET', '/profil', 'Default#profil', 'profil'], // affichage du profil perso
 		['GET', '/consultation', 'Default#consultation', 'consultation'], // affichage des pages des utilisateurs du site 
 		['GET', '/filtre', 'Default#filtre', 'filtre'], // affichage des pages des utilisateurs du site 
+        
+        
+        //Routes inscription bdd
+        ['GET', '/im', 'Inscription#insertMembre', 'home'], 
 	);
