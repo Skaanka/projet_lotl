@@ -25,9 +25,9 @@ body {
 	padding-bottom: 10em;
 	background: white;
 }
-
+ 
 #footer {
-	background: black;
+	background: #222222;
 	height: 50px;
 }
 /* Fin de structure du site */
@@ -70,15 +70,27 @@ body {
 	color: white;
 }
 
-.portfolio-items li {
+.vignette {
 	margin-bottom: 30px;
 }
 
-.portfolio-items li:hover {
-	
+.vignette a {
+    text-decoration: none;
 }
 
+.nav-tabs li a {
+    color: black;
+    text-decoration: none;
+    background-color: #e3e2e2;
+}
 
+.portfolio {
+    margin-top: 5%;
+}
+
+.modal_content {
+    margin-top: 15%;
+}
 
 /* FIN DES TRAVAUX*/
 
