@@ -135,17 +135,20 @@ class InscriptionController extends Controller
 
             // insert page formulaire 3
             $_SESSION['reseaux_social']['id_membre'] = $membre['id']; // ajout d'une $key id_membre dans la SESSION['reseaux_social']
-            $manager = new PortfolioManager(); //selection de la table reseaux_socials
+            $manager = new Reseaux_socialManager(); //selection de la table reseaux_socials
             $manager->insert($_SESSION['reseaux_social']);
             
             $_SESSION['reseaux_pro']['id_membre'] = $membre['id']; // ajout d'une $key id_membre dans la SESSION['reseaux_pro']
-            $manager = new PortfolioManager(); //selection de la table reseaux_pros
+            $manager = new Reseaux_proManager(); //selection de la table reseaux_pros
             $manager->insert($_SESSION['reseaux_pro']);
             
             $_SESSION['reseaux_divertissement']['id_membre'] = $membre['id']; // ajout d'une $key id_membre dans la SESSION['reseaux_divertissement']
-            $manager = new PortfolioManager(); //selection de la table reseaux_divertissements
+            $manager = new Reseaux_divertissementManager(); //selection de la table reseaux_divertissements
             $manager->insert($_SESSION['reseaux_divertissement']);
             
+            debug($_SESSION['reseaux_divertissement']);
+            debug($_SESSION['portfolio']);
+            die();
 
             $this->redirectToRoute('validation');
 

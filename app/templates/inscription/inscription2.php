@@ -189,7 +189,7 @@
                   <div class="panel-body">
                     
                     <div class="form-group col-xs-12">
-                        <textarea class="form-control" rows="6" name="competence[competences]"></textarea>
+                        <textarea class="form-control" rows="6" name="competence[competence]"></textarea>
                     </div>
                   </div>
                 </div>
@@ -199,7 +199,8 @@
                   <div class="panel-body">
                     
                     <div class="form-group col-xs-12">
-                        <textarea class="form-control" rows="6" name="fil_actus[message]"></textarea>
+                        <textarea class="form-control" rows="6" name="fil_actu[titre]"></textarea>
+                        <textarea class="form-control" rows="6" name="fil_actu[message]"></textarea>
                     </div>
                   </div>
                 </div>
@@ -209,7 +210,7 @@
                   <div class="panel-body">
                     
                     <div class="form-group col-xs-12">
-                        <input type="text" class="form-control" rows="6" placeholder="http://..." name="protfolios[ad_folio]">
+                        <input type="text" class="form-control" rows="6" placeholder="http://..." name="portfolio[ad_portfolio]">
                     </div>
                   </div>
                 </div>

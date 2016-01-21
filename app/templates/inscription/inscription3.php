@@ -48,7 +48,7 @@
                             <img class="icons col-sm-2" src="../../img/icons/nintendo_logo.png">
                             <label for="nintendo" class="col-sm-2 control-label celSoc">Nintendo</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control celSoc" id="nintendo" placeholder="Identifiant Nintendo" name="reseaux_divertissement[nintendo]">
+                                <input type="text" class="form-control celSoc" id="nintendo" placeholder="Identifiant Nintendo" name="reseaux_divertissement[compte_nintendo]">
                             </div>
                         </div>
                         <div class="row form-group">
@@ -89,7 +89,14 @@
                             <img class="icons col-sm-2" src="../../img/icons/muxi_logo.jpg">
                             <label for="muxy" class="col-sm-2 control-label celSoc">Muxy</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control celSoc" id="muxy" placeholder="Muxy" name="reseaux_pro[muxy]">
+                                <input type="text" class="form-control celSoc" id="muxy" placeholder="Muxy" name="reseaux_pro[muxi]">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <img class="icons col-sm-2" src="../../img/icons/github_logo.jpg">
+                            <label for="github" class="col-sm-2 control-label celSoc">Muxy</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control celSoc" id="github" placeholder="github" name="reseaux_pro[github]">
                             </div>
                         </div>
                     </div>
