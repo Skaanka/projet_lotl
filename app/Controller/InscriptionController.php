@@ -6,6 +6,8 @@ use \W\Controller\Controller;
 use \W\Manager\Manager;
 use \W\Manager\UserManager;
 use \Manager\MembreManager;
+use \Manager\DiplomeManager;
+use \Manager\Experience_proManager;
 
 class InscriptionController extends Controller
 {
@@ -62,36 +64,51 @@ class InscriptionController extends Controller
             $_SESSION['wuser']['role'] = 'membre';
 
             $manager = new UserManager();
-            debug($_SESSION['wuser']);
-            // insert page formulaire 1
+            
+            // insert formulaire 1
             $manager->insert($_SESSION['wuser']); //enregistrement membre dans BDD
-               debug($manager); die();
             $mail = $_SESSION['wuser']['mail']; // recuperation du mail dans une variable
-
-            $membre = $manager->find($mail);
-            $membre['id'];
-            // Ajouter $key = id_membre => $value = $membre['id']
-            array_push($_SESSION['membre'], $_SESSION['membre']['id_membre'] = $membre['id']);
-            var_dump($membre);
-            debug($_SESSION['membre']); die();
             
-            /*
             //suite insert formulaire 1
-            $manager->insert($_SESSION['membre']);
+            $membre = $manager->findMail($mail);  //recuperation du membre dans la table wusers via le mail
+            $_SESSION['membre']['id_membre'] = $membre['id']; // ajout d'une $key id_membre dans la SESSION['membre']
             
-            // insert page formulaire 2
+            $manager = new MembreManager(); //selection de la table Membre
+            $manager->insert($_SESSION['membre']); //insertion dans la table membre de la session['membre']
+            
+             
+             // insert page formulaire 2
+             
+            $_SESSION['diplome']['id_membre'] = $membre['id']; // ajout d'une $key id_membre dans la SESSION['diplome']
+            $_SESSION['diplome2']['id_membre'] = $membre['id'];
+            $_SESSION['diplome3']['id_membre'] = $membre['id'];
+            $_SESSION['diplome4']['id_membre'] = $membre['id'];
+            
+           
+            $manager = new DiplomeManager(); //selection de la table Diplome
             $manager->insert($_SESSION['diplome']);
             $manager->insert($_SESSION['diplome2']);
             $manager->insert($_SESSION['diplome3']);
             $manager->insert($_SESSION['diplome4']);
             
+            
+            $_SESSION['experience_pro']['id_membre'] = $membre['id']; // ajout d'une $key id_membre dans la SESSION['experience_pro']
+            $_SESSION['experience_pro2']['id_membre'] = $membre['id']; 
+            $_SESSION['experience_pro3']['id_membre'] = $membre['id']; 
+            $_SESSION['experience_pro4']['id_membre'] = $membre['id']; 
+            $_SESSION['experience_pro5']['id_membre'] = $membre['id']; 
+            $_SESSION['experience_pro6']['id_membre'] = $membre['id']; 
+            
+            
+            $manager = new Experience_proManager(); //selection de la table Diplome
             $manager->insert($_SESSION['experience_pro']);
             $manager->insert($_SESSION['experience_pro2']);
             $manager->insert($_SESSION['experience_pro3']);
             $manager->insert($_SESSION['experience_pro4']);
             $manager->insert($_SESSION['experience_pro5']);
             $manager->insert($_SESSION['experience_pro6']);
-
+            
+            /*
             $manager->insert($_SESSION['competence']);
             
             $manager->insert($_SESSION['fil_actu']);
@@ -111,18 +128,10 @@ class InscriptionController extends Controller
 
         } elseif (isset($_POST['precedent2'])) {
             $_SESSION['inscription_3'] = $_POST['inscription_3'];
-            $this->redirectToRoute('inscription2'); // si précédent retour page 2
+            //$this->redirectToRoute('inscription2'); // si précédent retour page 2
         }
         $this->show('inscription/inscription3');
     }
 
 
-    /*public function insertMembre() {
-		if(isset($inscription)) {
-			$manager = new MembreManager();
-			$manager->insertMembre($inscription);
-			$this->redirectToRoute('home');
-		}
-		$this->show('home/home');
-	}*/
 }
