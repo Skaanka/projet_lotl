@@ -58,9 +58,9 @@ class InscriptionController extends Controller
             $_SESSION['reseaux_pro'] = $_POST['reseaux_pro'];
             $_SESSION['reseaux_divertissement'] = $_POST['reseaux_divertissement'];
 
-
+            // ajout d'un $key => $value (ex :role => membre)
             $_SESSION['wuser']['role'] = 'membre';
-            //debug($inscription); die();
+
             $manager = new UserManager();
             debug($_SESSION['wuser']);
             // insert page formulaire 1
