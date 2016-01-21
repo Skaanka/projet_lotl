@@ -3,7 +3,7 @@
 	$w_routes = array(
         
         ['GET', '/', 'Default#home', 'home'], // lorsque l'utilisateur est connecté
-		['GET', '/accueil', 'Default#accueil', 'accueil'], // quand l'utilisateur n'est pas connecté
+		['GET', '/accueil', 'Accueil#getListeMembre', 'accueil'], // quand l'utilisateur n'est pas connecté
         
 		['GET', '/inscription', 'Default#inscription', 'inscription'], // formulaire d'inscription
 		['GET', '/profil', 'Default#profil', 'profil'], // affichage du profil perso

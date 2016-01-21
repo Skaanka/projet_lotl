@@ -124,21 +124,21 @@
 				<div class="carousel-inner" role="listbox">
 					<div class="item text-center active">
 						<h1>Post actu 0</h1>
-						<p>TRalala</p>
+						<p>- TRalala</p>
 						<div class="carousel-caption">
 							
 						</div>
 					</div>
 					<div class="item text-center">
 						<h1>Post actu 1 </h1>
-						<p>Debout les campeurs et haut les coeurs, parce-que ça caille aujourd'hui !</p>
+						<p>- Debout les campeurs et haut les coeurs, parce-que ça caille aujourd'hui !</p>
 						<div class="carousel-caption">
 							
 						</div>
 					</div>
 					<div class="item text-center">
 						<h1>Post actu 2 </h1>
-						<p>ça caille tout les jours par ici ...</p>
+						<p>- ça caille tout les jours par ici ...</p>
 						<div class="carousel-caption">
 							
 						</div>
