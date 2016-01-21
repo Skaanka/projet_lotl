@@ -51,4 +51,5 @@ class MembreManager extends \W\Manager\Manager {
         }
         return $sth->execute();
     }
+
 }

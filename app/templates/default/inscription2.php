@@ -7,8 +7,8 @@
 
 
 
-        <div id="wrapper" class="col-md-8 col-md-offset-2">
-            <form class="col-md-6 col-md-offset-3" method="POST">  
+        <div id="wrapper" class="col-md-10">
+            <form class="col-md-10" method="POST">  
 
                 
                 <h1>Parcour pro.</h1><br/>
@@ -33,46 +33,46 @@
                             
                     <div class="row cellule">
                         <div class="form-group col-md-2">
-                            <input type="text" class="form-control" name="inscription_2['annees_obt']" value="<?php  if ( !empty($_SESSION['inscription']['annees_obt'])) {echo $_SESSION['inscription']['annees_obt'];}  ?>">
+                            <input type="text" class="form-control" name="diplome['annees_obt']">
                         </div>
                         <div class="form-group col-md-5">
-                            <input type="text" class="form-control" name="inscription_2['intitule']" value="<?php  if ( !empty($_SESSION['inscription']['intitule'])) {echo $_SESSION['inscription']['intitule'];}  ?>">
+                            <input type="text" class="form-control" name="diplome['intitule']">
                         </div>
                         <div class="form-group col-md-5">
-                            <input type="text" class="form-control" name="inscription_2['ecole']" value="<?php  if ( !empty($_SESSION['inscription']['ecole'])) {echo $_SESSION['inscription']['ecole'];}  ?>">
+                            <input type="text" class="form-control" name="diplome['ecole']">
                         </div>
                     </div>
                     <div class="row cellule">
                         <div class="form-group col-md-2">
-                            <input type="text" class="form-control" name="inscription_2['annees_obt2']" value="<?php  if ( !empty($_SESSION['inscription']['annees_obt2'])) {echo $_SESSION['inscription']['annees_obt2'];}  ?>">
+                            <input type="text" class="form-control" name="diplome2['annees_obt']">
                         </div>
                         <div class="form-group col-md-5">
-                            <input type="text" class="form-control" name="inscription_2['intitule2']" value="<?php  if ( !empty($_SESSION['inscription']['intitule2'])) {echo $_SESSION['inscription']['intitule2'];}  ?>">
+                            <input type="text" class="form-control" name="diplome2['intitule']">
                         </div>
                         <div class="form-group col-md-5">
-                            <input type="text" class="form-control"  name="inscription_2['ecole2']" value="<?php  if ( !empty($_SESSION['inscription']['ecole2'])) {echo $_SESSION['inscription']['ecole2'];}  ?>">
+                            <input type="text" class="form-control"  name="diplome2['ecole']" >
                         </div>
                     </div>
                     <div class="row cellule">
                         <div class="form-group col-md-2">
-                            <input type="text" class="form-control" name="inscription_2['annees_obt3']" value="<?php  if ( !empty($_SESSION['inscription']['annees_obt3'])) {echo $_SESSION['inscription']['annees_obt3'];}  ?>">
+                            <input type="text" class="form-control" name="diplome3['annees_obt']">
                         </div>
                         <div class="form-group col-md-5">
-                            <input type="text" class="form-control" name="inscription_2['intitule3']" value="<?php  if ( !empty($_SESSION['inscription']['intitule3'])) {echo $_SESSION['inscription']['intitule3'];}  ?>">
+                            <input type="text" class="form-control" name="diplome3['intitule']">
                         </div>
                         <div class="form-group col-md-5">
-                            <input type="text" class="form-control" name="inscription_2['ecole3']" value="<?php  if ( !empty($_SESSION['inscription']['ecole3'])) {echo $_SESSION['inscription']['ecole3'];}  ?>">
+                            <input type="text" class="form-control" name="diplome3['ecole']">
                         </div>
                     </div>
                     <div class="row cellule">
                         <div class="form-group col-md-2">
-                            <input type="text" class="form-control" name="inscription_2['annees_obt4']" value="<?php  if ( !empty($_SESSION['inscription']['annees_obt4'])) {echo $_SESSION['inscription']['annees_obt4'];}  ?>">
+                            <input type="text" class="form-control" name="diplome4['annees_obt']">
                         </div>
                         <div class="form-group col-md-5">
-                            <input type="text" class="form-control" name="inscription_2['intitule4']" value="<?php  if ( !empty($_SESSION['inscription']['intitule4'])) {echo $_SESSION['inscription']['intitule4'];}  ?>">
+                            <input type="text" class="form-control" name="diplome4['intitule']">
                         </div>
                         <div class="form-group col-md-5">
-                            <input type="text" class="form-control" name="inscription_2['ecole4']" value="<?php  if ( !empty($_SESSION['inscription']['ecole4'])) {echo $_SESSION['inscription']['ecole4'];}  ?>">
+                            <input type="text" class="form-control" name="diplome4['ecole']">
                         </div>
                     </div>
                       </div>
@@ -98,86 +98,86 @@
 
                     <div class="row cellule">
                         <div class="form-group col-xs-2">
-                            <input type="text"  class="form-control" name="inscription_2['periode_debut']" value="<?php  if ( !empty($_SESSION['inscription']['periode_debut'])) {echo $_SESSION['inscription']['periode_debut'];}  ?>">
+                            <input type="text"  class="form-control" name="experience_pro['periode_debut']">
                         </div>
                         <div class="form-group col-xs-2">
-                            <input type="text" class="form-control" name="inscription_2['periode_fin']" value="<?php  if ( !empty($_SESSION['inscription']['periode_fin'])) {echo $_SESSION['inscription']['periode_fin'];}  ?>">
+                            <input type="text" class="form-control" name="experience_pro['periode_fin']">
                         </div>
                         <div class="form-group col-md-4">
-                            <input type="text" class="form-control" name="inscription_2['compagnie']" value="<?php  if ( !empty($_SESSION['inscription']['compagnie'])) {echo $_SESSION['inscription']['compagnie'];}  ?>">
+                            <input type="text" class="form-control" name="experience_pro['compagnie']">
                         </div>
                         <div class="form-group col-md-4">
-                            <input type="text" class="form-control" name="inscription_2['poste']" value="<?php  if ( !empty($_SESSION['inscription']['poste'])) {echo $_SESSION['inscription']['poste'];}  ?>">
+                            <input type="text" class="form-control" name="experience_pro['poste']">
                         </div>
                     </div>
                     <div class="row cellule">
                         <div class="form-group col-xs-2">
-                            <input type="text"  class="form-control" name="inscription_2['periode_debut2']" value="<?php  if ( !empty($_SESSION['inscription']['periode_debut2'])) {echo $_SESSION['inscription']['periode_debut2'];}  ?>">
+                            <input type="text"  class="form-control" name="experience_pro2['periode_debut']" >
                         </div>
                         <div class="form-group col-xs-2">
-                            <input type="text" class="form-control" name="inscription_2['periode_fin2']" value="<?php  if ( !empty($_SESSION['inscription']['periode_fin2'])) {echo $_SESSION['inscription']['periode_fin2'];}  ?>">
+                            <input type="text" class="form-control" name="experience_pro2['periode_fin']">
                         </div>
                         <div class="form-group col-md-4">
-                            <input type="text" class="form-control" name="inscription_2['compagnie2']" value="<?php  if ( !empty($_SESSION['inscription']['compagnie2'])) {echo $_SESSION['inscription']['compagnie2'];}  ?>">
+                            <input type="text" class="form-control" name="experience_pro2['compagnie']">
                         </div>
                         <div class="form-group col-md-4">
-                            <input type="text" class="form-control" name="inscription_2['poste2']" value="<?php  if ( !empty($_SESSION['inscription']['poste2'])) {echo $_SESSION['inscription']['poste2'];}  ?>">
+                            <input type="text" class="form-control" name="experience_pro2['poste']">
                         </div>
                     </div>
                    <div class="row cellule">
                         <div class="form-group col-xs-2">
-                            <input type="text"  class="form-control" name="inscription_2['periode_debut3']" value="<?php  if ( !empty($_SESSION['inscription']['periode_debut3'])) {echo $_SESSION['inscription']['periode_debut3'];}  ?>">
+                            <input type="text"  class="form-control" name="experience_pro3['periode_debut']">
                         </div>
                         <div class="form-group col-xs-2">
-                            <input type="text" class="form-control" name="inscription_2['periode_fin3']" value="<?php  if ( !empty($_SESSION['inscription']['periode_fin3'])) {echo $_SESSION['inscription']['periode_fin3'];}  ?>">
+                            <input type="text" class="form-control" name="experience_pro3['periode_fin']">
                         </div>
                         <div class="form-group col-md-4">
-                            <input type="text" class="form-control" name="inscription_2['compagnie3']" value="<?php  if ( !empty($_SESSION['inscription']['compagnie3'])) {echo $_SESSION['inscription']['compagnie3'];}  ?>">
+                            <input type="text" class="form-control" name="experience_pro3['compagnie']">
                         </div>
                         <div class="form-group col-md-4">
-                            <input type="text" class="form-control" name="inscription_2['poste3']" value="<?php  if ( !empty($_SESSION['inscription']['poste3'])) {echo $_SESSION['inscription']['poste3'];}  ?>">
+                            <input type="text" class="form-control" name="experience_pro3['poste']">
                         </div>
                     </div>
                     <div class="row cellule">
                         <div class="form-group col-xs-2">
-                            <input type="text"  class="form-control" name="inscription_2['periode_debut4']" value="<?php  if ( !empty($_SESSION['inscription']['periode_debut4'])) {echo $_SESSION['inscription']['periode_debut4'];}  ?>">
+                            <input type="text"  class="form-control" name="experience_pro4['periode_debut']">
                         </div>
                         <div class="form-group col-xs-2">
-                            <input type="text" class="form-control" name="inscription_2['periode_fin4']" value="<?php  if ( !empty($_SESSION['inscription']['periode_fin4'])) {echo $_SESSION['inscription']['periode_fin4'];}  ?>">
+                            <input type="text" class="form-control" name="experience_pro4['periode_fin']">
                         </div>
                         <div class="form-group col-md-4">
-                            <input type="text" class="form-control" name="inscription_2['compagnie4']" value="<?php  if ( !empty($_SESSION['inscription']['compagnie4'])) {echo $_SESSION['inscription']['compagnie4'];}  ?>">
+                            <input type="text" class="form-control" name="experience_pro4['compagnie']">
                         </div>
                         <div class="form-group col-md-4">
-                            <input type="text" class="form-control" name="inscription_2['poste4']" value="<?php  if ( !empty($_SESSION['inscription']['poste4'])) {echo $_SESSION['inscription']['poste4'];}  ?>">
+                            <input type="text" class="form-control" name="experience_pro4['poste']">
                         </div>
                     </div>
                     <div class="row cellule">
                         <div class="form-group col-xs-2">
-                            <input type="text"  class="form-control" name="inscription_2['periode_debut5']" value="<?php  if ( !empty($_SESSION['inscription']['periode_debut5'])) {echo $_SESSION['inscription']['periode_debut5'];}  ?>">
+                            <input type="text"  class="form-control" name="experience_pro5['periode_debut']">
                         </div>
                         <div class="form-group col-xs-2">
-                            <input type="text" class="form-control" name="inscription_2['periode_fin5']" value="<?php  if ( !empty($_SESSION['inscription']['periode_fin5'])) {echo $_SESSION['inscription']['periode_fin5'];}  ?>">
+                            <input type="text" class="form-control" name="experience_pro5['periode_fin']">
                         </div>
                         <div class="form-group col-md-4">
-                            <input type="text" class="form-control" name="inscription_2['compagnie5']" value="<?php  if ( !empty($_SESSION['inscription']['compagnie5'])) {echo $_SESSION['inscription']['compagnie5'];}  ?>">
+                            <input type="text" class="form-control" name="experience_pro5['compagnie']">
                         </div>
                         <div class="form-group col-md-4">
-                            <input type="text" class="form-control" name="inscription_2['poste5']" value="<?php  if ( !empty($_SESSION['inscription']['poste5'])) {echo $_SESSION['inscription']['poste5'];}  ?>">
+                            <input type="text" class="form-control" name="experience_pro5['poste']">
                         </div>
                     </div>
                     <div class="row cellule">
                         <div class="form-group col-xs-2">
-                            <input type="text"  class="form-control" name="inscription_2['periode_debut6']" value="<?php  if ( !empty($_SESSION['inscription']['periode_debut6'])) {echo $_SESSION['inscription']['periode_debut6'];}  ?>">
+                            <input type="text"  class="form-control" name="experience_pro6['periode_debut']">
                         </div>
                         <div class="form-group col-xs-2">
-                            <input type="text" class="form-control" name="inscription_2['periode_fin6']" value="<?php  if ( !empty($_SESSION['inscription']['periode_fin6'])) {echo $_SESSION['inscription']['periode_fin6'];}  ?>">
+                            <input type="text" class="form-control" name="experience_pro6['periode_fin']">
                         </div>
                         <div class="form-group col-md-4">
-                            <input type="text" class="form-control" name="inscription_2['compagnie6']" value="<?php  if ( !empty($_SESSION['inscription']['compagnie6'])) {echo $_SESSION['inscription']['compagnie6'];}  ?>">
+                            <input type="text" class="form-control" name="experience_pro6['compagnie']">
                         </div>
                         <div class="form-group col-md-4">
-                            <input type="text" class="form-control" name="inscription_2['poste6']" value="<?php  if ( !empty($_SESSION['inscription']['poste6'])) {echo $_SESSION['inscription']['poste6'];}  ?>">
+                            <input type="text" class="form-control" name="experience_pro6['poste']">
                         </div>
                     
                     </div>
@@ -189,33 +189,27 @@
                   <div class="panel-body">
                     
                     <div class="form-group col-xs-12">
-                        <textarea class="form-control" rows="6" name="inscription_2['competences']"><?php  if ( !empty($_SESSION['inscription']['competences'])) {echo $_SESSION['inscription']['competences'];}  ?></textarea>
+                        <textarea class="form-control" rows="6" name="competence['competences']"></textarea>
                     </div>
                   </div>
                 </div>
-                <?php 
-                    if (isset($_SESSION['user']) ) {
-                ?>
                 
                 <div class="panel panel-default">
                   <div class="panel-heading"><h3>Fil d'actu.</h3></div>
                   <div class="panel-body">
                     
                     <div class="form-group col-xs-12">
-                        <textarea class="form-control" rows="6" name="inscription_2['messages']"><?php  if ( !empty($_SESSION['inscription']['messages'])) {echo $_SESSION['inscription']['messages'];}  ?></textarea>
+                        <textarea class="form-control" rows="6" name="fil_actus['message']"></textarea>
                     </div>
                   </div>
                 </div>
-                <?php 
-                    }
-                ?>
                 
                 <div class="panel panel-default">
                   <div class="panel-heading"><h3>Portfolio en ligne</h3></div>
                   <div class="panel-body">
                     
                     <div class="form-group col-xs-12">
-                        <input type="text" class="form-control" rows="6" placeholder="http://..." name="inscription_2['porte_folio']" value="<?php  if ( !empty($_SESSION['inscription']['porte_folio'])) {echo $_SESSION['inscription']['porte_folio'];}  ?>">
+                        <input type="text" class="form-control" rows="6" placeholder="http://..." name="protfolios['ad_folio']">
                     </div>
                   </div>
                 </div>
