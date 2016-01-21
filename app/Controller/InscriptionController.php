@@ -2,12 +2,23 @@
 
 namespace Controller;
 
+//Manager Default
 use \W\Controller\Controller;
 use \W\Manager\Manager;
 use \W\Manager\UserManager;
-use \Manager\MembreManager;
+
+//Manager Projet
+use \Manager\CompetenceManager;
 use \Manager\DiplomeManager;
 use \Manager\Experience_proManager;
+use \Manager\Fil_actuManager;
+use \Manager\MembreManager;
+use \Manager\PortfolioManager;
+use \Manager\Reseaux_divertissementManager;
+use \Manager\Reseaux_proManager;
+use \Manager\Reseaux_socialManager;
+
+
 
 class InscriptionController extends Controller
 {
@@ -100,7 +111,7 @@ class InscriptionController extends Controller
             $_SESSION['experience_pro6']['id_membre'] = $membre['id']; 
             
             
-            $manager = new Experience_proManager(); //selection de la table Diplome
+            $manager = new Experience_proManager(); //selection de la table experience_pros
             $manager->insert($_SESSION['experience_pro']);
             $manager->insert($_SESSION['experience_pro2']);
             $manager->insert($_SESSION['experience_pro3']);
@@ -108,27 +119,39 @@ class InscriptionController extends Controller
             $manager->insert($_SESSION['experience_pro5']);
             $manager->insert($_SESSION['experience_pro6']);
             
-            /*
+            
+            $_SESSION['competence']['id_membre'] = $membre['id']; // ajout d'une $key id_membre dans la SESSION['competence']
+            $manager = new CompetenceManager(); //selection de la table competences
             $manager->insert($_SESSION['competence']);
             
+            $_SESSION['fil_actu']['id_membre'] = $membre['id']; // ajout d'une $key id_membre dans la SESSION['fil_actu']
+            $manager = new Fil_actuManager(); //selection de la table fil_actus
             $manager->insert($_SESSION['fil_actu']);
             
+            $_SESSION['portfolio']['id_membre'] = $membre['id']; // ajout d'une $key id_membre dans la SESSION['portfolio']
+            $manager = new PortfolioManager(); //selection de la table portfolios
             $manager->insert($_SESSION['portfolio']);
+            
 
             // insert page formulaire 3
+            $_SESSION['reseaux_social']['id_membre'] = $membre['id']; // ajout d'une $key id_membre dans la SESSION['reseaux_social']
+            $manager = new PortfolioManager(); //selection de la table reseaux_socials
             $manager->insert($_SESSION['reseaux_social']);
             
+            $_SESSION['reseaux_pro']['id_membre'] = $membre['id']; // ajout d'une $key id_membre dans la SESSION['reseaux_pro']
+            $manager = new PortfolioManager(); //selection de la table reseaux_pros
             $manager->insert($_SESSION['reseaux_pro']);
             
+            $_SESSION['reseaux_divertissement']['id_membre'] = $membre['id']; // ajout d'une $key id_membre dans la SESSION['reseaux_divertissement']
+            $manager = new PortfolioManager(); //selection de la table reseaux_divertissements
             $manager->insert($_SESSION['reseaux_divertissement']);
-            */
             
 
             $this->redirectToRoute('validation');
 
         } elseif (isset($_POST['precedent2'])) {
             $_SESSION['inscription_3'] = $_POST['inscription_3'];
-            //$this->redirectToRoute('inscription2'); // si précédent retour page 2
+            $this->redirectToRoute('inscription2'); // si précédent retour page 2
         }
         $this->show('inscription/inscription3');
     }
