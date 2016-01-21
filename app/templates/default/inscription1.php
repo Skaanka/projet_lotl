@@ -28,7 +28,7 @@
                 <div class="row" id="espaceform">
                     <div class="form-group col-md-6">
                         <label for="name">Nom</label>
-                        <input type="text" class="form-control" id="name" placeholder="nom" name="membre[nom]">
+                        <input type="text" class="form-control" id="name" placeholder="nom" name="wuser[nom]">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="firstname">Prenom</label>
@@ -36,7 +36,7 @@
                     </div>
                     <div class="form-group col-md-6 col-md-offset-3">
                         <label for="password">Password</label>     <!-- Ajout d'un  champs confirmation mot de passe ? -->
-                        <input type="text" class="form-control" id="password" placeholder="Password" name="membre[mot_de_passe]" value="">
+                        <input type="text" class="form-control" id="password" placeholder="Password" name="wuser[mot_de_passe]" value="">
                     </div>
                 </div>
                 
@@ -66,7 +66,7 @@
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label for="email">E-mail</label>
-                        <input type="text" class="form-control" id="email" placeholder="E-mail" name="membre['mail']" value="">
+                        <input type="text" class="form-control" id="email" placeholder="E-mail" name="wuser['mail']" value="">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="phone">Téléphone mobile</label>
