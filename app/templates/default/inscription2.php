@@ -7,8 +7,8 @@
 
 
 
-        <div id="wrapper" class="col-md-8 col-md-offset-2">
-            <form class="col-md-6 col-md-offset-3" method="POST">  
+        <div id="wrapper" class="col-md-10">
+            <form class="col-md-10" method="POST">  
 
                 
                 <h1>Parcour pro.</h1><br/>

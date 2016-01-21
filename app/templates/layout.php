@@ -49,50 +49,12 @@
                     </div>
 
                     <div id="navbar" class="container navbar-collapse collapse nav navbar-nav navbar-right">
-                        
+
 
 
                         <input type="submit" class="dropdown-toggle btn btn-info" data-toggle="modal" name="actu" value="Mon actu" data-target="#maFenetreModale">
                         <input type="submit" class="dropdown-toggle" name="profil" value="profil">
                         <input type="submit" class="dropdown-toggle" name="deconnexion" value="deconnexion">
-                                <div class="container">
-
-            <h1>Fenêtre modale (ou Lightbox)</h1>
-            
-            <!--Bouton qui permet de déclencher l'ouverture de la fenêtre modale-->
-            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#maFenetreModale">Ouvrir fenêtre modale</button>
-            
-            <!--Contenu de la fenêtre modale-->
-            <div id="maFenetreModale" class="modal fade" role="dialog">
-                
-                <div class="modal-dialog">
-                
-                    <!--contenu de la fenêtre à proprement parler-->
-                    <div class="modal-content">
-                    
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4>En-tête de la fenêtre modale</h4>
-                        </div>
-                        
-                        <div class="modal-body">
-                            <p>Contenu de la fenêtre modale</p>
-                        </div>
-                        
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                        </div>
-                    
-                    </div>
-                    
-                
-                </div>
-            
-            
-            
-            </div>
-            
-        </div>
 
 
                     </div><!--/.navbar-collapse -->

@@ -5,8 +5,8 @@
 	
 
 
-        <div id="wrapper" class="col-md-8 col-md-offset-2">
-            <form method="POST" class="col-md-6 col-md-offset-3">  
+        <div id="wrapper" class="col-md-10">
+            <form method="POST" class="col-md-10">  
 
                 
                 <h1>Sociaux</h1><br/>
