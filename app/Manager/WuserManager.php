@@ -10,7 +10,7 @@ class MembreManager extends \W\Manager\Manager {
 	 * @param boolean $stripTags Active le strip_tags automatique sur toutes les valeurs
 	 * @return mixed La valeur de retour de la méthode execute()
 	 */
-    public function insertMembre(array $data, $stripTags = true)
+    public function insertUser(array $data, $stripTags = true)
     {
 
         $colNames = array_keys($data);
@@ -30,6 +30,23 @@ class MembreManager extends \W\Manager\Manager {
         }
         return $sth->execute();
     }
+
+    // RECUPERE LE MEMBRE de la table Wusers
+    public function find($mail)
+    {
+        // verification email
+
+        $sql = "SELECT * FROM " . $this->table . " WHERE mail = :mail";
+        $sth = $this->dbh->prepare($sql);
+        $sth->bindValue(":mail", $mail);
+        $sth->execute();
+
+        return $sth->fetch();
+    }
+
+
+
+
 
 
     public function insertDataMembre(array $data, $stripTags = true) {

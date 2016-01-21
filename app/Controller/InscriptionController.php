@@ -12,6 +12,7 @@ class InscriptionController extends Controller
     public function inscription_1() 
     {
         if(isset($_POST['suivant'])) {
+            $_SESSION['wuser'] = $_POST['wuser'];
             $_SESSION['membre'] = $_POST['membre'];
             //debug();die()
             $this->redirectToRoute('inscription2'); // si ok envoie page 2
@@ -61,20 +62,27 @@ class InscriptionController extends Controller
             $manager = new UserManager();
 
             // insert page formulaire 1
-            $manager->insertMembre($_SESSION['membre']); //enregistrement membre dans BDD
-            $mail = $_SESSION['membre']['mail']; // recuperation du mail dans une variable
+            $manager->insertUser($_SESSION['wuser']); //enregistrement membre dans BDD
+            $mail = $_SESSION['wuser']['mail']; // recuperation du mail dans une variable
 
-            $manager = new MembreManager();
+            $manager = new WuserManager();
             $membre = $manager->find($mail);
             $membre['id'];
-
-
+            
+            // utiliser l'id de $membre pour l'ajouter e ntemps que id_membre dans les autres SESSION
+            
+            //suite insert formulaire 1
+            $manager = new MembreManager();
+            $manager->insertMembre($_SESSION['membre']);
+            
             // insert page formulaire 2
+            $manager = new DiplomeManager();
             $manager->insertDataMembre($_SESSION['diplome']);
             $manager->insertDataMembre($_SESSION['diplome2']);
             $manager->insertDataMembre($_SESSION['diplome3']);
             $manager->insertDataMembre($_SESSION['diplome4']);
-
+            
+            $manager = new Experience_proManager();
             $manager->insertDataMembre($_SESSION['experience_pro']);
             $manager->insertDataMembre($_SESSION['experience_pro2']);
             $manager->insertDataMembre($_SESSION['experience_pro3']);
@@ -82,14 +90,26 @@ class InscriptionController extends Controller
             $manager->insertDataMembre($_SESSION['experience_pro5']);
             $manager->insertDataMembre($_SESSION['experience_pro6']);
 
+            $manager = new CompetenceManager();
             $manager->insertDataMembre($_SESSION['competence']);
+            
+            $manager = new Fil_actuManager();
             $manager->insertDataMembre($_SESSION['fil_actu']);
+            
+            $manager = new PortfolioManager();
             $manager->insertDataMembre($_SESSION['portfolio']);
 
             // insert page formulaire 3
+            $manager = new Reseaux_socialManager();
             $manager->insertDataMembre($_SESSION['reseaux_social']);
+            
+            $manager = new Reseaux_proManager();
             $manager->insertDataMembre($_SESSION['reseaux_pro']);
+            
+            $manager = new Reseaux_divertissementManager();
             $manager->insertDataMembre($_SESSION['reseaux_divertissement']);
+            
+            
 
             $this->redirectToRoute('inscription_resumer');
 
