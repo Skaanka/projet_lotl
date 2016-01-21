@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 21 Janvier 2016 à 13:50
+-- Généré le :  Jeu 21 Janvier 2016 à 14:49
 -- Version du serveur :  5.6.25
 -- Version de PHP :  5.6.11
 
@@ -82,6 +82,7 @@ CREATE TABLE IF NOT EXISTS `fil_actus` (
 
 CREATE TABLE IF NOT EXISTS `membres` (
   `id` int(11) NOT NULL,
+  `id_membre` int(11) NOT NULL,
   `prenom` varchar(80) NOT NULL,
   `ddn` date NOT NULL,
   `avatar` varchar(50) NOT NULL,
@@ -96,8 +97,8 @@ CREATE TABLE IF NOT EXISTS `membres` (
 -- Contenu de la table `membres`
 --
 
-INSERT INTO `membres` (`id`, `prenom`, `ddn`, `avatar`, `adresse`, `cp`, `ville`, `phone`, `siteWeb`) VALUES
-(1, 'Admin', '0000-01-01', '', 'adresse Admin Istrateur', 6660, 'adminCity', 1234567890, 'mon.site-web.com');
+INSERT INTO `membres` (`id`, `id_membre`, `prenom`, `ddn`, `avatar`, `adresse`, `cp`, `ville`, `phone`, `siteWeb`) VALUES
+(1, 0, 'Admin', '0000-01-01', '', 'adresse Admin Istrateur', 6660, 'adminCity', 1234567890, 'mon.site-web.com');
 
 -- --------------------------------------------------------
 
@@ -174,7 +175,6 @@ CREATE TABLE IF NOT EXISTS `reseaux_socials` (
 
 CREATE TABLE IF NOT EXISTS `wusers` (
   `id` int(11) NOT NULL,
-  `id_membres` int(11) NOT NULL,
   `nom` varchar(255) NOT NULL,
   `mail` varchar(255) NOT NULL,
   `mot_de_passe` varchar(255) NOT NULL,

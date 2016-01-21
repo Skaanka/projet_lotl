@@ -188,6 +188,5 @@
             </form>   
 
         </div>
- <?php debug($_SESSION['inscription_2']); ?>
 
 <?php $this->stop('main_content') ?>
