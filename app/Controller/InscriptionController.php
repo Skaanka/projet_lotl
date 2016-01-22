@@ -26,7 +26,7 @@ class InscriptionController extends Controller
 
     public function inscription_1() 
     {
-        if(isset($_POST['suivant'])) {
+        if(isset($_POST['suivant'])) {            
             $_SESSION['wuser'] = $_POST['wuser'];
             $_SESSION['membre'] = $_POST['membre'];
             //debug();die()
@@ -73,6 +73,7 @@ class InscriptionController extends Controller
 
             // ajout d'un $key => $value (ex :role => membre)
             $_SESSION['wuser']['role'] = 'membre';
+            $_SESSION['wuser']['validation_inscription'] = 'false';
 
             $manager = new UserManager();
             
@@ -145,10 +146,6 @@ class InscriptionController extends Controller
             $_SESSION['reseaux_divertissement']['id_membre'] = $membre['id']; // ajout d'une $key id_membre dans la SESSION['reseaux_divertissement']
             $manager = new Reseaux_divertissementManager(); //selection de la table reseaux_divertissements
             $manager->insert($_SESSION['reseaux_divertissement']);
-            
-            debug($_SESSION['reseaux_divertissement']);
-            debug($_SESSION['portfolio']);
-            die();
 
             $this->redirectToRoute('validation');
 

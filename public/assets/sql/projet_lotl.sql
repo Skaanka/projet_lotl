@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 22 Janvier 2016 à 09:46
+-- Généré le :  Ven 22 Janvier 2016 à 10:07
 -- Version du serveur :  5.6.25
 -- Version de PHP :  5.6.11
 
@@ -242,15 +242,16 @@ CREATE TABLE IF NOT EXISTS `wusers` (
   `nom` varchar(255) NOT NULL,
   `mail` varchar(255) NOT NULL,
   `mot_de_passe` varchar(255) NOT NULL,
-  `role` varchar(255) NOT NULL
+  `role` varchar(255) NOT NULL,
+  `validation_inscription` varchar(50) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `wusers`
 --
 
-INSERT INTO `wusers` (`id`, `nom`, `mail`, `mot_de_passe`, `role`) VALUES
-(2, 'Péha', 'inscr@mail.com', '123', 'membre');
+INSERT INTO `wusers` (`id`, `nom`, `mail`, `mot_de_passe`, `role`, `validation_inscription`) VALUES
+(2, 'Péha', 'inscr@mail.com', '123', 'membre', '0');
 
 --
 -- Index pour les tables exportées
