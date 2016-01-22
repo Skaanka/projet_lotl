@@ -33,46 +33,46 @@
                             
                     <div class="row cellule">
                         <div class="form-group col-md-2">
-                            <input type="text" class="form-control" name="diplome['annees_obt']">
+                            <input type="text" class="form-control" name="diplome[annees_obt]">
                         </div>
                         <div class="form-group col-md-5">
-                            <input type="text" class="form-control" name="diplome['intitule']">
+                            <input type="text" class="form-control" name="diplome[intitule]">
                         </div>
                         <div class="form-group col-md-5">
-                            <input type="text" class="form-control" name="diplome['ecole']">
+                            <input type="text" class="form-control" name="diplome[ecole]">
                         </div>
                     </div>
                     <div class="row cellule">
                         <div class="form-group col-md-2">
-                            <input type="text" class="form-control" name="diplome2['annees_obt']">
+                            <input type="text" class="form-control" name="diplome2[annees_obt]">
                         </div>
                         <div class="form-group col-md-5">
-                            <input type="text" class="form-control" name="diplome2['intitule']">
+                            <input type="text" class="form-control" name="diplome2[intitule]">
                         </div>
                         <div class="form-group col-md-5">
-                            <input type="text" class="form-control"  name="diplome2['ecole']" >
+                            <input type="text" class="form-control"  name="diplome2[ecole]" >
                         </div>
                     </div>
                     <div class="row cellule">
                         <div class="form-group col-md-2">
-                            <input type="text" class="form-control" name="diplome3['annees_obt']">
+                            <input type="text" class="form-control" name="diplome3[annees_obt]">
                         </div>
                         <div class="form-group col-md-5">
-                            <input type="text" class="form-control" name="diplome3['intitule']">
+                            <input type="text" class="form-control" name="diplome3[intitule]">
                         </div>
                         <div class="form-group col-md-5">
-                            <input type="text" class="form-control" name="diplome3['ecole']">
+                            <input type="text" class="form-control" name="diplome3[ecole]">
                         </div>
                     </div>
                     <div class="row cellule">
                         <div class="form-group col-md-2">
-                            <input type="text" class="form-control" name="diplome4['annees_obt']">
+                            <input type="text" class="form-control" name="diplome4[annees_obt]">
                         </div>
                         <div class="form-group col-md-5">
-                            <input type="text" class="form-control" name="diplome4['intitule']">
+                            <input type="text" class="form-control" name="diplome4[intitule]">
                         </div>
                         <div class="form-group col-md-5">
-                            <input type="text" class="form-control" name="diplome4['ecole']">
+                            <input type="text" class="form-control" name="diplome4[ecole]">
                         </div>
                     </div>
                       </div>
@@ -98,86 +98,86 @@
 
                     <div class="row cellule">
                         <div class="form-group col-xs-2">
-                            <input type="text"  class="form-control" name="experience_pro['periode_debut']">
+                            <input type="text"  class="form-control" name="experience_pro[periode_debut]">
                         </div>
                         <div class="form-group col-xs-2">
-                            <input type="text" class="form-control" name="experience_pro['periode_fin']">
+                            <input type="text" class="form-control" name="experience_pro[periode_fin]">
                         </div>
                         <div class="form-group col-md-4">
-                            <input type="text" class="form-control" name="experience_pro['compagnie']">
+                            <input type="text" class="form-control" name="experience_pro[compagnie]">
                         </div>
                         <div class="form-group col-md-4">
-                            <input type="text" class="form-control" name="experience_pro['poste']">
+                            <input type="text" class="form-control" name="experience_pro[poste]">
                         </div>
                     </div>
                     <div class="row cellule">
                         <div class="form-group col-xs-2">
-                            <input type="text"  class="form-control" name="experience_pro2['periode_debut']" >
+                            <input type="text"  class="form-control" name="experience_pro2[periode_debut]" >
                         </div>
                         <div class="form-group col-xs-2">
-                            <input type="text" class="form-control" name="experience_pro2['periode_fin']">
+                            <input type="text" class="form-control" name="experience_pro2[periode_fin]">
                         </div>
                         <div class="form-group col-md-4">
-                            <input type="text" class="form-control" name="experience_pro2['compagnie']">
+                            <input type="text" class="form-control" name="experience_pro2[compagnie]">
                         </div>
                         <div class="form-group col-md-4">
-                            <input type="text" class="form-control" name="experience_pro2['poste']">
+                            <input type="text" class="form-control" name="experience_pro2[poste]">
                         </div>
                     </div>
                    <div class="row cellule">
                         <div class="form-group col-xs-2">
-                            <input type="text"  class="form-control" name="experience_pro3['periode_debut']">
+                            <input type="text"  class="form-control" name="experience_pro3[periode_debut]">
                         </div>
                         <div class="form-group col-xs-2">
-                            <input type="text" class="form-control" name="experience_pro3['periode_fin']">
+                            <input type="text" class="form-control" name="experience_pro3[periode_fin]">
                         </div>
                         <div class="form-group col-md-4">
-                            <input type="text" class="form-control" name="experience_pro3['compagnie']">
+                            <input type="text" class="form-control" name="experience_pro3[compagnie]">
                         </div>
                         <div class="form-group col-md-4">
-                            <input type="text" class="form-control" name="experience_pro3['poste']">
+                            <input type="text" class="form-control" name="experience_pro3[poste]">
                         </div>
                     </div>
                     <div class="row cellule">
                         <div class="form-group col-xs-2">
-                            <input type="text"  class="form-control" name="experience_pro4['periode_debut']">
+                            <input type="text"  class="form-control" name="experience_pro4[periode_debut]">
                         </div>
                         <div class="form-group col-xs-2">
-                            <input type="text" class="form-control" name="experience_pro4['periode_fin']">
+                            <input type="text" class="form-control" name="experience_pro4[periode_fin]">
                         </div>
                         <div class="form-group col-md-4">
-                            <input type="text" class="form-control" name="experience_pro4['compagnie']">
+                            <input type="text" class="form-control" name="experience_pro4[compagnie]">
                         </div>
                         <div class="form-group col-md-4">
-                            <input type="text" class="form-control" name="experience_pro4['poste']">
+                            <input type="text" class="form-control" name="experience_pro4[poste]">
                         </div>
                     </div>
                     <div class="row cellule">
                         <div class="form-group col-xs-2">
-                            <input type="text"  class="form-control" name="experience_pro5['periode_debut']">
+                            <input type="text"  class="form-control" name="experience_pro5[periode_debut]">
                         </div>
                         <div class="form-group col-xs-2">
-                            <input type="text" class="form-control" name="experience_pro5['periode_fin']">
+                            <input type="text" class="form-control" name="experience_pro5[periode_fin]">
                         </div>
                         <div class="form-group col-md-4">
-                            <input type="text" class="form-control" name="experience_pro5['compagnie']">
+                            <input type="text" class="form-control" name="experience_pro5[compagnie]">
                         </div>
                         <div class="form-group col-md-4">
-                            <input type="text" class="form-control" name="experience_pro5['poste']">
+                            <input type="text" class="form-control" name="experience_pro5[poste]">
                         </div>
                     </div>
                     <div class="row cellule">
                         <div class="form-group col-xs-2">
-                            <input type="text"  class="form-control" name="experience_pro6['periode_debut']">
+                            <input type="text"  class="form-control" name="experience_pro6[periode_debut]">
                         </div>
                         <div class="form-group col-xs-2">
-                            <input type="text" class="form-control" name="experience_pro6['periode_fin']">
+                            <input type="text" class="form-control" name="experience_pro6[periode_fin]">
                         </div>
                         <div class="form-group col-md-4">
-                            <input type="text" class="form-control" name="experience_pro6['compagnie']">
+                            <input type="text" class="form-control" name="experience_pro6[compagnie]">
                         </div>
                         <div class="form-group col-md-4">
-                            <input type="text" class="form-control" name="experience_pro6['poste']">
+                            <input type="text" class="form-control" name="experience_pro6[poste]">
                         </div>
                     
                     </div>
@@ -189,7 +189,7 @@
                   <div class="panel-body">
                     
                     <div class="form-group col-xs-12">
-                        <textarea class="form-control" rows="6" name="competence['competences']"></textarea>
+                        <textarea class="form-control" rows="6" name="competence[competence]"></textarea>
                     </div>
                   </div>
                 </div>
@@ -199,7 +199,7 @@
                   <div class="panel-body">
                     
                     <div class="form-group col-xs-12">
-                        <textarea class="form-control" rows="6" name="fil_actus['message']"></textarea>
+                        <textarea class="form-control" rows="6" name="fil_actu[message]"></textarea>
                     </div>
                   </div>
                 </div>
@@ -209,7 +209,7 @@
                   <div class="panel-body">
                     
                     <div class="form-group col-xs-12">
-                        <input type="text" class="form-control" rows="6" placeholder="http://..." name="protfolios['ad_folio']">
+                        <input type="text" class="form-control" rows="6" placeholder="http://..." name="portfolio[ad_portfolio]">
                     </div>
                   </div>
                 </div>

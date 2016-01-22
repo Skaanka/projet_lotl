@@ -18,5 +18,5 @@
         
         
         //Routes inscription bdd
-        ['GET', '/im', 'Inscription#insertMembre', 'home'], 
+        //['GET', '/im', 'Inscription#insertMembre', 'home'], 
 	);

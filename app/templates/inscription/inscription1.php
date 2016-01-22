@@ -36,7 +36,7 @@
                     </div>
                     <div class="form-group col-md-6 col-md-offset-3">
                         <label for="password">Password</label>     <!-- Ajout d'un  champs confirmation mot de passe ? -->
-                        <input type="text" class="form-control" id="password" placeholder="Password" name="wuser[mot_de_passe]" value="">
+                        <input type="password" class="form-control" id="password" placeholder="Password" name="wuser[mot_de_passe]" value="">
                     </div>
                 </div>
                 
@@ -55,36 +55,43 @@
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label for="cp">Code Postal</label>
-                        <input type="text" class="form-control" id="cp" placeholder="code postal" name="membre['cp']">
+                        <input type="text" class="form-control" id="cp" placeholder="code postal" name="membre[cp]">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="city">Ville</label>
-                        <input type="text" class="form-control" id="city" placeholder="Ville" name="membre['ville']">
+                        <input type="text" class="form-control" id="city" placeholder="Ville" name="membre[ville]">
                     </div>
                 </div>
                     
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label for="email">E-mail</label>
-                        <input type="text" class="form-control" id="email" placeholder="E-mail" name="wuser['mail']" value="">
+                        <input type="text" class="form-control" id="email" placeholder="E-mail" name="wuser[mail]" value="">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="phone">Téléphone mobile</label>
-                        <input type="text" class="form-control" id="phone" placeholder="Téléphone mobile" name="membre['phone']">
+                        <input type="text" class="form-control" id="phone" placeholder="Téléphone mobile" name="membre[phone]">
                     </div>
                 </div>
                 
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label for="webSite">Site web-perso</label>
-                        <input type="text" class="form-control" id="webSite" placeholder="Site web-perso" name="membre['siteWeb']">
+                        <input type="text" class="form-control" id="webSite" placeholder="Site web-perso" name="membre[siteWeb]">
                     </div>
+                    <div class="form-group col-md-6">
+                        <label for="citation">Citation</label>
+                        <input type="text" class="form-control" id="citation" placeholder="Votre citation..." name="membre[citation]">
+                    </div>
+                    
+                </div>
+                <div class="row">
+                
+                </div>
                     <label id="spanAvatar"for="pics" class=" col-md-3">Avatar</label>
                     <div class="col-md-6">
-                        <input type="file" class="" id="pics" name="membre['avatar']">
+                        <input type="file" class="" id="pics" name="membre[avatar]">
                     </div>
-                </div>
-                
                 <div id="bouton" class="row">
                     <div class="col-md-offset-9">
                         <input type="submit" class="btn btn-primary" name="suivant" value="Page suivante">
