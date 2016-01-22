@@ -28,7 +28,6 @@ class InscriptionController extends Controller
     {
         if(isset($_POST['suivant'])) {            
             $_SESSION['wuser'] = $_POST['wuser'];
-            $_SESSION['membre'] = $_POST['membre'];
             //debug();die()
             $this->redirectToRoute('inscription2'); // si ok envoie page 2
         }
@@ -81,20 +80,13 @@ class InscriptionController extends Controller
             $manager->insert($_SESSION['wuser']); //enregistrement membre dans BDD
             $mail = $_SESSION['wuser']['mail']; // recuperation du mail dans une variable
             
-            //suite insert formulaire 1
-            $membre = $manager->findMail($mail);  //recuperation du membre dans la table wusers via le mail
-            $_SESSION['membre']['id_membre'] = $membre['id']; // ajout d'une $key id_membre dans la SESSION['membre']
-            
-            $manager = new MembreManager(); //selection de la table Membre
-            $manager->insert($_SESSION['membre']); //insertion dans la table membre de la session['membre']
-            
              
              // insert page formulaire 2
              
-            $_SESSION['diplome']['id_membre'] = $membre['id']; // ajout d'une $key id_membre dans la SESSION['diplome']
-            $_SESSION['diplome2']['id_membre'] = $membre['id'];
-            $_SESSION['diplome3']['id_membre'] = $membre['id'];
-            $_SESSION['diplome4']['id_membre'] = $membre['id'];
+            $_SESSION['diplome']['id_wuser'] = $membre['id']; // ajout d'une $key id_wuser dans la SESSION['diplome']
+            $_SESSION['diplome2']['id_wuser'] = $membre['id'];
+            $_SESSION['diplome3']['id_wuser'] = $membre['id'];
+            $_SESSION['diplome4']['id_wuser'] = $membre['id'];
             
            
             $manager = new DiplomeManager(); //selection de la table Diplome
@@ -104,12 +96,12 @@ class InscriptionController extends Controller
             $manager->insert($_SESSION['diplome4']);
             
             
-            $_SESSION['experience_pro']['id_membre'] = $membre['id']; // ajout d'une $key id_membre dans la SESSION['experience_pro']
-            $_SESSION['experience_pro2']['id_membre'] = $membre['id']; 
-            $_SESSION['experience_pro3']['id_membre'] = $membre['id']; 
-            $_SESSION['experience_pro4']['id_membre'] = $membre['id']; 
-            $_SESSION['experience_pro5']['id_membre'] = $membre['id']; 
-            $_SESSION['experience_pro6']['id_membre'] = $membre['id']; 
+            $_SESSION['experience_pro']['id_wuser'] = $membre['id']; // ajout d'une $key id_wuser dans la SESSION['experience_pro']
+            $_SESSION['experience_pro2']['id_wuser'] = $membre['id']; 
+            $_SESSION['experience_pro3']['id_wuser'] = $membre['id']; 
+            $_SESSION['experience_pro4']['id_wuser'] = $membre['id']; 
+            $_SESSION['experience_pro5']['id_wuser'] = $membre['id']; 
+            $_SESSION['experience_pro6']['id_wuser'] = $membre['id']; 
             
             
             $manager = new Experience_proManager(); //selection de la table experience_pros
@@ -121,29 +113,29 @@ class InscriptionController extends Controller
             $manager->insert($_SESSION['experience_pro6']);
             
             
-            $_SESSION['competence']['id_membre'] = $membre['id']; // ajout d'une $key id_membre dans la SESSION['competence']
+            $_SESSION['competence']['id_wuser'] = $membre['id']; // ajout d'une $key id_wuser dans la SESSION['competence']
             $manager = new CompetenceManager(); //selection de la table competences
             $manager->insert($_SESSION['competence']);
             
-            $_SESSION['fil_actu']['id_membre'] = $membre['id']; // ajout d'une $key id_membre dans la SESSION['fil_actu']
+            $_SESSION['fil_actu']['id_wuser'] = $membre['id']; // ajout d'une $key id_wuser dans la SESSION['fil_actu']
             $manager = new Fil_actuManager(); //selection de la table fil_actus
             $manager->insert($_SESSION['fil_actu']);
             
-            $_SESSION['portfolio']['id_membre'] = $membre['id']; // ajout d'une $key id_membre dans la SESSION['portfolio']
+            $_SESSION['portfolio']['id_wuser'] = $membre['id']; // ajout d'une $key id_wuser dans la SESSION['portfolio']
             $manager = new PortfolioManager(); //selection de la table portfolios
             $manager->insert($_SESSION['portfolio']);
             
 
             // insert page formulaire 3
-            $_SESSION['reseaux_social']['id_membre'] = $membre['id']; // ajout d'une $key id_membre dans la SESSION['reseaux_social']
+            $_SESSION['reseaux_social']['id_wuser'] = $membre['id']; // ajout d'une $key id_wuser dans la SESSION['reseaux_social']
             $manager = new Reseaux_socialManager(); //selection de la table reseaux_socials
             $manager->insert($_SESSION['reseaux_social']);
             
-            $_SESSION['reseaux_pro']['id_membre'] = $membre['id']; // ajout d'une $key id_membre dans la SESSION['reseaux_pro']
+            $_SESSION['reseaux_pro']['id_wuser'] = $membre['id']; // ajout d'une $key id_wuser dans la SESSION['reseaux_pro']
             $manager = new Reseaux_proManager(); //selection de la table reseaux_pros
             $manager->insert($_SESSION['reseaux_pro']);
             
-            $_SESSION['reseaux_divertissement']['id_membre'] = $membre['id']; // ajout d'une $key id_membre dans la SESSION['reseaux_divertissement']
+            $_SESSION['reseaux_divertissement']['id_wuser'] = $membre['id']; // ajout d'une $key id_wuser dans la SESSION['reseaux_divertissement']
             $manager = new Reseaux_divertissementManager(); //selection de la table reseaux_divertissements
             $manager->insert($_SESSION['reseaux_divertissement']);
 

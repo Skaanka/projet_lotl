@@ -32,7 +32,7 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label for="firstname">Prenom</label>
-                        <input type="text" class="form-control" id="firstname" placeholder="prenom" name="membre[prenom]">
+                        <input type="text" class="form-control" id="firstname" placeholder="prenom" name="wuserprenom]">
                     </div>
                     <div class="form-group col-md-6 col-md-offset-3">
                         <label for="password">Password</label>     <!-- Ajout d'un  champs confirmation mot de passe ? -->
@@ -44,22 +44,22 @@
                 <div class="row">
                     <div class="form-group col-md-12">
                         <label for="birthD">date de naissance</label>
-                        <input type="date" class="form-control" id="birthD" placeholder="date de naissance" name="membre[ddn]">
+                        <input type="date" class="form-control" id="birthD" placeholder="date de naissance" name="wuserddn]">
                     </div>
                     <div class="form-group col-md-12">
                         <label for="adresse">Adresse</label>
-                        <input type="text" class="form-control" id="adresse" placeholder="adresse" name="membre[adresse]">
+                        <input type="text" class="form-control" id="adresse" placeholder="adresse" name="wuseradresse]">
                     </div>
                 </div>
                 
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label for="cp">Code Postal</label>
-                        <input type="text" class="form-control" id="cp" placeholder="code postal" name="membre[cp]">
+                        <input type="text" class="form-control" id="cp" placeholder="code postal" name="wusercp]">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="city">Ville</label>
-                        <input type="text" class="form-control" id="city" placeholder="Ville" name="membre[ville]">
+                        <input type="text" class="form-control" id="city" placeholder="Ville" name="wuserville]">
                     </div>
                 </div>
                     
@@ -70,18 +70,18 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label for="phone">Téléphone mobile</label>
-                        <input type="text" class="form-control" id="phone" placeholder="Téléphone mobile" name="membre[phone]">
+                        <input type="text" class="form-control" id="phone" placeholder="Téléphone mobile" name="wuserphone]">
                     </div>
                 </div>
                 
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label for="webSite">Site web-perso</label>
-                        <input type="text" class="form-control" id="webSite" placeholder="Site web-perso" name="membre[siteWeb]">
+                        <input type="text" class="form-control" id="webSite" placeholder="Site web-perso" name="wusersiteWeb]">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="citation">Citation</label>
-                        <input type="text" class="form-control" id="citation" placeholder="Votre citation..." name="membre[citation]">
+                        <input type="text" class="form-control" id="citation" placeholder="Votre citation..." name="wusercitation]">
                     </div>
                     
                 </div>
@@ -90,7 +90,7 @@
                 </div>
                     <label id="spanAvatar"for="pics" class=" col-md-3">Avatar</label>
                     <div class="col-md-6">
-                        <input type="file" class="" id="pics" name="membre[avatar]">
+                        <input type="file" class="" id="pics" name="wuseravatar]">
                     </div>
                 <div id="bouton" class="row">
                     <div class="col-md-offset-9">

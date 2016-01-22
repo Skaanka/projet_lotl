@@ -2,8 +2,10 @@
 	
 	$w_routes = array(
         
-
+        // HOME
         ['GET', '/', 'Default#home', 'home'], // lorsque l'utilisateur n'est pas connecté
+        
+        // ACCUEIL
 		['GET', '/accueil', 'Accueil#getListeMembre', 'accueil'], // quand l'utilisateur est connecté
 
         

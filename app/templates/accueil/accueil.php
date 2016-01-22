@@ -11,7 +11,8 @@
 
                 <!-- Début de la grille portfolio -->
                 <ul class="portfolio-items list-unstyled" id="grid">
-
+                    
+                    <?php foreach ($membres as $membre) { ?>
                     <!-- Première vignette  -->
                     <li class="vignette col-md-4 col-sm-8 col-xs-10 col-md-offset-0 col-sm-offset-2 col-xs-offset-1" data-groups='["youtube"]'>
                         <figure class="portfolio-item">
@@ -22,7 +23,7 @@
                                     </div>
                                     <div class="media-body">
                                         <div class="modal_content">
-                                            <h3 class="media-heading text-center">François GUILLERME</h3> <!-- SQL prenom NOM -->
+                                            <h3 class="media-heading text-center"><?php echo Nom / prenom?></h3> <!-- SQL prenom NOM -->
                                             <p>Je vais te donner 10 p'tites secondes, pour bouger ton gros cul dégueulasse...</p> <!-- SQL citation -->
                                         </div>
                                     </div>
@@ -30,7 +31,7 @@
                             </a>
                         </figure>
                     </li>
-
+                    <?php } ?>
 
                     <!-- Modal -->
                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
