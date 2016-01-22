@@ -12,7 +12,6 @@ use \Manager\CompetenceManager;
 use \Manager\DiplomeManager;
 use \Manager\Experience_proManager;
 use \Manager\Fil_actuManager;
-use \Manager\MembreManager;
 use \Manager\PortfolioManager;
 use \Manager\Reseaux_divertissementManager;
 use \Manager\Reseaux_proManager;
@@ -79,6 +78,10 @@ class InscriptionController extends Controller
             // insert formulaire 1
             $manager->insert($_SESSION['wuser']); //enregistrement membre dans BDD
             $mail = $_SESSION['wuser']['mail']; // recuperation du mail dans une variable
+            
+            //suite insert formulaire 1
+            $membre = $manager->findMail($mail);  //recuperation du membre dans la table wusers via le mail
+
             
              
              // insert page formulaire 2
