@@ -36,7 +36,7 @@
                     </div>
                     <div class="form-group col-md-6 col-md-offset-3">
                         <label for="password">Password</label>     <!-- Ajout d'un  champs confirmation mot de passe ? -->
-                        <input type="text" class="form-control" id="password" placeholder="Password" name="wuser[mot_de_passe]" value="">
+                        <input type="password" class="form-control" id="password" placeholder="Password" name="wuser[mot_de_passe]" value="">
                     </div>
                 </div>
                 
@@ -79,12 +79,19 @@
                         <label for="webSite">Site web-perso</label>
                         <input type="text" class="form-control" id="webSite" placeholder="Site web-perso" name="membre[siteWeb]">
                     </div>
+                    <div class="form-group col-md-6">
+                        <label for="citation">Citation</label>
+                        <input type="text" class="form-control" id="citation" placeholder="Votre citation..." name="membre[citation]">
+                    </div>
+                    
+                </div>
+                <div class="row">
+                
+                </div>
                     <label id="spanAvatar"for="pics" class=" col-md-3">Avatar</label>
                     <div class="col-md-6">
                         <input type="file" class="" id="pics" name="membre[avatar]">
                     </div>
-                </div>
-                
                 <div id="bouton" class="row">
                     <div class="col-md-offset-9">
                         <input type="submit" class="btn btn-primary" name="suivant" value="Page suivante">

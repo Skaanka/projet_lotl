@@ -94,7 +94,7 @@
                         </div>
                         <div class="row form-group">
                             <img class="icons col-sm-2" src="../../img/icons/github_logo.jpg">
-                            <label for="github" class="col-sm-2 control-label celSoc">Muxy</label>
+                            <label for="github" class="col-sm-2 control-label celSoc">GitHub</label>
                             <div class="col-sm-8">
                                 <input type="text" class="form-control celSoc" id="github" placeholder="github" name="reseaux_pro[github]">
                             </div>
@@ -145,6 +145,13 @@
                             <label for="instagram" class="col-sm-2 control-label celSoc">Instagram</label>
                             <div class="col-sm-8">
                                 <input type="text" class="form-control celSoc" id="instagram" placeholder="Instagram" name="reseaux_social[instagram]">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <img class="icons col-sm-2" src="../../img/icons/instagram_logo.png">
+                            <label for="whatsapp" class="col-sm-2 control-label celSoc">What's app</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control celSoc" id="whatsapp" placeholder="What's app" name="reseaux_social[whatsapp]">
                             </div>
                         </div>
                         <div class="row form-group">

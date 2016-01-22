@@ -199,7 +199,6 @@
                   <div class="panel-body">
                     
                     <div class="form-group col-xs-12">
-                        <textarea class="form-control" rows="6" name="fil_actu[titre]"></textarea>
                         <textarea class="form-control" rows="6" name="fil_actu[message]"></textarea>
                     </div>
                   </div>
