@@ -11,17 +11,14 @@ class DefaultController extends Controller
 	 * Page d'accueil par défaut
 	 */
 	public function home() {
-		$this->show('default/home');
+		$this->show('home/home');
 	}
     
     public function accueil() {
-		$this->show('default/accueil');
+		$this->show('accueil/accueil');
 	}
     
-    public function inscription() {
-		$this->show('default/inscription');
-	}
-    
+	    
     public function profil() {
 		$this->show('default/profil');
 	}
@@ -30,8 +27,8 @@ class DefaultController extends Controller
 		$this->show('default/consultation');
 	}
     
-    public function filtre() {
-		$this->show('default/filtre');
+    public function validation() {
+		$this->show('home/validation');
 	}
 
 }
