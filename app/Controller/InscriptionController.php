@@ -38,17 +38,7 @@ class InscriptionController extends Controller
     {
         if(isset($_POST['suivant2'])) {
             $_SESSION['diplome'] = $_POST['diplome'];
-            $_SESSION['diplome2'] = $_POST['diplome2'];
-            $_SESSION['diplome3'] = $_POST['diplome3'];
-            $_SESSION['diplome4'] = $_POST['diplome4'];
-
             $_SESSION['experience_pro'] = $_POST['experience_pro'];
-            $_SESSION['experience_pro2'] = $_POST['experience_pro2'];
-            $_SESSION['experience_pro3'] = $_POST['experience_pro3'];
-            $_SESSION['experience_pro4'] = $_POST['experience_pro4'];
-            $_SESSION['experience_pro5'] = $_POST['experience_pro5'];
-            $_SESSION['experience_pro6'] = $_POST['experience_pro6'];
-
             $_SESSION['competence'] = $_POST['competence'];
             $_SESSION['fil_actu'] = $_POST['fil_actu'];
             $_SESSION['portfolio'] = $_POST['portfolio'];
@@ -85,35 +75,17 @@ class InscriptionController extends Controller
             
              
              // insert page formulaire 2
-             
             $_SESSION['diplome']['id_wuser'] = $membre['id']; // ajout d'une $key id_wuser dans la SESSION['diplome']
-            $_SESSION['diplome2']['id_wuser'] = $membre['id'];
-            $_SESSION['diplome3']['id_wuser'] = $membre['id'];
-            $_SESSION['diplome4']['id_wuser'] = $membre['id'];
-            
-           
+
             $manager = new DiplomeManager(); //selection de la table Diplome
             $manager->insert($_SESSION['diplome']);
-            $manager->insert($_SESSION['diplome2']);
-            $manager->insert($_SESSION['diplome3']);
-            $manager->insert($_SESSION['diplome4']);
-            
+
             
             $_SESSION['experience_pro']['id_wuser'] = $membre['id']; // ajout d'une $key id_wuser dans la SESSION['experience_pro']
-            $_SESSION['experience_pro2']['id_wuser'] = $membre['id']; 
-            $_SESSION['experience_pro3']['id_wuser'] = $membre['id']; 
-            $_SESSION['experience_pro4']['id_wuser'] = $membre['id']; 
-            $_SESSION['experience_pro5']['id_wuser'] = $membre['id']; 
-            $_SESSION['experience_pro6']['id_wuser'] = $membre['id']; 
-            
             
             $manager = new Experience_proManager(); //selection de la table experience_pros
             $manager->insert($_SESSION['experience_pro']);
-            $manager->insert($_SESSION['experience_pro2']);
-            $manager->insert($_SESSION['experience_pro3']);
-            $manager->insert($_SESSION['experience_pro4']);
-            $manager->insert($_SESSION['experience_pro5']);
-            $manager->insert($_SESSION['experience_pro6']);
+
             
             
             $_SESSION['competence']['id_wuser'] = $membre['id']; // ajout d'une $key id_wuser dans la SESSION['competence']
