@@ -6,7 +6,6 @@ use \W\Controller\Controller;
 
 class DefaultController extends Controller {
 
-
 	public function home() {
 		$this->show('home/home');
 	}
@@ -15,7 +14,6 @@ class DefaultController extends Controller {
 		$this->show('accueil/accueil');
 	}
     
-	    
     public function profil() {
 		$this->show('default/profil');
 	}
