@@ -2,8 +2,6 @@
 	
 	$w_routes = array(
         
-        // méthode, url, controlleur#action, nom de la route
-        
         ['GET', '/', 'Default#home', 'home'], // lorsque l'utilisateur n'est pas connecté
 		['GET', '/accueil', 'Default#accueil', 'accueil'], // quand l'utilisateur est connecté
         
