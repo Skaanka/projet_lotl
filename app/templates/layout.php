@@ -183,7 +183,7 @@
 		<div class="col-md-4 col-md-offset-4" id="menu-nav">
 
 			<div class="btn-group">
-				<button type="button" data-group="all" class="dropdown-toggle active portfolio-sorting  list-inline"> 
+				<button type="button" data-group="all" class="dropdown-toggle active portfolio-sorting  list-inline"> <!-- Le filtre fonctionne mais le bouton pose probleme -->
 					<img src="<?= $this->assetUrl('img/icons/ring.png') ?>" id="home" >
 				</button>
 			</div>
