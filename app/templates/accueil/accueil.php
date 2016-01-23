@@ -13,7 +13,7 @@
                 <ul class="portfolio-items list-unstyled" id="grid">
 
                    <?php foreach ($membres as $membre) { ?> <!-- boucle foreach pour afficher les utilisateur dans la table wusers -->
-                    <?php debug($membres);//die();?>
+                    <?php //debug($membre);//die();?>
                     <!-- Première vignette  -->
                     <li class="vignette col-md-4 col-sm-8 col-xs-10 col-md-offset-0 col-sm-offset-2 col-xs-offset-1" data-groups='["youtube"]'>
                         <figure class="portfolio-item">
@@ -33,7 +33,7 @@
                         </figure>
                     </li>
                     
-
+                   
 
                     <!-- Modal -->
                     <div class="modal fade" id="myModal<?php echo $membre['id']?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -46,16 +46,46 @@
                                 <div class="modal-body">
 
                                     <ul class="nav nav-tabs" role="tablist">
-                                        <li class="active"><a data-toggle="tab" href="#tabInfo">Infos</a></li>
-                                        <li><a data-toggle="tab" href="#tabDiv">Divertissements</a></li>
-                                        <li><a data-toggle="tab" href="#tabPro">Réseaux Pro.</a></li>
-                                        <li><a data-toggle="tab" href="#tabSoc">Réseaux Soc.</a></li>
+                                        <li class="active"><a data-toggle="tab" href="#tabInfo<?php echo $membre['id']?>">Infos</a></li>
+                                        <li><a data-toggle="tab" href="#tabDiv<?php echo $membre['id']?>">Divertissements</a></li>
+                                        <li><a data-toggle="tab" href="#tabPro<?php echo $membre['id']?>">Réseaux Pro.</a></li>
+                                        <li><a data-toggle="tab" href="#tabSoc<?php echo $membre['id']?>">Réseaux Soc.</a></li>
                                     </ul>
                                     <div class="tab-content">
-                                        <div id="tabInfo" class="tab-pane fade in active">Test tab infos</div>
-                                        <div id="tabDiv" class="tab-pane fade"><?php echo $membre['citation']?></div>
-                                        <div id="tabPro" class="tab-pane fade">Test tab pro</div>
-                                        <div id="tabSoc" class="tab-pane fade">Test tab soc</div>
+                                        <div id="tabInfo<?php echo $membre['id']?>" class="tab-pane fade in active">
+                                            Test tab infos
+                                        </div>
+                                        
+                                        <div id="tabDiv<?php echo $membre['id']?>" class="tab-pane fade">
+                                            <?php echo $membre['psn']?>
+                                            <?php echo $membre['xboxlive']?>
+                                            <?php echo $membre['steam']?>
+                                            <?php echo $membre['battlenet']?>
+                                            <?php echo $membre['compte_nintendo']?>
+                                            <?php echo $membre['origin']?>
+                                        </div>
+                                        
+                                        <div id="tabPro<?php echo $membre['id']?>" class="tab-pane fade">
+                                            <?php echo $membre['linkedin']?>
+                                            <?php echo $membre['viadeo']?>
+                                            <?php echo $membre['xing']?>
+                                            <?php echo $membre['muxi']?>
+                                            <?php echo $membre['github']?>
+                                        </div>
+                                        
+                                        <div id="tabSoc<?php echo $membre['id']?>" class="tab-pane fade">
+                                            <?php echo $membre['facebook']?>
+                                            <?php echo $membre['twitter']?>
+                                            <?php echo $membre['youtube']?>
+                                            <?php echo $membre['google']?>
+                                            <?php echo $membre['skype']?>
+                                            <?php echo $membre['instagram']?>
+                                            <?php echo $membre['whatsapp']?>
+                                            <?php echo $membre['pinterest']?>
+                                            <?php echo $membre['deezer']?>
+                                            <?php echo $membre['spotify']?>
+                                            <?php echo $membre['viber']?>
+                                        </div>
                                     </div>
 
                                 </div>
@@ -65,10 +95,9 @@
                             </div>
                         </div>
                     </div> <!-- Fin de modal -->
-
+ <?php } ?>
                     <!-- sizer -->
                     <li class="col-md-4 col-sm-4 col-xs-6 shuffle_sizer"></li>
-<?php } ?>
 
                 </ul> <!--end portfolio grid -->
             </div> <!--end row -->
