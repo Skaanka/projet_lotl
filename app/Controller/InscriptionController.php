@@ -68,11 +68,9 @@ class InscriptionController extends Controller
             // insert formulaire 1
             $manager->insert($_SESSION['wuser']); //enregistrement membre dans BDD
             $mail = $_SESSION['wuser']['mail']; // recuperation du mail dans une variable
-            
             //suite insert formulaire 1
             $membre = $manager->findMail($mail);  //recuperation du membre dans la table wusers via le mail
 
-            
              
              // insert page formulaire 2
             $_SESSION['diplome']['id_wuser'] = $membre['id']; // ajout d'une $key id_wuser dans la SESSION['diplome']

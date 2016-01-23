@@ -3,9 +3,20 @@ namespace Manager;
 
 class GeneralManager extends \W\Manager\Manager {
     
-    public function findAll($orderBy = "", $orderDir = "ASC") {
+    public function findUserAll($orderBy = "", $orderDir = "ASC") {
 
-		$sql = "SELECT * FROM wusers AS w, competences AS c, diplomes AS d, experience_pro AS x, fil_actus AS fl, portfolios AS p, reseaux_divertissements AS rd, reseaux_pros AS rp, reseaux_socials AS rs WHERE c.id_wuser = w.id ";
+		$sql = "SELECT \n"
+    . "	* \n"
+    . "FROM \n"
+    . "	`wusers` AS w \n"
+    . "	INNER JOIN competences AS c ON w.id = c.id_wuser \n"
+    . "	INNER JOIN diplomes AS d ON w.id = d.id_wuser \n"
+    . "	INNER JOIN experience_pros AS x ON w.id = x.id_wuser \n"
+    . "	INNER JOIN fil_actus AS fl ON w.id = fl.id_wuser \n"
+    . "	INNER JOIN portfolios AS p ON w.id = p.id_wuser \n"
+    . "	INNER JOIN reseaux_divertissements AS rd ON w.id = rd.id_wuser \n"
+    . "	INNER JOIN reseaux_pros AS rp ON w.id = rp.id_wuser \n"
+    . "	INNER JOIN reseaux_socials AS rs On w.id = rs.id_wuser";
 		if (!empty($orderBy)){
 
 			//sécurisation des paramètres, pour éviter les injections SQL

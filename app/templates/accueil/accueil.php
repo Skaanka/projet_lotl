@@ -13,11 +13,11 @@
                 <ul class="portfolio-items list-unstyled" id="grid">
 
                    <?php foreach ($membres as $membre) { ?> <!-- boucle foreach pour afficher les utilisateur dans la table wusers -->
-                    
+                    <?php debug($membres);//die();?>
                     <!-- Première vignette  -->
                     <li class="vignette col-md-4 col-sm-8 col-xs-10 col-md-offset-0 col-sm-offset-2 col-xs-offset-1" data-groups='["youtube"]'>
                         <figure class="portfolio-item">
-                            <a href="#" data-toggle="modal" data-target="#myModal">
+                            <a href="#" data-toggle="modal" data-target="#myModal<?php echo $membre['id']?>">
                                 <div class="media no-padding">
                                     <div class="media-left media-middle">
                                         <img class="media-object img-circle" src="<?= $this->assetUrl('img/cat.jpg')?>" alt="..."><!-- SQL image avatar-->
@@ -32,11 +32,11 @@
                             </a>
                         </figure>
                     </li>
-                    <?php } ?>
+                    
 
 
                     <!-- Modal -->
-                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal fade" id="myModal<?php echo $membre['id']?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -53,7 +53,7 @@
                                     </ul>
                                     <div class="tab-content">
                                         <div id="tabInfo" class="tab-pane fade in active">Test tab infos</div>
-                                        <div id="tabDiv" class="tab-pane fade">Test tab div</div>
+                                        <div id="tabDiv" class="tab-pane fade"><?php echo $membre['citation']?></div>
                                         <div id="tabPro" class="tab-pane fade">Test tab pro</div>
                                         <div id="tabSoc" class="tab-pane fade">Test tab soc</div>
                                     </div>
@@ -66,9 +66,9 @@
                         </div>
                     </div> <!-- Fin de modal -->
 
-
                     <!-- sizer -->
                     <li class="col-md-4 col-sm-4 col-xs-6 shuffle_sizer"></li>
+<?php } ?>
 
                 </ul> <!--end portfolio grid -->
             </div> <!--end row -->
