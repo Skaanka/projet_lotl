@@ -15,7 +15,8 @@
                    <?php foreach ($membres as $membre) { ?> <!-- boucle foreach pour afficher les utilisateur dans la table wusers -->
                     <?php //debug($membre);//die();?>
                     <!-- Première vignette  -->
-                    <li class="vignette col-md-4 col-sm-8 col-xs-10 col-md-offset-0 col-sm-offset-2 col-xs-offset-1" data-groups='["youtube"]'>
+                    <li class="vignette col-md-4 col-sm-8 col-xs-10 col-md-offset-0 col-sm-offset-2 col-xs-offset-1" data-groups='["all", "<?php if (!empty($membre["psn"])) { echo 'psn'; } ?>", "<?php if (!empty($membre["xboxlive"])) { echo 'xbox'; } ?>", "<?php if (!empty($membre["steam"])) { echo 'steam'; } ?>", "<?php if (!empty($membre["battlenet"])) { echo 'battle'; }?>", "<?php if (!empty($membre["compte_nintendo"])) { echo 'nintendo'; } ?>", "<?php if (!empty($membre["origin"])) { echo 'origin'; } ?>", "<?php if (!empty($membre["linkedin"])) { echo 'linkedin'; } ?>", "<?php if (!empty($membre["viadeo"])) { echo 'viadeo'; } ?>", "<?php if (!empty($membre["xing"])) { echo 'xing'; } ?>", "<?php if (!empty($membre["muxi"])) { echo 'muxy'; } ?>", "<?php if (!empty($membre["github"])) { echo 'github'; } ?>", "<?php if (!empty($membre["facebook"])) { echo 'facebook'; } ?>", "<?php if (!empty($membre["twitter"])) { echo 'twitter'; } ?>", "<?php if (!empty($membre["youtube"])) { echo 'youtube'; } ?>", "<?php if (!empty($membre["google"])) { echo 'google+'; } ?>", "<?php if (!empty($membre["skype"])) { echo 'skype'; } ?>", "<?php if (!empty($membre["instagram"])) { echo 'instagram'; } ?>", "<?php if (!empty($membre["pinterest"])) { echo 'pinterest'; } ?>", "<?php if (!empty($membre["deezer"])) { echo 'deezer'; } ?>", "<?php if (!empty($membre["spotify"])) { echo 'spotify'; } ?>", "<?php if (!empty($membre["viber"])) { echo 'viber'; } ?>"]'>
+                        
                         <figure class="portfolio-item">
                             <a href="#" data-toggle="modal" data-target="#myModal<?php echo $membre['id']?>">
                                 <div class="media no-padding">
@@ -42,6 +43,16 @@
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                     <h4 class="modal-title" id="myModalLabel">Consultation du profil</h4>
+                                    <?php echo $membre['prenom']?> <?php echo $membre['nom']?>
+                                    <?php echo $membre['mail']?>
+                                    <?php echo $membre['ddn']?>
+                                    <?php echo $membre['avatar']?>
+                                    <?php echo $membre['adresse']?>
+                                    <?php echo $membre['cp']?>
+                                    <?php echo $membre['ville']?>
+                                    <?php echo $membre['phone']?>
+                                    <?php echo $membre['siteWeb']?>
+                                    <?php echo $membre['citation']?>
                                 </div>
                                 <div class="modal-body">
 
@@ -53,7 +64,58 @@
                                     </ul>
                                     <div class="tab-content">
                                         <div id="tabInfo<?php echo $membre['id']?>" class="tab-pane fade in active">
-                                            Test tab infos
+                                            <?php echo $membre['competence']?>
+                                            
+                                            <?php echo $membre['annees_obt']?>
+                                            <?php echo $membre['intitule']?>
+                                            <?php echo $membre['ecole']?>
+                                            
+                                            <?php echo $membre['annees_obt2']?>
+                                            <?php echo $membre['intitule2']?>
+                                            <?php echo $membre['ecole2']?>
+                                            
+                                            <?php echo $membre['annees_obt3']?>
+                                            <?php echo $membre['intitule3']?>
+                                            <?php echo $membre['ecole3']?>
+                                            
+                                            <?php echo $membre['annees_obt4']?>
+                                            <?php echo $membre['intitule4']?>
+                                            <?php echo $membre['ecole4']?>
+                                            
+                                            
+                                            <?php echo $membre['periode_debut']?>
+                                            <?php echo $membre['periode_fin']?>
+                                            <?php echo $membre['compagnie']?>
+                                            <?php echo $membre['poste']?>
+                                            
+                                            <?php echo $membre['periode_debut2']?>
+                                            <?php echo $membre['periode_fin2']?>
+                                            <?php echo $membre['compagnie2']?>
+                                            <?php echo $membre['poste2']?>
+                                            
+                                            <?php echo $membre['periode_debut3']?>
+                                            <?php echo $membre['periode_fin3']?>
+                                            <?php echo $membre['compagnie3']?>
+                                            <?php echo $membre['poste3']?>
+                                            
+                                            <?php echo $membre['periode_debut4']?>
+                                            <?php echo $membre['periode_fin4']?>
+                                            <?php echo $membre['compagnie4']?>
+                                            <?php echo $membre['poste4']?>
+                                            
+                                            <?php echo $membre['periode_debut5']?>
+                                            <?php echo $membre['periode_fin5']?>
+                                            <?php echo $membre['compagnie5']?>
+                                            <?php echo $membre['poste5']?>
+                                            
+                                            <?php echo $membre['periode_debut6']?>
+                                            <?php echo $membre['periode_fin6']?>
+                                            <?php echo $membre['compagnie6']?>
+                                            <?php echo $membre['poste6']?>
+                                            
+                                            <?php echo $membre['ad_portfolio']?> <!-- portfolio -->
+                                            
+                                            <?php echo $membre['message']?> <!-- fil d'actu -->
                                         </div>
                                         
                                         <div id="tabDiv<?php echo $membre['id']?>" class="tab-pane fade">
