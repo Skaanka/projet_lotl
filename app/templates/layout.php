@@ -114,11 +114,13 @@
 		<!-- menu navbar en dropdown -->
 		<div class="col-md-4 col-md-offset-4" id="menu-nav">
 
-			<div class="btn-group">
-				<button type="button" data-group="all" class="dropdown-toggle active portfolio-sorting  list-inline"> <!-- Le filtre fonctionne mais le bouton pose probleme -->
-					<img src="<?= $this->assetUrl('img/icons/ring.png') ?>" id="home" >
-				</button>
-			</div>
+			<div class="btn-group btn_home">
+                <ul class="portfolio-sorting list-inline ul_btnHome">
+                    <li>
+                        <a href="#" data-group="all" class="active"><img src="<?= $this->assetUrl('img/icons/ring.png') ?>" id="home"></a>
+                    </li>
+                </ul>
+            </div>
 
 			<!-- bouton divertissement -->
 			<div class="btn-group" >
