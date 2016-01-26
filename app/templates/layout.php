@@ -12,6 +12,9 @@
 		<meta name="description" content="">  
 
 		<title><?= $this->e($title) ?></title>
+        
+        <!--Feuilles de style-->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
 		<!--Feuilles de style-->
 		<link href="<?= $this->assetUrl('css/bootstrap/bootstrap.css') ?>" rel="stylesheet">
@@ -32,95 +35,10 @@
 	</head>
 	<body>
 
-		<!-- Navbar Top-Screen-->
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#">Lord of the links</a>
-				</div>
-				<div id="navbar" class="navbar-collapse collapse">
-					<form class="navbar-form navbar-right" method="post">
 
-						<!-- Button trigger modal Profil -->
-						<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModalProfil">
-							Profil
-						</button>
+        <?= $this->section('navBar') ?>
+        <?= $this->section('carousel') ?>
 
-						<!-- Modal -->
-						<div class="modal fade" id="myModalProfil" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-							<div class="modal-dialog" role="document">
-								<div class="modal-content">
-									<div class="modal-header">
-										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-										<h4 class="modal-title" id="myModalLabel">Mon profil</h4>
-									</div>
-									<div class="modal-body">
-										...
-									</div>
-									<div class="modal-footer">
-										<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-										<button type="submit" name="profil" class="btn btn-primary">Sauvegarder</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					
-
-					
-						<!-- Button trigger modal -->
-						<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModalPost">
-							Post actu
-						</button>
-
-						<!-- Modal -->
-
-						<div class="modal fade" id="myModalPost" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-							<div class="modal-dialog" role="document">
-								<div class="modal-content">
-									<div class="modal-header">
-										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-										<h4 class="modal-title" id="myModalLabel">Poster une nouvelle actualitée.</h4>
-									</div>
-
-									<div class="modal-body">
-										<div class="container-fluid">
-
-											<textarea class="col-md-12" rows="10" placeholder="Votre nouvelle actu."></textarea>
-
-										</div>
-									</div>
-
-									<div class="modal-footer">
-										<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-										<button type="submit" name="actu" class="btn btn-primary">Sauvegarder</button>
-									</div>
-
-								</div>
-
-							</div>
-						</div>
-					
-
-					
-						<button type="submit" class="btn btn-success" name="deconnection">Déconnection</button>
-					</form>
-				</div><!--/.navbar-collapse -->
-			</div>
-		</nav>
-		<!-- Fin Navbar Top-Screen-->
-
-
-
-
-
-
-		<?= $this->section('carousel') ?>
 
 
 		<!-- menu navbar en dropdown -->
@@ -200,5 +118,9 @@
 		<script src="<?= $this->assetUrl('js/bootstrap.min.js') ?>"></script>
 		<script src="<?= $this->assetUrl('js/jquery.shuffle.min.js') ?>"></script>
 		<script type="text/javascript" src="<?= $this->assetUrl('js/script.js') ?>"></script>
+        
+        <!--Scripts-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	</body>
 </html>

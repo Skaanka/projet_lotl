@@ -1,5 +1,91 @@
 <?php $this->layout('layout', ['title' => 'accueil']) ?>
 
+<?php $this->start('navBar') ?>
+
+		<!-- Navbar Top-Screen-->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Lord of the links</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<form class="navbar-form navbar-right" method="post">
+
+						<!-- Button trigger modal Profil -->
+						<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModalProfil">
+							Profil
+						</button>
+
+						<!-- Modal -->
+						<div class="modal fade" id="myModalProfil" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+										<h4 class="modal-title" id="myModalLabel">Mon profil</h4>
+									</div>
+									<div class="modal-body">
+										...
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+										<button type="submit" name="profil" class="btn btn-primary">Sauvegarder</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					
+
+					
+						<!-- Button trigger modal -->
+						<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModalPost">
+							Post actu
+						</button>
+
+						<!-- Modal -->
+
+						<div class="modal fade" id="myModalPost" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+										<h4 class="modal-title" id="myModalLabel">Poster une nouvelle actualitée.</h4>
+									</div>
+
+									<div class="modal-body">
+										<div class="container-fluid">
+
+											<textarea class="col-md-12" rows="10" placeholder="Votre nouvelle actu."></textarea>
+
+										</div>
+									</div>
+
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+										<button type="submit" name="actu" class="btn btn-primary">Sauvegarder</button>
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+					
+
+					
+						<input type="submit" class="btn btn-success" name="deconnexion" value="déconnexion" formaction="<?= $this->url("logout")  ?>">
+					</form>
+				</div><!--/.navbar-collapse -->
+			</div>
+		</nav>
+		<!-- Fin Navbar Top-Screen-->
+<?php $this->stop('navBar') ?>
+
 <?php $this->start('carousel') ?>
 <!--<div id="header" class="container-fluid no-padding"><img src="<?php echo $this->assetUrl('img/bandeau.jpg') ?>" alt="" class="img-reponsive col-xs-12 no-padding"></div>-->
 
@@ -51,9 +137,12 @@
 <?php $this->stop('carousel') ?>
 
 
+
 <?php $this->start('main_content') ?>
 
-<div id="homeContent" class="row no-padding"> 
+<?php debug($_SESSION['user']); ?> 
+
+<div id="homeContent" class="row no-padding">
 
 	<!-- Portfolio -->
 	<section class="portfolio ">
@@ -66,22 +155,6 @@
 
 					<?php foreach ($membres as $membre) { ?> <!-- boucle foreach pour afficher les utilisateur dans la table wusers -->
 					<?php //debug($membres);//die();?>
-					<!-- Première vignette  -->
-					<!--<li class="vignette col-md-4 col-sm-6 col-xs-7 col-md-offset-0 col-sm-offset-3 col-xs-offset-2" data-groups='["all", "<?php if (!empty($membre["psn"])) { echo 'psn'; } ?>", "<?php if (!empty($membre["xboxlive"])) { echo 'xbox'; } ?>", "<?php if (!empty($membre["steam"])) { echo 'steam'; } ?>", "<?php if (!empty($membre["battlenet"])) { echo 'battle'; }?>", "<?php if (!empty($membre["compte_nintendo"])) { echo 'nintendo'; } ?>", "<?php if (!empty($membre["origin"])) { echo 'origin'; } ?>", "<?php if (!empty($membre["linkedin"])) { echo 'linkedin'; } ?>", "<?php if (!empty($membre["viadeo"])) { echo 'viadeo'; } ?>", "<?php if (!empty($membre["xing"])) { echo 'xing'; } ?>", "<?php if (!empty($membre["muxi"])) { echo 'muxy'; } ?>", "<?php if (!empty($membre["github"])) { echo 'github'; } ?>", "<?php if (!empty($membre["facebook"])) { echo 'facebook'; } ?>", "<?php if (!empty($membre["twitter"])) { echo 'twitter'; } ?>", "<?php if (!empty($membre["youtube"])) { echo 'youtube'; } ?>", "<?php if (!empty($membre["google"])) { echo 'google+'; } ?>", "<?php if (!empty($membre["skype"])) { echo 'skype'; } ?>", "<?php if (!empty($membre["instagram"])) { echo 'instagram'; } ?>", "<?php if (!empty($membre["pinterest"])) { echo 'pinterest'; } ?>", "<?php if (!empty($membre["deezer"])) { echo 'deezer'; } ?>", "<?php if (!empty($membre["spotify"])) { echo 'spotify'; } ?>", "<?php if (!empty($membre["viber"])) { echo 'viber'; } ?>"]'>
-<div class="outerBox">
-<a href="#" id="innerBoxA" class="innerBoxA" data-toggle="modal" data-target="#myModal<?php echo $membre['id']?>">
-<div class="chat">
-<img class="media-object chatchat img-circle" src="<?= $this->assetUrl('img/cat.jpg')?>" alt="...">
-</div>
-<div class="innerBox">
-<div class="chatcontent">
-<h3 class="text-center"><?php echo $membre['prenom']?> <?php echo $membre['nom']?></h3>
-<p><?php echo $membre['citation']?></p>
-</div> 
-</div>
-</a>
-</div>
-</li>-->
 
 					<li class="row col-md-4 offset-1 " data-groups='["all", "<?php if (!empty($membre["psn"])) { echo 'psn'; } ?>", "<?php if (!empty($membre["xboxlive"])) { echo 'xbox'; } ?>", "<?php if (!empty($membre["steam"])) { echo 'steam'; } ?>", "<?php if (!empty($membre["battlenet"])) { echo 'battle'; }?>", "<?php if (!empty($membre["compte_nintendo"])) { echo 'nintendo'; } ?>", "<?php if (!empty($membre["origin"])) { echo 'origin'; } ?>", "<?php if (!empty($membre["linkedin"])) { echo 'linkedin'; } ?>", "<?php if (!empty($membre["viadeo"])) { echo 'viadeo'; } ?>", "<?php if (!empty($membre["xing"])) { echo 'xing'; } ?>", "<?php if (!empty($membre["muxi"])) { echo 'muxy'; } ?>", "<?php if (!empty($membre["github"])) { echo 'github'; } ?>", "<?php if (!empty($membre["facebook"])) { echo 'facebook'; } ?>", "<?php if (!empty($membre["twitter"])) { echo 'twitter'; } ?>", "<?php if (!empty($membre["youtube"])) { echo 'youtube'; } ?>", "<?php if (!empty($membre["google"])) { echo 'google+'; } ?>", "<?php if (!empty($membre["skype"])) { echo 'skype'; } ?>", "<?php if (!empty($membre["instagram"])) { echo 'instagram'; } ?>", "<?php if (!empty($membre["pinterest"])) { echo 'pinterest'; } ?>", "<?php if (!empty($membre["deezer"])) { echo 'deezer'; } ?>", "<?php if (!empty($membre["spotify"])) { echo 'spotify'; } ?>", "<?php if (!empty($membre["viber"])) { echo 'viber'; } ?>"]'>
 						<figure class="portfolio-items">

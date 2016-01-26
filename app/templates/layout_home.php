@@ -12,6 +12,11 @@
         <meta name="description" content="">  
 
         <title><?= $this->e($title) ?></title>
+        
+        <!--Feuilles de style-->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        
+
 
         <!--Feuilles de style-->
         <link href="<?= $this->assetUrl('css/bootstrap/bootstrap.css') ?>" rel="stylesheet">
@@ -30,30 +35,7 @@
     </head>
     <body>
 
-        <nav id="navHome" class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <form class="navbar-form navbar-right">
-                        <div class="form-group">
-                            <input type="text" placeholder="Email" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="password" placeholder="Password" class="form-control">
-                        </div>
-                        <button type="submit" class="btn btn-success">Connexion</button>
-                        <button type="submit" class="btn btn-success">Inscription</button>
-                    </form>
-                </div><!--/.navbar-collapse -->
-            </div>
-        </nav>
+        <?= $this->section('navBar') ?>
 
         <?= $this->section('main_content') ?>
 
@@ -69,5 +51,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="<?= $this->assetUrl('js/bootstrap.min.js') ?>"></script>
         <script type="text/javascript" src="<?= $this->assetUrl('js/script.js') ?>"></script>
+        <!--Scripts-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     </body>
 </html>
