@@ -16,6 +16,8 @@
         <!--Feuilles de style-->
         <link href="<?= $this->assetUrl('css/bootstrap/bootstrap.css') ?>" rel="stylesheet">
         <link href="<?= $this->assetUrl('css/home/style.css') ?>" rel="stylesheet">
+        <!--fichier font google -->
+        <script src="//use.edgefonts.net/kotta-one.js"></script> 
 
 
         <!--font awesome-->
@@ -48,8 +50,8 @@
                         <div class="form-group">
                             <input type="password" placeholder="Password" class="form-control">
                         </div>
-                        <button type="submit" class="btn btn-success">Connexion</button>
-                        <button type="submit" class="btn btn-success">Inscription</button>
+                        <button type="submit" class="btn btn-navbut">Connexion</button>
+                        <button type="submit" class="btn btn-navbut">Inscription</button>
                     </form>
                 </div><!--/.navbar-collapse -->
             </div>

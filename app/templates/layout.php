@@ -48,7 +48,7 @@
 					<form class="navbar-form navbar-right">
 
 						<!-- Button trigger modal Profil -->
-						<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModalProfil">
+						<button type="button" class="btn btn-navbut" data-toggle="modal" data-target="#myModalProfil">
 							Profil
 						</button>
 
@@ -73,7 +73,7 @@
 
 
 						<!-- Button trigger modal -->
-						<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModalPost">
+						<button type="button" class="btn btn-navbut" data-toggle="modal" data-target="#myModalPost">
 							Post actu
 						</button>
 
@@ -96,7 +96,7 @@
 							</div>
 						</div>
 
-						<button type="submit" class="btn btn-success" name="deconnection">Déconnection</button>
+						<button type="submit" class="btn btn-navbut" name="deconnection">Déconnection</button>
 					</form>
 				</div><!--/.navbar-collapse -->
 			</div>
