@@ -34,9 +34,8 @@
 <![endif]-->
 	</head>
 	<body>
-
-
         <?= $this->section('navBar') ?>
+        
         <?= $this->section('carousel') ?>
 
 

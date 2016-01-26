@@ -21,8 +21,8 @@
                             <input type="password" name="wuser[mot_de_passe]" placeholder="Password" class="form-control">
                         </div>
 
-                        <input type="submit" name="connexion" class="btn btn-success" formaction="<?php echo $this->url('login') ?>" value="Connexion">
-                        <input type="submit" name="inscription" class="btn btn-success" formaction="<?php echo $this->url('inscription1') ?>" value="Inscription">
+                        <input type="submit" name="connexion" class="btn btn-navbut" formaction="<?php echo $this->url('login') ?>" value="Connexion">
+                        <input type="submit" name="inscription" class="btn btn-navbut" formaction="<?php echo $this->url('inscription1') ?>" value="Inscription">
 
                     </form>
                 </div><!--/.navbar-collapse -->
@@ -34,8 +34,8 @@
 
 <div id="homeContent" class="container-fluid no-padding">
     <div id="titleHome" class="row text-center">
-        <h1 col-xs-offset-1 col-xs-10>Bienvenue sur <br class="visible-xs"/>Lord of the link</h1> 
-        <span class=" col-xs-offset-1 col-xs-10">un réseau pour les trouver, un réseau pour les amener tous, et dans le web les lier.</span>
+        <span class="texte col-xs-offset-1 col-xs-10">Bienvenue sur <br class="visible-xs"/>Lord of the link</span> 
+        <span class=" col-xs-offset-1 col-xs-10"></span>
         
         <p class=" col-xs-offset-1 col-xs-10">TODO DESCRIPTION</p>
     </div>

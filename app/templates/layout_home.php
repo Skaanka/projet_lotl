@@ -21,6 +21,8 @@
         <!--Feuilles de style-->
         <link href="<?= $this->assetUrl('css/bootstrap/bootstrap.css') ?>" rel="stylesheet">
         <link href="<?= $this->assetUrl('css/home/style.css') ?>" rel="stylesheet">
+        <!--fichier font google -->
+        <script src="//use.edgefonts.net/kotta-one.js"></script> 
 
 
         <!--font awesome-->
@@ -35,7 +37,9 @@
     </head>
     <body>
 
+
         <?= $this->section('navBar') ?>
+
 
         <?= $this->section('main_content') ?>
 

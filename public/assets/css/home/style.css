@@ -8,6 +8,7 @@ TODO :
 
 html, body {
     height: 100%;
+    
 }
 body {
     min-height: 100%;
@@ -31,15 +32,70 @@ body {
 
 /* Contenu central */
  #homeContent {
-     padding-top: 40px;
-     background: url(../../img/comeon2.jpg) no-repeat center;
+     padding-top: 10px;
+     background: url(../../img/background_groupe.jpg) no-repeat center;
      overflow-x: hidden;
      background-size: cover;
 }
 
 #titleHome {
     padding-top: 100px;
+    font-family: kotta-one, serif bold;
+    
 }
+.texte{
+    background: url(public/assets/img/bienvenue.png)no-repeat;
+    font-size: 54px;
+    color: black;
+    
+}
+
+.btn-navbut { 
+  color: #ffffff; 
+  background-color: #37566E; 
+  border-color: #FFFFFF; 
+} 
+ 
+.btn-navbut:hover, 
+.btn-navbut:focus, 
+.btn-navbut:active, 
+.btn-navbut.active, 
+.open .dropdown-toggle.btn-navbut { 
+  color: #ffffff; 
+  background-color: #37566E; 
+  border-color: #FFFFFF; 
+} 
+ 
+.btn-navbut:active, 
+.btn-navbut.active, 
+.open .dropdown-toggle.btn-navbut { 
+  background-image: none; 
+} 
+ 
+.btn-navbut.disabled, 
+.btn-navbut[disabled], 
+fieldset[disabled] .btn-navbut, 
+.btn-navbut.disabled:hover, 
+.btn-navbut[disabled]:hover, 
+fieldset[disabled] .btn-navbut:hover, 
+.btn-navbut.disabled:focus, 
+.btn-navbut[disabled]:focus, 
+fieldset[disabled] .btn-navbut:focus, 
+.btn-navbut.disabled:active, 
+.btn-navbut[disabled]:active, 
+fieldset[disabled] .btn-navbut:active, 
+.btn-navbut.disabled.active, 
+.btn-navbut[disabled].active, 
+fieldset[disabled] .btn-navbut.active { 
+  background-color: #37566E; 
+  border-color: #FFFFFF; 
+} 
+ 
+.btn-navbut .badge { 
+  color: #37566E; 
+  background-color: #ffffff; 
+}
+
 
 /* A MODIFIER UNE FOIS CONTENU AJOUTER DANS LA PAGE*/
 blockquote { 
