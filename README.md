@@ -12,7 +12,7 @@ Pour télécharger le framework et en consulter la documentation :
 
 ------------------------------------------------------------------------------------------------------------------
 
-François Leuliet 
+François Guillerme
 Gilles Saley 
 Gregoire Gripon 
 Pascual Puga 
