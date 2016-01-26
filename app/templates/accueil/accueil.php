@@ -53,6 +53,8 @@
 
 <?php $this->start('main_content') ?>
 
+<?php debug($_SESSION['user']); ?> 
+
 <div id="homeContent" class="row no-padding">
 
     <!-- Portfolio -->

@@ -3,6 +3,8 @@
 namespace Controller;
 
 use \W\Controller\Controller;
+use \W\Manager\UserManager;
+use \W\Security\AuthentificationManager;
 
 class DefaultController extends Controller {
 
@@ -24,6 +26,21 @@ class DefaultController extends Controller {
     
     public function validation() {
 		$this->show('home/validation');
+	}
+    
+    public function login() {
+		if(isset($_POST['connexion'])) {
+			$auth = new AuthentificationManager();
+			$userManager = new UserManager();
+            
+			if($auth->isValidLoginInfo($_POST['wuser']['mail'], $_POST['wuser']['mot_de_passe'])) {
+				$user = $userManager->getUserByUsernameOrEmail($_POST['wuser']['mail']);
+				$auth->logUserIn($user);
+                //debug($user);die();
+				$this->redirectToRoute('accueil');
+			}
+		}
+		$this->show('home/home');
 	}
 
 }

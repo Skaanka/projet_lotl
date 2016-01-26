@@ -12,6 +12,9 @@
 		<meta name="description" content="">  
 
 		<title><?= $this->e($title) ?></title>
+        
+        <!--Feuilles de style-->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
 		<!--Feuilles de style-->
 		<link href="<?= $this->assetUrl('css/bootstrap/bootstrap.css') ?>" rel="stylesheet">
@@ -188,5 +191,9 @@
 		<script src="<?= $this->assetUrl('js/bootstrap.min.js') ?>"></script>
 		<script src="<?= $this->assetUrl('js/jquery.shuffle.min.js') ?>"></script>
 		<script type="text/javascript" src="<?= $this->assetUrl('js/script.js') ?>"></script>
+        
+        <!--Scripts-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	</body>
 </html>

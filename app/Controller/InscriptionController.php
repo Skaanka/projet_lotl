@@ -24,8 +24,21 @@ class InscriptionController extends Controller {
     
     public function inscription_1() 
     {
-        if(isset($_POST['suivant'])) {            
+        if(isset($_POST['suivant'])) {  
+            
+
+            //envoi image + changement nom_image
+            $uploads_dir = "C:/xampp/htdocs/projet_lotl/public/assets/img/uploads/";
+            //debug($_FILES);die();
+            $tmp_name = $_FILES['avatar']['tmp_name'];
+            $name = time() . "_" . $_FILES['avatar']['name'];
+            $result = move_uploaded_file($tmp_name, "$uploads_dir$name");
+            $_POST['wuser']['avatar'] = $name;
+            
+            
             $_SESSION['wuser'] = $_POST['wuser'];
+            //hashage du mdp
+            $_SESSION['wuser']['mot_de_passe'] = password_hash($_SESSION['wuser']['mot_de_passe'], PASSWORD_DEFAULT);
             //debug();die()
             $this->redirectToRoute('inscription2'); // si ok envoie page 2
         }

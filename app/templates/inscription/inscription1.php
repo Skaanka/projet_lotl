@@ -90,7 +90,7 @@
                 </div>
                     <label id="spanAvatar"for="pics" class=" col-md-3">Avatar</label>
                     <div class="col-md-6">
-                        <input type="file" class="" id="pics" name="wuser[avatar]">
+                        <input type="file" class="" id="pics" name="avatar">
                     </div>
                 <div id="bouton" class="row">
                     <div class="col-md-offset-9">
