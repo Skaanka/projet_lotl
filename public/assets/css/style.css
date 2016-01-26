@@ -99,9 +99,6 @@ body {
     border: 4px solid grey;
 }
 
-.innerBoxA { transition: all .2s ease-in-out; }
-.innerBoxA:hover { transform: scale(1.1); }
-
 .chat {
     margin-top: 9%;
     border-radius: 50%;
@@ -120,8 +117,12 @@ body {
     margin: 10% 4% 0 24%;
 }
 
-.portfolio-items > .vignette {
-    margin-bottom: 4%
+.vignette {
+    margin-bottom: 7%
+}
+
+.portfolio-items a {
+	color: white;
 }
 
 /* Fin Vignettes Membres */
@@ -152,7 +153,27 @@ body {
 }
 
 
+.vignette {
+    
+    background: url("../img/vignette.png");
+    background-size: cover;
+    width: 25em;
+    height: 12em;
+}
 
+.inside {
+   
+    width: 34em;
+    height: auto;
+}
+
+.avatar {
+  
+    height: 8em;
+    width: auto;
+    margin-top: 2em;
+    margin-left: 0.9em;
+}
 
 /* FIN DES TRAVAUX*/
 

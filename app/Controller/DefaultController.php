@@ -25,5 +25,11 @@ class DefaultController extends Controller {
     public function validation() {
 		$this->show('home/validation');
 	}
+	
+	public function post() {
+		if ( isset($_POST['profil']) ) {
+		$this->show('home/home');
+		}
+	}
 
 }

@@ -5,6 +5,8 @@
 
         ['GET', '/', 'Default#home', 'home'], // lorsque l'utilisateur n'est pas connecté
 		['GET', '/accueil', 'Accueil#getListeMembre', 'accueil'], // quand l'utilisateur est connecté
+		['POST', '/post', 'Default#post', 'post'], 
+		
 
         
 		['GET|POST', '/inscription1', 'Inscription#inscription_1', 'inscription1'],
@@ -15,6 +17,7 @@
 		['GET', '/consultation', 'Default#consultation', 'consultation'], // affichage des pages des utilisateurs du site 
 		['GET', '/filtre', 'Default#filtre', 'filtre'], // affichage des pages des utilisateurs du site 
 		['GET', '/validation', 'Default#validation', 'validation'], 
+		
         
         
 	);

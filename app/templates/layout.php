@@ -45,7 +45,7 @@
 					<a class="navbar-brand" href="#">Lord of the links</a>
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
-					<form class="navbar-form navbar-right">
+					<form class="navbar-form navbar-right" method="post">
 
 						<!-- Button trigger modal Profil -->
 						<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModalProfil">
@@ -65,19 +65,21 @@
 									</div>
 									<div class="modal-footer">
 										<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-										<button type="button" class="btn btn-primary">Sauvegarder</button>
+										<button type="submit" name="profil" class="btn btn-primary">Sauvegarder</button>
 									</div>
 								</div>
 							</div>
 						</div>
+					
 
-
+					
 						<!-- Button trigger modal -->
 						<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModalPost">
 							Post actu
 						</button>
 
 						<!-- Modal -->
+
 						<div class="modal fade" id="myModalPost" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 							<div class="modal-dialog" role="document">
 								<div class="modal-content">
@@ -85,17 +87,27 @@
 										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 										<h4 class="modal-title" id="myModalLabel">Poster une nouvelle actualitée.</h4>
 									</div>
+
 									<div class="modal-body">
-										...
+										<div class="container-fluid">
+
+											<textarea class="col-md-12" rows="10" placeholder="Votre nouvelle actu."></textarea>
+
+										</div>
 									</div>
+
 									<div class="modal-footer">
 										<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-										<button type="button" class="btn btn-primary">Sauvegarder</button>
+										<button type="submit" name="actu" class="btn btn-primary">Sauvegarder</button>
 									</div>
+
 								</div>
+
 							</div>
 						</div>
+					
 
+					
 						<button type="submit" class="btn btn-success" name="deconnection">Déconnection</button>
 					</form>
 				</div><!--/.navbar-collapse -->
@@ -105,22 +117,22 @@
 
 
 
-		
 
-		
-        <?= $this->section('carousel') ?>
+
+
+		<?= $this->section('carousel') ?>
 
 
 		<!-- menu navbar en dropdown -->
 		<div class="col-md-4 col-md-offset-4" id="menu-nav">
 
 			<div class="btn-group btn_home">
-                <ul class="portfolio-sorting list-inline ul_btnHome">
-                    <li>
-                        <a href="#" data-group="all" class="active"><img src="<?= $this->assetUrl('img/icons/ring.png') ?>" id="home"></a>
-                    </li>
-                </ul>
-            </div>
+				<ul class="portfolio-sorting list-inline ul_btnHome">
+					<li>
+						<a href="#" data-group="all" class="active"><img src="<?= $this->assetUrl('img/icons/ring.png') ?>" id="home"></a>
+					</li>
+				</ul>
+			</div>
 
 			<!-- bouton divertissement -->
 			<div class="btn-group" >
