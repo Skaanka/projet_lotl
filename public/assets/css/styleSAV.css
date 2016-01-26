@@ -1,0 +1,486 @@
+
+/* glyphicons */
+@font-face{
+	font-family: 'Glyphicons Halflings';
+	src: url('../font/glyphicons-halflings-regular.eot');
+	src: url('../font/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../font/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../font/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+
+
+/* Structure du site */
+/*============*/
+body {
+	display: block;
+	background: url(../img/lotl_background.jpg) no-repeat, center;
+	background-size: cover;
+}
+
+.no-padding{
+	padding: 0;
+	margin: 0;
+}
+
+#wrapper {
+	padding-top: 10em;
+	padding-bottom: 10em;
+	background: white;
+}
+ 
+#footer {
+	background: #222222;
+	height: 50px;
+}
+/* Fin de structure du site */
+/*============*/
+
+
+
+/* EN TRAVAUX */
+
+/* Cheats pour le modal */
+.modal-backdrop {
+	z-index: 0;
+}
+
+#wrapCar {
+	background: url(../img/bandeau_sombre.jpg) no-repeat center;
+	margin-top: 51px;
+}
+
+#wrapCar .item {
+	height: 500px;
+	color: white;
+}
+
+#wrapCar .item h1 {
+	padding-top: 10%;
+}
+
+.fondVignette {
+	height: 200px;
+	background: grey;
+}
+
+.media-left {
+	height: 200px;
+}
+
+.media {
+	background: grey;
+	color: white;
+}
+
+.vignette {
+	margin-bottom: 30px;
+}
+
+.vignette a {
+    text-decoration: none;
+}
+
+.nav-tabs li a {
+    color: black;
+    text-decoration: none;
+    background-color: #e3e2e2;
+}
+
+.portfolio {
+    margin-top: 5%;
+}
+
+.modal_content {
+    margin-top: 15%;
+}
+
+/* FIN DES TRAVAUX*/
+
+
+
+
+
+/* Connexion inscription */
+/*============*/
+#connexionbar {
+	padding: 8px;
+	background: black;
+}
+
+#connexion {
+	text-align: right;
+	font-size: 12px;
+}
+
+#wellcome {
+	color: white;
+}
+
+.glyphicon-ok-sign {
+	color: #01a801;
+	font-size: 20px;
+	top: 6px;
+}
+/* Fin de connexion inscription */
+/*============*/
+
+
+
+/* Barre de mini-boutons */
+/*============*/
+#menu-nav {
+	text-align: center;
+	background: grey;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: url(../img/decor01.jpg) center no-repeat;
+	background-size: cover;
+	border-radius: 5px;
+}
+
+.iconMini {
+	height: auto;
+	width: 20px;
+}
+
+#home {
+	height: 18px;
+	width: auto;
+}
+/* Fin de barre mini-boutons */
+/*============*/
+
+
+
+/* Boutons déroulants */
+/*============*/
+.dropdown-menu {
+	background: #9b9fa3;
+	font-weight: bold;
+}
+
+.dropdown-toggle {
+	background: #9b9fa3;
+	background-image: -webkit-linear-gradient(top, #9b9fa3, #0f0f0f);
+	background-image: -moz-linear-gradient(top, #9b9fa3, #0f0f0f);
+	background-image: -ms-linear-gradient(top, #9b9fa3, #0f0f0f);
+	background-image: -o-linear-gradient(top, #9b9fa3, #0f0f0f);
+	background-image: linear-gradient(to bottom, #9b9fa3, #0f0f0f);
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 15px;
+	padding: 5px 10px 5px 10px;
+	border: solid #c4c4c4 2px;
+	text-decoration: none;
+}
+
+.dropdown-toggle:hover {
+	background:#e3e3e3;
+	background-image: -webkit-linear-gradient(top, #e3e3e3, #45535c);
+	background-image: -moz-linear-gradient(top, #e3e3e3, #45535c);
+	background-image: -ms-linear-gradient(top, #e3e3e3, #45535c);
+	background-image: -o-linear-gradient(top, #e3e3e3, #45535c);
+	background-image: linear-gradient(to bottom, #e3e3e3, #45535c);
+	text-decoration: none;
+}
+/* Fin de boutons déroulants*/
+/*============*/
+
+
+
+/* Formulaires inscription */
+/*============*/
+#avatar {
+	float: left;
+}
+
+#avatarProfil {
+	height: 50px;
+	width: auto;
+}
+
+.rowProfil {
+	font-size: 24px;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.name {
+	font-size: 34px;
+}
+
+#rowName {
+	margin-top: 18em;
+}
+
+#avatarProfilName {
+	padding: 0;
+	height: 150px;
+	width: 150px;
+	border: 1px solid grey;
+	box-shadow: 5px 5px 5px grey;
+}
+
+#rowAdress {
+	margin-top: 4em;
+}
+
+#rowCom {
+	margin-top: 4em;
+}
+
+#espaceform {
+	padding-top: 5em;
+}
+
+#bouton {
+	padding-top: 4em;
+}
+
+
+#diplomes {
+	text-align: center;
+}
+
+.panel-heading {
+	text-align: center;
+}
+
+.icons {
+	height: auto;
+	width: 90px;
+}
+
+.celSoc {
+	margin-top: 2%;
+}
+
+
+
+/* Liste des membres */
+/*============*/
+#sidebarMembres {
+	background: url(../img/bggrille.png);
+	color: white;
+	height: 1200px;
+}
+
+#membres {
+	list-style-type: none;
+}
+
+#membres li {
+	padding: 10px 0 10px 0;
+	border-bottom: 1px solid white;
+}
+/* Fin de liste des membres */
+/*============*/
+
+
+
+/* Début animation membres*/
+/*============*/
+.animated:hover { 
+	-webkit-animation-duration: 0.2s; 
+	animation-duration: 0.2s; 
+	-webkit-animation-fill-mode: both; 
+	animation-fill-mode: both; 
+	-webkit-animation-timing-function: ease-out; 
+	animation-timing-function: ease-out; 
+	background: white;
+	color: black;
+	font-size: 20px;
+	padding-left: 30px;
+} 
+
+@-webkit-keyframes fadeInLeft { 
+	0% { 
+		opacity: 0; 
+		-webkit-transform: translateX(-5px); 
+	} 
+	100% { 
+		opacity: 1; 
+		-webkit-transform: translateX(10px); 
+	} 
+} 
+@keyframes fadeInLeft { 
+	0% { 
+		opacity: 0; 
+		transform: translateX(-5px); 
+	} 
+
+	100% { 
+		opacity: 1; 
+		transform: translateX(10px); 
+	} 
+} 
+.fadeInLeft:hover { 
+	-webkit-animation-name: fadeInLeft; 
+	animation-name: fadeInLeft; 
+}
+/* Fin animation membres*/
+/*============*/
+
+
+
+/* Page principale */
+/*============*/
+#homeContent {
+	height: 1200px;
+}
+
+#homeContent h1 {
+	margin: 10% 0 0 0;
+	color: white;
+}
+
+#homeContent h3 ,h2 {
+	color: white;
+}
+
+#homeContent button {
+	margin: 10% 0 0 0 ;
+}
+/* Fin de page principale */
+/*============*/
+
+
+
+/* Menu post-it droite */
+/*============*/
+#sidebarCat {
+	position: absolute;
+	top: 400px;
+	right: 5px;
+	background: url(../img/post-it-note-orange-final.jpg) no-repeat;
+	background-size: contain;
+	height: 230px;
+	padding-top: 65px;
+	float: right;
+	transform: rotate(5deg) translateX(200px);
+	font-family: 'Indie Flower', cursive;
+	transition: all ease-in-out 0.3s 0s;
+}
+
+#sidebarCatTire {
+	position: absolute;
+	font-size: 24px;
+	left: -30px;
+	top: 100px;
+	transform: rotate(270deg);
+}
+
+#sidebarCat:hover {
+	right: 190px;
+}
+
+#sidebarCat li{
+	padding-bottom: 0.5em;
+	list-style-type: none;
+	margin-left: -8%;
+	list-style-type: none;
+	font-size: 1.3em;
+}
+
+#sidebarCat a {
+	color: black;
+}
+/* Fin du menu post-it */
+/*============*/
+
+
+
+/* Profils des membres */
+/*============*/
+#titrePage {
+	margin-top: 20%;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.rowPage {
+	/*border: 1px solid black;*/
+	height: 6%;
+	margin-top: 5%;
+	margin-left: 12%;
+}
+
+.iconsPage {
+	margin-top: 5%;
+	margin-bottom: 0%;
+	height: auto;
+	width: 80px;
+}
+
+.labelPage {
+	margin-top: 2%;
+}
+
+.well {
+	margin-bottom: 3%;
+	box-shadow: 1px 1px 4px;
+	border: 1px solid grey;
+}
+
+.infoPage {
+	box-shadow: 3px 3px 4px grey;
+	border-radius: 5px;
+	background: #afbdbf;
+}
+
+#avatarPage {
+	margin-left: 30%;
+	padding: 0;
+	height: 150px;
+	width: 150px;
+	border: 1px solid grey;
+	box-shadow: 5px 5px 5px grey;
+}
+/* Fin profils membres */
+/*============*/
+
+
+
+/* Profil perso */
+/*============*/
+#titreProfilPerso {
+	margin-top: 20%;
+	margin-bottom: 4%;
+}
+
+#sousTitreProfilPerso {
+	margin-top: 5%;
+	margin-bottom: 2%;
+}
+
+.panel-default {
+	box-shadow: 2px 2px 4px black;
+}
+
+#rowNamePP {
+	font-size: 18px;
+	margin-top: 2%;
+}
+
+#avatarPP {
+	height: 100px;
+	width: auto;
+}
+
+#rowAdressPP {
+	font-size: 18px;
+	margin-top: 2%;
+}
+
+#rowComPP {
+	font-size: 18px;
+	margin-top: 2%;
+}
+/* Fin profil perso */
+/*============*/
+
+
+
+/* Profil perso social */
+/*============*/
+.panel-primary {
+	box-shadow: 2px 2px 4px black;
+}
+>>>>>>> accueil
