@@ -6,6 +6,7 @@
         ['GET', '/', 'Default#home', 'home'], // lorsque l'utilisateur n'est pas connecté
 		['GET', '/accueil', 'Accueil#getListeMembre', 'accueil'], // quand l'utilisateur est connecté
 		['GET|POST', '/', 'Default#login', 'login'], 
+        ['GET|POST', '/', 'Default#logout', 'logout'], 
 
         
 		['GET|POST', '/inscription1', 'Inscription#inscription_1', 'inscription1'],

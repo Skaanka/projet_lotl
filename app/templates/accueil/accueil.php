@@ -1,5 +1,79 @@
 <?php $this->layout('layout', ['title' => 'accueil']) ?>
 
+<?php $this->start('navBar') ?>
+
+		<!-- Navbar Top-Screen-->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Lord of the links</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<form class="navbar-form navbar-right">
+
+						<!-- Button trigger modal Profil -->
+						<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModalProfil">
+							Profil
+						</button>
+
+						<!-- Modal -->
+						<div class="modal fade" id="myModalProfil" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+										<h4 class="modal-title" id="myModalLabel">Mon profil</h4>
+									</div>
+									<div class="modal-body">
+										...
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+										<button type="button" class="btn btn-primary">Sauvegarder</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+						<!-- Button trigger modal -->
+						<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModalPost">
+							Post actu
+						</button>
+
+						<!-- Modal -->
+						<div class="modal fade" id="myModalPost" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+										<h4 class="modal-title" id="myModalLabel">Poster une nouvelle actualitée.</h4>
+									</div>
+									<div class="modal-body">
+										...
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+										<button type="button" class="btn btn-primary">Sauvegarder</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<input type="submit" class="btn btn-success" name="deconnexion" value="déconnexion" formaction="<?= $this->url("logout")  ?>">
+					</form>
+				</div><!--/.navbar-collapse -->
+			</div>
+		</nav>
+		<!-- Fin Navbar Top-Screen-->
+<?php $this->stop('navBar') ?>
+
 <?php $this->start('carousel') ?>
 <!--<div id="header" class="container-fluid no-padding"><img src="<?php echo $this->assetUrl('img/bandeau.jpg') ?>" alt="" class="img-reponsive col-xs-12 no-padding"></div>-->
 

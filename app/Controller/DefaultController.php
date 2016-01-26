@@ -42,5 +42,12 @@ class DefaultController extends Controller {
 		}
 		$this->show('home/home');
 	}
+    
+    public function logout() {
+        
+		$auth = new AuthentificationManager();
+		$auth->logUserOut();
+		$this->redirectToRoute('home');
+	}
 
 }

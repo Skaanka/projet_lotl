@@ -21,7 +21,7 @@
                             <input type="password" name="wuser[mot_de_passe]" placeholder="Password" class="form-control">
                         </div>
 
-                        <input type="submit" name="connexion" class="btn btn-success" formaction="<?php echo $this->url('logins') ?>" value="Connexion">
+                        <input type="submit" name="connexion" class="btn btn-success" formaction="<?php echo $this->url('login') ?>" value="Connexion">
                         <input type="submit" name="inscription" class="btn btn-success" formaction="<?php echo $this->url('inscription1') ?>" value="Inscription">
 
                     </form>
