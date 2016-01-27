@@ -14,7 +14,9 @@
 					</button>
 					<a class="navbar-brand" href="#">Lord of the links</a>
 				</div>
-				<div id="navbar" class="navbar-collapse collapse">
+                
+				<div id="navbar" class="navbar-collapse collapse"><!-- Début navbar-collapse -->
+                    
 					<form class="navbar-form navbar-right" method="post">
 
 						<!-- Button trigger modal Profil -->
@@ -22,7 +24,7 @@
 							Profil
 						</button>
 
-						<!-- Modal -->
+						<!-- Début Modal -->
 						<div class="modal fade" id="myModalProfil" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 							<div class="modal-dialog" role="document">
 								<div class="modal-content">
@@ -40,7 +42,7 @@
 								</div>
 							</div>
 						</div>
-					
+					   <!-- Fin Modal -->
 
 					
 						<!-- Button trigger modal -->
@@ -49,7 +51,6 @@
 						</button>
 
 						<!-- Modal -->
-
 						<div class="modal fade" id="myModalPost" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 							<div class="modal-dialog" role="document">
 								<div class="modal-content">
@@ -75,12 +76,12 @@
 
 							</div>
 						</div>
-					
+					   <!-- Fin Modal -->
 
 					
 						<input type="submit" class="btn btn-success" name="deconnexion" value="déconnexion" formaction="<?= $this->url("logout")  ?>">
 					</form>
-				</div><!--/.navbar-collapse -->
+				</div><!-- Fin navbar-collapse -->
 			</div>
 		</nav>
 		<!-- Fin Navbar Top-Screen-->
@@ -89,10 +90,11 @@
 <?php $this->start('carousel') ?>
 <!--<div id="header" class="container-fluid no-padding"><img src="<?php echo $this->assetUrl('img/bandeau.jpg') ?>" alt="" class="img-reponsive col-xs-12 no-padding"></div>-->
 
-<!-- Caroussel -->
+<!-- Début Caroussel -->
 <div id="wrapCar" class="col-md-8 col-md-offset-2">
 	<div id="carousel-example-generic" class="carousel slide " data-ride="carousel">
-		<!-- Indicators -->
+        
+		<!-- Début Indicators -->
 		<ol class="carousel-indicators">
 			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
 			<li data-target="#carousel-example-generic" data-slide-to="1"></li>
@@ -101,8 +103,9 @@
 			<li data-target="#carousel-example-generic" data-slide-to="4"></li>
 			<li data-target="#carousel-example-generic" data-slide-to="5"></li>
 		</ol>
-
-		<!-- Wrapper for slides -->
+        <!-- Fin Indicators -->
+        
+		<!-- Début Wrapper for slides -->
 		<div class="carousel-inner" role="listbox">
 			<div class="item text-center active">
 				<h1>HELLO WORLD</h1>
@@ -121,8 +124,9 @@
 			</div>
 			<?php } ?>
 		</div>
+        <!-- Fin Wrapper for slides -->
 
-		<!-- Controls -->
+		<!-- Début Controls -->
 		<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
 			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 			<span class="sr-only">Previous</span>
@@ -131,9 +135,11 @@
 			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 			<span class="sr-only">Next</span>
 		</a>
+        <!-- Fin Controls -->
 	</div>
 </div>
 <!-- Fin du caroussel -->
+
 <?php $this->stop('carousel') ?>
 
 

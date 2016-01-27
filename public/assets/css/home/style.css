@@ -118,10 +118,25 @@ blockquote {
     z-index: 0;
 }
 
+.rouge {
+    color: red;
+}
+
 .black {
     color: black;
 }
 
-.recup_mdp {
-    text-decoration: underline;
+.recup_mdp:hover {
+    cursor: pointer;
+    /* text-decoration: underline;*/
+    color: red;
+}
+
+.lien {
+    color: #FFF;
+}
+
+.lien:hover {
+    color: red;
+    text-decoration: none;
 }

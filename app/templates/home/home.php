@@ -2,7 +2,7 @@
 <?php $this->layout('layout_home', ['title' => 'home']) ?>
 
 <?php $this->start('navBar') ?>
-<nav id="navHome" class="navbar navbar-inverse navbar-fixed-top">
+<nav id="navHome" class="navbar navbar-inverse navbar-fixed-top"><!-- Début navbar -->
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -12,7 +12,7 @@
                 <span class="icon-bar"></span>
             </button>
         </div>
-        <div  id="navbar" class="navbar-collapse collapse">
+        <div  id="navbar" class="navbar-collapse collapse"><!-- Début navbar-collapse -->
             <form method="post" class="navbar-form navbar-right">
                 <div class="form-group">
                     <input type="text" name="wuser[mail]" placeholder="Email" class="form-control">
@@ -24,21 +24,18 @@
                 <input type="submit" name="connexion" class="btn btn-navbut" formaction="<?php echo $this->url('login') ?>" value="Connexion">
                 <input type="submit" name="inscription" class="btn btn-navbut" formaction="<?php echo $this->url('inscription1') ?>" value="Inscription">
 
-                <!--<button type="button" class="btn btn-info" data-toggle="modal" data-target="#maFenetreModale">Mot de passe oublié ?</button>-->
-
                 <!-- Button trigger modal -->
                 <span  class="recup_mdp" data-toggle="modal" data-target="#myModal">
                     Mot de passe oublié ?
                 </span>
 
-                <!-- Modal -->
-
+                <!-- Début Modal -->
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title black" id="myModalLabel">Mot de passe oublié</h4>
+                                <h3 class="modal-title rouge" id="myModalLabel">Mot de passe oublié</h3>
                             </div>
                             <div class="modal-body">
                                 <form>
@@ -55,10 +52,14 @@
                         </div>
                     </div>
                 </div>
+                <!-- Fin Modal -->
+                
             </form>
-        </div><!--/.navbar-collapse -->
+            
+        </div><!-- Fin navbar-collapse -->
     </div>
-</nav>
+</nav><!-- Fin navbar -->
+
 <?php $this->stop('navBar') ?>
 
 <?php $this->start('main_content') ?>

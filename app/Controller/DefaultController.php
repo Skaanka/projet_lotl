@@ -30,7 +30,7 @@ class DefaultController extends Controller {
 	}
 
     
-    public function login() {
+    public function login() { // connexion au site
 		if(isset($_POST['connexion'])) {
 			$auth = new AuthentificationManager();
 			$userManager = new UserManager();
@@ -38,21 +38,21 @@ class DefaultController extends Controller {
 			if($auth->isValidLoginInfo($_POST['wuser']['mail'], $_POST['wuser']['mot_de_passe'])) {
 				$user = $userManager->getUserByUsernameOrEmail($_POST['wuser']['mail']);
 				$auth->logUserIn($user);
-                //debug($user);die();
+                //debug($user);die(); // vérification 
 				$this->redirectToRoute('accueil');
 			}
 		}
 		$this->show('home/home');
 	}
     
-    public function logout() {
+    public function logout() { // déconnexion du site
         
 		$auth = new AuthentificationManager();
 		$auth->logUserOut();
 		$this->redirectToRoute('home');
 	}
     
-    public function sendgrid() {
+    public function sendgrid() { // l'envoi de mail
     
         $sendgrid = new SendGrid("");
         $mail    = new SendGrid\Email();

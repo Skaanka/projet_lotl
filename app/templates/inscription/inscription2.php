@@ -4,12 +4,9 @@
 
 
 
-
-
-
 <div id="wrapper" class="col-md-10">
+    
     <form class="col-md-10" method="POST">  
-
 
         <h1>Parcour pro.</h1><br/>
 
@@ -214,9 +211,6 @@
             </div>
         </div>
 
-
-
-
         <div id="bouton" class="row">
             <div class="">
                 <input type="submit" class="btn btn-default col-md-offset-1" value="Page précédente" name="precedent">
@@ -227,7 +221,5 @@
     </form>   
 
 </div>
-
-
 
 <?php $this->stop('main_content') ?>

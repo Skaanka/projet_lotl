@@ -2,17 +2,13 @@
 
 <?php $this->start('main_content') ?>
 	
-	
-
 
         <div id="wrapper" class="col-md-10">
+            
             <form method="POST" class="col-md-10">  
-
                 
                 <h1>Sociaux</h1><br/>
 
-           
-                
                 <div class="panel panel-default">
                     <div class="panel-heading"><h3>Divertissement</h3></div>
                     <div class="panel-body">
@@ -185,12 +181,6 @@
 
                     </div>
                 </div>
-                
-
-                
-                
-
-
 
                 <div id="bouton" class="row">
                     <div class="">
