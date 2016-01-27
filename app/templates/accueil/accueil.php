@@ -2,88 +2,557 @@
 
 <?php $this->start('navBar') ?>
 
-		<!-- Navbar Top-Screen-->
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#">Lord of the links</a>
-				</div>
-				<div id="navbar" class="navbar-collapse collapse">
-					<form class="navbar-form navbar-right" method="post">
+<!-- Navbar Top-Screen-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Lord of the links</a>
+		</div>
+		<div id="navbar" class="navbar-collapse collapse">
+			<form class="navbar-form navbar-right" method="post">
 
-						<!-- Button trigger modal Profil -->
-						<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModalProfil">
-							Profil
-						</button>
+				<!-- Button trigger modal Profil -->
+				<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModalProfil">
+					Profil
+				</button>
 
-						<!-- Modal -->
-						<div class="modal fade" id="myModalProfil" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-							<div class="modal-dialog" role="document">
-								<div class="modal-content">
-									<div class="modal-header">
-										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-										<h4 class="modal-title" id="myModalLabel">Mon profil</h4>
-									</div>
-									<div class="modal-body">
-										...
-									</div>
-									<div class="modal-footer">
-										<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-										<button type="submit" name="profil" class="btn btn-primary">Sauvegarder</button>
-									</div>
-								</div>
+				<!-- Modal -->
+				<div class="modal fade" id="myModalProfil" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="myModalLabel">Mon profil</h4>
 							</div>
-						</div>
-					
+							<div class="modal-body">
 
-					
-						<!-- Button trigger modal -->
-						<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModalPost">
-							Post actu
-						</button>
+								<!-- Début des onglets dans le modal consultation des profil membres -->
+								<ul class="nav nav-tabs" role="tablist">
+									<li class="active"><a data-toggle="tab" href="#tabMembreInfo<?php echo $_SESSION['user']['id']?>">Infos</a></li>
+									<li><a data-toggle="tab" href="#tabMembreDiv<?php echo $_SESSION['user']['id']?>">Divertissements</a></li>
+									<li><a data-toggle="tab" href="#tabMembrePro<?php echo $_SESSION['user']['id']?>">Réseaux Pro.</a></li>
+									<li><a data-toggle="tab" href="#tabMembreSoc<?php echo $_SESSION['user']['id']?>">Réseaux Soc.</a></li>
+								</ul>
+								<!-- Fin des onglets -->
 
-						<!-- Modal -->
 
-						<div class="modal fade" id="myModalPost" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-							<div class="modal-dialog" role="document">
-								<div class="modal-content">
-									<div class="modal-header">
-										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-										<h4 class="modal-title" id="myModalLabel">Poster une nouvelle actualitée.</h4>
-									</div>
+								<!-- Contenu des onglets -->
+								<div class="tab-content">
 
-									<div class="modal-body">
+									<!-- info -->
+									<div id="tabMembreInfo<?php echo $_SESSION['user']['id']?>" class="tab-pane fade in active">
 										<div class="container-fluid">
 
-											<textarea class="col-md-12" rows="10" placeholder="Votre nouvelle actu."></textarea>
+											<div class="row media">
+												<div class="col-md-12 espacementProfil">
+													<div class="media-left media-middle col-md-3 col-md-offset-1">
+														<img class="media-object img-circle" src="<?= $this->assetUrl('img/uploads/' .$_SESSION['user']['avatar'].'') ?>" alt="...">
+													</div>
+													<div class="media-body media-body-cheat col-md-6 col-md-offset-2">
+														<h2 class="media-heading"><?php echo $_SESSION['user']['prenom']?><br><?php echo $_SESSION['user']['nom']?></h2>
+														<h3 class="">Age: <?= $_SESSION['user']['ddn'] ?></h3>
+													</div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="panel panel-default col-md-12">
+													<div class="panel-body col-md-12">
+														<div class="col-md-6">
+															<p>Adresse : <?php echo $_SESSION['user']['adresse']?></p>
+															<p>Code postal : <?php echo $_SESSION['user']['cp']?></p>
+															<p>Ville : <?php echo $_SESSION['user']['ville']?></p>
+														</div>
+														<div class="col-md-6">
+															<p>Email: <?php echo $_SESSION['user']['mail']?></p>
+															<p>Telephone: <?php echo $_SESSION['user']['phone']?></p>
+															<p>Site Web: <?php echo $_SESSION['user']['siteWeb']?></p>
+														</div>
+													</div>
+
+
+
+
+													<?php //echo $_SESSION['user']['ad_portfolio']?> <!-- portfolio --> <!-- il faut connecter la table wuser à la table portfolios -->
+													<?php echo $portfolio['ad_portfolio'] ?>
+
+													<?php //echo $_SESSION['user']['message']?> <!-- fil d'actu --> <!-- il faut connecter la table wuser à la table fil_actus -->
+													<?php // echo $fil_actus['message'] ?> <!-- ajouter le fil_actus dans la fenêtre modale post actu-->
+													<?php //debug($fil_actus);die(); ?>
+													
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="panel panel-default col-md-12">
+													<div class="panel-body col-md-12">
+														<h2><span class="glyphicon glyphicon-education" aria-hidden="true"></span>&nbsp;<u>Diplomes: </u></h2><br>
+														<table class="table">
+															<tr>
+																<td><b>Années <br>d'obtention</b></td>
+																<td><b>Intitulé</b></td>
+																<td><b>Ecole</b></td>
+															</tr>
+															<tr>
+																<td><?php echo $_SESSION['user']['annees_obt']?></td>
+																<td><?php echo $_SESSION['user']['intitule']?></td>
+																<td><?php echo $_SESSION['user']['ecole']?></td>
+															</tr>
+															<tr>
+																<td><?php echo $_SESSION['user']['annees_obt2']?></td>
+																<td><?php echo $_SESSION['user']['intitule2']?></td>
+																<td><?php echo $_SESSION['user']['ecole2']?></td>
+															</tr>
+															<tr>
+																<td><?php echo $_SESSION['user']['annees_obt3']?></td>
+																<td><?php echo $_SESSION['user']['intitule3']?></td>
+																<td><?php echo $_SESSION['user']['ecole3']?></td>
+															</tr>
+															<tr>
+																<td><?php echo $_SESSION['user']['annees_obt4']?></td>
+																<td><?php echo $_SESSION['user']['intitule4']?></td>
+																<td><?php echo $_SESSION['user']['ecole4']?></td>
+															</tr>
+														</table>
+													</div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="panel panel-default col-md-12">
+													<div class="panel-body col-md-12">
+														<h2><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>&nbsp; <u>Experiences Professionnelles: </u></h2><br>
+														<table class="table">
+															<tr>
+																<td><b>Début</b></td>
+																<td><b>Fin</b></td>
+																<td><b>Compagnie</b></td>
+																<td><b>Poste</b></td>
+															</tr>
+															<tr>
+																<td><?php echo $_SESSION['user']['periode_debut']?></td>
+																<td><?php echo $_SESSION['user']['periode_fin']?></td>
+																<td><?php echo $_SESSION['user']['compagnie']?></td>
+																<td><?php echo $_SESSION['user']['poste']?></td>
+															</tr>
+															<tr>
+																<td><?php echo $_SESSION['user']['periode_debut2']?></td>
+																<td><?php echo $_SESSION['user']['periode_fin2']?></td>
+																<td><?php echo $_SESSION['user']['compagnie2']?></td>
+																<td><?php echo $_SESSION['user']['poste2']?></td>
+															</tr>
+															<tr>
+																<td><?php echo $_SESSION['user']['periode_debut3']?></td>
+																<td><?php echo $_SESSION['user']['periode_fin3']?></td>
+																<td><?php echo $_SESSION['user']['compagnie3']?></td>
+																<td><?php echo $_SESSION['user']['poste3']?></td>
+															</tr>
+															<tr>
+																<td><?php echo $_SESSION['user']['periode_debut4']?></td>
+																<td><?php echo $_SESSION['user']['periode_fin4']?></td>
+																<td><?php echo $_SESSION['user']['compagnie4']?></td>
+																<td><?php echo $_SESSION['user']['poste4']?></td>
+															</tr>
+															<tr>
+																<td><?php echo $_SESSION['user']['periode_debut5']?></td>
+																<td><?php echo $_SESSION['user']['periode_fin5']?></td>
+																<td><?php echo $_SESSION['user']['compagnie5']?></td>
+																<td><?php echo $_SESSION['user']['poste5']?></td>
+															</tr>
+															<tr>
+																<td><?php echo $_SESSION['user']['periode_debut6']?></td>
+																<td><?php echo $_SESSION['user']['periode_fin6']?></td>
+																<td><?php echo $_SESSION['user']['compagnie6']?></td>
+																<td><?php echo $_SESSION['user']['poste6']?></td>
+															</tr>
+														</table>
+													</div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="panel panel-default col-md-12">
+													<div class="panel-body col-md-12">
+														<h2><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>&nbsp;<u>Compétences: </u></h2><br>
+														<p><?php echo $_SESSION['user']['competence']?></p>
+
+													</div>
+												</div>
+											</div>
+
+
+
+										</div>
+									</div><!-- Fin contenu onglet info -->
+
+
+									<!-- Divertissements -->
+									<div id="tabMembreDiv<?php echo $_SESSION['user']['id']?>" class="tab-pane fade">
+										<div class="container-fluid">
+
+											<h3 class="text-center espacementProfil">Vous trouverez ici les plate-formes de jeux en ligne que <?php echo $_SESSION['user']['prenom']?> utilise.</h3>
+
+											<div class="panel panel-default col-md-12 espacementProfil">
+												<div class="panel-body">
+													<div class="row">
+
+														<div class="col-md-6 affichageLiens">
+															<div class="col-md-10 col-md-offset-2">
+																<h4>PSN</h4>
+															</div>
+															<div class="col-md-2">
+																<img src="<?= $this->assetUrl('img/icons/PSN_logo.png') ?>" class="iconeMembre">
+															</div>
+															<div class="well well-sm col-md-8">
+																<?php echo $_SESSION['user']['psn']?>
+															</div>
+														</div>
+
+														<div class="col-md-6 affichageLiens">
+															<div class="col-md-10 col-md-offset-2">
+																<h4>XboxLive</h4>
+															</div>
+															<div class="col-md-2">
+																<img src="<?= $this->assetUrl('img/icons/Xbox_logo.png') ?>" class="iconeMembre">
+															</div>
+															<div class="well well-sm col-md-8">
+																<?php echo $_SESSION['user']['xboxlive']?>
+															</div>
+														</div>
+
+														<div class="col-md-6 affichageLiens">
+															<div class="col-md-10 col-md-offset-2">
+																<h4>Steam</h4>
+															</div>
+															<div class="col-md-2">
+																<img src="<?= $this->assetUrl('img/icons/Steam_logo.png') ?>" class="iconeMembre">
+															</div>
+															<div class="well well-sm col-md-8">
+																<?php echo $_SESSION['user']['steam']?>
+															</div>
+														</div>
+
+														<div class="col-md-6 affichageLiens">
+															<div class="col-md-10 col-md-offset-2">
+																<h4>Battle.net</h4>
+															</div>
+															<div class="col-md-2">
+																<img src="<?= $this->assetUrl('img/icons/battlenet_logo.png') ?>" class="iconeMembre">
+															</div>
+															<div class="well well-sm col-md-8">
+																<?php echo $_SESSION['user']['battlenet']?>
+															</div>
+														</div>
+
+														<div class="col-md-6 affichageLiens">
+															<div class="col-md-10 col-md-offset-2">
+																<h4>Origin</h4>
+															</div>
+															<div class="col-md-2">
+																<img src="<?= $this->assetUrl('img/icons/origin1_logo.png') ?>" class="iconeMembre">
+															</div>
+															<div class="well well-sm col-md-8">
+																<?php echo $_SESSION['user']['origin']?>
+															</div>
+														</div>
+
+														<div class="col-md-6 affichageLiens">
+															<div class="col-md-10 col-md-offset-2">
+																<h4>Nintendo</h4>
+															</div>
+															<div class="col-md-2">
+																<img src="<?= $this->assetUrl('img/icons/Nintendo_logo.png') ?>" class="iconeMembre">
+															</div>
+															<div class="well well-sm col-md-8">
+																<?php echo $_SESSION['user']['compte_nintendo']?>
+															</div>
+														</div>
+
+
+
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div><!-- Fin contenu onglet divertissements -->
+
+
+									<!-- Pro -->
+									<div id="tabMembrePro<?php echo $_SESSION['user']['id']?>" class="tab-pane fade">
+										<div class="container-fluid">
+
+											<h3 class="text-center espacementProfil">Vous trouverez ici les réseaux professionnel que <?php echo $_SESSION['user']['prenom']?> utilise.</h3>
+
+											<div class="panel panel-default col-md-12 espacementProfil">
+												<div class="panel-body">
+													<div class="row">
+
+														<div class="col-md-6 affichageLiens">
+															<div class="col-md-10 col-md-offset-2">
+																<h4>LinkedIn</h4>
+															</div>
+															<div class="col-md-2">
+																<img src="<?= $this->assetUrl('img/icons/linkedin_logo.png') ?>" class="iconeMembre">
+															</div>
+															<div class="well well-sm col-md-8">
+																<?php echo $_SESSION['user']['linkedin']?>
+															</div>
+														</div>
+
+														<div class="col-md-6 affichageLiens">
+															<div class="col-md-10 col-md-offset-2">
+																<h4>Viadéo</h4>
+															</div>
+															<div class="col-md-2">
+																<img src="<?= $this->assetUrl('img/icons/viadeo_logo.png') ?>" class="iconeMembre">
+															</div>
+															<div class="well well-sm col-md-8">
+																<?php echo $_SESSION['user']['viadeo']?>
+															</div>
+														</div>
+
+														<div class="col-md-6 affichageLiens">
+															<div class="col-md-10 col-md-offset-2">
+																<h4>Xing</h4>
+															</div>
+															<div class="col-md-2">
+																<img src="<?= $this->assetUrl('img/icons/xing_logo.png') ?>" class="iconeMembre">
+															</div>
+															<div class="well well-sm col-md-8">
+																<?php echo $_SESSION['user']['xing']?>
+															</div>
+														</div>
+
+														<div class="col-md-6 affichageLiens">
+															<div class="col-md-10 col-md-offset-2">
+																<h4>Muxi</h4>
+															</div>
+															<div class="col-md-2">
+																<img src="<?= $this->assetUrl('img/icons/muxi_logo.jpg') ?>" class="iconeMembre">
+															</div>
+															<div class="well well-sm col-md-8">
+																<?php echo $_SESSION['user']['muxi']?>
+															</div>
+														</div>
+
+														<div class="col-md-6 affichageLiens">
+															<div class="col-md-10 col-md-offset-2">
+																<h4>GitHub</h4>
+															</div>
+															<div class="col-md-2">
+																<img src="<?= $this->assetUrl('img/icons/github_logo.jpg') ?>" class="iconeMembre">
+															</div>
+															<div class="well well-sm col-md-8">
+																<?php echo $_SESSION['user']['github']?>
+															</div>
+														</div>
+
+													</div>
+												</div>
+											</div>
 
 										</div>
 									</div>
 
-									<div class="modal-footer">
-										<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-										<button type="submit" name="actu" class="btn btn-primary">Sauvegarder</button>
-									</div>
 
+									<!-- Sociaux -->
+									<div id="tabMembreSoc<?php echo $_SESSION['user']['id']?>" class="tab-pane fade">
+										<div class="container-fluid">
+
+											<h3 class="text-center espacementProfil">Vous trouverez ici les réseaux sociaux que <?php echo $_SESSION['user']['prenom']?> utilise.</h3>
+
+											<div class="panel panel-default col-md-12 espacementProfil">
+												<div class="panel-body">
+													<div class="row">
+
+														<div class="col-md-6 affichageLiens">
+															<div class="col-md-10 col-md-offset-2">
+																<h4>Facebook</h4>
+															</div>
+															<div class="col-md-2">
+																<img src="<?= $this->assetUrl('img/icons/FB_logo.png') ?>" class="iconeMembre">
+															</div>
+															<div class="well well-sm col-md-8">
+																<?php echo $_SESSION['user']['facebook']?>
+															</div>
+														</div>
+
+														<div class="col-md-6 affichageLiens">
+															<div class="col-md-10 col-md-offset-2">
+																<h4>Twitter</h4>
+															</div>
+															<div class="col-md-2">
+																<img src="<?= $this->assetUrl('img/icons/Twitter-logo.png') ?>" class="iconeMembre">
+															</div>
+															<div class="well well-sm col-md-8">
+																<?php echo $_SESSION['user']['twitter']?>
+															</div>
+														</div>
+
+														<div class="col-md-6 affichageLiens">
+															<div class="col-md-10 col-md-offset-2">
+																<h4>Youtube</h4>
+															</div>
+															<div class="col-md-2">
+																<img src="<?= $this->assetUrl('img/icons/YouTube-logo.png') ?>" class="iconeMembre">
+															</div>
+															<div class="well well-sm col-md-8">
+																<?php echo $_SESSION['user']['youtube']?>
+															</div>
+														</div>
+
+														<div class="col-md-6 affichageLiens">
+															<div class="col-md-10 col-md-offset-2">
+																<h4>Google+</h4>
+															</div>
+															<div class="col-md-2">
+																<img src="<?= $this->assetUrl('img/icons/googleplus_logo.png') ?>" class="iconeMembre">
+															</div>
+															<div class="well well-sm col-md-8">
+																<?php echo $_SESSION['user']['google']?>
+															</div>
+														</div>
+
+														<div class="col-md-6 affichageLiens">
+															<div class="col-md-10 col-md-offset-2">
+																<h4>Skype</h4>
+															</div>
+															<div class="col-md-2">
+																<img src="<?= $this->assetUrl('img/icons/skype_logo.png') ?>" class="iconeMembre">
+															</div>
+															<div class="well well-sm col-md-8">
+																<?php echo $_SESSION['user']['skype']?>
+															</div>
+														</div>
+
+														<div class="col-md-6 affichageLiens">
+															<div class="col-md-10 col-md-offset-2">
+																<h4>Instagram</h4>
+															</div>
+															<div class="col-md-2">
+																<img src="<?= $this->assetUrl('img/icons/instagram_logo.png') ?>" class="iconeMembre">
+															</div>
+															<div class="well well-sm col-md-8">
+																<?php echo $_SESSION['user']['instagram']?>
+															</div>
+														</div>
+
+														<div class="col-md-6 affichageLiens">
+															<div class="col-md-10 col-md-offset-2">
+																<h4>Pinterest</h4>
+															</div>
+															<div class="col-md-2">
+																<img src="<?= $this->assetUrl('img/icons/pinterest-logo.png') ?>" class="iconeMembre">
+															</div>
+															<div class="well well-sm col-md-8">
+																<?php echo $_SESSION['user']['pinterest']?>
+															</div>
+														</div>
+
+														<div class="col-md-6 affichageLiens">
+															<div class="col-md-10 col-md-offset-2">
+																<h4>Spotify</h4>
+															</div>
+															<div class="col-md-2">
+																<img src="<?= $this->assetUrl('img/icons/spotify_logo.png') ?>" class="iconeMembre">
+															</div>
+															<div class="well well-sm col-md-8">
+																<?php echo $_SESSION['user']['spotify']?>
+															</div>
+														</div>
+
+														<div class="col-md-6 affichageLiens">
+															<div class="col-md-10 col-md-offset-2">
+																<h4>Deezer</h4>
+															</div>
+															<div class="col-md-2">
+																<img src="<?= $this->assetUrl('img/icons/deezer_logo.png') ?>" class="iconeMembre">
+															</div>
+															<div class="well well-sm col-md-8">
+																<?php echo $_SESSION['user']['deezer']?>
+															</div>
+														</div>
+
+														<div class="col-md-6 affichageLiens">
+															<div class="col-md-10 col-md-offset-2">
+																<h4>Viber</h4>
+															</div>
+															<div class="col-md-2">
+																<img src="<?= $this->assetUrl('img/icons/viber-logo.png') ?>" class="iconeMembre">
+															</div>
+															<div class="well well-sm col-md-8">
+																<?php echo $_SESSION['user']['viber']?>
+															</div>
+														</div>
+
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div><!-- Fin du contenu onglet réseaux sociaux -->
 								</div>
 
+
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+								<button type="submit" name="profil" class="btn btn-primary">Sauvegarder</button>
 							</div>
 						</div>
-					
+					</div>
+				</div>
 
-					
-						<input type="submit" class="btn btn-success" name="deconnexion" value="déconnexion" formaction="<?= $this->url("logout")  ?>">
-					</form>
-				</div><!--/.navbar-collapse -->
-			</div>
-		</nav>
-		<!-- Fin Navbar Top-Screen-->
+
+
+				<!-- Button trigger modal -->
+				<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModalPost">
+					Post actu
+				</button>
+
+				<!-- Modal -->
+
+				<div class="modal fade" id="myModalPost" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="myModalLabel">Poster une nouvelle actualitée.</h4>
+							</div>
+
+							<div class="modal-body">
+								<div class="container-fluid">
+
+									<textarea class="col-md-12" rows="10" placeholder="Votre nouvelle actu."></textarea>
+
+								</div>
+							</div>
+
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+								<button type="submit" name="actu" class="btn btn-primary">Sauvegarder</button>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+
+
+
+				<input type="submit" class="btn btn-success" name="deconnexion" value="déconnexion" formaction="<?= $this->url("logout")  ?>">
+			</form>
+		</div><!--/.navbar-collapse -->
+	</div>
+</nav>
+<!-- Fin Navbar Top-Screen-->
 <?php $this->stop('navBar') ?>
 
 <?php $this->start('carousel') ?>
@@ -236,9 +705,9 @@
 																<p>Site Web: <?php echo $membre['siteWeb']?></p>
 															</div>
 														</div>
-														
 
-														
+
+
 
 														<?php echo $membre['ad_portfolio']?> <!-- portfolio -->
 
@@ -280,7 +749,7 @@
 														</div>
 													</div>
 												</div>
-												
+
 												<div class="row">
 													<div class="panel panel-default col-md-12">
 														<div class="panel-body col-md-12">
@@ -332,13 +801,13 @@
 														</div>
 													</div>
 												</div>
-												
+
 												<div class="row">
 													<div class="panel panel-default col-md-12">
 														<div class="panel-body col-md-12">
 															<h2><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>&nbsp;<u>Compétences: </u></h2><br>
 															<p><?php echo $membre['competence']?></p>
-															
+
 														</div>
 													</div>
 												</div>

@@ -39,8 +39,9 @@ class InscriptionController extends Controller {
             $_SESSION['wuser'] = $_POST['wuser'];
             //hashage du mdp
             $_SESSION['wuser']['mot_de_passe'] = password_hash($_SESSION['wuser']['mot_de_passe'], PASSWORD_DEFAULT);
-            //debug();die()
+            //debug($_SESSION['wuser']);die();
             $this->redirectToRoute('inscription2'); // si ok envoie page 2
+
         }
         
         $this->show('inscription/inscription1'); // redirection si erreur

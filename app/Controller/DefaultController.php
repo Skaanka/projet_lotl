@@ -13,6 +13,7 @@ class DefaultController extends Controller {
 	}
 
     public function accueil() {
+
 		$this->show('accueil/accueil');
 	}
     

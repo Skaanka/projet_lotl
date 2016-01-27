@@ -6,6 +6,7 @@ use \W\Controller\Controller;
 use \W\Manager\UserManager;
 use \Manager\GeneralManager;
 use \Manager\Fil_actuManager;
+use \Manager\PortfolioManager;
 
 class AccueilController extends Controller {
 
@@ -15,8 +16,22 @@ class AccueilController extends Controller {
 		$membres = $manager->findUserAll();
         $manager2 = new Fil_actuManager(); // execute la function qui recupere TOUTES les tables de la bdd
 		$fil_actus = $manager2->findLastFilActu5();
+		
+
+
 		$this->show('accueil/accueil', ['membres' => $membres, 'fil_actus' => $fil_actus]);
+
 	}
-    
-    
+		public function getProfilPerso() { //affiche tout les membres de la bdd
+		$user = $this->getUser();
+		$manager = new GeneralManager(); // execute la function qui recupere TOUTES les tables de la bdd
+		$ProfilPerso = $manager->findProfilPerso();
+
+		$this->show('accueil/accueil',['ProfilPerso' => $ProfilPerso]);
+			
+			
+		}
+	
+
+
 }
