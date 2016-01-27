@@ -111,3 +111,17 @@ blockquote {
 .hauteurFooter {
     padding-top: 10px;
 }
+
+
+/* FENETRE MODALE */
+.modal-backdrop {
+    z-index: 0;
+}
+
+.black {
+    color: black;
+}
+
+.recup_mdp {
+    text-decoration: underline;
+}

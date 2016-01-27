@@ -2,6 +2,8 @@
 
 namespace Controller;
 
+require __DIR__ . '/../Helper/Helper.php';
+use Helper\Helper;
 //Manager Default
 use \W\Controller\Controller;
 use \W\Manager\Manager;
@@ -115,6 +117,9 @@ class InscriptionController extends Controller {
             $_SESSION['reseaux_divertissement']['id_wuser'] = $membre['id']; // ajout d'une $key id_wuser dans la SESSION['reseaux_divertissement']
             $manager = new Reseaux_divertissementManager(); //selection de la table reseaux_divertissements
             $manager->insert($_SESSION['reseaux_divertissement']);
+            
+            
+            Helper::mail("saurondumordorlouviers@gmail.com", "Une demande d'inscritption à été effectué sur LOTL", "Veuillez valider ou non l'inscritpion.");
             
             $this->redirectToRoute('validation');
             

@@ -6,6 +6,7 @@ use \W\Controller\Controller;
 use \W\Manager\UserManager;
 use \W\Security\AuthentificationManager;
 
+
 class DefaultController extends Controller {
 
 	public function home() {
@@ -50,5 +51,18 @@ class DefaultController extends Controller {
 		$auth->logUserOut();
 		$this->redirectToRoute('home');
 	}
+    
+    public function sendgrid() {
+    
+        $sendgrid = new SendGrid("");
+        $mail    = new SendGrid\Email();
 
+        $mail->addTo("test@sendgrid.com")
+        ->setFrom("saurondumordorlouviers@gmail.com")
+        ->setSubject("Demande d'inscription validée !!!")
+        ->setHtml("and easy to do anywhere, even with PHP");
+
+        $sendgrid->send($mail);
+    }
+    
 }

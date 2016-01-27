@@ -14,8 +14,7 @@
         <title><?= $this->e($title) ?></title>
         
         <!--Feuilles de style-->
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-        
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">       
 
 
         <!--Feuilles de style-->
@@ -45,7 +44,7 @@
 
         <div id="footerHome" class="container-fluid no-padding">
             <div class="col-xs-6 col-sm-offset-8 col-sm-1  col-lg-offset-8 col-lg-1 text-center hauteurFooter">
-                <a href="">Contact</a>
+                <a href="mailto:saurondumordorlouviers@gmail.com">Contact</a>
             </div>
             <div class="col-xs-6 col-sm-1 col-lg-1 text-center hauteurFooter">
                 <a href="http://www.jesuistondev.fr/" target="_blank">JeSuisTonDev.fr</a>
@@ -55,8 +54,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="<?= $this->assetUrl('js/bootstrap.min.js') ?>"></script>
         <script type="text/javascript" src="<?= $this->assetUrl('js/script.js') ?>"></script>
-        <!--Scripts-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        
     </body>
 </html>
