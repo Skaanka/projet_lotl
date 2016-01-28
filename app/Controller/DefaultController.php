@@ -80,7 +80,7 @@ class DefaultController extends Controller {
                     $id = $result["id"];
                     $token = md5(uniqid(rand(), true));
 
-		              debug($result);die;
+		            debug($result);die;
                     $manager = new TokenManager();
                     $manager->insert(['tokens']['id_wuser']);
                     $manager->insert($_POST['tokens']['token']);
