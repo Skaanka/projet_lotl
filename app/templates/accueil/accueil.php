@@ -80,7 +80,7 @@
 
 
 													<?php //echo $_SESSION['user']['ad_portfolio']?> <!-- portfolio --> <!-- il faut connecter la table wuser à la table portfolios -->
-													<?php echo $portfolio['ad_portfolio'] ?>
+													<?php  //$portfolio['ad_portfolio'] ?>
 
 													<?php //echo $_SESSION['user']['message']?> <!-- fil d'actu --> <!-- il faut connecter la table wuser à la table fil_actus -->
 													<?php // echo $fil_actus['message'] ?> <!-- ajouter le fil_actus dans la fenêtre modale post actu-->
@@ -526,13 +526,13 @@
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 								<h4 class="modal-title" id="myModalLabel">Poster une nouvelle actualitée.</h4>
 							</div>
-							<form action="<?php $this->url('postactu') ?>" method="POST">
+							<form action="<?= $this->url('postactu') ?>" method="POST">
 							<div class="modal-body">
 								<div class="container-fluid">
 									<h1>Ma dernière actualité : </h1>
 									<div class="panel panel-default">
 										<div class="panel-body">
-											<p>- <?php echo $_SESSION['user']['infos']['message'] ?></p>
+											<p><?php echo $_SESSION['user']['statut'] ?></p>
 										</div>
 									</div>
 
@@ -553,7 +553,7 @@
 
 
 
-				<input type="submit" class="btn btn-success" name="deconnexion" value="déconnexion" formaction="<?= $this->url("logout")  ?>">
+				<a href="<?= $this->url("logout")  ?>"><button class="btn btn-success">Déconnexion</button></a>
 			</div>
 		</div><!--/.navbar-collapse -->
 	</div>

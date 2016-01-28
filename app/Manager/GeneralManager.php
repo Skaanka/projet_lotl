@@ -6,7 +6,7 @@ class GeneralManager extends \W\Manager\Manager {
     public function findUserAll($orderBy = "", $orderDir = "ASC") {
 
         $sql = "SELECT \n"
-            . "	w.id, w.prenom, w.nom, w.ddn, w.mail, w.ddn, w.avatar, w.adresse, w.cp, w.ville, w.phone, w.siteWeb, w.citation, c.*, d.*, x.*, fl.*, p.*, rd.*, rp.*, rs.*"
+            . "	w.id, w.prenom, w.nom, w.ddn, w.mail, w.ddn, w.avatar, w.adresse, w.cp, w.ville, w.phone, w.siteWeb, w.citation, w.statut, c.*, d.*, x.*, fl.*, p.*, rd.*, rp.*, rs.*"
             . "FROM \n"
             . "	`wusers` AS w \n"
             . "	INNER JOIN competences AS c ON w.id = c.id_wuser \n"

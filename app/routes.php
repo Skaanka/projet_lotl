@@ -5,12 +5,12 @@
         // GESTION DES PAGES ACCUEIL
         ['GET', '/', 'Default#home', 'home'], // lorsque l'utilisateur n'est pas connecté
 		['GET', '/accueil', 'Accueil#getListeMembre', 'accueil'], // quand l'utilisateur est connecté
-		['GET', '/accueil/[:id]', 'Accueil#getPortfolio', 'accueil_portfolio'], // quand l'utilisateur est connecté
-		['GET', '/postactu', 'Accueil#postActu', 'postactu'], // lorsque l'utilisateur n'est pas connecté
+//		['GET', '/accueil/[:id]', 'Accueil#getPortfolio', 'accueil_portfolio'], // quand l'utilisateur est connecté
+		['POST', '/postactu', 'Accueil#postActu', 'postactu'], // lorsque l'utilisateur n'est pas connecté
         
         // GESTION LOGIN / LOGOFF
-		['GET|POST', '/', 'Default#login', 'login'], 
-        ['GET|POST', '/', 'Default#logout', 'logout'], 
+		['GET|POST', '/login', 'Default#login', 'login'], 
+        ['GET|POST', '/logout', 'Default#logout', 'logout'], 
 
         // GESTION FORMULAIRE INSCRIPTION
 		['GET|POST', '/inscription1', 'Inscription#inscription_1', 'inscription1'],

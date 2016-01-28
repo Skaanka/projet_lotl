@@ -4,6 +4,8 @@ namespace Controller;
 
 use \W\Controller\Controller;
 use \W\Manager\UserManager;
+use W\Security\AuthentificationManager;
+
 use \Manager\GeneralManager;
 use \Manager\Fil_actuManager;
 use \Manager\PortfolioManager;
@@ -11,6 +13,7 @@ use \Manager\PortfolioManager;
 class AccueilController extends Controller {
 
 	public function getListeMembre() { //affiche tout les membres de la bdd
+		$this->allowTo(['admin','user']);
 		$user = $this->getUser();
 		$manager = new GeneralManager(); // execute la function qui recupere TOUTES les tables de la bdd
 		$membres = $manager->findUserAll();
@@ -33,10 +36,14 @@ class AccueilController extends Controller {
 	}
 	
 	public function postActu() {
-		if (isset ($_POST['actu']) ){
+		if (isset($_POST['actu']) ){
 			$manager = new UserManager();
-			$manager->update($_POST['message' => $_POST['texte_actu']);
+			$manager->update(['statut' => $_POST['texte_actu']], $_SESSION['user']['id']);
+			$auth_manager = new AuthentificationManager(); 
+			$auth_manager->refreshUser();
+			$this->redirectToRoute('accueil');
 		}
+		$this->redirectToRoute('accueil');
 	}
 
 
