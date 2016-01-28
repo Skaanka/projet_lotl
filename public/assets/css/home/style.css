@@ -111,3 +111,33 @@ blockquote {
 .hauteurFooter {
     padding-top: 10px;
 }
+
+
+
+/* Inscription1 */
+.wrappInscr {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2% 0;
+}
+
+#avatarInscr {
+    margin: 10% 0;
+    border: 4px solid #3c2f2f;
+}
+
+#bouton {
+    margin: 10% 0;
+}
+
+.inscr2, h1, label {
+    color: black;
+}
+
+.jumbotron h1, p{
+    color: black;
+}
+
+.form-control {
+	border: 2px solid #3c2f2f;
+}
+/* Fin inscription 1*/

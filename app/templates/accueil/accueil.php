@@ -15,7 +15,7 @@
 			<a class="navbar-brand" href="#">Lord of the links</a>
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
-			<div class="navbar-form navbar-right" >
+			<form class="navbar-form navbar-right" method="post">
 
 				<!-- Button trigger modal Profil -->
 				<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModalProfil">
@@ -34,10 +34,10 @@
 
 								<!-- Début des onglets dans le modal consultation des profil membres -->
 								<ul class="nav nav-tabs" role="tablist">
-									<li class="active"><a data-toggle="tab" href="#tabMembreInfo<?php echo $_SESSION['user']['id']?>">Infos</a></li>
-									<li><a data-toggle="tab" href="#tabMembreDiv<?php echo $_SESSION['user']['id']?>">Divertissements</a></li>
-									<li><a data-toggle="tab" href="#tabMembrePro<?php echo $_SESSION['user']['id']?>">Réseaux Pro.</a></li>
-									<li><a data-toggle="tab" href="#tabMembreSoc<?php echo $_SESSION['user']['id']?>">Réseaux Soc.</a></li>
+									<li class="active"><a data-toggle="tab" href="#tabMembreInfo<?php //echo $_SESSION['user']['id']?>">Infos</a></li>
+									<li><a data-toggle="tab" href="#tabMembreDiv<?php //echo $_SESSION['user']['id']?>">Divertissements</a></li>
+									<li><a data-toggle="tab" href="#tabMembrePro<?php //echo $_SESSION['user']['id']?>">Réseaux Pro.</a></li>
+									<li><a data-toggle="tab" href="#tabMembreSoc<?php //echo $_SESSION['user']['id']?>">Réseaux Soc.</a></li>
 								</ul>
 								<!-- Fin des onglets -->
 
@@ -46,7 +46,7 @@
 								<div class="tab-content">
 
 									<!-- info -->
-									<div id="tabMembreInfo<?php echo $_SESSION['user']['id']?>" class="tab-pane fade in active">
+									<div id="tabMembreInfo<?php //echo $_SESSION['user']['id']?>" class="tab-pane fade in active">
 										<div class="container-fluid">
 
 											<div class="row media">
@@ -56,7 +56,7 @@
 													</div>
 													<div class="media-body media-body-cheat col-md-6 col-md-offset-2">
 														<h2 class="media-heading"><?php echo $_SESSION['user']['prenom']?><br><?php echo $_SESSION['user']['nom']?></h2>
-														<h3 class="">Age: <?php echo DateTime::createFromFormat('Y-m-d', $_SESSION['user']['ddn'])->diff(new DateTime('now'))->y; ?></h3>
+														<h3 class="">Age: <?= $_SESSION['user']['ddn'] ?></h3>
 													</div>
 												</div>
 											</div>
@@ -80,12 +80,12 @@
 
 
 													<?php //echo $_SESSION['user']['ad_portfolio']?> <!-- portfolio --> <!-- il faut connecter la table wuser à la table portfolios -->
-													<?php  //$portfolio['ad_portfolio'] ?>
+													<?php echo $portfolio['ad_portfolio'] ?>
 
 													<?php //echo $_SESSION['user']['message']?> <!-- fil d'actu --> <!-- il faut connecter la table wuser à la table fil_actus -->
 													<?php // echo $fil_actus['message'] ?> <!-- ajouter le fil_actus dans la fenêtre modale post actu-->
 													<?php //debug($fil_actus);die(); ?>
-
+													
 												</div>
 											</div>
 
@@ -100,24 +100,24 @@
 																<td><b>Ecole</b></td>
 															</tr>
 															<tr>
-																<td><?php echo $_SESSION['user']['infos']['annees_obt']?></td>
-																<td><?php echo $_SESSION['user']['infos']['intitule']?></td>
-																<td><?php echo $_SESSION['user']['infos']['ecole']?></td>
+																<td><?php echo $_SESSION['user']['annees_obt']?></td>
+																<td><?php echo $_SESSION['user']['intitule']?></td>
+																<td><?php echo $_SESSION['user']['ecole']?></td>
 															</tr>
 															<tr>
-																<td><?php echo $_SESSION['user']['infos']['annees_obt2']?></td>
-																<td><?php echo $_SESSION['user']['infos']['intitule2']?></td>
-																<td><?php echo $_SESSION['user']['infos']['ecole2']?></td>
+																<td><?php echo $_SESSION['user']['annees_obt2']?></td>
+																<td><?php echo $_SESSION['user']['intitule2']?></td>
+																<td><?php echo $_SESSION['user']['ecole2']?></td>
 															</tr>
 															<tr>
-																<td><?php echo $_SESSION['user']['infos']['annees_obt3']?></td>
-																<td><?php echo $_SESSION['user']['infos']['intitule3']?></td>
-																<td><?php echo $_SESSION['user']['infos']['ecole3']?></td>
+																<td><?php echo $_SESSION['user']['annees_obt3']?></td>
+																<td><?php echo $_SESSION['user']['intitule3']?></td>
+																<td><?php echo $_SESSION['user']['ecole3']?></td>
 															</tr>
 															<tr>
-																<td><?php echo $_SESSION['user']['infos']['annees_obt4']?></td>
-																<td><?php echo $_SESSION['user']['infos']['intitule4']?></td>
-																<td><?php echo $_SESSION['user']['infos']['ecole4']?></td>
+																<td><?php echo $_SESSION['user']['annees_obt4']?></td>
+																<td><?php echo $_SESSION['user']['intitule4']?></td>
+																<td><?php echo $_SESSION['user']['ecole4']?></td>
 															</tr>
 														</table>
 													</div>
@@ -136,40 +136,40 @@
 																<td><b>Poste</b></td>
 															</tr>
 															<tr>
-																<td><?php echo $_SESSION['user']['infos']['periode_debut']?></td>
-																<td><?php echo $_SESSION['user']['infos']['periode_fin']?></td>
-																<td><?php echo $_SESSION['user']['infos']['compagnie']?></td>
-																<td><?php echo $_SESSION['user']['infos']['poste']?></td>
+																<td><?php echo $_SESSION['user']['periode_debut']?></td>
+																<td><?php echo $_SESSION['user']['periode_fin']?></td>
+																<td><?php echo $_SESSION['user']['compagnie']?></td>
+																<td><?php echo $_SESSION['user']['poste']?></td>
 															</tr>
 															<tr>
-																<td><?php echo $_SESSION['user']['infos']['periode_debut2']?></td>
-																<td><?php echo $_SESSION['user']['infos']['periode_fin2']?></td>
-																<td><?php echo $_SESSION['user']['infos']['compagnie2']?></td>
-																<td><?php echo $_SESSION['user']['infos']['poste2']?></td>
+																<td><?php echo $_SESSION['user']['periode_debut2']?></td>
+																<td><?php echo $_SESSION['user']['periode_fin2']?></td>
+																<td><?php echo $_SESSION['user']['compagnie2']?></td>
+																<td><?php echo $_SESSION['user']['poste2']?></td>
 															</tr>
 															<tr>
-																<td><?php echo $_SESSION['user']['infos']['periode_debut3']?></td>
-																<td><?php echo $_SESSION['user']['infos']['periode_fin3']?></td>
-																<td><?php echo $_SESSION['user']['infos']['compagnie3']?></td>
-																<td><?php echo $_SESSION['user']['infos']['poste3']?></td>
+																<td><?php echo $_SESSION['user']['periode_debut3']?></td>
+																<td><?php echo $_SESSION['user']['periode_fin3']?></td>
+																<td><?php echo $_SESSION['user']['compagnie3']?></td>
+																<td><?php echo $_SESSION['user']['poste3']?></td>
 															</tr>
 															<tr>
-																<td><?php echo $_SESSION['user']['infos']['periode_debut4']?></td>
-																<td><?php echo $_SESSION['user']['infos']['periode_fin4']?></td>
-																<td><?php echo $_SESSION['user']['infos']['compagnie4']?></td>
-																<td><?php echo $_SESSION['user']['infos']['poste4']?></td>
+																<td><?php echo $_SESSION['user']['periode_debut4']?></td>
+																<td><?php echo $_SESSION['user']['periode_fin4']?></td>
+																<td><?php echo $_SESSION['user']['compagnie4']?></td>
+																<td><?php echo $_SESSION['user']['poste4']?></td>
 															</tr>
 															<tr>
-																<td><?php echo $_SESSION['user']['infos']['periode_debut5']?></td>
-																<td><?php echo $_SESSION['user']['infos']['periode_fin5']?></td>
-																<td><?php echo $_SESSION['user']['infos']['compagnie5']?></td>
-																<td><?php echo $_SESSION['user']['infos']['poste5']?></td>
+																<td><?php echo $_SESSION['user']['periode_debut5']?></td>
+																<td><?php echo $_SESSION['user']['periode_fin5']?></td>
+																<td><?php echo $_SESSION['user']['compagnie5']?></td>
+																<td><?php echo $_SESSION['user']['poste5']?></td>
 															</tr>
 															<tr>
-																<td><?php echo $_SESSION['user']['infos']['periode_debut6']?></td>
-																<td><?php echo $_SESSION['user']['infos']['periode_fin6']?></td>
-																<td><?php echo $_SESSION['user']['infos']['compagnie6']?></td>
-																<td><?php echo $_SESSION['user']['infos']['poste6']?></td>
+																<td><?php echo $_SESSION['user']['periode_debut6']?></td>
+																<td><?php echo $_SESSION['user']['periode_fin6']?></td>
+																<td><?php echo $_SESSION['user']['compagnie6']?></td>
+																<td><?php echo $_SESSION['user']['poste6']?></td>
 															</tr>
 														</table>
 													</div>
@@ -180,7 +180,7 @@
 												<div class="panel panel-default col-md-12">
 													<div class="panel-body col-md-12">
 														<h2><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>&nbsp;<u>Compétences: </u></h2><br>
-														<p><?php echo $_SESSION['user']['infos']['competence']?></p>
+														<p><?php echo $_SESSION['user']['competence']?></p>
 
 													</div>
 												</div>
@@ -193,7 +193,7 @@
 
 
 									<!-- Divertissements -->
-									<div id="tabMembreDiv<?php echo $_SESSION['user']['id']?>" class="tab-pane fade">
+									<div id="tabMembreDiv<?php //echo $_SESSION['user']['id']?>" class="tab-pane fade">
 										<div class="container-fluid">
 
 											<h3 class="text-center espacementProfil">Vous trouverez ici les plate-formes de jeux en ligne que <?php echo $_SESSION['user']['prenom']?> utilise.</h3>
@@ -210,7 +210,7 @@
 																<img src="<?= $this->assetUrl('img/icons/PSN_logo.png') ?>" class="iconeMembre">
 															</div>
 															<div class="well well-sm col-md-8">
-																<?php echo $_SESSION['user']['infos']['psn']?>
+																<?php echo $_SESSION['user']['psn']?>
 															</div>
 														</div>
 
@@ -222,7 +222,7 @@
 																<img src="<?= $this->assetUrl('img/icons/Xbox_logo.png') ?>" class="iconeMembre">
 															</div>
 															<div class="well well-sm col-md-8">
-																<?php echo $_SESSION['user']['infos']['xboxlive']?>
+																<?php echo $_SESSION['user']['xboxlive']?>
 															</div>
 														</div>
 
@@ -234,7 +234,7 @@
 																<img src="<?= $this->assetUrl('img/icons/Steam_logo.png') ?>" class="iconeMembre">
 															</div>
 															<div class="well well-sm col-md-8">
-																<?php echo $_SESSION['user']['infos']['steam']?>
+																<?php echo $_SESSION['user']['steam']?>
 															</div>
 														</div>
 
@@ -246,7 +246,7 @@
 																<img src="<?= $this->assetUrl('img/icons/battlenet_logo.png') ?>" class="iconeMembre">
 															</div>
 															<div class="well well-sm col-md-8">
-																<?php echo $_SESSION['user']['infos']['battlenet']?>
+																<?php echo $_SESSION['user']['battlenet']?>
 															</div>
 														</div>
 
@@ -258,7 +258,7 @@
 																<img src="<?= $this->assetUrl('img/icons/origin1_logo.png') ?>" class="iconeMembre">
 															</div>
 															<div class="well well-sm col-md-8">
-																<?php echo $_SESSION['user']['infos']['origin']?>
+																<?php echo $_SESSION['user']['origin']?>
 															</div>
 														</div>
 
@@ -270,7 +270,7 @@
 																<img src="<?= $this->assetUrl('img/icons/Nintendo_logo.png') ?>" class="iconeMembre">
 															</div>
 															<div class="well well-sm col-md-8">
-																<?php echo $_SESSION['user']['infos']['compte_nintendo']?>
+																<?php echo $_SESSION['user']['compte_nintendo']?>
 															</div>
 														</div>
 
@@ -285,7 +285,7 @@
 
 
 									<!-- Pro -->
-									<div id="tabMembrePro<?php echo $_SESSION['user']['id']?>" class="tab-pane fade">
+									<div id="tabMembrePro<?php //echo $_SESSION['user']['id']?>" class="tab-pane fade">
 										<div class="container-fluid">
 
 											<h3 class="text-center espacementProfil">Vous trouverez ici les réseaux professionnel que <?php echo $_SESSION['user']['prenom']?> utilise.</h3>
@@ -302,7 +302,7 @@
 																<img src="<?= $this->assetUrl('img/icons/linkedin_logo.png') ?>" class="iconeMembre">
 															</div>
 															<div class="well well-sm col-md-8">
-																<?php echo $_SESSION['user']['infos']['linkedin']?>
+																<?php echo $_SESSION['user']['linkedin']?>
 															</div>
 														</div>
 
@@ -314,7 +314,7 @@
 																<img src="<?= $this->assetUrl('img/icons/viadeo_logo.png') ?>" class="iconeMembre">
 															</div>
 															<div class="well well-sm col-md-8">
-																<?php echo $_SESSION['user']['infos']['viadeo']?>
+																<?php echo $_SESSION['user']['viadeo']?>
 															</div>
 														</div>
 
@@ -326,7 +326,7 @@
 																<img src="<?= $this->assetUrl('img/icons/xing_logo.png') ?>" class="iconeMembre">
 															</div>
 															<div class="well well-sm col-md-8">
-																<?php echo $_SESSION['user']['infos']['xing']?>
+																<?php echo $_SESSION['user']['xing']?>
 															</div>
 														</div>
 
@@ -338,7 +338,7 @@
 																<img src="<?= $this->assetUrl('img/icons/muxi_logo.jpg') ?>" class="iconeMembre">
 															</div>
 															<div class="well well-sm col-md-8">
-																<?php echo $_SESSION['user']['infos']['muxi']?>
+																<?php echo $_SESSION['user']['muxi']?>
 															</div>
 														</div>
 
@@ -350,7 +350,7 @@
 																<img src="<?= $this->assetUrl('img/icons/github_logo.jpg') ?>" class="iconeMembre">
 															</div>
 															<div class="well well-sm col-md-8">
-																<?php echo $_SESSION['user']['infos']['github']?>
+																<?php echo $_SESSION['user']['github']?>
 															</div>
 														</div>
 
@@ -363,7 +363,7 @@
 
 
 									<!-- Sociaux -->
-									<div id="tabMembreSoc<?php echo $_SESSION['user']['id']?>" class="tab-pane fade">
+									<div id="tabMembreSoc<?php //echo $_SESSION['user']['id']?>" class="tab-pane fade">
 										<div class="container-fluid">
 
 											<h3 class="text-center espacementProfil">Vous trouverez ici les réseaux sociaux que <?php echo $_SESSION['user']['prenom']?> utilise.</h3>
@@ -380,7 +380,7 @@
 																<img src="<?= $this->assetUrl('img/icons/FB_logo.png') ?>" class="iconeMembre">
 															</div>
 															<div class="well well-sm col-md-8">
-																<?php echo $_SESSION['user']['infos']['facebook']?>
+																<?php echo $_SESSION['user']['facebook']?>
 															</div>
 														</div>
 
@@ -392,7 +392,7 @@
 																<img src="<?= $this->assetUrl('img/icons/Twitter-logo.png') ?>" class="iconeMembre">
 															</div>
 															<div class="well well-sm col-md-8">
-																<?php echo $_SESSION['user']['infos']['twitter']?>
+																<?php echo $_SESSION['user']['twitter']?>
 															</div>
 														</div>
 
@@ -404,7 +404,7 @@
 																<img src="<?= $this->assetUrl('img/icons/YouTube-logo.png') ?>" class="iconeMembre">
 															</div>
 															<div class="well well-sm col-md-8">
-																<?php echo $_SESSION['user']['infos']['youtube']?>
+																<?php echo $_SESSION['user']['youtube']?>
 															</div>
 														</div>
 
@@ -416,7 +416,7 @@
 																<img src="<?= $this->assetUrl('img/icons/googleplus_logo.png') ?>" class="iconeMembre">
 															</div>
 															<div class="well well-sm col-md-8">
-																<?php echo $_SESSION['user']['infos']['google']?>
+																<?php echo $_SESSION['user']['google']?>
 															</div>
 														</div>
 
@@ -428,7 +428,7 @@
 																<img src="<?= $this->assetUrl('img/icons/skype_logo.png') ?>" class="iconeMembre">
 															</div>
 															<div class="well well-sm col-md-8">
-																<?php echo $_SESSION['user']['infos']['skype']?>
+																<?php echo $_SESSION['user']['skype']?>
 															</div>
 														</div>
 
@@ -440,7 +440,7 @@
 																<img src="<?= $this->assetUrl('img/icons/instagram_logo.png') ?>" class="iconeMembre">
 															</div>
 															<div class="well well-sm col-md-8">
-																<?php echo $_SESSION['user']['infos']['instagram']?>
+																<?php echo $_SESSION['user']['instagram']?>
 															</div>
 														</div>
 
@@ -452,7 +452,7 @@
 																<img src="<?= $this->assetUrl('img/icons/pinterest-logo.png') ?>" class="iconeMembre">
 															</div>
 															<div class="well well-sm col-md-8">
-																<?php echo $_SESSION['user']['infos']['pinterest']?>
+																<?php echo $_SESSION['user']['pinterest']?>
 															</div>
 														</div>
 
@@ -464,7 +464,7 @@
 																<img src="<?= $this->assetUrl('img/icons/spotify_logo.png') ?>" class="iconeMembre">
 															</div>
 															<div class="well well-sm col-md-8">
-																<?php echo $_SESSION['user']['infos']['spotify']?>
+																<?php echo $_SESSION['user']['spotify']?>
 															</div>
 														</div>
 
@@ -476,7 +476,7 @@
 																<img src="<?= $this->assetUrl('img/icons/deezer_logo.png') ?>" class="iconeMembre">
 															</div>
 															<div class="well well-sm col-md-8">
-																<?php echo $_SESSION['user']['infos']['deezer']?>
+																<?php echo $_SESSION['user']['deezer']?>
 															</div>
 														</div>
 
@@ -488,7 +488,7 @@
 																<img src="<?= $this->assetUrl('img/icons/viber-logo.png') ?>" class="iconeMembre">
 															</div>
 															<div class="well well-sm col-md-8">
-																<?php echo $_SESSION['user']['infos']['viber']?>
+																<?php echo $_SESSION['user']['viber']?>
 															</div>
 														</div>
 
@@ -526,17 +526,11 @@
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 								<h4 class="modal-title" id="myModalLabel">Poster une nouvelle actualitée.</h4>
 							</div>
-							<form action="<?= $this->url('postactu') ?>" method="POST">
+
 							<div class="modal-body">
 								<div class="container-fluid">
-									<h1>Ma dernière actualité : </h1>
-									<div class="panel panel-default">
-										<div class="panel-body">
-											<p><?php echo $_SESSION['user']['statut'] ?></p>
-										</div>
-									</div>
 
-									<textarea name="texte_actu" class="col-md-12" rows="10" placeholder="Votre nouvelle actu."></textarea>
+									<textarea class="col-md-12" rows="10" placeholder="Votre nouvelle actu."></textarea>
 
 								</div>
 							</div>
@@ -545,7 +539,7 @@
 								<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
 								<button type="submit" name="actu" class="btn btn-primary">Sauvegarder</button>
 							</div>
-							</form>
+
 						</div>
 
 					</div>
@@ -553,8 +547,8 @@
 
 
 
-				<a href="<?= $this->url("logout")  ?>"><button class="btn btn-success">Déconnexion</button></a>
-			</div>
+				<input type="submit" class="btn btn-success" name="deconnexion" value="déconnexion" formaction="<?= $this->url("logout")  ?>">
+			</form>
 		</div><!--/.navbar-collapse -->
 	</div>
 </nav>
