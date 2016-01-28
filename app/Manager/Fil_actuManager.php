@@ -25,5 +25,8 @@ class Fil_actuManager extends \W\Manager\Manager {
 
 		return $sth->fetch();
 	}
+	
+
+
 
 }

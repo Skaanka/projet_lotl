@@ -14,24 +14,31 @@ class AccueilController extends Controller {
 		$user = $this->getUser();
 		$manager = new GeneralManager(); // execute la function qui recupere TOUTES les tables de la bdd
 		$membres = $manager->findUserAll();
-        $manager2 = new Fil_actuManager(); // execute la function qui recupere TOUTES les tables de la bdd
+		$manager2 = new Fil_actuManager(); // execute la function qui recupere TOUTES les tables de la bdd
 		$fil_actus = $manager2->findLastFilActu5();
-		
+
 
 
 		$this->show('accueil/accueil', ['membres' => $membres, 'fil_actus' => $fil_actus]);
 
 	}
-		public function getProfilPerso() { //affiche tout les membres de la bdd
+	public function getProfilPerso() { //affiche tout les membres de la bdd
 		$user = $this->getUser();
 		$manager = new GeneralManager(); // execute la function qui recupere TOUTES les tables de la bdd
 		$ProfilPerso = $manager->findProfilPerso();
 
 		$this->show('accueil/accueil',['ProfilPerso' => $ProfilPerso]);
-			
-			
-		}
+
+
+	}
 	
+	public function postActu() {
+		if (isset ($_POST['actu']) ){
+			$manager = new UserManager();
+			$manager->update($_POST['message' => $_POST['texte_actu']);
+		}
+	}
+
 
 
 }
