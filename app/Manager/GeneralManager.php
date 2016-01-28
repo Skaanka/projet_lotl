@@ -37,7 +37,7 @@ class GeneralManager extends \W\Manager\Manager {
 	}
     
     
-}
+
 
 /* MODIFICATION TABLE SQL :
 
@@ -83,3 +83,52 @@ $sql = "SELECT \n"
     . "	INNER JOIN reseaux_pros AS rp ON w.id = rp.id_wuser \n"
     . "	INNER JOIN reseaux_socials AS rs On w.id = rs.id_wuser";
 */
+
+
+
+
+    public function findMail($mail)
+	{
+
+		$sql = "SELECT * FROM wusers WHERE mail = :mail LIMIT 1";
+		$sth = $this->dbh->prepare($sql);
+		$sth->bindValue(":mail", $mail);
+		$sth->execute();
+
+		return $sth->fetch();
+	}
+
+
+
+
+//// vérification de l'email : est-il dans la table membres ?
+//	$stmt = $db->prepare("SELECT * FROM wusers WHERE mail=? AND id=?");
+//	$stmt->execute(array($_POST["mail"]));
+//	$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

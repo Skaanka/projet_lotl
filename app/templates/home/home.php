@@ -35,20 +35,22 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h3 class="modal-title rouge" id="myModalLabel">Mot de passe oublié</h3>
+                                <h3 class="modal-title black" id="myModalLabel">Mot de passe oublié</h3>
                             </div>
+                            <form method="post">
                             <div class="modal-body">
-                                <form>
+                                
                                     <div class="row form-group">
                                     <label for="exampleInputEmail1" class="col-md-6 black">Veuillez saisir votre adresse mail :</label>
                                     <input type="email" class="form-control col-md-4" id="exampleInputEmail1" placeholder="Email">
                                     </div>
-                                </form>
+                                
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-primary">Envoyer</button>
+                                <button type="button" class="btn btn-primary" name="envoyer" formaction="<?= $this->url('oubli_mdp') ?>">Envoyer</button>
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
                             </div>
+                            </form>
                         </div>
                     </div>
                 </div>

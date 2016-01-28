@@ -39,6 +39,8 @@
 
 
         <?= $this->section('navBar') ?>
+        
+        <?= $this->section('oubli_mdp') ?>
 
 
         <?= $this->section('main_content') ?>
