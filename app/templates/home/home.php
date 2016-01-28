@@ -34,18 +34,27 @@
 
 <div id="homeContent" class="container-fluid no-padding">
     <div id="titleHome" class="row text-center">
-        <span class="texte col-xs-offset-1 col-xs-10">Bienvenue sur <br class="visible-xs"/>Lord of the link</span> 
-        <span class=" col-xs-offset-1 col-xs-10"></span>
         
-        <p class=" col-xs-offset-1 col-xs-10">TODO DESCRIPTION</p>
-    </div>
+        
+        <div class="texte col-xs-8-offset-2 animated fadeInUp">
+            <div class="row">
+                <span class="bienvenue">Bienvenue</span>
+                <span class="tiny_ltr">Sur</span>
+            </div>
+            <div class="row">
+                <span class="norm_ltr">" Lord</span>
+                <span class="tiny_ltr">of the</span>
+                <span class="norm_ltr">Link "</span>
+            </div>
+        </div>
+        </div>
     <div  id="quote" class="row">
         <blockquote class="blockquote-reverse text_justify col-xs-12">
-            <p><b>" Vous êtes en retard ! "<br/>
-            " Un magicien n’est jamais en retard, ni en avance d’ailleurs. Il arrive précisément à l’heure prévue. "</b></p>
-            <footer>Frodon Sacquet, Gandalf le Gris.</footer>
+           
+            <p ><b>Lord Of The Link est un site privé. Si vous êtes un visiteur en recherche de codeur web,<br> nous vous invitons à venir nous rencontrer sur : "http://jesuistondev.fr". </b></p>
+            <p>Merci de votre visite.</p>
         </blockquote>
     </div>
-</div>		
+</div>
 
 <?php $this->stop('main_content') ?>

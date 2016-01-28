@@ -40,20 +40,48 @@ body {
 
 #titleHome {
     padding-top: 100px;
-    font-family: kotta-one, serif bold;
     
 }
 .texte{
-    background: url(public/assets/img/bienvenue.png)no-repeat;
-    font-size: 54px;
-    color: black;
+
+    text-shadow:0px 0px 12px black;
+    color:#FFFFFF;
+    letter-spacing:2pt;
+    word-spacing:2pt;
+    font-family:impact, sans-serif;
+    line-height:1;
+    margin:0px;
+    
     
 }
+.bienvenue{
+    font-size: 54px;
+}
+.norm_ltr {
+    font-size:72px;
+}
+.tiny_ltr {
+   font-size:38px; 
+}
+.under_title{
+    font-style: italic;
+    font-family: cursive;
+    color: white;
+    word-spacing:0pt;
+    font-style: italic;
+    text-shadow:0px 0px 8px black;
+    font-size:24px; 
+}
+#quote {
+    padding-top: 7em;
+    padding-right: 5em;
+}
+
 
 .btn-navbut { 
   color: #ffffff; 
   background-color: #37566E; 
-  border-color: #FFFFFF; 
+  border-color: cadetblue; 
 } 
  
 .btn-navbut:hover, 
@@ -61,10 +89,11 @@ body {
 .btn-navbut:active, 
 .btn-navbut.active, 
 .open .dropdown-toggle.btn-navbut { 
-  color: #ffffff; 
+  color: dodgerblue; 
   background-color: #37566E; 
-  border-color: #FFFFFF; 
+  border-color: cadetblue; 
 } 
+  
  
 .btn-navbut:active, 
 .btn-navbut.active, 
@@ -111,3 +140,33 @@ blockquote {
 .hauteurFooter {
     padding-top: 10px;
 }
+
+
+
+/* Inscription1 */
+.wrappInscr {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2% 0;
+}
+
+#avatarInscr {
+    margin: 10% 0;
+    border: 4px solid #3c2f2f;
+}
+
+#bouton {
+    margin: 10% 0;
+}
+
+.inscr2, h1, label {
+    color: black;
+}
+
+.jumbotron h1, p{
+    color: black;
+}
+
+.form-control {
+	border: 2px solid #3c2f2f;
+}
+/* Fin inscription 1*/

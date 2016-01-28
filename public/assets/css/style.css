@@ -35,18 +35,18 @@ body {
 .btn-navbut { 
   color: #ffffff; 
   background-color: #37566E; 
-  border-color: #FFFFFF; 
-} 
+  border-color: cadetblue; 
+}  
  
 .btn-navbut:hover, 
 .btn-navbut:focus, 
 .btn-navbut:active, 
 .btn-navbut.active, 
 .open .dropdown-toggle.btn-navbut { 
-  color: #ffffff; 
+  color: dodgerblue; 
   background-color: #37566E; 
-  border-color: #FFFFFF; 
-} 
+  border-color: cadetblue; 
+}
  
 .btn-navbut:active, 
 .btn-navbut.active, 
@@ -77,9 +77,26 @@ fieldset[disabled] .btn-navbut.active {
   color: #37566E; 
   background-color: #5d5b5b; 
 }
-#myModalPost {
-    background: #37566E; 
+
+/*   -----------   Personalisation modal  ---------*/
+.modal-content {
+    background: #37566E;
+    color: black;
+    text-align: center;
+    border: 2px solid #043055;
 }
+.modal-body {
+    background: #51728d;
+     border: 2px solid #043055; 
+}
+
+.mod_textarea {
+    background: #5e8eb6;
+    opacity: 0,5;
+     border: 2px solid #043055;
+}
+
+
 
 /* Fin de structure du site */
 /*============*/
@@ -224,6 +241,10 @@ fieldset[disabled] .btn-navbut.active {
     margin-top: 2em;
     margin-left: 0.9em;
 }
+
+
+
+
 
 /* FIN DES TRAVAUX*/
 

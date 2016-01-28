@@ -21,6 +21,7 @@
         <!--Feuilles de style-->
         <link href="<?= $this->assetUrl('css/bootstrap/bootstrap.css') ?>" rel="stylesheet">
         <link href="<?= $this->assetUrl('css/home/style.css') ?>" rel="stylesheet">
+         <link href="<?= $this->assetUrl('css/animate.min.css') ?>" rel="stylesheet">
         <!--fichier font google -->
         <script src="//use.edgefonts.net/kotta-one.js"></script> 
 
