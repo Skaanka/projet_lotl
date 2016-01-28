@@ -6,6 +6,13 @@
         ['GET', '/', 'Default#home', 'home'], // lorsque l'utilisateur n'est pas connecté
 		['GET', '/accueil', 'Accueil#getListeMembre', 'accueil'], // quand l'utilisateur est connecté
         
+        
+        //INTEFACE ADMIN
+		['GET|POST', '/administration', 'Administration#administration', 'administration'], 
+		['GET', '/administration/validation/[:id]', 'Administration#validationProfil', 'validationProfil'], // validation profil
+		['GET', '/administration/refus/[i:id]', 'Administration#deleteProfil', 'RefusProfil'], // Refus profil
+        
+        
         // GESTION LOGIN / LOGOFF
 		['GET|POST', '/', 'Default#login', 'login'], 
         ['GET|POST', '/', 'Default#logout', 'logout'], 
