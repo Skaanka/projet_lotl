@@ -20,7 +20,8 @@
 		['GET', '/consultation', 'Default#consultation', 'consultation'], // affichage des pages des utilisateurs du site 
 		['GET', '/filtre', 'Default#filtre', 'filtre'], // affichage des pages des utilisateurs du site 
 		['GET', '/validation', 'Default#validation', 'validation'], 
-		['POST', '/oubli_mdp', 'Default#mdp_oublie', 'oubli_mdp'], // page de redéfintion du mot de passe en cas d'oubli.
+		['GET|POST', '/oubli_mdp', 'Default#mdp_oublie', 'oubli_mdp'], // page de redéfintion du mot de passe en cas d'oubli.
+		['GET|POST', '/nouveau_mdp', 'Default#new_mdp', 'new_mdp'], // page de redéfintion du mot de passe en cas d'oubli.
         
         
 	);

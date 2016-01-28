@@ -2,10 +2,16 @@
 
 namespace Controller;
 
+require __DIR__ . '/../Helper/Helper.php';
+use Helper\Helper;
+use 
+
 use \W\Controller\Controller;
 use \W\Manager\UserManager;
 use \W\Security\AuthentificationManager;
 use \Manager\GeneralManager;
+use \Manager\TokenManager;
+
 
 
 class DefaultController extends Controller {
@@ -30,12 +36,15 @@ class DefaultController extends Controller {
 		$this->show('home/validation');
 	}
 
+    public function nouveau_mdp() {
+		$this->show('oubli_mdp/oubli_mdp');
+	}
     
     public function login() { // connexion au site
 		if(isset($_POST['connexion'])) {
 			$auth = new AuthentificationManager();
 			$userManager = new UserManager();
-            
+            // debug($userManager); die; // vérification 
 			if($auth->isValidLoginInfo($_POST['wuser']['mail'], $_POST['wuser']['mot_de_passe'])) {
 				$user = $userManager->getUserByUsernameOrEmail($_POST['wuser']['mail']);
 				$auth->logUserIn($user);
@@ -73,17 +82,17 @@ class DefaultController extends Controller {
         if(isset($_POST["envoyer"])) {
 	
             $manager = new TokenManager();
-            $result = $manager->findMail($_POST['mail']);
-
+            $result = $manager->findMail($_POST['oublie']['mail']); //recuperation de l'id et du mail de l'utilisateur
+            //debug($result);die();
 	           if( $result ) {
         
                     $id = $result["id"];
                     $token = md5(uniqid(rand(), true));
+                    $tableautoken = array('token' => $token, 'id_wuser' => $id );
+		            //debug($tableautoken);debug($token);die;
+                    //$manager = new TokenManager();
+                    $manager->insert($tableautoken);
 
-		            debug($result);die;
-                    $manager = new TokenManager();
-                    $manager->insert(['tokens']['id_wuser']);
-                    $manager->insert($_POST['tokens']['token']);
 
                     // envoi email
 		            $email = new SendGrid\Email();
@@ -94,8 +103,9 @@ class DefaultController extends Controller {
     		          ->setSubject('Réinitialisation de votre mot de passe')
     		          ->setText('Redéfinir votre mot de passe : http://projet_lotl/mot_de_passe_oublie.php?id=' . $id . "&token=" . $token)
     		          ->setHtml('<a href="http://http://projet_lotl/mot_de_passe_oublie.php?id=' . $id . "&token=" . $token . '">Redéfinir votre mot de passe</a>');
-
+                        Helper::mail($result['mail'], "Demande de nouveau mto de passe", "rzhgafiuhgrf");
                         $sendgrid->send($email);
+                   
 	           }
         }
         
@@ -105,4 +115,21 @@ class DefaultController extends Controller {
 
     }
     
+    
+//    public function new_mdp() {
+//        
+//        if(isset($_POST['envoyer'])) { 
+//            //debug($_POST); die();
+//            $new_mdp = password_hash($_POST['wuser']['mot_de_passe'], PASSWORD_DEFAULT);
+//            $manager = new userManager;
+//            
+//            $manager->update()
+//            $this->redirectToRoute('home'); // renvoi à la page home du site
+//    }
+//        
+//    $this->redirectToRoute('new_mdp');
+//    }
+    
+    
 }
+    

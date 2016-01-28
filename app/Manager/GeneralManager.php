@@ -87,17 +87,7 @@ $sql = "SELECT \n"
 
 
 
-    public function findMail($mail)
-	{
-
-		$sql = "SELECT * FROM wusers WHERE mail = :mail LIMIT 1";
-		$sth = $this->dbh->prepare($sql);
-		$sth->bindValue(":mail", $mail);
-		$sth->execute();
-
-		return $sth->fetch();
-	}
-
+    
 
 
 
@@ -105,8 +95,6 @@ $sql = "SELECT \n"
 //	$stmt = $db->prepare("SELECT * FROM wusers WHERE mail=? AND id=?");
 //	$stmt->execute(array($_POST["mail"]));
 //	$result = $stmt->fetch(PDO::FETCH_ASSOC);
-
-
 
 }
 

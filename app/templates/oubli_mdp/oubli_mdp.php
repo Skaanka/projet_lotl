@@ -4,9 +4,10 @@
 <?php $this->start('oubli_mdp') ?>
 
 <form method="POST">
-
-		<input  name="mail" placeholder="Email" />
-		<input type="submit" name="envoyer" value="Envoyer" />
+    
+        <h1>Veuillez saisir votre nouveau mot passe.</h1>
+		<input name="wuser[mot_de_passe]" placeholder="Password" />
+		<button name="envoyer" value="Envoyer "></button>
 		
 </form>
 
