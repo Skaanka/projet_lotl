@@ -22,7 +22,8 @@ use \Manager\Reseaux_socialManager;
 class InscriptionController extends Controller {
     
     
-    public function inscription_1() 
+   
+   public function inscription_1() 
     {
         if(isset($_POST['suivant'])) {  
             			
