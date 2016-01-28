@@ -77,11 +77,9 @@ fieldset[disabled] .btn-navbut.active {
   color: #37566E; 
   background-color: #5d5b5b; 
 }
-/*
 #myModalPost {
     background: #37566E; 
 }
-*/
 
 /* Fin de structure du site */
 /*============*/
@@ -226,6 +224,10 @@ fieldset[disabled] .btn-navbut.active {
     margin-top: 2em;
     margin-left: 0.9em;
 }
+
+
+
+
 
 /* FIN DES TRAVAUX*/
 
