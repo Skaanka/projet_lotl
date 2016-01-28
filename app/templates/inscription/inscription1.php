@@ -58,7 +58,7 @@
         <div class="row">
             <div class="form-group col-md-6">
                 <label for="email">E-mail</label>
-                <input type="text" class="form-control" id="email" placeholder="E-mail" name="wuser[mail]" value="">
+                <input type="text" class="form-control" id="email" placeholder="E-mail" name="wuser[mail]" value="" required>
             </div>
             <div class="form-group col-md-6">
                 <label for="phone">Téléphone mobile</label>
