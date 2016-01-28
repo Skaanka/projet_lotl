@@ -23,6 +23,10 @@
 		['GET', '/filtre', 'Default#filtre', 'filtre'], // affichage des pages des utilisateurs du site 
 		['GET', '/validation', 'Default#validation', 'validation'], 
 		
+		// GESTION FORMULAIRE MODIFICATION
+		['GET|POST', '/modif_profil1', 'ModifProfil#modif_profil1', 'modif_profil1'],
+        ['GET|POST', '/modif_profil2', 'ModifProfil#modif_profil2', 'modif_profil2'],
+        ['GET|POST', '/modif_profil3', 'ModifProfil#modif_profil3', 'modif_profil3'],// formulaire d'inscription
         
         
 	);

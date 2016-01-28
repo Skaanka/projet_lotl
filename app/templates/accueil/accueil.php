@@ -502,10 +502,12 @@
 
 
 							</div>
+							<form method="post">
 							<div class="modal-footer">
 								<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-								<button type="submit" name="profil" class="btn btn-primary">Sauvegarder</button>
+								<button type="submit" name="modifier" class="btn btn-primary" formaction="<?php echo $this->url('modif_profil1') ?>">Modifier</button>
 							</div>
+							</form>
 						</div>
 					</div>
 				</div>
