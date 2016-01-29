@@ -5,6 +5,7 @@
         // GESTION DES PAGES ACCUEIL
         ['GET', '/', 'Default#home', 'home'], // lorsque l'utilisateur n'est pas connecté
 		['GET', '/accueil', 'Accueil#getListeMembre', 'accueil'], // quand l'utilisateur est connecté
+		['POST', '/postactu', 'Accueil#postActu', 'postactu'], 
         
         
         //INTEFACE ADMIN
@@ -14,8 +15,8 @@
         
         
         // GESTION LOGIN / LOGOFF
-		['GET|POST', '/', 'Default#login', 'login'], 
-        ['GET|POST', '/', 'Default#logout', 'logout'], 
+		['GET|POST', '/login', 'Default#login', 'login'], 
+        ['GET|POST', '/logout', 'Default#logout', 'logout'], 
 
         // GESTION FORMULAIRE INSCRIPTION
 		['GET|POST', '/inscription1', 'Inscription#inscription_1', 'inscription1'],
@@ -28,6 +29,10 @@
 		['GET', '/filtre', 'Default#filtre', 'filtre'], // affichage des pages des utilisateurs du site 
 		['GET', '/validation', 'Default#validation', 'validation'], 
 		
+		// GESTION FORMULAIRE MODIFICATION
+		['GET|POST', '/modif_profil1', 'ModifProfil#modif_profil1', 'modif_profil1'],
+        ['GET|POST', '/modif_profil2', 'ModifProfil#modif_profil2', 'modif_profil2'],
+        ['GET|POST', '/modif_profil3', 'ModifProfil#modif_profil3', 'modif_profil3'],// formulaire d'inscription
         
         
 	);

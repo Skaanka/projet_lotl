@@ -19,45 +19,35 @@ use \Manager\Reseaux_socialManager;
 
 
 
-class InscriptionController extends Controller {
+class ModifProfilController extends Controller {
     
     
-   
-   public function inscription_1() 
+    public function modif_profil1() 
     {
         if(isset($_POST['suivant'])) {  
-            			
-			$mail = $_POST['wuser']['mail'];
-			$user_manager = new userManager();
-			$verif = $user_manager->emailExists($mail);
+            
 
-			if ($verif){
-				debug("Cet email est déjà utilisé !");
-				$this->show('inscription/inscription1'); // redirection si erreur
-			} else {
-			//envoi image + changement nom_image
+            //envoi image + changement nom_image
             $uploads_dir = "C:/xampp/htdocs/projet_lotl/public/assets/img/uploads/";
             //debug($_FILES);die();
             $tmp_name = $_FILES['avatar']['tmp_name'];
             $name = time() . "_" . $_FILES['avatar']['name'];
             $result = move_uploaded_file($tmp_name, "$uploads_dir$name");
-            $_POST['wuser']['avatar'] = $name;            
+            $_POST['wuser']['avatar'] = $name;
+            
             
             $_SESSION['wuser'] = $_POST['wuser'];
             //hashage du mdp
             $_SESSION['wuser']['mot_de_passe'] = password_hash($_SESSION['wuser']['mot_de_passe'], PASSWORD_DEFAULT);
-				
-				//debug($_SESSION['wuser']);die();
-            $this->redirectToRoute('inscription2'); // si ok envoie page 2
-			}
-            
+            //debug($_SESSION['wuser']);die();
+            $this->redirectToRoute('modif_profil2'); // si ok envoie page 2
 
         }
         
-        $this->show('inscription/inscription1'); // redirection si erreur
+        $this->show('modif_profil/modif_profil1'); // redirection si erreur
     }
     
-    public function inscription_2() 
+    public function modif_profil2() 
     {
         if(isset($_POST['suivant2'])) {
             $_SESSION['diplome'] = $_POST['diplome'];
@@ -66,15 +56,15 @@ class InscriptionController extends Controller {
             $_SESSION['fil_actu'] = $_POST['fil_actu'];
             $_SESSION['portfolio'] = $_POST['portfolio'];
             
-            $this->redirectToRoute('inscription3'); // si ok envoie page 2
+            $this->redirectToRoute('modif_profil3'); // si ok envoie page 2
         } elseif (isset($_POST['precedent'])) {
-            $_SESSION['inscription_2'] = $_POST['inscription_2'];
-            $this->redirectToRoute('inscription1'); // si précédent retour page 1
+            $_SESSION['modif_profil2'] = $_POST['modif_profil2'];
+            $this->redirectToRoute('modif_profil1'); // si précédent retour page 1
         }
-        $this->show('inscription/inscription2'); // redirection si erreur
+        $this->show('modif_profil/modif_profil2'); // redirection si erreur
     }
     
-    public function inscription_3() 
+    public function modif_profil3() 
     {
         if(isset($_POST['valider'])) {
             $_SESSION['reseaux_social'] = $_POST['reseaux_social'];
@@ -130,10 +120,10 @@ class InscriptionController extends Controller {
             $this->redirectToRoute('validation');
             
         } elseif (isset($_POST['precedent2'])) {
-            $_SESSION['inscription_3'] = $_POST['inscription_3'];
-            $this->redirectToRoute('inscription2'); // si précédent retour page 2
+            $_SESSION['inscription_3'] = $_POST['modif_profil3'];
+            $this->redirectToRoute('modif_profil2'); // si précédent retour page 2
         }
-        $this->show('inscription/inscription3');
+        $this->show('modif_profil/modif_profil3');
     }
     
 }
