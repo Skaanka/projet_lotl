@@ -11,7 +11,7 @@ use \Manager\Fil_actuManager;
 use \Manager\PortfolioManager;
 
 class AccueilController extends Controller {
-
+ 
 	public function getListeMembre() { //affiche tout les membres de la bdd
 		$this->allowTo(['admin','user']);
 		$user = $this->getUser();

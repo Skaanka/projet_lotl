@@ -22,25 +22,35 @@ use \Manager\Reseaux_socialManager;
 class InscriptionController extends Controller {
     
     
-    public function inscription_1() 
+   
+   public function inscription_1() 
     {
         if(isset($_POST['suivant'])) {  
-            
+            			
+			$mail = $_POST['wuser']['mail'];
+			$user_manager = new userManager();
+			$verif = $user_manager->emailExists($mail);
 
-            //envoi image + changement nom_image
+			if ($verif){
+				debug("Cet email est déjà utilisé !");
+				$this->show('inscription/inscription1'); // redirection si erreur
+			} else {
+			//envoi image + changement nom_image
             $uploads_dir = "C:/xampp/htdocs/projet_lotl/public/assets/img/uploads/";
             //debug($_FILES);die();
             $tmp_name = $_FILES['avatar']['tmp_name'];
             $name = time() . "_" . $_FILES['avatar']['name'];
             $result = move_uploaded_file($tmp_name, "$uploads_dir$name");
-            $_POST['wuser']['avatar'] = $name;
-            
+            $_POST['wuser']['avatar'] = $name;            
             
             $_SESSION['wuser'] = $_POST['wuser'];
             //hashage du mdp
             $_SESSION['wuser']['mot_de_passe'] = password_hash($_SESSION['wuser']['mot_de_passe'], PASSWORD_DEFAULT);
-            //debug($_SESSION['wuser']);die();
+				
+				//debug($_SESSION['wuser']);die();
             $this->redirectToRoute('inscription2'); // si ok envoie page 2
+			}
+            
 
         }
         
