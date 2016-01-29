@@ -80,6 +80,8 @@
 				</div>
 			</div>
 			<?php foreach ($fil_actus as $fil_actu) { ?>
+            <?php //debug($fil_actus);die(); ?>
+            <?php if ($fil_actu['id'] != '1') { ?>
 			<div class="item text-center">
 				<h1>Nouveau chez <?php echo $fil_actu['prenom'] ?></h1>
 				<p><?php echo $fil_actu['message'] ?></p>
@@ -87,6 +89,7 @@
 
 				</div>
 			</div>
+			<?php } ?>
 			<?php } ?>
 		</div>
 

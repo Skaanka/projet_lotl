@@ -73,7 +73,7 @@
             </div>
             <div class="form-group col-md-6">
                 <label for="citation">Citation</label>
-                <input type="text" class="form-control" id="citation" placeholder="Votre citation..." name="wuser[citation]">
+                <input type="text" class="form-control" id="citation" placeholder="Votre citation..." name="wuser[citation]" maxlength="60">
             </div>
 
         </div>
