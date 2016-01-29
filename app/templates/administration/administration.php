@@ -123,4 +123,6 @@
     <?php } ?> <!--fin du foreach-->
         </form>
 </div>	
+
+<span>TODO : suppression de profil deja validé. ajout d'administrateur ?</span>
 <?php $this->stop('main_content') ?>
