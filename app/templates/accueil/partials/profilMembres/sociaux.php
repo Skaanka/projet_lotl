@@ -6,7 +6,8 @@
         <div class="panel panel-default col-md-12 espacementProfil">
             <div class="panel-body">
                 <div class="row">
-
+                    
+                    <?php if (!empty($membre['facebook'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Facebook</h4>
@@ -18,7 +19,9 @@
                             <?php echo $membre['facebook']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($membre['twitter'])) { ?>                   
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Twitter</h4>
@@ -30,7 +33,9 @@
                             <?php echo $membre['twitter']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($membre['youtube'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Youtube</h4>
@@ -42,7 +47,9 @@
                             <?php echo $membre['youtube']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($membre['google'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Google+</h4>
@@ -54,7 +61,9 @@
                             <?php echo $membre['google']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($membre['skype'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Skype</h4>
@@ -66,7 +75,9 @@
                             <?php echo $membre['skype']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($membre['instagram'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Instagram</h4>
@@ -78,7 +89,9 @@
                             <?php echo $membre['instagram']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($membre['pinterest'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Pinterest</h4>
@@ -90,7 +103,9 @@
                             <?php echo $membre['pinterest']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($membre['spotify'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Spotify</h4>
@@ -102,7 +117,9 @@
                             <?php echo $membre['spotify']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($membre['deezer'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Deezer</h4>
@@ -114,7 +131,9 @@
                             <?php echo $membre['deezer']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($membre['viber'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Viber</h4>
@@ -126,7 +145,8 @@
                             <?php echo $membre['viber']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
                 </div>
             </div>
         </div>

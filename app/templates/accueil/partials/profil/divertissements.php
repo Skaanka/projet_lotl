@@ -6,7 +6,8 @@
         <div class="panel panel-default col-md-12 espacementProfil">
             <div class="panel-body">
                 <div class="row">
-
+                    
+                    <?php if (!empty($_SESSION['user']['infos']['psn'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>PSN</h4>
@@ -18,7 +19,9 @@
                             <?php echo $_SESSION['user']['infos']['psn']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($_SESSION['user']['infos']['xboxlive'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>XboxLive</h4>
@@ -30,7 +33,9 @@
                             <?php echo $_SESSION['user']['infos']['xboxlive']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($_SESSION['user']['infos']['steam'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Steam</h4>
@@ -42,7 +47,9 @@
                             <?php echo $_SESSION['user']['infos']['steam']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($_SESSION['user']['infos']['battlenet'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Battle.net</h4>
@@ -54,7 +61,9 @@
                             <?php echo $_SESSION['user']['infos']['battlenet']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($_SESSION['user']['infos']['origin'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Origin</h4>
@@ -66,7 +75,9 @@
                             <?php echo $_SESSION['user']['infos']['origin']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($_SESSION['user']['infos']['compte_nintendo'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Nintendo</h4>
@@ -78,7 +89,8 @@
                             <?php echo $_SESSION['user']['infos']['compte_nintendo']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
                 </div>
             </div>
         </div>

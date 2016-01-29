@@ -8,6 +8,7 @@
             <div class="panel-body">
                 <div class="row">
 
+                    <?php if (!empty($_SESSION['user']['infos']['linkedin'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>LinkedIn</h4>
@@ -19,7 +20,9 @@
                             <?php echo $_SESSION['user']['infos']['linkedin']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($_SESSION['user']['infos']['viadeo'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Viadéo</h4>
@@ -31,7 +34,9 @@
                             <?php echo $_SESSION['user']['infos']['viadeo']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($_SESSION['user']['infos']['xing'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Xing</h4>
@@ -43,7 +48,9 @@
                             <?php echo $_SESSION['user']['infos']['xing']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($_SESSION['user']['infos']['muxi'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Muxi</h4>
@@ -55,7 +62,9 @@
                             <?php echo $_SESSION['user']['infos']['muxi']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($_SESSION['user']['infos']['github'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>GitHub</h4>
@@ -67,7 +76,8 @@
                             <?php echo $_SESSION['user']['infos']['github']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
                 </div>
             </div>
         </div>

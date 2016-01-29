@@ -23,7 +23,7 @@
                     </div>
                     <div class="col-md-6">
                         <p>Email: <?php echo $_SESSION['user']['mail']?></p>
-                        <p>Telephone: <?php echo $_SESSION['user']['phone']?></p>
+                        <p>Telephone: <?php if (!empty($_SESSION['user']['infos']['intitule'])) { echo $_SESSION['user']['phone']; } ?></p>
                         <p>Site Web: <?php echo $_SESSION['user']['siteWeb']?></p>
                     </div>
                 </div>
@@ -48,26 +48,37 @@
                             <td><b>Intitulé</b></td>
                             <td><b>Ecole</b></td>
                         </tr>
+                        <?php if (!empty($_SESSION['user']['infos']['intitule'])) { ?>
                         <tr>
                             <td><?php echo $_SESSION['user']['infos']['annees_obt']?></td>
                             <td><?php echo $_SESSION['user']['infos']['intitule']?></td>
                             <td><?php echo $_SESSION['user']['infos']['ecole']?></td>
                         </tr>
+                        <?php } ?>
+                    
+                        <?php if (!empty($_SESSION['user']['infos']['intitule2'])) { ?>
                         <tr>
                             <td><?php echo $_SESSION['user']['infos']['annees_obt2']?></td>
                             <td><?php echo $_SESSION['user']['infos']['intitule2']?></td>
                             <td><?php echo $_SESSION['user']['infos']['ecole2']?></td>
                         </tr>
+                        <?php } ?>
+                    
+                        <?php if (!empty($_SESSION['user']['infos']['intitule3'])) { ?>
                         <tr>
                             <td><?php echo $_SESSION['user']['infos']['annees_obt3']?></td>
                             <td><?php echo $_SESSION['user']['infos']['intitule3']?></td>
                             <td><?php echo $_SESSION['user']['infos']['ecole3']?></td>
                         </tr>
+                        <?php } ?>
+                    
+                        <?php if (!empty($_SESSION['user']['infos']['intitule4'])) { ?>
                         <tr>
                             <td><?php echo $_SESSION['user']['infos']['annees_obt4']?></td>
                             <td><?php echo $_SESSION['user']['infos']['intitule4']?></td>
                             <td><?php echo $_SESSION['user']['infos']['ecole4']?></td>
                         </tr>
+                        <?php } ?>
                     </table>
                 </div>
             </div>
@@ -84,42 +95,59 @@
                             <td><b>Compagnie</b></td>
                             <td><b>Poste</b></td>
                         </tr>
+                        <?php if (!empty($_SESSION['user']['infos']['poste'])) { ?>
                         <tr>
                             <td><?php echo $_SESSION['user']['infos']['periode_debut']?></td>
                             <td><?php echo $_SESSION['user']['infos']['periode_fin']?></td>
                             <td><?php echo $_SESSION['user']['infos']['compagnie']?></td>
                             <td><?php echo $_SESSION['user']['infos']['poste']?></td>
                         </tr>
+                        <?php } ?>
+                    
+                        <?php if (!empty($_SESSION['user']['infos']['poste2'])) { ?>
                         <tr>
                             <td><?php echo $_SESSION['user']['infos']['periode_debut2']?></td>
                             <td><?php echo $_SESSION['user']['infos']['periode_fin2']?></td>
                             <td><?php echo $_SESSION['user']['infos']['compagnie2']?></td>
                             <td><?php echo $_SESSION['user']['infos']['poste2']?></td>
                         </tr>
+                        <?php } ?>
+                    
+                        <?php if (!empty($_SESSION['user']['infos']['poste3'])) { ?>
                         <tr>
                             <td><?php echo $_SESSION['user']['infos']['periode_debut3']?></td>
                             <td><?php echo $_SESSION['user']['infos']['periode_fin3']?></td>
                             <td><?php echo $_SESSION['user']['infos']['compagnie3']?></td>
                             <td><?php echo $_SESSION['user']['infos']['poste3']?></td>
                         </tr>
+                        <?php } ?>
+                    
+                        <?php if (!empty($_SESSION['user']['infos']['poste4'])) { ?>
                         <tr>
                             <td><?php echo $_SESSION['user']['infos']['periode_debut4']?></td>
                             <td><?php echo $_SESSION['user']['infos']['periode_fin4']?></td>
                             <td><?php echo $_SESSION['user']['infos']['compagnie4']?></td>
                             <td><?php echo $_SESSION['user']['infos']['poste4']?></td>
                         </tr>
+                        <?php } ?>
+                    
+                        <?php if (!empty($_SESSION['user']['infos']['poste5'])) { ?>
                         <tr>
                             <td><?php echo $_SESSION['user']['infos']['periode_debut5']?></td>
                             <td><?php echo $_SESSION['user']['infos']['periode_fin5']?></td>
                             <td><?php echo $_SESSION['user']['infos']['compagnie5']?></td>
                             <td><?php echo $_SESSION['user']['infos']['poste5']?></td>
                         </tr>
+                        <?php } ?>
+                    
+                        <?php if (!empty($_SESSION['user']['infos']['poste6'])) { ?>
                         <tr>
                             <td><?php echo $_SESSION['user']['infos']['periode_debut6']?></td>
                             <td><?php echo $_SESSION['user']['infos']['periode_fin6']?></td>
                             <td><?php echo $_SESSION['user']['infos']['compagnie6']?></td>
                             <td><?php echo $_SESSION['user']['infos']['poste6']?></td>
                         </tr>
+                        <?php } ?>
                     </table>
                 </div>
             </div>

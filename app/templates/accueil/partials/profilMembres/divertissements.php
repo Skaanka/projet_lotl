@@ -7,6 +7,7 @@
             <div class="panel-body">
                 <div class="row">
 
+                    <?php if (!empty($membre['psn'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>PSN</h4>
@@ -18,7 +19,9 @@
                             <?php echo $membre['psn']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($membre['xboxlive'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>XboxLive</h4>
@@ -30,7 +33,9 @@
                             <?php echo $membre['xboxlive']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($membre['steam'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Steam</h4>
@@ -42,7 +47,9 @@
                             <?php echo $membre['steam']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($membre['battlenet'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Battle.net</h4>
@@ -54,7 +61,9 @@
                             <?php echo $membre['battlenet']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($membre['origin'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Origin</h4>
@@ -66,7 +75,9 @@
                             <?php echo $membre['origin']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($membre['compte_nintendo'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Nintendo</h4>
@@ -78,7 +89,7 @@
                             <?php echo $membre['compte_nintendo']?>
                         </div>
                     </div>
-
+                    <?php } ?>
 
 
                 </div>
