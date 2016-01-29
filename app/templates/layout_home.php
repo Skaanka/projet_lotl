@@ -50,7 +50,7 @@
         
         <div id="footerHome" class="container-fluid no-padding">
             <div class="col-xs-6 col-sm-offset-8 col-sm-1  col-lg-offset-8 col-lg-1 text-center hauteurFooter">
-                <a href="">Contact</a>
+                <a href="mailto:saurondumordorlouviers@gmail.com">Contact</a>
             </div>
             <div class="col-xs-6 col-sm-1 col-lg-1 text-center hauteurFooter">
                 <a href="http://www.jesuistondev.fr/" target="_blank">JeSuisTonDev.fr</a>

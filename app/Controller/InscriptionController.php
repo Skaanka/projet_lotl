@@ -8,7 +8,7 @@ use Helper\Helper;
 use \W\Controller\Controller;
 use \W\Manager\Manager;
 use \W\Manager\UserManager;
-
+use W\Security\AuthentificationManager;
 //Manager Projet
 use \Manager\CompetenceManager;
 use \Manager\DiplomeManager;
@@ -18,6 +18,7 @@ use \Manager\PortfolioManager;
 use \Manager\Reseaux_divertissementManager;
 use \Manager\Reseaux_proManager;
 use \Manager\Reseaux_socialManager;
+use \Manager\GeneralManager;
 
 
 
@@ -130,6 +131,10 @@ class InscriptionController extends Controller {
             $manager->insert($_SESSION['reseaux_divertissement']);
             
             Helper::mail("saurondumordorlouviers@gmail.com", "Une demande d'inscritption à été effectué sur LOTL", "Veuillez valider ou non l'inscritpion."); // l'envoi de mail vers la BAL de l'admin pour toute nouvelle demande d'inscription sur le site
+            
+            //destruction des SESSION INSCRIPTION
+            $manager = new GeneralManager();
+            $manager->logInscrOut();
             
             $this->redirectToRoute('validation');
             

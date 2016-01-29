@@ -56,6 +56,19 @@ class GeneralManager extends \W\Manager\Manager {
 
         return $sth->fetch();
     }
+    
+    public function logInscrOut()
+	{
+		unset($_SESSION["wuser"]);
+		unset($_SESSION["diplome"]);
+		unset($_SESSION["experience_pro"]);
+		unset($_SESSION["competence"]);
+		unset($_SESSION["fil_actu"]);
+		unset($_SESSION["portfolio"]);
+		unset($_SESSION["reseaux_social"]);
+		unset($_SESSION["reseaux_pro"]);
+		unset($_SESSION["reseaux_divertissement"]);
+	}
 
 }
 
