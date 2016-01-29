@@ -4,11 +4,11 @@
         <div class="row media">
             <div class="col-md-12 espacementProfil">
                 <div class="media-left media-middle col-md-3 col-md-offset-1">
-                    <img class="media-object img-circle" src="<?= $this->assetUrl('img/Avatar-512.png') ?>" alt="...">
+                    <img class="media-object img-circle" src="<?= $this->assetUrl("img/uploads/" . $membre["avatar"] . "")?>" alt="...">
                 </div>
                 <div class="media-body media-body-cheat col-md-6 col-md-offset-2">
                     <h2 class="media-heading"><?php echo $membre['prenom']?><br><?php echo $membre['nom']?></h2>
-                    <h3 class="">Age: Beaucoup trop</h3>
+                    <h3 class="">Age: <?php echo DateTime::createFromFormat('Y-m-d', $membre['ddn'])->diff(new DateTime('now'))->y; ?></h3>
                 </div>
             </div>
         </div>
