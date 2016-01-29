@@ -45,7 +45,7 @@ class DefaultController extends Controller {
 			$userManager = new UserManager();
             $UserManagerSuite = new GeneralManager();
             
-            // debug($userManager); die; // vérification 
+            //debug($userManager); die; // vérification 
 			if($auth->isValidLoginInfo($_POST['wuser']['mail'], $_POST['wuser']['mot_de_passe'])) {
                 //selection table user
 				$user = $userManager->getUserByUsernameOrEmail($_POST['wuser']['mail']);
@@ -56,7 +56,7 @@ class DefaultController extends Controller {
                 $user2 = $UserManagerSuite->findAllLogUser($id_user);
                 $_SESSION['user']['infos'] = $user2; // ajout de $user2 dans $user
 
-                //debug($user);die(); // vérification 
+                //debug($_SESSION['user']);die(); // vérification 
 				$this->redirectToRoute('accueil');
 			}
 		}

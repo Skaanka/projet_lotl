@@ -13,7 +13,7 @@ use \Manager\PortfolioManager;
 class AccueilController extends Controller {
  
 	public function getListeMembre() { //affiche tout les membres de la bdd
-		$this->allowTo(['admin','user']);
+		$this->allowTo(['admin','membre']);
 		$user = $this->getUser();
 		$manager = new GeneralManager(); // execute la function qui recupere TOUTES les tables de la bdd
 		$membres = $manager->findUserAll();
