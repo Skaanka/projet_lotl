@@ -40,10 +40,12 @@
 
 
         <?= $this->section('navBar') ?>
+        
+        <?= $this->section('validation') ?>
 
         <?= $this->section('main_content') ?>
         
-        <?= $this->section('oubli_mdp') ?>
+        
         
         <div id="footerHome" class="container-fluid no-padding">
             <div class="col-xs-6 col-sm-offset-8 col-sm-1  col-lg-offset-8 col-lg-1 text-center hauteurFooter">
