@@ -2,6 +2,8 @@
 
 <?php $this->start('main_content') ?>
 
+<meta http-equiv="Refresh" content="3;URL='http://projet_lotl"> 
+
 <h1> Votre demande a été prise en compte et un Admin validera votre inscription dans les plus brefs délais.</h1>
 
 	
