@@ -47,7 +47,7 @@
                                 
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" class="btn btn-primary" name="envoyer" formaction="<?php echo $this->url('oubli_mdp'); ?>">Envoyer</button>
+                                <button type="submit" class="btn btn-primary" name="envoyer" formaction="<?php echo $this->url('oubli'); ?>">Envoyer</button>
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
                             </div>
                             </form>

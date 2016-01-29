@@ -7,8 +7,8 @@
 		['GET', '/accueil', 'Accueil#getListeMembre', 'accueil'], // quand l'utilisateur est connecté
         
         // GESTION LOGIN / LOGOFF
-		['GET|POST', '/', 'Default#login', 'login'], 
-        ['GET|POST', '/', 'Default#logout', 'logout'], 
+		['GET|POST', '/login', 'Default#login', 'login'], 
+        ['GET|POST', '/logout', 'Default#logout', 'logout'], 
 
         // GESTION FORMULAIRE INSCRIPTION
 		['GET|POST', '/inscription1', 'Inscription#inscription_1', 'inscription1'],
@@ -20,8 +20,9 @@
 		['GET', '/consultation', 'Default#consultation', 'consultation'], // affichage des pages des utilisateurs du site 
 		['GET', '/filtre', 'Default#filtre', 'filtre'], // affichage des pages des utilisateurs du site 
 		['GET', '/validation', 'Default#validation', 'validation'], 
-		['GET|POST', '/oubli_mdp', 'Default#mdp_oublie', 'oubli_mdp'], // page de redéfintion du mot de passe en cas d'oubli.
-		['GET|POST', '/nouveau_mdp', 'Default#new_mdp', 'new_mdp'], // page de redéfintion du mot de passe en cas d'oubli.
+		
+        ['GET|POST', '/oubli', 'Default#oubli', 'oubli'], // page de redéfintion du mot de passe en cas d'oubli.
+		['GET|POST', '/nouveau/[:token]/[:id]', 'Default#nouveau', 'nouveau'], // page de redéfintion du mot de passe en cas d'oubli.
         
         
 	);

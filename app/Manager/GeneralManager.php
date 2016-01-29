@@ -96,6 +96,7 @@ $sql = "SELECT \n"
 //	$stmt->execute(array($_POST["mail"]));
 //	$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
+    
 }
 
 
