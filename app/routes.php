@@ -5,8 +5,7 @@
         // GESTION DES PAGES ACCUEIL
         ['GET', '/', 'Default#home', 'home'], // lorsque l'utilisateur n'est pas connecté
 		['GET', '/accueil', 'Accueil#getListeMembre', 'accueil'], // quand l'utilisateur est connecté
-//		['GET', '/accueil/[:id]', 'Accueil#getPortfolio', 'accueil_portfolio'], // quand l'utilisateur est connecté
-		['POST', '/postactu', 'Accueil#postActu', 'postactu'], // lorsque l'utilisateur n'est pas connecté
+		['POST', '/postactu', 'Accueil#postActu', 'postactu'], 
         
         // GESTION LOGIN / LOGOFF
 		['GET|POST', '/login', 'Default#login', 'login'], 

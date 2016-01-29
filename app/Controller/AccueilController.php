@@ -20,8 +20,6 @@ class AccueilController extends Controller {
 		$manager2 = new Fil_actuManager(); // execute la function qui recupere TOUTES les tables de la bdd
 		$fil_actus = $manager2->findLastFilActu5();
 
-
-
 		$this->show('accueil/accueil', ['membres' => $membres, 'fil_actus' => $fil_actus]);
 
 	}
