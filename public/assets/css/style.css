@@ -98,8 +98,130 @@ fieldset[disabled] .btn-navbut.active {
 
 
 
+
 /* Fin de structure du site */
-/*============*/
+
+
+/*====oeil de sauron =====*/
+
+
+
+@keyframes blink {
+  3% {
+    border-top: 76px solid #E7B79B;
+    border-bottom: 76px solid #E7B79B;
+  }
+  15% {
+    border-top: 30px solid #E7B79B;
+    border-bottom: 20px solid #E7B79B;
+  }
+  80% {
+    border-top: 70px solid #E7B79B;
+    border-bottom: 40px solid #E7B79B;
+  }
+}
+@keyframes eyemove {
+  3% {
+    left: 45px;
+    top: 45px;
+  }
+  30% {
+    left: 70px;
+    top: 50px;
+  }
+  80% {
+    left: 20px;
+    top: 45px;
+  }
+}
+body {
+  
+}
+.eye_back {
+    background: rgba(218, 58, 18, 0.6);;
+    
+    width: 800px;
+    height: auto;
+   
+}
+
+.eye {
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    border-radius: 50%;
+    background: url("/../../img/eye.jpg")no-repeat;
+    background-position: center;
+    background-size: cover ;
+    width: 150px;
+    height: 150px;
+    transform: rotate(0deg);
+    box-sizing: border-box;
+}
+
+.lids {
+ 
+  position: absolute;
+  border-top: 30px solid white; ;
+  border-bottom: 30px solid white;;
+    /*border-image: url(img/Fire.jpg);
+    */
+    
+  top: -1px;
+  width: 150px;
+  height: 152px;
+  border-radius: 60%;
+  background: rgba(255, 0, 255, 0);
+  box-sizing: border-box;
+}
+
+.eyeshine {
+  position: absolute;
+  left: 100px;
+  top: 50px;
+  width: 20px;
+  height: 15px;
+  border-radius: 60%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.iris {
+  position: absolute;
+  width: 100px;
+  height: 80px;
+  border-radius: 60%;
+  left: 25px;
+  top: 38px;
+  background: url("../img/iris.jpg")no-repeat;
+    background-size: cover ;
+    box-shadow: 0px 0px 10px #f3e127;
+
+  
+}
+
+.pupil {
+  position: absolute;
+  left: 46px;
+  top: 20px;
+  width: 10px;
+  height: 45px;
+  border-radius: 60%;
+  background-color: black;
+  box-shadow: 0px 0px 30px #f3e127;
+}
+
+.pupil-shine {
+  position: absolute;
+  left: 60%;
+  top: 20%;
+  width: 20%;
+  height: 20%;
+  border-radius: 60%;
+  background-color: #f3e127;
+}
+
+
+
 
 
 
@@ -237,9 +359,9 @@ fieldset[disabled] .btn-navbut.active {
 .avatar {
   
     height: 8em;
-    width: auto;
+    width: 10em;
     margin-top: 2em;
-    margin-left: 0.9em;
+    margin-left: 1em;
 }
 
 

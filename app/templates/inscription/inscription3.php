@@ -4,12 +4,12 @@
 
 
 
-
+<div class="inscript_back">
 <div id="wrapper" class="wrappInscr container">
 	<form method="POST" class="col-md-12">  
 
 		<div class="col-md-offset-1">
-			<h1>Sociaux</h1><br/>
+			<h1 class="title_inscipt">Réseaux Sociaux</h1><br/>
 		</div>
 
 
@@ -253,13 +253,14 @@
 
 		<div id="bouton" class="row">
 			<div class="">
-				<input type="submit" class="btn btn-primary col-md-offset-3" value="Page précédente" name="precedent2">
+				<input type="submit" class="btn-navbut btn btn-primary col-md-offset-3" value="Page précédente" name="precedent2">
 				<input type="submit" class="btn btn-success col-md-offset-3" value="valider" name="valider">
 			</div>
 		</div>
 
 	</form>   
 
+</div>
 </div>
 
 <?php $this->stop('main_content') ?>

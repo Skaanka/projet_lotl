@@ -6,11 +6,11 @@
 
 
 
-
+<div class="inscript_back">
 <div id="wrapper" class="wrappInscr container">
 	<form class="inscr2 col-md-12" method="POST">  
 
-		<div class="col-md-offset-1">
+		<div class="title_inscipt col-md-offset-1">
 			<h1>Parcour pro.</h1><br/>
 		</div>
 
@@ -218,19 +218,20 @@
 				
 			
 		</div>
-
+  
 
 
 
 		<div id="bouton" class="row">
 			<div class="">
-				<input type="submit" class="btn btn-primary col-md-offset-3" value="Page précédente" name="precedent">
-				<input type="submit" class="btn btn-primary col-md-offset-3" value="Page suivante" name="suivant2">
+				<input type="submit" class="btn-navbut btn btn-primary col-md-offset-3" value="Page précédente" name="precedent">
+				<input type="submit" class="btn-navbut btn btn-primary col-md-offset-3" value="Page suivante" name="suivant2">
 			</div>
 		</div>
 
 	</form>   
 
+</div>
 </div>
 <?php //debug($_SESSION['inscription_1']); ?>
 

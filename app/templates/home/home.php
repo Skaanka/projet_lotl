@@ -15,10 +15,10 @@
                 <div  id="navbar" class="navbar-collapse collapse">
                     <form method="post" class="navbar-form navbar-right">
                         <div class="form-group">
-                            <input type="text" name="wuser[mail]" placeholder="Email" class="form-control">
+                            <input type="text" name="wuser[mail]" placeholder="Email" class="grey form-control">
                         </div>
                         <div class="form-group">
-                            <input type="password" name="wuser[mot_de_passe]" placeholder="Password" class="form-control">
+                            <input type="password" name="wuser[mot_de_passe]" placeholder="Password" class=" grey form-control">
                         </div>
 
                         <input type="submit" name="connexion" class="btn btn-navbut" formaction="<?php echo $this->url('login') ?>" value="Connexion" >

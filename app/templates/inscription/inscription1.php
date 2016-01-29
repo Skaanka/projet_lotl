@@ -3,7 +3,7 @@
 <?php $this->start('main_content') ?>
 
 
-
+<div class="inscript_back">
 <div id="wrapper" class="wrappInscr container">
 
     <form method="post" enctype="multipart/form-data" class="col-md-6 col-md-offset-3">  
@@ -73,7 +73,7 @@
             </div>
             <div class="form-group col-md-6">
                 <label for="citation">Citation</label>
-                <input type="text" class="form-control" id="citation" placeholder="Votre citation..." name="wuser[citation]">
+                <input type="text" class="form-control" id="citation" placeholder="Votre citation...(130 caractères max)" name="wuser[citation]">
             </div>
 
         </div>
@@ -90,12 +90,13 @@
 
         <div id="bouton" class="row">
             <div class="col-md-offset-9">
-                <input type="submit" class="btn btn-primary" name="suivant" value="Page suivante">
+                <input type="submit" class="btn-navbut btn btn-primary" name="suivant" value="Page suivante">
             </div>
         </div>
 
     </form>   
 
+</div>
 </div>
 <?php //print_r($_SESSION['inscription_1']); ?>
 
