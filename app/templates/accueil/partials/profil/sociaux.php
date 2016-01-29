@@ -15,7 +15,7 @@
                             <img src="<?= $this->assetUrl('img/icons/FB_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['facebook']?>
+                            <?php echo $_SESSION['user']['infos']['facebook']?>
                         </div>
                     </div>
 
@@ -27,7 +27,7 @@
                             <img src="<?= $this->assetUrl('img/icons/Twitter-logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['twitter']?>
+                            <?php echo $_SESSION['user']['infos']['twitter']?>
                         </div>
                     </div>
 
@@ -39,7 +39,7 @@
                             <img src="<?= $this->assetUrl('img/icons/YouTube-logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['youtube']?>
+                            <?php echo $_SESSION['user']['infos']['youtube']?>
                         </div>
                     </div>
 
@@ -51,7 +51,7 @@
                             <img src="<?= $this->assetUrl('img/icons/googleplus_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['google']?>
+                            <?php echo $_SESSION['user']['infos']['google']?>
                         </div>
                     </div>
 
@@ -63,7 +63,7 @@
                             <img src="<?= $this->assetUrl('img/icons/skype_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['skype']?>
+                            <?php echo $_SESSION['user']['infos']['skype']?>
                         </div>
                     </div>
 
@@ -75,7 +75,7 @@
                             <img src="<?= $this->assetUrl('img/icons/instagram_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['instagram']?>
+                            <?php echo $_SESSION['user']['infos']['instagram']?>
                         </div>
                     </div>
 
@@ -87,7 +87,7 @@
                             <img src="<?= $this->assetUrl('img/icons/pinterest-logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['pinterest']?>
+                            <?php echo $_SESSION['user']['infos']['pinterest']?>
                         </div>
                     </div>
 
@@ -99,7 +99,7 @@
                             <img src="<?= $this->assetUrl('img/icons/spotify_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['spotify']?>
+                            <?php echo $_SESSION['user']['infos']['spotify']?>
                         </div>
                     </div>
 
@@ -111,7 +111,7 @@
                             <img src="<?= $this->assetUrl('img/icons/deezer_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['deezer']?>
+                            <?php echo $_SESSION['user']['infos']['deezer']?>
                         </div>
                     </div>
 
@@ -123,7 +123,7 @@
                             <img src="<?= $this->assetUrl('img/icons/viber-logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['viber']?>
+                            <?php echo $_SESSION['user']['infos']['viber']?>
                         </div>
                     </div>
 
