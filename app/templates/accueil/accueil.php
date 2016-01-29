@@ -84,17 +84,14 @@
 															<p>Site Web: <?php echo $_SESSION['user']['siteWeb']?></p>
 														</div>
 													</div>
-
-
-
-
-													<?php //echo $_SESSION['user']['ad_portfolio']?> <!-- portfolio --> <!-- il faut connecter la table wuser à la table portfolios -->
+                                                    
+                                                    <?php //echo $_SESSION['user']['ad_portfolio']?> <!-- portfolio --> <!-- il faut connecter la table wuser à la table portfolios -->
 													<?php echo $portfolio['ad_portfolio'] ?>
 
 													<?php //echo $_SESSION['user']['message']?> <!-- fil d'actu --> <!-- il faut connecter la table wuser à la table fil_actus -->
 													<?php // echo $fil_actus['message'] ?> <!-- ajouter le fil_actus dans la fenêtre modale post actu-->
 													<?php //debug($fil_actus);die(); ?>
-													
+                                                    
 												</div>
 											</div>
 
@@ -634,7 +631,7 @@
 
 					<?php foreach ($membres as $membre) { ?> <!-- boucle foreach pour afficher les utilisateur dans la table wusers -->
 					<?php //debug($membres);//die();?>
-
+<?php if ( $membre['validation_inscription'] == 'true' && $membre['nom'] != 'Sauron') { ?>
 					<li class="row col-md-4 offset-1 " data-groups='["all", "<?php if (!empty($membre["psn"])) { echo 'psn'; } ?>", "<?php if (!empty($membre["xboxlive"])) { echo 'xbox'; } ?>", "<?php if (!empty($membre["steam"])) { echo 'steam'; } ?>", "<?php if (!empty($membre["battlenet"])) { echo 'battle'; }?>", "<?php if (!empty($membre["compte_nintendo"])) { echo 'nintendo'; } ?>", "<?php if (!empty($membre["origin"])) { echo 'origin'; } ?>", "<?php if (!empty($membre["linkedin"])) { echo 'linkedin'; } ?>", "<?php if (!empty($membre["viadeo"])) { echo 'viadeo'; } ?>", "<?php if (!empty($membre["xing"])) { echo 'xing'; } ?>", "<?php if (!empty($membre["muxi"])) { echo 'muxy'; } ?>", "<?php if (!empty($membre["github"])) { echo 'github'; } ?>", "<?php if (!empty($membre["facebook"])) { echo 'facebook'; } ?>", "<?php if (!empty($membre["twitter"])) { echo 'twitter'; } ?>", "<?php if (!empty($membre["youtube"])) { echo 'youtube'; } ?>", "<?php if (!empty($membre["google"])) { echo 'google+'; } ?>", "<?php if (!empty($membre["skype"])) { echo 'skype'; } ?>", "<?php if (!empty($membre["instagram"])) { echo 'instagram'; } ?>", "<?php if (!empty($membre["pinterest"])) { echo 'pinterest'; } ?>", "<?php if (!empty($membre["deezer"])) { echo 'deezer'; } ?>", "<?php if (!empty($membre["spotify"])) { echo 'spotify'; } ?>", "<?php if (!empty($membre["viber"])) { echo 'viber'; } ?>"]'>
 						<figure class="portfolio-items">
 							<a href="#" data-toggle="modal" data-target="#myModal<?php echo $membre['id']?>">
@@ -1144,6 +1141,7 @@
 						</div>
 					</div> <!-- Fin de modal -->
 
+					<?php } ?>
 					<?php } ?>
 					<!-- sizer -->
 					<li class="col-md-4 col-sm-4 col-xs-6 shuffle_sizer"></li>
