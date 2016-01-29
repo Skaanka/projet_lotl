@@ -209,7 +209,7 @@
             <div class="panel-body">
 
                 <div class="form-group col-xs-12">
-                    <input type="text" class="form-control" rows="6" placeholder="http://..." name="portfolio[ad_portfolio]" placeholder="<?php echo $_SESSION['user']['infos']['']?>">
+                    <input type="text" class="form-control" rows="6" placeholder="http://..." name="portfolio[ad_portfolio]" placeholder="<?php echo $_SESSION['user']['infos']['ad_portfolio']?>">
                 </div>
             </div>
         </div>

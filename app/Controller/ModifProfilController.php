@@ -56,9 +56,9 @@ class ModifProfilController extends Controller {
             $_SESSION['fil_actu'] = $_POST['fil_actu'];
             $_SESSION['portfolio'] = $_POST['portfolio'];
             
-            $this->redirectToRoute('inscription3'); // si ok envoie page 2
+            $this->redirectToRoute('modif_profil3'); // si ok envoie page 2
         } elseif (isset($_POST['precedent'])) {
-            $_SESSION['inscription_2'] = $_POST['inscription_2'];
+            $_SESSION['modif_profil2'] = $_POST['modif_profil2'];
             $this->redirectToRoute('modif_profil1'); // si précédent retour page 1
         }
         $this->show('modif_profil/modif_profil2'); // redirection si erreur
