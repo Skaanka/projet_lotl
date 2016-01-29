@@ -643,7 +643,7 @@
 								<div class=" vignette">
 									<div class="row inside" >
 
-										<img src="<?= $this->assetUrl('img/cat.jpg')?>" class="avatar img-circle col-md-4 col-sm-4 col-xs-4"  alt="Item 1">
+										<img src="<?= $this->assetUrl("img/uploads/" . $membre["avatar"] . "")?>" class="avatar img-circle col-md-4 col-sm-4 col-xs-4"  alt="Item 1">
 
 
 										<!-- fin contenue image  / début lettrage -->
