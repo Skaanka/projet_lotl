@@ -21,8 +21,40 @@
                             <input type="password" name="wuser[mot_de_passe]" placeholder="Password" class="form-control">
                         </div>
 
-                        <input type="submit" name="connexion" class="btn btn-navbut" formaction="<?php echo $this->url('login') ?>" value="Connexion">
-                        <input type="submit" name="inscription" class="btn btn-navbut" formaction="<?php echo $this->url('inscription1') ?>" value="Inscription">
+                        <input type="submit" name="connexion" class="btn btn-navbut" formaction="<?php echo $this->url('login') ?>" value="Connexion" >
+                        <input type="submit" name="inscription" class="btn btn-navbut" formaction="<?php echo $this->url('inscription1') ?>" value="Inscription" >
+                        
+                    <!-- Button trigger modal -->
+                <span  class="recup_mdp" data-toggle="modal" data-target="#myModal">
+                    Mot de passe oublié ?
+                </span>
+                        
+                <!-- Début Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h3 class="modal-title black" id="myModalLabel">Mot de passe oublié</h3>
+                            </div>
+                            <form method="post">
+                            <div class="modal-body">
+                                
+                                    <div class="row form-group">
+                                    <label for="exampleInputEmail1" class="col-md-6 black">Veuillez saisir votre adresse mail :</label>
+                                    <input type="email" class="form-control col-md-4" id="exampleInputEmail1" name="oublie[mail]" placeholder="Email">
+                                    </div>
+                                
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary" name="envoyer" formaction="<?php echo $this->url('oubli'); ?>">Envoyer</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin Modal -->
 
                     </form>
                 </div><!--/.navbar-collapse -->

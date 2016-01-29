@@ -4,7 +4,7 @@
 
                 <div class="modal-dialog">
                 
-                    contenu de la fenêtre à proprement parler
+                    <!-- contenu de la fenêtre à proprement parler -->
                     <div class="modal-content">
                     
                         <div class="modal-header">

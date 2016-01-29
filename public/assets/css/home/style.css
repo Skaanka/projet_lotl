@@ -170,3 +170,29 @@ blockquote {
 	border: 2px solid #3c2f2f;
 }
 /* Fin inscription 1*/
+
+
+/* FENETRE MODALE */
+.modal-backdrop {
+    z-index: 0;
+}
+
+.black {
+    color: black;
+}
+
+.recup_mdp:hover {
+    cursor: pointer;
+    /* text-decoration: underline;*/
+    color: red;
+}
+
+.lien {
+    color: #FFF;
+}
+
+.lien:hover {
+    color: red;
+    text-decoration: none;
+}
+
