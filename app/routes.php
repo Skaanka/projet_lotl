@@ -25,7 +25,7 @@
 		['GET|POST', '/inscription1', 'Inscription#inscription_1', 'inscription1'],
         ['GET|POST', '/inscription2', 'Inscription#inscription_2', 'inscription2'],
         ['GET|POST', '/inscription3', 'Inscription#inscription_3', 'inscription3'],// formulaire d'inscription
-		
+		['GET', '/validation', 'Inscription#validation', 'validation'], 
 
 		// GESTION FORMULAIRE MODIFICATION
 		['GET|POST', '/modif_profil1', 'ModifProfil#modif_profil1', 'modif_profil1'],

@@ -146,4 +146,8 @@ class InscriptionController extends Controller {
         $this->show('inscription/inscription3');
     }
     
+    public function validation() {
+		$this->show('home/validation');
+	}
+    
 }
