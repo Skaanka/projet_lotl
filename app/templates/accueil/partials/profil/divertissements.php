@@ -7,7 +7,7 @@
             <div class="panel-body">
                 <div class="row">
                     
-                    <?php if (!empty($_SESSION['user']['infos']['psn'])) { ?>
+                    <?php if (!empty($_SESSION['user']['psn'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>PSN</h4>
@@ -16,12 +16,12 @@
                             <img src="<?= $this->assetUrl('img/icons/PSN_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['infos']['psn']?>
+                            <?php echo $_SESSION['user']['psn']?>
                         </div>
                     </div>
                     <?php } ?>
                     
-                    <?php if (!empty($_SESSION['user']['infos']['xboxlive'])) { ?>
+                    <?php if (!empty($_SESSION['user']['xboxlive'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>XboxLive</h4>
@@ -30,12 +30,12 @@
                             <img src="<?= $this->assetUrl('img/icons/Xbox_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['infos']['xboxlive']?>
+                            <?php echo $_SESSION['user']['xboxlive']?>
                         </div>
                     </div>
                     <?php } ?>
                     
-                    <?php if (!empty($_SESSION['user']['infos']['steam'])) { ?>
+                    <?php if (!empty($_SESSION['user']['steam'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Steam</h4>
@@ -44,12 +44,12 @@
                             <img src="<?= $this->assetUrl('img/icons/Steam_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['infos']['steam']?>
+                            <?php echo $_SESSION['user']['steam']?>
                         </div>
                     </div>
                     <?php } ?>
                     
-                    <?php if (!empty($_SESSION['user']['infos']['battlenet'])) { ?>
+                    <?php if (!empty($_SESSION['user']['battlenet'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Battle.net</h4>
@@ -58,12 +58,12 @@
                             <img src="<?= $this->assetUrl('img/icons/battlenet_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['infos']['battlenet']?>
+                            <?php echo $_SESSION['user']['battlenet']?>
                         </div>
                     </div>
                     <?php } ?>
                     
-                    <?php if (!empty($_SESSION['user']['infos']['origin'])) { ?>
+                    <?php if (!empty($_SESSION['user']['origin'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Origin</h4>
@@ -72,12 +72,12 @@
                             <img src="<?= $this->assetUrl('img/icons/origin1_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['infos']['origin']?>
+                            <?php echo $_SESSION['user']['origin']?>
                         </div>
                     </div>
                     <?php } ?>
                     
-                    <?php if (!empty($_SESSION['user']['infos']['compte_nintendo'])) { ?>
+                    <?php if (!empty($_SESSION['user']['compte_nintendo'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Nintendo</h4>
@@ -86,7 +86,7 @@
                             <img src="<?= $this->assetUrl('img/icons/Nintendo_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['infos']['compte_nintendo']?>
+                            <?php echo $_SESSION['user']['compte_nintendo']?>
                         </div>
                     </div>
                     <?php } ?>

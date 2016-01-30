@@ -1,5 +1,5 @@
 
-<?php $this->layout('layout_home', ['title' => 'home']) ?>
+<?php $this->layout('layout_home', ['title' => 'Lord of the Link']) ?>
 
 <?php $this->start('navBar') ?>
 <nav id="navHome" class="navbar navbar-inverse navbar-fixed-top">

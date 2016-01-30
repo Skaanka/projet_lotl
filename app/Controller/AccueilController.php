@@ -11,16 +11,14 @@ use \Manager\Fil_actuManager;
 use \Manager\PortfolioManager;
 
 class AccueilController extends Controller {
- 
+    
 	public function getListeMembre() { //affiche tout les membres de la bdd
 		$this->allowTo(['admin','membre']);
 		$user = $this->getUser();
 		$manager = new GeneralManager(); // execute la function qui recupere TOUTES les tables de la bdd
 		$membres = $manager->findUserAll();
-		$manager2 = new Fil_actuManager(); // execute la function qui recupere TOUTES les tables de la bdd
-		$fil_actus = $manager2->findLastFilActu5();
 
-		$this->show('accueil/accueil', ['membres' => $membres, 'fil_actus' => $fil_actus]);
+		$this->show('accueil/accueil', ['membres' => $membres]);
 
 	}
 	public function getProfilPerso() { //affiche tout les membres de la bdd

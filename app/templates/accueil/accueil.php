@@ -79,12 +79,12 @@
 
 				</div>
 			</div>
-			<?php foreach ($fil_actus as $fil_actu) { ?>
-            <?php //debug($fil_actus);die(); ?>
-            <?php if ($fil_actu['id'] != '1') { ?>
+			<?php foreach ($membres as $membre) { ?>
+            <?php //debug($membres);die(); ?>
+            <?php if ($membre['id'] != '1') { ?>
 			<div class="item text-center">
-				<h1>Nouveau chez <?php echo $fil_actu['prenom'] ?></h1>
-				<p><?php echo $fil_actu['message'] ?></p>
+				<h1>Nouveau chez <?php echo $membre['prenom'] ?></h1>
+				<p><?php echo $membre['statut'] ?></p>
 				<div class="carousel-caption">
 
 				</div>
@@ -151,7 +151,6 @@
 							</a>
 						</figure>
 					</li>
-
 
 
 					<!-- Modal -->

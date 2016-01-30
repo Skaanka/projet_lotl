@@ -1,4 +1,4 @@
-<?php $this->layout('layout', ['title' => 'modif_profil1']);?>
+<?php $this->layout('layout', ['title' => 'modification profil - partie 1']);?>
 
 <?php $this->start('main_content') ?>
 	

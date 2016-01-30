@@ -1,4 +1,4 @@
-<?php $this->layout('layout', ['title' => 'accueil']) ?>
+<?php $this->layout('layout', ['title' => 'administration']) ?>
 
 <?php $this->start('navBar') ?>
 

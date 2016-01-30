@@ -36,10 +36,10 @@ class ModifProfilController extends Controller {
             $_POST['wuser']['avatar'] = $name;
             
             
-            $_SESSION['wuser'] = $_POST['wuser'];
+            $_SESSION['updateUser'] = $_POST['wuser'];
             //hashage du mdp
-            $_SESSION['wuser']['mot_de_passe'] = password_hash($_SESSION['wuser']['mot_de_passe'], PASSWORD_DEFAULT);
-            //debug($_SESSION['wuser']);die();
+            $_SESSION['updateUser']['mot_de_passe'] = password_hash($_SESSION['updateUser']['mot_de_passe'], PASSWORD_DEFAULT);
+            //debug($_SESSION['updateUser']);die();
             $this->redirectToRoute('modif_profil2'); // si ok envoie page 2
 
         }
@@ -72,8 +72,8 @@ class ModifProfilController extends Controller {
             $_SESSION['reseaux_divertissement'] = $_POST['reseaux_divertissement'];
             
             // ajout d'un $key => $value (ex :role => membre)
-            $_SESSION['wuser']['role'] = 'membre';
-            $_SESSION['wuser']['validation_inscription'] = 'false';
+            $_SESSION['updateUser']['role'] = 'membre';
+            $_SESSION['updateUser']['validation_inscription'] = 'false';
             
             $manager = new UserManager();
             

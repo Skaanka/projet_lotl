@@ -11,6 +11,7 @@
 						<h1>Ma dernière actualité : </h1>
 						<div class="panel panel-default">
 							<div class="panel-body">
+                                
 								<p><?php echo $_SESSION['user']['statut'] ?></p>
 							</div>
 						</div>
