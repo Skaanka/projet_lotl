@@ -227,7 +227,5 @@
     </form>   
 
 </div>
-<?php debug($_SESSION['inscription_1']); ?>
-
 
 <?php $this->stop('main_content') ?>

@@ -69,7 +69,7 @@
                             <h4>GitHub</h4>
                         </div>
                         <div class="col-md-2">
-                            <img src="<?= $this->assetUrl('img/icons/github_logo.jpg') ?>" class="iconeMembre">
+                            <img src="<?= $this->assetUrl('img/icons/github_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
                             <?php echo $membre['github']?>
