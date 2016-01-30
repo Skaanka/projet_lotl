@@ -94,6 +94,7 @@ class InscriptionController extends Controller {
             $manager->insert($_SESSION['wuser']); //enregistrement membre dans BDD
             $mail = $_SESSION['wuser']['mail']; // recuperation du mail dans une variable
             //suite insert formulaire 1
+            $manager = new GeneralManager();
             $membre = $manager->findMail($mail);  //recuperation du membre dans la table wusers via le mail
             
             // insert page formulaire 2

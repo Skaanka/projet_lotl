@@ -6,6 +6,7 @@ namespace Controller;
 use \W\Controller\Controller;
 use \W\Manager\Manager;
 use \W\Manager\UserManager;
+use W\Security\AuthentificationManager;
 
 //Manager Projet
 use \Manager\CompetenceManager;
@@ -26,20 +27,20 @@ class ModifProfilController extends Controller {
     {
         if(isset($_POST['suivant'])) {  
             
-
-            //envoi image + changement nom_image
-            $uploads_dir = "C:/xampp/htdocs/projet_lotl/public/assets/img/uploads/";
-            //debug($_FILES);die();
-            $tmp_name = $_FILES['avatar']['tmp_name'];
-            $name = time() . "_" . $_FILES['avatar']['name'];
-            $result = move_uploaded_file($tmp_name, "$uploads_dir$name");
-            $_POST['wuser']['avatar'] = $name;
+            $update_profil = $_POST['wuser'];
             
+            if (!empty($_FILES['avatar']['tmp_name'])) { // si il y a une nouvelle image
+                //envoi image + changement nom_image
+                $uploads_dir = "C:/xampp/htdocs/projet_lotl/public/assets/img/uploads/";
+                //debug($_FILES);die();
+                $tmp_name = $_FILES['avatar']['tmp_name'];
+                $name = time() . "_" . $_FILES['avatar']['name'];
+                $result = move_uploaded_file($tmp_name, "$uploads_dir$name");
+                $update_profil['avatar'] = $name;
+            }
             
-            $_SESSION['wuser'] = $_POST['wuser'];
-            //hashage du mdp
-            $_SESSION['wuser']['mot_de_passe'] = password_hash($_SESSION['wuser']['mot_de_passe'], PASSWORD_DEFAULT);
-            //debug($_SESSION['wuser']);die();
+            $_SESSION['updateUser'] = $update_profil;
+            //debug($_SESSION['updateUser']);die();
             $this->redirectToRoute('modif_profil2'); // si ok envoie page 2
 
         }
@@ -50,13 +51,16 @@ class ModifProfilController extends Controller {
     public function modif_profil2() 
     {
         if(isset($_POST['suivant2'])) {
+            
             $_SESSION['diplome'] = $_POST['diplome'];
             $_SESSION['experience_pro'] = $_POST['experience_pro'];
             $_SESSION['competence'] = $_POST['competence'];
             $_SESSION['fil_actu'] = $_POST['fil_actu'];
             $_SESSION['portfolio'] = $_POST['portfolio'];
             
+            //debug($_SESSION['portfolio']);die();
             $this->redirectToRoute('modif_profil3'); // si ok envoie page 2
+            
         } elseif (isset($_POST['precedent'])) {
             $_SESSION['modif_profil2'] = $_POST['modif_profil2'];
             $this->redirectToRoute('modif_profil1'); // si précédent retour page 1
@@ -67,63 +71,58 @@ class ModifProfilController extends Controller {
     public function modif_profil3() 
     {
         if(isset($_POST['valider'])) {
+            
             $_SESSION['reseaux_social'] = $_POST['reseaux_social'];
             $_SESSION['reseaux_pro'] = $_POST['reseaux_pro'];
             $_SESSION['reseaux_divertissement'] = $_POST['reseaux_divertissement'];
+            //debug($_SESSION['updateUser']);debug($_SESSION['portfolio']);debug($_SESSION['reseaux_pro']);die();
             
-            // ajout d'un $key => $value (ex :role => membre)
-            $_SESSION['wuser']['role'] = 'membre';
-            $_SESSION['wuser']['validation_inscription'] = 'false';
-            
+            //recuperation de l'id du profil
             $manager = new UserManager();
-            
-            // insert formulaire 1
-            $manager->insert($_SESSION['wuser']); //enregistrement membre dans BDD
-            $mail = $_SESSION['wuser']['mail']; // recuperation du mail dans une variable
-            //suite insert formulaire 1
+            $mail = $_SESSION['updateUser']['mail']; // recuperation du mail dans une variable
             $membre = $manager->findMail($mail);  //recuperation du membre dans la table wusers via le mail
+            $id = $membre['id'];
             
-            // insert page formulaire 2
-            $_SESSION['diplome']['id_wuser'] = $membre['id']; // ajout d'une $key id_wuser dans la SESSION['diplome']
+            //debug($membre);debug($id);die();
+            
+            // update formulaire 1
+            $manager->update($_SESSION['updateUser'], $id); //enregistrement membre dans BDD
+            
+        
+            // update page formulaire 2
+			//debug($_SESSION['diplome']);die();
             $manager = new DiplomeManager(); //selection de la table Diplome
-            $manager->insert($_SESSION['diplome']);
+            $manager->update($_SESSION['diplome'], $id);
             
-            $_SESSION['experience_pro']['id_wuser'] = $membre['id']; // ajout d'une $key id_wuser dans la SESSION['experience_pro']
             $manager = new Experience_proManager(); //selection de la table experience_pros
-            $manager->insert($_SESSION['experience_pro']);
+            $manager->update($_SESSION['experience_pro'], $id);
             
-            $_SESSION['competence']['id_wuser'] = $membre['id']; // ajout d'une $key id_wuser dans la SESSION['competence']
             $manager = new CompetenceManager(); //selection de la table competences
-            $manager->insert($_SESSION['competence']);
+            $manager->update($_SESSION['competence'], $id);
             
-            $_SESSION['fil_actu']['id_wuser'] = $membre['id']; // ajout d'une $key id_wuser dans la SESSION['fil_actu']
             $manager = new Fil_actuManager(); //selection de la table fil_actus
-            $manager->insert($_SESSION['fil_actu']);
+            $manager->update($_SESSION['fil_actu'], $id);
             
-            $_SESSION['portfolio']['id_wuser'] = $membre['id']; // ajout d'une $key id_wuser dans la SESSION['portfolio']
             $manager = new PortfolioManager(); //selection de la table portfolios
-            $manager->insert($_SESSION['portfolio']);
+            $manager->update($_SESSION['portfolio'], $id);
             
-            // insert page formulaire 3
-            $_SESSION['reseaux_social']['id_wuser'] = $membre['id']; // ajout d'une $key id_wuser dans la SESSION['reseaux_social']
+            // update page formulaire 3
             $manager = new Reseaux_socialManager(); //selection de la table reseaux_socials
-            $manager->insert($_SESSION['reseaux_social']);
+            $manager->update($_SESSION['reseaux_social'], $id);
             
-            $_SESSION['reseaux_pro']['id_wuser'] = $membre['id']; // ajout d'une $key id_wuser dans la SESSION['reseaux_pro']
             $manager = new Reseaux_proManager(); //selection de la table reseaux_pros
-            $manager->insert($_SESSION['reseaux_pro']);
+            $manager->update($_SESSION['reseaux_pro'], $id);
             
-            $_SESSION['reseaux_divertissement']['id_wuser'] = $membre['id']; // ajout d'une $key id_wuser dans la SESSION['reseaux_divertissement']
             $manager = new Reseaux_divertissementManager(); //selection de la table reseaux_divertissements
-            $manager->insert($_SESSION['reseaux_divertissement']);
+            $manager->update($_SESSION['reseaux_divertissement'], $id);
             
-            $this->redirectToRoute('validation');
+            $this->redirectToRoute('accueil');
             
         } elseif (isset($_POST['precedent2'])) {
             $_SESSION['inscription_3'] = $_POST['modif_profil3'];
             $this->redirectToRoute('modif_profil2'); // si précédent retour page 2
         }
         $this->show('modif_profil/modif_profil3');
-    }
     
+	}
 }

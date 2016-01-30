@@ -1,4 +1,4 @@
-<?php $this->layout('layout_home', ['title' => 'inscription1']);?>
+<?php $this->layout('layout_home', ['title' => 'inscription - partie 1']);?>
 
 <?php $this->start('main_content') ?>
 

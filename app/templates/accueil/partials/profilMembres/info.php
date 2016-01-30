@@ -23,10 +23,11 @@
                     </div>
                     <div class="col-md-6">
                         <p>Email: <?php echo $membre['mail']?></p>
-                        <p>Telephone: <?php echo $membre['phone']?></p>
+                        <p>Telephone:<?php if (!empty($membre['phone'])) { echo $membre['phone']; } ?></p>
                         <p>Site Web: <?php echo $membre['siteWeb']?></p>
                     </div>
                 </div>
+                <!-- TODO STYLE -->
                 <?php echo $membre['ad_portfolio']?> <!-- portfolio -->
                 <?php echo $membre['message']?> <!-- fil d'actu -->
             </div>
@@ -42,26 +43,34 @@
                             <td><b>Intitulé</b></td>
                             <td><b>Ecole</b></td>
                         </tr>
+                        <?php if ( !empty($membre['intitule']) ) { ?>
                         <tr>
                             <td><?php echo $membre['annees_obt']?></td>
                             <td><?php echo $membre['intitule']?></td>
                             <td><?php echo $membre['ecole']?></td>
                         </tr>
+                        <?php } ?>
+                        <?php if ( !empty($membre['intitule2']) ) { ?>
                         <tr>
                             <td><?php echo $membre['annees_obt2']?></td>
                             <td><?php echo $membre['intitule2']?></td>
                             <td><?php echo $membre['ecole2']?></td>
                         </tr>
+                        <?php } ?>
+                        <?php if ( !empty($membre['intitule3']) ) { ?>
                         <tr>
                             <td><?php echo $membre['annees_obt3']?></td>
                             <td><?php echo $membre['intitule3']?></td>
                             <td><?php echo $membre['ecole3']?></td>
                         </tr>
+                        <?php } ?>
+                        <?php if ( !empty($membre['intitule4']) ) { ?>
                         <tr>
                             <td><?php echo $membre['annees_obt4']?></td>
                             <td><?php echo $membre['intitule4']?></td>
                             <td><?php echo $membre['ecole4']?></td>
                         </tr>
+                        <?php } ?>
                     </table>
                 </div>
             </div>
@@ -78,42 +87,54 @@
                             <td><b>Compagnie</b></td>
                             <td><b>Poste</b></td>
                         </tr>
+                        <?php if ( !empty($membre['poste']) ) { ?>
                         <tr>
                             <td><?php echo $membre['periode_debut']?></td>
                             <td><?php echo $membre['periode_fin']?></td>
                             <td><?php echo $membre['compagnie']?></td>
                             <td><?php echo $membre['poste']?></td>
                         </tr>
+                        <?php } ?>
+                        <?php if ( !empty($membre['poste2']) ) { ?>
                         <tr>
                             <td><?php echo $membre['periode_debut2']?></td>
                             <td><?php echo $membre['periode_fin2']?></td>
                             <td><?php echo $membre['compagnie2']?></td>
                             <td><?php echo $membre['poste2']?></td>
                         </tr>
+                        <?php } ?>
+                        <?php if ( !empty($membre['poste3']) ) { ?>
                         <tr>
                             <td><?php echo $membre['periode_debut3']?></td>
                             <td><?php echo $membre['periode_fin3']?></td>
                             <td><?php echo $membre['compagnie3']?></td>
                             <td><?php echo $membre['poste3']?></td>
                         </tr>
+                        <?php } ?>
+                        <?php if ( !empty($membre['poste4']) ) { ?>
                         <tr>
                             <td><?php echo $membre['periode_debut4']?></td>
                             <td><?php echo $membre['periode_fin4']?></td>
                             <td><?php echo $membre['compagnie4']?></td>
                             <td><?php echo $membre['poste4']?></td>
                         </tr>
+                        <?php } ?>
+                        <?php if ( !empty($membre['poste5']) ) { ?>
                         <tr>
                             <td><?php echo $membre['periode_debut5']?></td>
                             <td><?php echo $membre['periode_fin5']?></td>
                             <td><?php echo $membre['compagnie5']?></td>
                             <td><?php echo $membre['poste5']?></td>
                         </tr>
+                        <?php } ?>
+                        <?php if ( !empty($membre['poste6']) ) { ?>
                         <tr>
                             <td><?php echo $membre['periode_debut6']?></td>
                             <td><?php echo $membre['periode_fin6']?></td>
                             <td><?php echo $membre['compagnie6']?></td>
                             <td><?php echo $membre['poste6']?></td>
                         </tr>
+                        <?php } ?>
                     </table>
                 </div>
             </div>

@@ -6,7 +6,8 @@
         <div class="panel panel-default col-md-12 espacementProfil">
             <div class="panel-body">
                 <div class="row">
-
+                    
+                    <?php if (!empty($_SESSION['user']['facebook'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Facebook</h4>
@@ -18,7 +19,9 @@
                             <?php echo $_SESSION['user']['facebook']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($_SESSION['user']['twitter'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Twitter</h4>
@@ -30,7 +33,9 @@
                             <?php echo $_SESSION['user']['twitter']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($_SESSION['user']['youtube'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Youtube</h4>
@@ -42,7 +47,9 @@
                             <?php echo $_SESSION['user']['youtube']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($_SESSION['user']['compte_nintendo'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Google+</h4>
@@ -54,7 +61,9 @@
                             <?php echo $_SESSION['user']['google']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($_SESSION['user']['skype'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Skype</h4>
@@ -66,7 +75,9 @@
                             <?php echo $_SESSION['user']['skype']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($_SESSION['user']['instagram'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Instagram</h4>
@@ -78,7 +89,9 @@
                             <?php echo $_SESSION['user']['instagram']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($_SESSION['user']['pinterest'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Pinterest</h4>
@@ -90,7 +103,9 @@
                             <?php echo $_SESSION['user']['pinterest']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($_SESSION['user']['spotify'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Spotify</h4>
@@ -102,7 +117,9 @@
                             <?php echo $_SESSION['user']['spotify']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($_SESSION['user']['deezer'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Deezer</h4>
@@ -114,7 +131,9 @@
                             <?php echo $_SESSION['user']['deezer']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($_SESSION['user']['viber'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Viber</h4>
@@ -126,7 +145,8 @@
                             <?php echo $_SESSION['user']['viber']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
                 </div>
             </div>
         </div>

@@ -6,7 +6,8 @@
         <div class="panel panel-default col-md-12 espacementProfil">
             <div class="panel-body">
                 <div class="row">
-
+                    
+                    <?php if (!empty($_SESSION['user']['facebook'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Facebook</h4>
@@ -15,10 +16,12 @@
                             <img src="<?= $this->assetUrl('img/icons/FB_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['infos']['facebook']?>
+                            <?php echo $_SESSION['user']['facebook']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($_SESSION['user']['twitter'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Twitter</h4>
@@ -27,10 +30,12 @@
                             <img src="<?= $this->assetUrl('img/icons/Twitter-logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['infos']['twitter']?>
+                            <?php echo $_SESSION['user']['twitter']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($_SESSION['user']['youtube'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Youtube</h4>
@@ -39,10 +44,12 @@
                             <img src="<?= $this->assetUrl('img/icons/YouTube-logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['infos']['youtube']?>
+                            <?php echo $_SESSION['user']['youtube']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($_SESSION['user']['compte_nintendo'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Google+</h4>
@@ -51,10 +58,12 @@
                             <img src="<?= $this->assetUrl('img/icons/googleplus_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['infos']['google']?>
+                            <?php echo $_SESSION['user']['google']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($_SESSION['user']['skype'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Skype</h4>
@@ -63,10 +72,12 @@
                             <img src="<?= $this->assetUrl('img/icons/skype_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['infos']['skype']?>
+                            <?php echo $_SESSION['user']['skype']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($_SESSION['user']['instagram'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Instagram</h4>
@@ -75,10 +86,12 @@
                             <img src="<?= $this->assetUrl('img/icons/instagram_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['infos']['instagram']?>
+                            <?php echo $_SESSION['user']['instagram']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($_SESSION['user']['pinterest'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Pinterest</h4>
@@ -87,10 +100,12 @@
                             <img src="<?= $this->assetUrl('img/icons/pinterest-logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['infos']['pinterest']?>
+                            <?php echo $_SESSION['user']['pinterest']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($_SESSION['user']['spotify'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Spotify</h4>
@@ -99,10 +114,12 @@
                             <img src="<?= $this->assetUrl('img/icons/spotify_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['infos']['spotify']?>
+                            <?php echo $_SESSION['user']['spotify']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($_SESSION['user']['deezer'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Deezer</h4>
@@ -111,10 +128,12 @@
                             <img src="<?= $this->assetUrl('img/icons/deezer_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['infos']['deezer']?>
+                            <?php echo $_SESSION['user']['deezer']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
+                    <?php if (!empty($_SESSION['user']['viber'])) { ?>
                     <div class="col-md-6 affichageLiens">
                         <div class="col-md-10 col-md-offset-2">
                             <h4>Viber</h4>
@@ -123,10 +142,11 @@
                             <img src="<?= $this->assetUrl('img/icons/viber-logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['infos']['viber']?>
+                            <?php echo $_SESSION['user']['viber']?>
                         </div>
                     </div>
-
+                    <?php } ?>
+                    
                 </div>
             </div>
         </div>
