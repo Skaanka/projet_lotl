@@ -105,7 +105,9 @@
 
         </div>
         <!-- Fin menu navbar en dropdown --> -->
+        
 
+       
         <!-- Début container -->
         <div class="container-fluid no-padding">
 
@@ -125,6 +127,7 @@
         <script src="<?= $this->assetUrl('js/bootstrap.min.js') ?>"></script>
         <script src="<?= $this->assetUrl('js/jquery.shuffle.min.js') ?>"></script>
         <script type="text/javascript" src="<?= $this->assetUrl('js/script.js') ?>"></script>
+       
 
 
     </body>

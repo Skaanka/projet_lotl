@@ -1,118 +1,22 @@
-var melanger = (function( $ ) {
-    'use strict';
-    var maGrille = $('#grid'), //localiser l'élément à trier
-        filtresOptions = $('.portfolio-sorting li'),  //localiser les catégories de tri
-        dimensionner = maGrille.find('.shuffle_sizer'), // enregistre la taille des éléments
+/* 
+Feel free to modify and use it as you wish, no restrictions. 
+I'd like to hear if it's used anywhere though!
 
-        init = function() {
-
-            // None of these need to be executed synchronously
-            setTimeout(function() {
-                listen();
-                setupFilters();
-            }, 100);
-
-            // on instancie le plugin shuffle
-            maGrille.shuffle({
-                itemSelector: '[class*="col-"]',
-                sizer: dimensionner    
-            });
-        },
-
-
-
-        // Clic sur les boutons de filtre
-        setupFilters = function() {
-            var mesBoutons = filtresOptions.children();
-            mesBoutons.on('click', function(e) {
-                e.preventDefault();
-                var $this = $(this),
-                    isActive = $this.hasClass( 'active' ),
-                    group = isActive ? 'all' : $this.data('group');
-
-                // Bascule la classe "active" sur l'élément cliqué
-                if ( !isActive ) {
-                    $('.portfolio-sorting li a').removeClass('active');
-                }
-
-                $this.toggleClass('active');
-
-                // Filtrage des éléments
-                maGrille.shuffle( 'shuffle', group );
-            });
-
-            mesBoutons = null;
-        },
-
-        // Lancement du shuffle au chargement des images
-        // Nécessaire en-dessous de 768px car la hauteur de .picture-item est auto
-        // et que cela dépend de l'image chargée.
-        // Il est recommandé d'utiliser "imagesloaded" pour déterminer
-        // si l'image est chargée mais cela ne fonctionne pas avec IE7
-        listen = function() {
-            var debouncedLayout = $.throttle( 300, function() {
-                maGrille.shuffle('update');
-            });
-
-            // Placer toutes les images dans le shuffle (code pour chaque image / each)
-            maGrille.find('img').each(function() {
-                var proxyImage;
-
-                // si une image est déjà chargée
-                if ( this.complete && this.naturalWidth !== undefined ) {
-                    return;
-                }
-
-                // Si aucun des tests ci-dessus n'a fonctionné, on simule le chargement
-                // de l'élément indépendamment des autres
-                proxyImage = new Image();
-                $( proxyImage ).on('load', function() {
-                    $(this).off('load');
-                    debouncedLayout();
-                });
-
-                proxyImage.src = this.src;
-            });
-
-            // Parce que la méthode n'est pas parfaite...
-            setTimeout(function() {
-                debouncedLayout();
-            }, 500);
-        };      
-
-    return {
-        init: init
-    };
-}( jQuery ));
-
-$(document).ready(function()
-                  {
-    melanger.init(); //filtrer le portfolio
-});
-
-$('.carousel').carousel();
-
-
-
-
-
-
-/*----------   oeil de sauron   -----------------*/
-
-
+Thanks to Serge for providing a good example of the base mouse tracking here: cdpn.io/rbgpD
+*/
 
 var eye, lids = null;
-var lidMax = 18;
+var lidMax = 76;
 var skinColor = $('.lids').css('border-top-color');
 var eyeColor;
-var lidTop = {pos: 8, posGoal: this.pos, relaxed: 24, surprised: 3, 
-              angry: 23, playful: 10, bored: 25, 
-              tired: 23, squint: 20, lerp: 0, modifier: 1,};
-var lidBottom = {pos: 25, posGoal: this.pos, relaxed: 8, surprised: 3, 
-                 angry: 10, playful: 17, bored: 15, 
-                 tired: 18, squint: 22, lerp: 0, modifier: 1};
-var iris = {ref: null, x: 0, y: 0, w: 33, h: 27, color:'', lerp: 0};
-var pupil = {ref: null, x: 0, y: 0,  w: 3, h: 15, sizeGoal: 10, lerp: 0};
+var lidTop = {pos: 25, posGoal: this.pos, relaxed: 25, surprised: 10, 
+              angry: 70, playful: 10, bored: 55, 
+              tired: 70, squint: 60, lerp: 0, modifier: 1,};
+var lidBottom = {pos: 25, posGoal: this.pos, relaxed: 25, surprised: 10, 
+                 angry: 30, playful: 50, bored: 15, 
+                 tired: 55, squint: 65, lerp: 0, modifier: 1};
+var iris = {ref: null, x: 0, y: 0, w: 100, h: 80, color:'', lerp: 0};
+var pupil = {ref: null, x: 0, y: 0,  w: 10, h: 45, sizeGoal: 30, lerp: 0};
 var blinkFlag = false;
 var blinkTimer = 0;
 var distractionTimer = 0;

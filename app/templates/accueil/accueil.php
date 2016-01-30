@@ -3,7 +3,7 @@
 <?php $this->start('navBar') ?>
 
 <!-- Navbar Top-Screen-->
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class=" navbar navbar-inverse navbar-fixed-top">
 	<div class="container">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -13,6 +13,23 @@
 				<span class="icon-bar"></span>
 			</button>
 			<a class="navbar-brand" href="#">Lord of the links</a>
+            
+            <!--    debut "oeil de sauron" -->
+            
+           
+                <div class="eye">
+                    <div class="iris">
+                        <div class="pupil">
+                            <div class="pupil-shine"></div>
+                        </div>
+                    </div>
+  <!--<div class="eyeshine"></div>-->
+                    <div class="lids"></div>
+                </div>
+            
+            
+            <!-- fin "oeil de sauron" -->
+            
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
 			<div class="navbar-form navbar-right">
@@ -104,6 +121,7 @@
 		</a>
 	</div>
 </div>
+
 <!-- Fin du caroussel -->
 <?php $this->stop('carousel') ?>
 
@@ -115,6 +133,8 @@
 <?php //debug($_SESSION['user']); ?> 
 
 <div id="homeContent" class="row no-padding">
+    
+    
 
 	<!-- Portfolio -->
 	<section class="portfolio ">
@@ -132,6 +152,7 @@
 						<figure class="portfolio-items">
 							<a href="#" data-toggle="modal" data-target="#myModal<?php echo $membre['id']?>">
 
+        
 								<!-- contenue de image-->
 								<div class=" vignette">
 									<div class="row inside" >

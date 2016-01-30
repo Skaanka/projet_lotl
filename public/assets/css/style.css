@@ -16,6 +16,7 @@ body {
     background-size: cover;
 }
 
+
 .no-padding{
     padding: 0;
     margin: 0;
@@ -98,8 +99,226 @@ fieldset[disabled] .btn-navbut.active {
 
 
 
+
 /* Fin de structure du site */
+
+
+/*====oeil de sauron =====*/
+
+
+
+
+/* glyphicons */
+@font-face{
+    font-family: 'Glyphicons Halflings';
+    src: url('../font/glyphicons-halflings-regular.eot');
+    src: url('../font/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../font/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../font/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+
+
+/* Structure du site */
 /*============*/
+body {
+    display: block;
+    background: url(../img/lotl_background.jpg) no-repeat, center;
+    background-size: cover;
+}
+
+.no-padding{
+    padding: 0;
+    margin: 0;
+}
+
+#wrapper {
+    padding-top: 10em;
+    padding-bottom: 10em;
+    background: white;
+}
+
+#footer {
+    background: #222222;
+    height: 50px;
+} 
+
+.btn-navbut { 
+  color: #ffffff; 
+  background-color: #37566E; 
+  border-color: cadetblue; 
+}  
+ 
+.btn-navbut:hover, 
+.btn-navbut:focus, 
+.btn-navbut:active, 
+.btn-navbut.active, 
+.open .dropdown-toggle.btn-navbut { 
+  color: dodgerblue; 
+  background-color: #37566E; 
+  border-color: cadetblue; 
+}
+ 
+.btn-navbut:active, 
+.btn-navbut.active, 
+.open .dropdown-toggle.btn-navbut { 
+  background-image: none; 
+} 
+ 
+.btn-navbut.disabled, 
+.btn-navbut[disabled], 
+fieldset[disabled] .btn-navbut, 
+.btn-navbut.disabled:hover, 
+.btn-navbut[disabled]:hover, 
+fieldset[disabled] .btn-navbut:hover, 
+.btn-navbut.disabled:focus, 
+.btn-navbut[disabled]:focus, 
+fieldset[disabled] .btn-navbut:focus, 
+.btn-navbut.disabled:active, 
+.btn-navbut[disabled]:active, 
+fieldset[disabled] .btn-navbut:active, 
+.btn-navbut.disabled.active, 
+.btn-navbut[disabled].active, 
+fieldset[disabled] .btn-navbut.active { 
+  background-color: #37566E; 
+  border-color: #FFFFFF; 
+} 
+ 
+.btn-navbut .badge { 
+  color: #37566E; 
+  background-color: #5d5b5b; 
+}
+
+/*   -----------   Personalisation modal  ---------*/
+.modal-content {
+    background: #37566E;
+    color: black;
+    text-align: center;
+    border: 2px solid #043055;
+}
+.modal-body {
+    background: #51728d;
+     border: 2px solid #043055; 
+}
+
+.mod_textarea {
+    background: #5e8eb6;
+    opacity: 0,5;
+     border: 2px solid #043055;
+}
+
+
+
+
+/* Fin de structure du site */
+
+
+/*====oeil de sauron =====*/
+
+
+
+@keyframes blink {
+  3% {
+    border-top: 25px solid #E7B79B;
+    border-bottom: 25px solid #E7B79B;
+  }
+  15% {
+    border-top: 10px solid #E7B79B;
+    border-bottom: 7px solid #E7B79B;
+  }
+  80% {
+    border-top: 23px solid #E7B79B;
+    border-bottom: 13px solid #E7B79B;
+  }
+}
+@keyframes eyemove {
+  3% {
+    left: 15px;
+    top: 15px;
+  }
+  30% {
+    left: 23px;
+    top: 17px;
+  }
+  80% {
+    left: 7px;
+    top: 15px;
+  }
+}
+
+
+
+.eye {
+    background: url(../img/eye.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    left: 53%;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transform: rotate(0deg);
+    box-sizing: border-box;
+}
+
+.lids {
+ 
+  position: absolute;
+  border-top: 10px solid #222222; ;
+  border-bottom: 10px solid #222222;;  
+  top: -1px;
+  width: 50px;
+  height: 51px;
+  border-radius: 60%;
+  background: rgba(255, 0, 255, 0);
+  box-sizing: border-box;
+}
+
+.eyeshine {
+  position: absolute;
+  left: 33px;
+  top: 17px;
+  width: 7px;
+  height: 5px;
+  border-radius: 60%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.iris {
+  position: absolute;
+  width: 33px;
+  height: 27px;
+  border-radius: 60%;
+  left: 25px;
+  top: 38px;
+  background: url(../img/iris.jpg)no-repeat;
+    background-size: cover ;
+    box-shadow: 0px 0px 10px #f3e127;
+
+  
+}
+
+.pupil {
+  position: absolute;
+  left: 16px;
+  top: 6px;
+  width: 3px;
+  height: 15px;
+  border-radius: 60%;
+  background-color: black;
+  box-shadow: 0px 0px 30px #f3e127;
+}
+
+.pupil-shine {
+  position: absolute;
+  left: 60%;
+  top: 20%;
+  width: 20%;
+  height: 20%;
+  border-radius: 60%;
+  background-color: #f3e127;
+}
+
+
+
 
 
 
@@ -237,9 +456,9 @@ fieldset[disabled] .btn-navbut.active {
 .avatar {
   
     height: 8em;
-    width: auto;
+    width: 10em;
     margin-top: 2em;
-    margin-left: 0.9em;
+    margin-left: 1em;
 }
 
 
@@ -659,3 +878,574 @@ fieldset[disabled] .btn-navbut.active {
     box-shadow: 2px 2px 4px black;
 }
 >>>>>>> accueil
+
+
+
+
+/* EN TRAVAUX */
+
+/* Cheats pour le modal */
+.modal-backdrop {
+    z-index: 0;
+}
+
+#wrapCar {
+    background: url(../img/bandeau_sombre.jpg) no-repeat center;
+    margin-top: 51px;
+}
+
+#wrapCar .item {
+    height: 500px;
+    color: white;
+}
+
+#wrapCar .item h1 {
+    padding-top: 10%;
+}
+
+.media-left img {
+    max-height: 150px;
+    border: 2px solid #b2b2b2;
+}
+
+.espacementProfil {
+    margin: 5% 0;
+}
+
+.media-body-cheat {
+    margin-top: 2%;
+    width: 50%;
+}
+
+/*
+.media {
+    color: white;
+}
+*/
+
+
+/* Vignettes Membres */
+/*============*/
+.outerBox {
+    padding-left: 50px;
+}
+
+.outerBox a { 
+    text-decoration: none;
+}
+
+.innerBox {
+    height: 200px; 
+    border-radius: 15px;
+    background: #36454f; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  #36454f 0%, #1f262b 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover,  #36454f 0%,#1f262b 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center,  #36454f 0%,#1f262b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#36454f', endColorstr='#1f262b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    border: 4px solid grey;
+}
+
+.chat {
+    margin-top: 9%;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-left: -16%;
+    position: absolute;
+}
+
+.chat img {
+    height: 8.5em;
+    width: 8.5em;
+} 
+
+.chatcontent {
+    color: white;
+    margin: 10% 4% 0 24%;
+}
+
+.vignette {
+    margin-bottom: 7%
+}
+
+.portfolio-items a {
+	color: white;
+}
+
+/* Fin Vignettes Membres */
+/*============*/
+
+
+.nav-tabs li a {
+    color: black;
+    text-decoration: none;
+    background-color: #e3e2e2;
+}
+
+.portfolio {
+    margin-top: 5%;
+}
+
+.modal_content {
+    margin-top: 15%;
+}
+
+.affichageLiens {
+    margin-bottom: 4%;
+}
+
+.iconeMembre {
+    width: 40px;
+    height: auto;
+}
+
+
+.vignette {
+    
+    background: url("../img/vignette.png");
+    background-size: cover;
+    width: 25em;
+    height: 12em;
+}
+
+.inside {
+   
+    width: 34em;
+    height: auto;
+}
+
+.avatar {
+  
+    height: 8em;
+    width: 10em;
+    margin-top: 2em;
+    margin-left: 1em;
+}
+
+
+
+
+
+/* FIN DES TRAVAUX*/
+
+
+
+
+
+/* Connexion inscription */
+/*============*/
+#connexionbar {
+    padding: 8px;
+    background: black;
+}
+
+#connexion {
+    text-align: right;
+    font-size: 12px;
+}
+
+#wellcome {
+    color: white;
+}
+
+.glyphicon-ok-sign {
+    color: #01a801;
+    font-size: 20px;
+    top: 6px;
+}
+/* Fin de connexion inscription */
+/*============*/
+
+
+
+/* Barre de mini-boutons */
+/*============*/
+#menu-nav {
+    text-align: center;
+    background: grey;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: url(../img/decor01.jpg) center no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.iconMini {
+    height: auto;
+    width: 20px;
+}
+
+#home {
+    height: 25px;
+    width: auto;
+}
+
+.ul_btnHome {
+    margin: 8%;
+    
+}
+
+.btn_home {
+    background: #9b9fa3;
+    background-image: -webkit-linear-gradient(top, #9b9fa3, #0f0f0f);
+    background-image: -moz-linear-gradient(top, #9b9fa3, #0f0f0f);
+    background-image: -ms-linear-gradient(top, #9b9fa3, #0f0f0f);
+    background-image: -o-linear-gradient(top, #9b9fa3, #0f0f0f);
+    background-image: linear-gradient(to bottom, #9b9fa3, #0f0f0f);
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 0px 0px 0px 0px;
+    border: solid #c4c4c4 2px;
+    text-decoration: none;
+}
+/* Fin de barre mini-boutons */
+/*============*/
+
+
+
+/* Boutons déroulants */
+/*============*/
+.dropdown-menu {
+    background: #9b9fa3;
+    font-weight: bold;
+}
+
+.dropdown-toggle {
+    background: #9b9fa3;
+    background-image: -webkit-linear-gradient(top, #9b9fa3, #0f0f0f);
+    background-image: -moz-linear-gradient(top, #9b9fa3, #0f0f0f);
+    background-image: -ms-linear-gradient(top, #9b9fa3, #0f0f0f);
+    background-image: -o-linear-gradient(top, #9b9fa3, #0f0f0f);
+    background-image: linear-gradient(to bottom, #9b9fa3, #0f0f0f);
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 5px 10px 5px 10px;
+    border: solid #c4c4c4 2px;
+    text-decoration: none;
+}
+
+.dropdown-toggle:hover {
+    background:#e3e3e3;
+    background-image: -webkit-linear-gradient(top, #e3e3e3, #45535c);
+    background-image: -moz-linear-gradient(top, #e3e3e3, #45535c);
+    background-image: -ms-linear-gradient(top, #e3e3e3, #45535c);
+    background-image: -o-linear-gradient(top, #e3e3e3, #45535c);
+    background-image: linear-gradient(to bottom, #e3e3e3, #45535c);
+    text-decoration: none;
+}
+
+
+/* Fin de boutons déroulants*/
+/*============*/
+
+
+
+/* Formulaires inscription */
+/*============*/
+#avatar {
+    float: left;
+}
+
+#avatarProfil {
+    height: 50px;
+    width: auto;
+}
+
+.rowProfil {
+    font-size: 24px;
+    font-family: 'Droid Sans', sans-serif;
+}
+
+.name {
+    font-size: 34px;
+}
+
+#rowName {
+    margin-top: 18em;
+}
+
+#avatarProfilName {
+    padding: 0;
+    height: 150px;
+    width: 150px;
+    border: 1px solid grey;
+    box-shadow: 5px 5px 5px grey;
+}
+
+#rowAdress {
+    margin-top: 4em;
+}
+
+#rowCom {
+    margin-top: 4em;
+}
+
+#espaceform {
+    padding-top: 5em;
+}
+
+#bouton {
+    padding-top: 4em;
+}
+
+
+#diplomes {
+    text-align: center;
+}
+
+.panel-heading {
+    text-align: center;
+}
+
+.icons {
+    height: auto;
+    width: 90px;
+}
+
+.celSoc {
+    margin-top: 2%;
+}
+
+
+
+/* Liste des membres */
+/*============*/
+#sidebarMembres {
+    background: url(../img/bggrille.png);
+    color: white;
+    height: 1200px;
+}
+
+#membres {
+    list-style-type: none;
+}
+
+#membres li {
+    padding: 10px 0 10px 0;
+    border-bottom: 1px solid white;
+}
+/* Fin de liste des membres */
+/*============*/
+
+
+
+/* Début animation membres*/
+/*============*/
+.animated:hover { 
+    -webkit-animation-duration: 0.2s; 
+    animation-duration: 0.2s; 
+    -webkit-animation-fill-mode: both; 
+    animation-fill-mode: both; 
+    -webkit-animation-timing-function: ease-out; 
+    animation-timing-function: ease-out; 
+    background: white;
+    color: black;
+    font-size: 20px;
+    padding-left: 30px;
+} 
+
+@-webkit-keyframes fadeInLeft { 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: translateX(-5px); 
+    } 
+    100% { 
+        opacity: 1; 
+        -webkit-transform: translateX(10px); 
+    } 
+} 
+@keyframes fadeInLeft { 
+    0% { 
+        opacity: 0; 
+        transform: translateX(-5px); 
+    } 
+
+    100% { 
+        opacity: 1; 
+        transform: translateX(10px); 
+    } 
+} 
+.fadeInLeft:hover { 
+    -webkit-animation-name: fadeInLeft; 
+    animation-name: fadeInLeft; 
+}
+/* Fin animation membres*/
+/*============*/
+
+
+
+/* Page principale */
+/*============*/
+#homeContent {
+    height: 1200px;
+}
+
+#homeContent h1 {
+    margin: 10% 0 0 0;
+    color: white;
+}
+
+/*#homeContent h3 ,h2 {
+    color: white;
+}*/
+
+/*#homeContent button {
+    margin: 10% 0 0 0 ;
+}*/
+/* Fin de page principale */
+/*============*/
+
+
+
+/* Menu post-it droite */
+/*============*/
+#sidebarCat {
+    position: absolute;
+    top: 400px;
+    right: 5px;
+    background: url(../img/post-it-note-orange-final.jpg) no-repeat;
+    background-size: contain;
+    height: 230px;
+    padding-top: 65px;
+    float: right;
+    transform: rotate(5deg) translateX(200px);
+    font-family: 'Indie Flower', cursive;
+    transition: all ease-in-out 0.3s 0s;
+}
+
+#sidebarCatTire {
+    position: absolute;
+    font-size: 24px;
+    left: -30px;
+    top: 100px;
+    transform: rotate(270deg);
+}
+
+#sidebarCat:hover {
+    right: 190px;
+}
+
+#sidebarCat li{
+    padding-bottom: 0.5em;
+    list-style-type: none;
+    margin-left: -8%;
+    list-style-type: none;
+    font-size: 1.3em;
+}
+
+#sidebarCat a {
+    color: black;
+}
+/* Fin du menu post-it */
+/*============*/
+
+
+
+/* Profils des membres */
+/*============*/
+#titrePage {
+    margin-top: 20%;
+    font-family: 'Droid Sans', sans-serif;
+}
+
+.rowPage {
+    /*border: 1px solid black;*/
+    height: 6%;
+    margin-top: 5%;
+    margin-left: 12%;
+}
+
+.iconsPage {
+    margin-top: 5%;
+    margin-bottom: 0%;
+    height: auto;
+    width: 80px;
+}
+
+.labelPage {
+    margin-top: 2%;
+}
+
+.well {
+    margin-bottom: 3%;
+    box-shadow: 1px 1px 4px;
+    border: 1px solid grey;
+}
+
+.infoPage {
+    box-shadow: 3px 3px 4px grey;
+    border-radius: 5px;
+    background: #afbdbf;
+}
+
+#avatarPage {
+    margin-left: 30%;
+    padding: 0;
+    height: 150px;
+    width: 150px;
+    border: 1px solid grey;
+    box-shadow: 5px 5px 5px grey;
+}
+/* Fin profils membres */
+/*============*/
+
+
+
+/* Profil perso */
+/*============*/
+#titreProfilPerso {
+    margin-top: 20%;
+    margin-bottom: 4%;
+}
+
+#sousTitreProfilPerso {
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+.panel-default {
+    box-shadow: 2px 2px 4px black;
+}
+
+#rowNamePP {
+    font-size: 18px;
+    margin-top: 2%;
+}
+
+#avatarPP {
+    height: 100px;
+    width: auto;
+}
+
+#rowAdressPP {
+    font-size: 18px;
+    margin-top: 2%;
+}
+
+#rowComPP {
+    font-size: 18px;
+    margin-top: 2%;
+}
+/* Fin profil perso */
+/*============*/
+
+
+
+/* Profil perso social */
+/*============*/
+.panel-primary {
+    box-shadow: 2px 2px 4px black;
+}
+>>>>>>> accueil
+
+
+
+
+
+
+
+
+
+
+

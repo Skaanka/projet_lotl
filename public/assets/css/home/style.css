@@ -14,6 +14,10 @@ body {
     min-height: 100%;
 }
 
+.grey {
+    background: #b3c2ce;
+}
+
 #homeContent { /*image*/
     min-height: 95%;
 }
@@ -29,7 +33,14 @@ body {
     color: white;
 }
 
-
+/* contenue inscription*/
+.inscript_back {
+    background: url(../../img/lotl_background.jpg) no-repeat;
+    background-size: cover;
+}
+.title_inscipt {
+    text-align: center;
+}
 /* Contenu central */
  #homeContent {
      padding-top: 10px;
@@ -145,7 +156,7 @@ blockquote {
 
 /* Inscription1 */
 .wrappInscr {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(240, 249, 255, 0.7);
     padding: 2% 0;
 }
 
