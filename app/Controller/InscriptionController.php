@@ -96,7 +96,7 @@ class InscriptionController extends Controller {
             //suite insert formulaire 1
             $manager = new GeneralManager();
             $membre = $manager->findMail($mail);  //recuperation du membre dans la table wusers via le mail
-            
+            //debug($membre);die();
             // insert page formulaire 2
             $_SESSION['diplome']['id_wuser'] = $membre['id']; // ajout d'une $key id_wuser dans la SESSION['diplome']
             $manager = new DiplomeManager(); //selection de la table Diplome
