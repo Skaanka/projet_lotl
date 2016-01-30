@@ -80,7 +80,7 @@ abstract class Manager
     public function findMail($mail)
 	{
 
-		$sql = "SELECT * FROM " . $this->table . " WHERE mail = :mail LIMIT 1";
+		$sql = "SELECT * FROM wusers WHERE mail = :mail LIMIT 1";
 		$sth = $this->dbh->prepare($sql);
 		$sth->bindValue(":mail", $mail);
 		$sth->execute();

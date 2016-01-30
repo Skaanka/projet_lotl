@@ -22,6 +22,7 @@
 
         
         // GESTION FORMULAIRE INSCRIPTION
+        ['GET', '/validation', 'Inscription#validation', 'validation'],
 		['GET|POST', '/inscription1', 'Inscription#inscription_1', 'inscription1'],
         ['GET|POST', '/inscription2', 'Inscription#inscription_2', 'inscription2'],
         ['GET|POST', '/inscription3', 'Inscription#inscription_3', 'inscription3'],// formulaire d'inscription

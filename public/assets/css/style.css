@@ -454,16 +454,42 @@ fieldset[disabled] .btn-navbut.active {
 }
 
 .avatar {
-  
     height: 8em;
     width: 10em;
     margin-top: 2em;
     margin-left: 1em;
 }
 
+#avatar {
+    border: 4px solid #3c2f2f;
+}
 
+.wrappInscr {
+    padding-top:  5%;
+    background: rgba(240, 249, 255, 0.7);
+}
 
+.wrappInscr h3 {
+    color: white;
+}
 
+.margintop10 {
+    margin-top: 10%;
+}
+
+.form-control {
+	border: 2px solid #3c2f2f;
+}
+
+.marginTop5Bottom10 {
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.espacement2 {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
 
 /* FIN DES TRAVAUX*/
 
