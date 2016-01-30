@@ -4,52 +4,52 @@
 
 <!-- Navbar Top-Screen-->
 <nav class="navbar navbar-inverse navbar-fixed-top">
-	<div class="container">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#">Lord of the links</a>
-		</div>
-		<div id="navbar" class="navbar-collapse collapse">
-			<div class="navbar-form navbar-right">
-                
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Lord of the links</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <div class="navbar-form navbar-right">
+
                 <!--interface admin-->
                 <?php if ($_SESSION['user']['role'] === 'admin' ) { ?>
                 <!-- Button trigger modal Admin -->
                 <a href="<?php echo $this->url('administration'); ?>"><button type="button" class="btn btn-navbut" data-toggle="modal" data-target="#myModalAdmin">
                     Administration
-                </button></a>
+                    </button></a>
                 <?php } elseif ($_SESSION['user']['role'] == 'membre') {echo "";}?>
                 <!--interface admin-->
-                
-				<!-- Button trigger modal Profil -->
-				<button type="button" class="btn btn-navbut" data-toggle="modal" data-target="#myModalProfil">
-					Profil
-				</button>
 
-				<!-- Modal -->
+                <!-- Button trigger modal Profil -->
+                <button type="button" class="btn btn-navbut" data-toggle="modal" data-target="#myModalProfil">
+                    Profil
+                </button>
+
+                <!-- Modal -->
                 <?php require('partials/modal_profil.php') ?>
 
 
 
-				<!-- Button trigger modal -->
-				<button type="button" class="btn  btn-navbut" data-toggle="modal" data-target="#myModalPost">
-					Post actu
-				</button>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn  btn-navbut" data-toggle="modal" data-target="#myModalPost">
+                    Post actu
+                </button>
 
-				<!-- Modal -->
-				<?php require('partials/modal_postActu.php') ?>
+                <!-- Modal -->
+                <?php require('partials/modal_postActu.php') ?>
 
 
 
-				<a href="<?= $this->url("logout"); ?>"><button class="btn btn-success">Déconnexion</button></a>
-			</div>
-		</div><!--/.navbar-collapse -->
-	</div>
+                <a href="<?= $this->url("logout"); ?>"><button class="btn btn-success">Déconnexion</button></a>
+            </div>
+        </div><!--/.navbar-collapse -->
+    </div>
 </nav>
 <!-- Fin Navbar Top-Screen-->
 <?php $this->stop('navBar') ?>
@@ -60,17 +60,15 @@
     <?php //debug($membres);die(); ?>
     <a href="<?php echo $this->url('accueil'); ?>">Retour accueil</a>
     <form>
-    <?php foreach ($membres as $membre) { ?> <!-- boucle foreach pour afficher les utilisateur dans la table wusers -->
-    <?php if ( $membre['validation_inscription'] === 'false') { ?>
+        <?php foreach ($membres as $membre) { ?> <!-- boucle foreach pour afficher les utilisateur dans la table wusers -->
+        <?php if ( $membre['validation_inscription'] === 'false') { ?>
         <?php 
-        $true = 'true';
-        echo $membre['prenom'] . " " . $membre['nom'] . " : "; 
+    $true = 'true';
+    echo $membre['prenom'] . " " . $membre['nom'] . " : "; 
         ?> <a href="<?= $this->url('validationProfil', ['id' => $membre['id']]) ?>">Validation profil</a> <a href="<?= $this->url('RefusProfil', ['id' => $membre['id']]) ?>">Delete profil</a> 
         <br/>
-    <?php } ?> <!--fin du if--> 
-    <?php } ?> <!--fin du foreach-->
-        </form>
+        <?php } ?> <!--fin du if--> 
+        <?php } ?> <!--fin du foreach-->
+    </form>
 </div>	
-
-<span>TODO : suppression de profil deja validé. ajout d'administrateur ?</span>
 <?php $this->stop('main_content') ?>

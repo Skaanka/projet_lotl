@@ -12,7 +12,7 @@
 						<div class="panel panel-default">
 							<div class="panel-body">
                                 
-								<p><?php echo $_SESSION['user']['infos']['message'] ?></p>
+								<p><?php echo $_SESSION['user']['message'] ?></p>
 							</div>
 						</div>
 

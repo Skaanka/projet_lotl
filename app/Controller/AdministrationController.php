@@ -22,8 +22,9 @@ class AdministrationController extends Controller {
 
     public function administration() {
         //$user = $this->getUser();
-        $manager = new GeneralManager(); // execute la function qui recupere TOUTES les tables de la bdd
-        $membres = $manager->findUserAll();
+        $manager = new UserManager(); // execute la function qui recupere TOUTES les tables de la bdd
+        $membres = $manager->findAll();
+        //debug($membres);die();
         $this->show('administration/administration', ['membres' => $membres]);
     }
 

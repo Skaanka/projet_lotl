@@ -157,7 +157,7 @@
             <div class="panel panel-default col-md-12">
                 <div class="panel-body col-md-12">
                     <h2><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>&nbsp;<u>Compétences: </u></h2><br>
-                    <p><?php echo $_SESSION['user']['competence']?></p>
+                    <p><?php if (!empty($_SESSION['user']['competence'])) { echo $_SESSION['user']['competence']; }?></p>
 
                 </div>
             </div>

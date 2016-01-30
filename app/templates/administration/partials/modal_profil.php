@@ -8,7 +8,7 @@
             <div class="modal-body">
 
                 <!-- Début des onglets dans le modal consultation des profil membres -->
-                <ul class="nav nav-tabs" role="tablist">
+                <ul class="nav nav-tabs " role="tablist">
                     <li class="active"><a data-toggle="tab" href="#tabMembreInfo<?php echo $_SESSION['user']['id']?>">Infos</a></li>
                     <li><a data-toggle="tab" href="#tabMembreDiv<?php echo $_SESSION['user']['id']?>">Divertissements</a></li>
                     <li><a data-toggle="tab" href="#tabMembrePro<?php echo $_SESSION['user']['id']?>">Réseaux Pro.</a></li>
