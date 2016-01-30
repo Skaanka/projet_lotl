@@ -123,10 +123,12 @@
         </div>
 
         <!-- Liaison bilbliothèque javascript bootstrap et Jquery -->
+        <script type="text/javascript" src="<?= $this->assetUrl('js/eye.js') ?>"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="<?= $this->assetUrl('js/bootstrap.min.js') ?>"></script>
         <script src="<?= $this->assetUrl('js/jquery.shuffle.min.js') ?>"></script>
         <script type="text/javascript" src="<?= $this->assetUrl('js/script.js') ?>"></script>
+        
        
 
 

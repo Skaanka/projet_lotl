@@ -1,22 +1,19 @@
-/* 
-Feel free to modify and use it as you wish, no restrictions. 
-I'd like to hear if it's used anywhere though!
+/*----------   oeil de sauron   -----------------*/
 
-Thanks to Serge for providing a good example of the base mouse tracking here: cdpn.io/rbgpD
-*/
+
 
 var eye, lids = null;
-var lidMax = 76;
+var lidMax = 18;
 var skinColor = $('.lids').css('border-top-color');
 var eyeColor;
-var lidTop = {pos: 25, posGoal: this.pos, relaxed: 25, surprised: 10, 
-              angry: 70, playful: 10, bored: 55, 
-              tired: 70, squint: 60, lerp: 0, modifier: 1,};
-var lidBottom = {pos: 25, posGoal: this.pos, relaxed: 25, surprised: 10, 
-                 angry: 30, playful: 50, bored: 15, 
-                 tired: 55, squint: 65, lerp: 0, modifier: 1};
-var iris = {ref: null, x: 0, y: 0, w: 100, h: 80, color:'', lerp: 0};
-var pupil = {ref: null, x: 0, y: 0,  w: 10, h: 45, sizeGoal: 30, lerp: 0};
+var lidTop = {pos: 8, posGoal: this.pos, relaxed: 24, surprised: 3, 
+              angry: 23, playful: 10, bored: 25, 
+              tired: 23, squint: 20, lerp: 0, modifier: 1,};
+var lidBottom = {pos: 25, posGoal: this.pos, relaxed: 8, surprised: 3, 
+                 angry: 10, playful: 17, bored: 15, 
+                 tired: 18, squint: 22, lerp: 0, modifier: 1};
+var iris = {ref: null, x: 0, y: 0, w: 33, h: 27, color:'', lerp: 0};
+var pupil = {ref: null, x: 0, y: 0,  w: 3, h: 15, sizeGoal: 10, lerp: 0};
 var blinkFlag = false;
 var blinkTimer = 0;
 var distractionTimer = 0;

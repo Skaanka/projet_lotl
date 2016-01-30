@@ -152,7 +152,6 @@
 						<figure class="portfolio-items">
 							<a href="#" data-toggle="modal" data-target="#myModal<?php echo $membre['id']?>">
 
-        
 								<!-- contenue de image-->
 								<div class=" vignette">
 									<div class="row inside" >
