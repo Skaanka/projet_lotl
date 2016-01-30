@@ -85,4 +85,6 @@ class AuthentificationManager
 
 		return false;
 	}
+    
+    
 }

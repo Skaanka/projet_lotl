@@ -1,6 +1,10 @@
 <?php
 namespace Manager;
 
+use \W\Session\SessionManager;
+use \W\Security\AuthentificationManager;
+
+
 class GeneralManager extends \W\Manager\Manager {
 
     public function findUserAll($orderBy = "", $orderDir = "ASC") {
@@ -69,7 +73,10 @@ class GeneralManager extends \W\Manager\Manager {
 		unset($_SESSION["reseaux_pro"]);
 		unset($_SESSION["reseaux_divertissement"]);
 	}
+    
+    
 
+    
 }
 
 

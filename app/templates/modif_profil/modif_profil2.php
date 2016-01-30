@@ -33,46 +33,46 @@
 
                 <div class="row cellule">
                     <div class="form-group col-md-2">
-                        <input type="text" class="form-control" name="diplome[annees_obt]" placeholder="<?php echo $_SESSION['user']['infos']['annees_obt']?>">
+                        <input type="text" class="form-control" name="diplome[annees_obt]" value="<?php echo $_SESSION['user']['annees_obt']?>">
                     </div>
                     <div class="form-group col-md-5">
-                        <input type="text" class="form-control" name="diplome[intitule]" placeholder="<?php echo $_SESSION['user']['infos']['intitule']?>">
+                        <input type="text" class="form-control" name="diplome[intitule]" value="<?php echo $_SESSION['user']['intitule']?>">
                     </div>
                     <div class="form-group col-md-5">
-                        <input type="text" class="form-control" name="diplome[ecole]" placeholder="<?php echo $_SESSION['user']['infos']['ecole']?>">
+                        <input type="text" class="form-control" name="diplome[ecole]" value="<?php echo $_SESSION['user']['ecole']?>">
                     </div>
                 </div>
                 <div class="row cellule">
                     <div class="form-group col-md-2">
-                        <input type="text" class="form-control" name="diplome[annees_obt2]" placeholder="<?php echo $_SESSION['user']['infos']['annees_obt2']?>">
+                        <input type="text" class="form-control" name="diplome[annees_obt2]" value="<?php echo $_SESSION['user']['annees_obt2']?>">
                     </div>
                     <div class="form-group col-md-5">
-                        <input type="text" class="form-control" name="diplome[intitule2]" placeholder="<?php echo $_SESSION['user']['infos']['intitule2']?>">
+                        <input type="text" class="form-control" name="diplome[intitule2]" value="<?php echo $_SESSION['user']['intitule2']?>">
                     </div>
                     <div class="form-group col-md-5">
-                        <input type="text" class="form-control"  name="diplome[ecole2]" placeholder="<?php echo $_SESSION['user']['infos']['ecole2']?>">
+                        <input type="text" class="form-control"  name="diplome[ecole2]" value="<?php echo $_SESSION['user']['ecole2']?>">
                     </div>
                 </div>
                 <div class="row cellule">
                     <div class="form-group col-md-2">
-                        <input type="text" class="form-control" name="diplome[annees_obt3]" placeholder="<?php echo $_SESSION['user']['infos']['annees_obt3']?>">
+                        <input type="text" class="form-control" name="diplome[annees_obt3]" value="<?php echo $_SESSION['user']['annees_obt3']?>">
                     </div>
                     <div class="form-group col-md-5">
-                        <input type="text" class="form-control" name="diplome[intitule3]" placeholder="<?php echo $_SESSION['user']['infos']['intitule3']?>">
+                        <input type="text" class="form-control" name="diplome[intitule3]" value="<?php echo $_SESSION['user']['intitule3']?>">
                     </div>
                     <div class="form-group col-md-5">
-                        <input type="text" class="form-control" name="diplome[ecole3]" placeholder="<?php echo $_SESSION['user']['infos']['ecole3']?>">
+                        <input type="text" class="form-control" name="diplome[ecole3]" value="<?php echo $_SESSION['user']['ecole3']?>">
                     </div>
                 </div>
                 <div class="row cellule">
                     <div class="form-group col-md-2">
-                        <input type="text" class="form-control" name="diplome[annees_obt4]" placeholder="<?php echo $_SESSION['user']['infos']['annees_obt4']?>">
+                        <input type="text" class="form-control" name="diplome[annees_obt4]" value="<?php echo $_SESSION['user']['annees_obt4']?>">
                     </div>
                     <div class="form-group col-md-5">
-                        <input type="text" class="form-control" name="diplome[intitule4]" placeholder="<?php echo $_SESSION['user']['infos']['intitule4']?>">
+                        <input type="text" class="form-control" name="diplome[intitule4]" value="<?php echo $_SESSION['user']['intitule4']?>">
                     </div>
                     <div class="form-group col-md-5">
-                        <input type="text" class="form-control" name="diplome[ecole4]" placeholder="<?php echo $_SESSION['user']['infos']['ecole4']?>">
+                        <input type="text" class="form-control" name="diplome[ecole4]" value="<?php echo $_SESSION['user']['ecole4']?>">
                     </div>
                 </div>
             </div>
@@ -98,86 +98,86 @@
 
                 <div class="row cellule">
                     <div class="form-group col-xs-2">
-                        <input type="text"  class="form-control" name="experience_pro[periode_debut]" placeholder="<?php echo $_SESSION['user']['infos']['periode_debut']?>">
+                        <input type="text"  class="form-control" name="experience_pro[periode_debut]" value="<?php echo $_SESSION['user']['periode_debut']?>">
                     </div>
                     <div class="form-group col-xs-2">
-                        <input type="text" class="form-control" name="experience_pro[periode_fin]" placeholder="<?php echo $_SESSION['user']['infos']['periode_fin']?>">
+                        <input type="text" class="form-control" name="experience_pro[periode_fin]" value="<?php echo $_SESSION['user']['periode_fin']?>">
                     </div>
                     <div class="form-group col-md-4">
-                        <input type="text" class="form-control" name="experience_pro[compagnie]" placeholder="<?php echo $_SESSION['user']['infos']['compagnie']?>">
+                        <input type="text" class="form-control" name="experience_pro[compagnie]" value="<?php echo $_SESSION['user']['compagnie']?>">
                     </div>
                     <div class="form-group col-md-4">
-                        <input type="text" class="form-control" name="experience_pro[poste]" placeholder="<?php echo $_SESSION['user']['infos']['poste']?>">
+                        <input type="text" class="form-control" name="experience_pro[poste]" value="<?php echo $_SESSION['user']['poste']?>">
                     </div>
                 </div>
                 <div class="row cellule">
                     <div class="form-group col-xs-2">
-                        <input type="text"  class="form-control" name="experience_pro[periode_debut2]" placeholder="<?php echo $_SESSION['user']['infos']['periode_debut2']?>" >
+                        <input type="text"  class="form-control" name="experience_pro[periode_debut2]" value="<?php echo $_SESSION['user']['periode_debut2']?>" >
                     </div>
                     <div class="form-group col-xs-2">
-                        <input type="text" class="form-control" name="experience_pro[periode_fin2]" placeholder="<?php echo $_SESSION['user']['infos']['periode_fin2']?>">
+                        <input type="text" class="form-control" name="experience_pro[periode_fin2]" value="<?php echo $_SESSION['user']['periode_fin2']?>">
                     </div>
                     <div class="form-group col-md-4">
-                        <input type="text" class="form-control" name="experience_pro[compagnie2]" placeholder="<?php echo $_SESSION['user']['infos']['compagnie2']?>">
+                        <input type="text" class="form-control" name="experience_pro[compagnie2]" value="<?php echo $_SESSION['user']['compagnie2']?>">
                     </div>
                     <div class="form-group col-md-4">
-                        <input type="text" class="form-control" name="experience_pro[poste2]" placeholder="<?php echo $_SESSION['user']['infos']['poste2']?>">
+                        <input type="text" class="form-control" name="experience_pro[poste2]" value="<?php echo $_SESSION['user']['poste2']?>">
                     </div>
                 </div>
                 <div class="row cellule">
                     <div class="form-group col-xs-2">
-                        <input type="text"  class="form-control" name="experience_pro[periode_debut3]" placeholder="<?php echo $_SESSION['user']['infos']['periode_debut3']?>">
+                        <input type="text"  class="form-control" name="experience_pro[periode_debut3]" value="<?php echo $_SESSION['user']['periode_debut3']?>">
                     </div>
                     <div class="form-group col-xs-2">
-                        <input type="text" class="form-control" name="experience_pro[periode_fin3]" placeholder="<?php echo $_SESSION['user']['infos']['periode_fin3']?>">
+                        <input type="text" class="form-control" name="experience_pro[periode_fin3]" value="<?php echo $_SESSION['user']['periode_fin3']?>">
                     </div>
                     <div class="form-group col-md-4">
-                        <input type="text" class="form-control" name="experience_pro[compagnie3]" placeholder="<?php echo $_SESSION['user']['infos']['compagnie3']?>">
+                        <input type="text" class="form-control" name="experience_pro[compagnie3]" value="<?php echo $_SESSION['user']['compagnie3']?>">
                     </div>
                     <div class="form-group col-md-4">
-                        <input type="text" class="form-control" name="experience_pro[poste3]" placeholder="<?php echo $_SESSION['user']['infos']['poste3']?>">
+                        <input type="text" class="form-control" name="experience_pro[poste3]" value="<?php echo $_SESSION['user']['poste3']?>">
                     </div>
                 </div>
                 <div class="row cellule">
                     <div class="form-group col-xs-2">
-                        <input type="text"  class="form-control" name="experience_pro[periode_debut4]" placeholder="<?php echo $_SESSION['user']['infos']['periode_debut4']?>">
+                        <input type="text"  class="form-control" name="experience_pro[periode_debut4]" value="<?php echo $_SESSION['user']['periode_debut4']?>">
                     </div>
                     <div class="form-group col-xs-2">
-                        <input type="text" class="form-control" name="experience_pro[periode_fin4]" placeholder="<?php echo $_SESSION['user']['infos']['periode_fin4']?>">
+                        <input type="text" class="form-control" name="experience_pro[periode_fin4]" value="<?php echo $_SESSION['user']['periode_fin4']?>">
                     </div>
                     <div class="form-group col-md-4">
-                        <input type="text" class="form-control" name="experience_pro[compagnie4]" placeholder="<?php echo $_SESSION['user']['infos']['compagnie4']?>">
+                        <input type="text" class="form-control" name="experience_pro[compagnie4]" value="<?php echo $_SESSION['user']['compagnie4']?>">
                     </div>
                     <div class="form-group col-md-4">
-                        <input type="text" class="form-control" name="experience_pro[poste4]" placeholder="<?php echo $_SESSION['user']['infos']['poste4']?>">
+                        <input type="text" class="form-control" name="experience_pro[poste4]" value="<?php echo $_SESSION['user']['poste4']?>">
                     </div>
                 </div>
                 <div class="row cellule">
                     <div class="form-group col-xs-2">
-                        <input type="text"  class="form-control" name="experience_pro[periode_debut5]" placeholder="<?php echo $_SESSION['user']['infos']['periode_debut5']?>">
+                        <input type="text"  class="form-control" name="experience_pro[periode_debut5]" value="<?php echo $_SESSION['user']['periode_debut5']?>">
                     </div>
                     <div class="form-group col-xs-2">
-                        <input type="text" class="form-control" name="experience_pro[periode_fin5]" placeholder="<?php echo $_SESSION['user']['infos']['periode_fin5']?>">
+                        <input type="text" class="form-control" name="experience_pro[periode_fin5]" value="<?php echo $_SESSION['user']['periode_fin5']?>">
                     </div>
                     <div class="form-group col-md-4">
-                        <input type="text" class="form-control" name="experience_pro[compagnie5]" placeholder="<?php echo $_SESSION['user']['infos']['compagnie5']?>">
+                        <input type="text" class="form-control" name="experience_pro[compagnie5]" value="<?php echo $_SESSION['user']['compagnie5']?>">
                     </div>
                     <div class="form-group col-md-4">
-                        <input type="text" class="form-control" name="experience_pro[poste5]" placeholder="<?php echo $_SESSION['user']['infos']['poste5']?>">
+                        <input type="text" class="form-control" name="experience_pro[poste5]" value="<?php echo $_SESSION['user']['poste5']?>">
                     </div>
                 </div>
                 <div class="row cellule">
                     <div class="form-group col-xs-2">
-                        <input type="text"  class="form-control" name="experience_pro[periode_debut6]" placeholder="<?php echo $_SESSION['user']['infos']['periode_debut6']?>">
+                        <input type="text"  class="form-control" name="experience_pro[periode_debut6]" value="<?php echo $_SESSION['user']['periode_debut6']?>">
                     </div>
                     <div class="form-group col-xs-2">
-                        <input type="text" class="form-control" name="experience_pro[periode_fin6]" placeholder="<?php echo $_SESSION['user']['infos']['periode_fin6']?>">
+                        <input type="text" class="form-control" name="experience_pro[periode_fin6]" value="<?php echo $_SESSION['user']['periode_fin6']?>">
                     </div>
                     <div class="form-group col-md-4">
-                        <input type="text" class="form-control" name="experience_pro[compagnie6]" placeholder="<?php echo $_SESSION['user']['infos']['compagnie6']?>">
+                        <input type="text" class="form-control" name="experience_pro[compagnie6]" value="<?php echo $_SESSION['user']['compagnie6']?>">
                     </div>
                     <div class="form-group col-md-4">
-                        <input type="text" class="form-control" name="experience_pro[poste6]" placeholder="<?php echo $_SESSION['user']['infos']['poste6']?>">
+                        <input type="text" class="form-control" name="experience_pro[poste6]" value="<?php echo $_SESSION['user']['poste6']?>">
                     </div>
 
                 </div>
@@ -189,7 +189,7 @@
             <div class="panel-body">
 
                 <div class="form-group col-xs-12">
-                    <textarea class="form-control" rows="6" name="competence[competence]" placeholder="<?php echo $_SESSION['user']['infos']['competence']?>"></textarea>
+                    <textarea class="form-control" rows="6" name="competence[competence]"><?php echo $_SESSION['user']['competence']?></textarea>
                 </div>
             </div>
         </div>
@@ -199,7 +199,7 @@
             <div class="panel-body">
 
                 <div class="form-group col-xs-12">
-                    <textarea class="form-control" rows="6" name="fil_actu[message]" placeholder="<?php echo $_SESSION['user']['infos']['message']?>"></textarea>
+                    <textarea class="form-control" rows="6" name="fil_actu[message]"><?php echo $_SESSION['user']['message']?></textarea>
                 </div>
             </div>
         </div>
@@ -209,7 +209,7 @@
             <div class="panel-body">
 
                 <div class="form-group col-xs-12">
-                    <input type="text" class="form-control" rows="6" placeholder="http://..." name="portfolio[ad_portfolio]" placeholder="<?php echo $_SESSION['user']['infos']['ad_portfolio']?>">
+                    <input type="text" class="form-control" rows="6" placeholder="http://..." name="portfolio[ad_portfolio]" value="<?php echo $_SESSION['user']['ad_portfolio']?>">
                 </div>
             </div>
         </div>
