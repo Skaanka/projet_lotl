@@ -84,7 +84,7 @@
             <?php if ($membre['id'] != '1') { ?>
 			<div class="item text-center">
 				<h1>Nouveau chez <?php echo $membre['prenom'] ?></h1>
-				<p><?php echo $membre['statut'] ?></p>
+				<p><?php echo $membre['message'] ?></p>
 				<div class="carousel-caption">
 
 				</div>

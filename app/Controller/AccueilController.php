@@ -26,15 +26,17 @@ class AccueilController extends Controller {
 		$manager = new GeneralManager(); // execute la function qui recupere TOUTES les tables de la bdd
 		$ProfilPerso = $manager->findProfilPerso();
 
-		$this->show('accueil/accueil',['ProfilPerso' => $ProfilPerso]);
+		$this->show('accueil/accueil', ['ProfilPerso' => $ProfilPerso]);
 
 
 	}
 	
 	public function postActu() {
 		if (isset($_POST['actu']) ){
-			$manager = new UserManager();
-			$manager->update(['statut' => $_POST['texte_actu']], $_SESSION['user']['id']);
+            $date = date("Y-m-d H:i:s");
+//            debug($date);die();
+			$manager = new Fil_actuManager();
+			$manager->update(['message' => $_POST['texte_actu'], 'date' => $date], $_SESSION['user']['id']);
 			$auth_manager = new AuthentificationManager(); 
 			$auth_manager->refreshUser();
 			$this->redirectToRoute('accueil');

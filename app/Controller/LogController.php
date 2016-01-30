@@ -24,14 +24,14 @@ public function login() { // connexion au site
             //debug($userManager); die; // vérification 
             if($auth->isValidLoginInfo($_POST['wuser']['mail'], $_POST['wuser']['mot_de_passe'])) {
                 //selection table user
-                $user = $userManager->getUserByUsernameOrEmail($_POST['wuser']['mail']);
-                $auth->logUserIn($user);
-
+                $user_part1 = $userManager->getUserByUsernameOrEmail($_POST['wuser']['mail']);
+                
                 //recuperation de l'id de l'utilisateur connecté et jointure avec les autres tables.
-                $id_user = $user['id'];
-                $user2 = $UserManagerSuite->findAllLogUser($id_user);
-                $_SESSION['user'] = array_merge($_SESSION['user'], $user2); // ajout de $user2 dans $user
-
+                $id_user = $user_part1['id'];
+                $user_part2 = $UserManagerSuite->findAllLogUser($id_user);
+                $user = array_merge($user_part1, $user_part2); // ajout de $user2 dans $user
+                
+                $auth->logUserIn($user);
                 //debug($_SESSION['user']);die(); // vérification 
                 $this->redirectToRoute('accueil');
             }
