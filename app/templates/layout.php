@@ -106,17 +106,7 @@
         </div>
         <!-- Fin menu navbar en dropdown --> -->
         
-<div class="eye_back">
-    <div class="eye">
-        <div class="iris">
-        <div class="pupil">
-        <div class="pupil-shine"></div>
-    </div>
-</div>
-  <!--<div class="eyeshine"></div>-->
-  <div class="lids"></div>
-</div>
-</div>
+
        
         <!-- Début container -->
         <div class="container-fluid no-padding">
