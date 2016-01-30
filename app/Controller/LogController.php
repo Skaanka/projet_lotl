@@ -28,12 +28,17 @@ public function login() { // connexion au site
                 
                 //recuperation de l'id de l'utilisateur connecté et jointure avec les autres tables.
                 $id_user = $user_part1['id'];
-                $user_part2 = $UserManagerSuite->findAllLogUser($id_user);
-                $user = array_merge($user_part1, $user_part2); // ajout de $user2 dans $user
                 
-                $auth->logUserIn($user);
-                //debug($_SESSION['user']);die(); // vérification 
-                $this->redirectToRoute('accueil');
+                if ($user_part1['validation_inscription'] === 'true') {
+                    $user_part2 = $UserManagerSuite->findAllLogUser($id_user);
+                    $user = array_merge($user_part1, $user_part2); // ajout de $user2 dans $user
+
+                    $auth->logUserIn($user);
+                    //debug($_SESSION['user']);die(); // vérification
+                    $this->redirectToRoute('accueil');
+                } else {
+                    $this->show('home/home');
+                }
             }
         }
         $this->show('home/home');
