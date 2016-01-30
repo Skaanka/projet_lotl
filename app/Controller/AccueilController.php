@@ -17,8 +17,10 @@ class AccueilController extends Controller {
 		$user = $this->getUser();
 		$manager = new GeneralManager(); // execute la function qui recupere TOUTES les tables de la bdd
 		$membres = $manager->findUserAll();
-
-		$this->show('accueil/accueil', ['membres' => $membres]);
+        $manager2 = new Fil_actuManager(); // execute la function qui recupere TOUTES les tables de la bdd
+		$fil_actus = $manager2->findLastFilActu5();
+        
+		$this->show('accueil/accueil', ['membres' => $membres, 'fil_actus' => $fil_actus]);
 
 	}
 	public function getProfilPerso() { //affiche tout les membres de la bdd
