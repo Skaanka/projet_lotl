@@ -15,7 +15,12 @@ use \Manager\TokenManager;
 
 class  LogController extends Controller {
 
-public function login() { // connexion au site
+    public function login() { // connexion au site
+
+        if (isset($_SESSION['user'])) {
+            $this->redirectToRoute('accueil'); // si ok envoie page 2    
+        }
+        
         if(isset($_POST['connexion'])) {
             $auth = new AuthentificationManager();
             $userManager = new UserManager();
@@ -25,10 +30,10 @@ public function login() { // connexion au site
             if($auth->isValidLoginInfo($_POST['wuser']['mail'], $_POST['wuser']['mot_de_passe'])) {
                 //selection table user
                 $user_part1 = $userManager->getUserByUsernameOrEmail($_POST['wuser']['mail']);
-                
+
                 //recuperation de l'id de l'utilisateur connecté et jointure avec les autres tables.
                 $id_user = $user_part1['id'];
-                
+
                 if ($user_part1['validation_inscription'] === 'true') {
                     $user_part2 = $UserManagerSuite->findAllLogUser($id_user);
                     $user = array_merge($user_part1, $user_part2); // ajout de $user2 dans $user
@@ -50,5 +55,5 @@ public function login() { // connexion au site
         $auth->logUserOut();
         $this->redirectToRoute('home');
     }
-    
+
 }
