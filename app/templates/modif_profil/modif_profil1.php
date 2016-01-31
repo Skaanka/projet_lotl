@@ -1,9 +1,77 @@
 <?php $this->layout('layout', ['title' => 'modification profil - partie 1']);?>
 
+<?php $this->start('navBar') ?>
+<!-- Navbar Top-Screen-->
+<nav class=" navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Lord of the links</a>
+            
+            <!--    debut "oeil de sauron" -->
+            
+           
+                <div class="eye">
+                    <div class="iris">
+                        <div class="pupil">
+                            <div class="pupil-shine"></div>
+                        </div>
+                    </div>
+  <!--<div class="eyeshine"></div>-->
+                    <div class="lids"></div>
+                </div>
+            
+            
+            <!-- fin "oeil de sauron" -->
+            
+		</div>
+		<div id="navbar" class="navbar-collapse collapse">
+			<div class="navbar-form navbar-right">
+                
+                <!--interface admin-->
+                <?php if ($_SESSION['user']['role'] === 'admin' ) { ?>
+                <!-- Button trigger modal Admin -->
+                <a href="<?php echo $this->url('administration'); ?>"><button type="button" class="btn btn-navbut" data-toggle="modal" data-target="#myModalAdmin">
+                    Administration
+                </button></a>
+                <?php } elseif ($_SESSION['user']['role'] == 'membre') {echo "";}?>
+                <!--interface admin-->
+                
+				<!-- Button trigger modal Profil -->
+				<button type="button" class="btn btn-navbut" data-toggle="modal" data-target="#myModalProfil">
+					Profil
+				</button>
+
+				<!-- Modal -->
+                <?php require('partials/modal_profil.php') ?>
+
+
+
+				<!-- Button trigger modal -->
+				<button type="button" class="btn  btn-navbut" data-toggle="modal" data-target="#myModalPost">
+					Post actu
+				</button>
+
+				<!-- Modal -->
+				<?php require('partials/modal_postActu.php') ?>
+
+
+
+				<a href="<?= $this->url("logout"); ?>"><button class="btn btn-navbut">Déconnexion</button></a>
+			</div>
+		</div><!--/.navbar-collapse -->
+	</div>
+</nav>
+<!-- Fin Navbar Top-Screen-->
+<?php $this->stop('navBar') ?>
+
+
 <?php $this->start('main_content') ?>
-
-
-
     <div id="" class="wrappInscr container">
 
         <form method="post" enctype="multipart/form-data" class="col-md-6 col-md-offset-3">  

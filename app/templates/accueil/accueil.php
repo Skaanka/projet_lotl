@@ -1,7 +1,7 @@
 <?php $this->layout('layout', ['title' => 'accueil']) ?>
 
-<?php $this->start('navBar') ?>
 
+<?php $this->start('navBar') ?>
 <!-- Navbar Top-Screen-->
 <nav class=" navbar navbar-inverse navbar-fixed-top">
 	<div class="container">
@@ -71,6 +71,7 @@
 <!-- Fin Navbar Top-Screen-->
 <?php $this->stop('navBar') ?>
 
+
 <?php $this->start('carousel') ?>
 <!--<div id="header" class="container-fluid no-padding"><img src="<?php echo $this->assetUrl('img/bandeau.jpg') ?>" alt="" class="img-reponsive col-xs-12 no-padding"></div>-->
 <!-- Caroussel -->
@@ -123,18 +124,14 @@
 <!-- Fin du caroussel -->
 <?php $this->stop('carousel') ?>
 
+
 <?php $this->start('filtre') ?>
-
 <?php require('partials/filtre.php') ?>
-
 <?php $this->stop('filtre') ?>
 
 
 <?php $this->start('main_content') ?>
-
-
 <?php //debug($_SESSION['user']); ?> 
-
 <div id="homeContent" class="row no-padding">
     
     
