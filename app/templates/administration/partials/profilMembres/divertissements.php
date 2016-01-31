@@ -1,7 +1,7 @@
 <div id="tabMembreDiv<?php echo $membre['id']?>" class="tab-pane fade">
     <div class="container-fluid">
 
-        <h3 class="text-center espacementProfil">Vous trouverez ici les plate-formes de jeux en ligne que <?php echo $membre['prenom']?> utilise.</h3>
+        <h3 class="text-center espacementProfil">Vous trouverez ici les plate-formes de jeux en ligne que <?php echo $this->e($membre['prenom'])?> utilise.</h3>
 
         <div class="panel panel-default col-md-12 espacementProfil">
             <div class="panel-body">
@@ -16,7 +16,7 @@
                             <img src="<?= $this->assetUrl('img/icons/PSN_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $membre['psn']?>
+                            <?php echo $this->e($membre['psn'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -30,7 +30,7 @@
                             <img src="<?= $this->assetUrl('img/icons/Xbox_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $membre['xboxlive']?>
+                            <?php echo $this->e($membre['xboxlive'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -44,7 +44,7 @@
                             <img src="<?= $this->assetUrl('img/icons/Steam_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $membre['steam']?>
+                            <?php echo $this->e($membre['steam'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -58,7 +58,7 @@
                             <img src="<?= $this->assetUrl('img/icons/battlenet_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $membre['battlenet']?>
+                            <?php echo $this->e($membre['battlenet'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -72,7 +72,7 @@
                             <img src="<?= $this->assetUrl('img/icons/origin1_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $membre['origin']?>
+                            <?php echo $this->e($membre['origin'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -86,7 +86,7 @@
                             <img src="<?= $this->assetUrl('img/icons/Nintendo_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $membre['compte_nintendo']?>
+                            <?php echo $this->e($membre['compte_nintendo'])?>
                         </div>
                     </div>
                     <?php } ?>

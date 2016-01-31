@@ -2,7 +2,7 @@
 <div id="tabMembrePro<?php echo $_SESSION['user']['id']?>" class="tab-pane fade">
     <div class="container-fluid">
 
-        <h3 class="text-center espacementProfil">Vous trouverez ici les réseaux professionnel que <?php echo $_SESSION['user']['prenom']?> utilise.</h3>
+        <h3 class="text-center espacementProfil">Vous trouverez ici les réseaux professionnel que <?php echo $this->e($_SESSION['user']['prenom'])?> utilise.</h3>
 
         <div class="panel panel-default col-md-12 espacementProfil">
             <div class="panel-body">
@@ -17,7 +17,7 @@
                             <img src="<?= $this->assetUrl('img/icons/linkedin_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['linkedin']?>
+                            <?php echo $this->e($_SESSION['user']['linkedin'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -31,7 +31,7 @@
                             <img src="<?= $this->assetUrl('img/icons/viadeo_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['viadeo']?>
+                            <?php echo $this->e($_SESSION['user']['viadeo'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -45,7 +45,7 @@
                             <img src="<?= $this->assetUrl('img/icons/xing_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['xing']?>
+                            <?php echo $this->e($_SESSION['user']['xing'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -59,7 +59,7 @@
                             <img src="<?= $this->assetUrl('img/icons/muxi_logo.jpg') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['muxi']?>
+                            <?php echo $this->e($_SESSION['user']['muxi'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -73,7 +73,7 @@
                             <img src="<?= $this->assetUrl('img/icons/github_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['github']?>
+                            <?php echo $this->e($_SESSION['user']['github'])?>
                         </div>
                     </div>
                     <?php } ?>

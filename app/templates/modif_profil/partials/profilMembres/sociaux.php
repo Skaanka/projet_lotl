@@ -1,7 +1,7 @@
 <div id="tabMembreSoc<?php echo $membre['id']?>" class="tab-pane fade">
     <div class="container-fluid">
 
-        <h3 class="text-center espacementProfil">Vous trouverez ici les réseaux sociaux que <?php echo $membre['prenom']?> utilise.</h3>
+        <h3 class="text-center espacementProfil">Vous trouverez ici les réseaux sociaux que <?php echo $this->e($membre['prenom'])?> utilise.</h3>
 
         <div class="panel panel-default col-md-12 espacementProfil">
             <div class="panel-body">
@@ -16,7 +16,7 @@
                             <img src="<?= $this->assetUrl('img/icons/FB_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $membre['facebook']?>
+                            <?php echo $this->e($membre['facebook'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -30,7 +30,7 @@
                             <img src="<?= $this->assetUrl('img/icons/Twitter-logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $membre['twitter']?>
+                            <?php echo $this->e($membre['twitter'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -44,7 +44,7 @@
                             <img src="<?= $this->assetUrl('img/icons/YouTube-logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $membre['youtube']?>
+                            <?php echo $this->e($membre['youtube'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -58,7 +58,7 @@
                             <img src="<?= $this->assetUrl('img/icons/googleplus_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $membre['google']?>
+                            <?php echo $this->e($membre['google'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -72,7 +72,7 @@
                             <img src="<?= $this->assetUrl('img/icons/skype_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $membre['skype']?>
+                            <?php echo $this->e($membre['skype'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -86,7 +86,7 @@
                             <img src="<?= $this->assetUrl('img/icons/instagram_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $membre['instagram']?>
+                            <?php echo $this->e($membre['instagram'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -100,7 +100,7 @@
                             <img src="<?= $this->assetUrl('img/icons/pinterest-logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $membre['pinterest']?>
+                            <?php echo $this->e($membre['pinterest'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -114,7 +114,7 @@
                             <img src="<?= $this->assetUrl('img/icons/spotify_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $membre['spotify']?>
+                            <?php echo $this->e($membre['spotify'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -128,7 +128,7 @@
                             <img src="<?= $this->assetUrl('img/icons/deezer_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $membre['deezer']?>
+                            <?php echo $this->e($membre['deezer'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -142,7 +142,7 @@
                             <img src="<?= $this->assetUrl('img/icons/viber-logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $membre['viber']?>
+                            <?php echo $this->e($membre['viber'])?>
                         </div>
                     </div>
                     <?php } ?>

@@ -1,7 +1,7 @@
 <div id="tabMembreSoc<?php echo $_SESSION['user']['id']?>" class="tab-pane fade">
     <div class="container-fluid">
 
-        <h3 class="text-center espacementProfil">Vous trouverez ici les réseaux sociaux que <?php echo $_SESSION['user']['prenom']?> utilise.</h3>
+        <h3 class="text-center espacementProfil">Vous trouverez ici les réseaux sociaux que <?php echo $this->e($_SESSION['user']['prenom'])?> utilise.</h3>
 
         <div class="panel panel-default col-md-12 espacementProfil">
             <div class="panel-body">
@@ -16,7 +16,7 @@
                             <img src="<?= $this->assetUrl('img/icons/FB_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['facebook']?>
+                            <?php echo $this->e($_SESSION['user']['facebook'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -30,7 +30,7 @@
                             <img src="<?= $this->assetUrl('img/icons/Twitter-logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['twitter']?>
+                            <?php echo $this->e($_SESSION['user']['twitter'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -44,7 +44,7 @@
                             <img src="<?= $this->assetUrl('img/icons/YouTube-logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['youtube']?>
+                            <?php echo $this->e($_SESSION['user']['youtube'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -58,7 +58,7 @@
                             <img src="<?= $this->assetUrl('img/icons/googleplus_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['google']?>
+                            <?php echo $this->e($_SESSION['user']['google'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -72,7 +72,7 @@
                             <img src="<?= $this->assetUrl('img/icons/skype_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['skype']?>
+                            <?php echo $this->e($_SESSION['user']['skype'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -86,7 +86,7 @@
                             <img src="<?= $this->assetUrl('img/icons/instagram_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['instagram']?>
+                            <?php echo $this->e($_SESSION['user']['instagram'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -100,7 +100,7 @@
                             <img src="<?= $this->assetUrl('img/icons/pinterest-logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['pinterest']?>
+                            <?php echo $this->e($_SESSION['user']['pinterest'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -114,7 +114,7 @@
                             <img src="<?= $this->assetUrl('img/icons/spotify_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['spotify']?>
+                            <?php echo $this->e($_SESSION['user']['spotify'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -128,7 +128,7 @@
                             <img src="<?= $this->assetUrl('img/icons/deezer_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['deezer']?>
+                            <?php echo $this->e($_SESSION['user']['deezer'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -142,7 +142,7 @@
                             <img src="<?= $this->assetUrl('img/icons/viber-logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $_SESSION['user']['viber']?>
+                            <?php echo $this->e($_SESSION['user']['viber'])?>
                         </div>
                     </div>
                     <?php } ?>
