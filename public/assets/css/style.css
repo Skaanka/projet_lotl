@@ -350,6 +350,7 @@ fieldset[disabled] .btn-navbut.active {
 
 .espacementProfil {
     margin: 5% 0;
+    font-family: 'Playfair Display', serif;
 }
 
 .media-body-cheat {
@@ -672,6 +673,8 @@ fieldset[disabled] .btn-navbut.active {
 .celSoc {
     margin-top: 2%;
 }
+
+
 
 
 
@@ -1464,14 +1467,6 @@ fieldset[disabled] .btn-navbut.active {
     box-shadow: 2px 2px 4px black;
 }
 >>>>>>> accueil
-
-
-
-
-
-
-
-
 
 
 

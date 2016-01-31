@@ -1,10 +1,10 @@
 <div id="tabMembreInfo<?php echo $_SESSION['user']['id']?>" class="tab-pane fade in active">
-    <div class="container-fluid">
 
+    <div class="container-fluid">
         <div class="row media">
             <div class="col-md-12 espacementProfil">
-                <div class="media-left media-middle col-md-3 col-md-offset-1">
-                    <img class="media-object img-circle" src="<?= $this->assetUrl('img/uploads/' . $this->e($_SESSION['user']['avatar']) .'') ?>" alt="avatar de <?php echo $this->e($_SESSION['user']['prenom']) ?>">
+                <div class="media-left media-middle ">
+                    <img id="avatarInscr" class="media-object img-circle" src="<?= $this->assetUrl('img/uploads/' . $this->e($_SESSION['user']['avatar']) .'') ?>" alt="avatar de <?php echo $this->e($_SESSION['user']['prenom']) ?>">
                 </div>
                 <div class="media-body media-body-cheat col-md-6 col-md-offset-2">
                     <h2 class="media-heading"><?php echo $this->e($_SESSION['user']['prenom'])?><br><?php echo $this->e($_SESSION['user']['nom'])?></h2>
@@ -15,7 +15,7 @@
 
         <div class="row">
             <div class="panel panel-default col-md-12">
-                <div class="panel-body col-md-12">
+                <div class="panel-body">
                     <div class="col-md-6">
                         <p>Adresse : <?php echo $this->e($_SESSION['user']['adresse'])?></p>
                         <p>Code postal : <?php echo $this->e($_SESSION['user']['cp'])?></p>
@@ -52,7 +52,7 @@
                             <td><?php echo $this->e($_SESSION['user']['ecole'])?></td>
                         </tr>
                         <?php } ?>
-                    
+
                         <?php if (!empty($_SESSION['user']['intitule2'])) { ?>
                         <tr>
                             <td><?php echo $this->e($_SESSION['user']['annees_obt2'])?></td>
@@ -60,7 +60,7 @@
                             <td><?php echo $this->e($_SESSION['user']['ecole2'])?></td>
                         </tr>
                         <?php } ?>
-                    
+
                         <?php if (!empty($_SESSION['user']['intitule3'])) { ?>
                         <tr>
                             <td><?php echo $this->e($_SESSION['user']['annees_obt3'])?></td>
@@ -68,7 +68,7 @@
                             <td><?php echo $this->e($_SESSION['user']['ecole3'])?></td>
                         </tr>
                         <?php } ?>
-                    
+
                         <?php if (!empty($_SESSION['user']['intitule4'])) { ?>
                         <tr>
                             <td><?php echo $this->e($_SESSION['user']['annees_obt4'])?></td>
@@ -86,12 +86,21 @@
                 <div class="panel-body col-md-12">
                     <h2><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>&nbsp; <u>Experiences Professionnelles: </u></h2><br>
                     <table class="table">
-                        <tr>
-                            <td><b>Début</b></td>
-                            <td><b>Fin</b></td>
-                            <td><b>Compagnie</b></td>
-                            <td><b>Poste</b></td>
-                        </tr>
+                        <div class=""><legend><h3 class="text-center">Diplomes</h3></legend></div>
+
+                        <div class="row" id="diplomes">
+                            <div class="form-group col-md-2 col-xs-2">
+                                <label for="annees">Années d'obt.</label>
+                            </div>
+                            <div class="form-group col-md-5 col-xs-5">
+                                <label for="intitule">Intitulé</label>
+
+                            </div>
+                            <div class="form-group col-md-5 col-xs-5">
+                                <label for="ecole">Ecole</label>
+                            </div>
+                        </div>
+
                         <?php if (!empty($_SESSION['user']['poste'])) { ?>
                         <tr>
                             <td><?php echo $this->e($_SESSION['user']['periode_debut'])?></td>
@@ -100,7 +109,7 @@
                             <td><?php echo $this->e($_SESSION['user']['poste'])?></td>
                         </tr>
                         <?php } ?>
-                    
+
                         <?php if (!empty($_SESSION['user']['poste2'])) { ?>
                         <tr>
                             <td><?php echo $this->e($_SESSION['user']['periode_debut2'])?></td>
@@ -109,7 +118,7 @@
                             <td><?php echo $this->e($_SESSION['user']['poste2'])?></td>
                         </tr>
                         <?php } ?>
-                    
+
                         <?php if (!empty($_SESSION['user']['poste3'])) { ?>
                         <tr>
                             <td><?php echo $this->e($_SESSION['user']['periode_debut3'])?></td>
@@ -118,7 +127,7 @@
                             <td><?php echo $this->e($_SESSION['user']['poste3'])?></td>
                         </tr>
                         <?php } ?>
-                    
+
                         <?php if (!empty($_SESSION['user']['poste4'])) { ?>
                         <tr>
                             <td><?php echo $this->e($_SESSION['user']['periode_debut4'])?></td>
@@ -127,7 +136,7 @@
                             <td><?php echo $this->e($_SESSION['user']['poste4'])?></td>
                         </tr>
                         <?php } ?>
-                    
+
                         <?php if (!empty($_SESSION['user']['poste5'])) { ?>
                         <tr>
                             <td><?php echo $this->e($_SESSION['user']['periode_debut5'])?></td>
@@ -136,7 +145,7 @@
                             <td><?php echo $this->e($_SESSION['user']['poste5'])?></td>
                         </tr>
                         <?php } ?>
-                    
+
                         <?php if (!empty($_SESSION['user']['poste6'])) { ?>
                         <tr>
                             <td><?php echo $this->e($_SESSION['user']['periode_debut6'])?></td>
