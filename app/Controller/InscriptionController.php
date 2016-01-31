@@ -65,8 +65,13 @@ class InscriptionController extends Controller {
         $this->show('inscription/inscription1'); // redirection si erreur
     }
 
-    public function inscription_2() 
-    {
+    public function inscription_2() {
+        
+        if (isset($_SESSION['user'])) {
+        
+            $this->redirectToRoute('accueil'); // si ok envoie page 2    
+        }
+        
         if(isset($_POST['suivant2'])) {
             $_SESSION['diplome'] = $_POST['diplome'];
             $_SESSION['experience_pro'] = $_POST['experience_pro'];
@@ -86,8 +91,13 @@ class InscriptionController extends Controller {
         $this->show('inscription/inscription2'); // redirection si erreur
     }
 
-    public function inscription_3() 
-    {
+    public function inscription_3() {
+        
+        if (isset($_SESSION['user'])) {
+        
+            $this->redirectToRoute('accueil'); // si ok envoie page 2    
+        }
+        
         if(isset($_POST['valider'])) {
             $_SESSION['reseaux_social'] = $_POST['reseaux_social'];
             $_SESSION['reseaux_pro'] = $_POST['reseaux_pro'];
