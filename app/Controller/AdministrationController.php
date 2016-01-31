@@ -21,7 +21,7 @@ use \Manager\Reseaux_socialManager;
 class AdministrationController extends Controller {
 
     public function administration() {
-        //$user = $this->getUser();
+        $this->allowTo('admin'); // uniquement un admin
         $manager = new UserManager(); // execute la function qui recupere TOUTES les tables de la bdd
         $membres = $manager->findAll();
         //debug($membres);die();
