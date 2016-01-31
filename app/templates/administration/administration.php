@@ -46,7 +46,7 @@
 
 
 
-                <a href="<?= $this->url("logout"); ?>"><button class="btn btn-success">Déconnexion</button></a>
+                <a href="<?= $this->url("logout"); ?>"><button class="btn btn-navbut">Déconnexion</button></a>
             </div>
         </div><!--/.navbar-collapse -->
     </div>
