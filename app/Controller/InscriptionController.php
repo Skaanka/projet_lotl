@@ -66,7 +66,11 @@ class InscriptionController extends Controller {
             $_SESSION['diplome'] = $_POST['diplome'];
             $_SESSION['experience_pro'] = $_POST['experience_pro'];
             $_SESSION['competence'] = $_POST['competence'];
+            
             $_SESSION['fil_actu'] = $_POST['fil_actu'];
+            $date = date("Y-m-d H:i:s");
+            $_SESSION['fil_actu']['date'] = $date;
+            
             $_SESSION['portfolio'] = $_POST['portfolio'];
 
             $this->redirectToRoute('inscription3'); // si ok envoie page 2

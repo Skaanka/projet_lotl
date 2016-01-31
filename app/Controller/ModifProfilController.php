@@ -56,6 +56,8 @@ class ModifProfilController extends Controller {
             $_SESSION['experience_pro'] = $_POST['experience_pro'];
             $_SESSION['competence'] = $_POST['competence'];
             $_SESSION['fil_actu'] = $_POST['fil_actu'];
+            $date = date("Y-m-d H:i:s");
+            $_SESSION['fil_actu']['date'] = $date;
             $_SESSION['portfolio'] = $_POST['portfolio'];
             
             //debug($_SESSION['portfolio']);die();
