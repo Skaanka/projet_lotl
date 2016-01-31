@@ -3,7 +3,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="myModalLabel">Poster une nouvelle actualitée.</h4>
+				<h4 class="modal-title" id="myModalLabel<?php echo $_SESSION['user']['id']?>">Poster une nouvelle actualitée.</h4>
 			</div>
 			<form action="<?= $this->url('postactu') ?>" method="POST">
 				<div class="modal-body">
