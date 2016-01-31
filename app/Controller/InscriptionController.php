@@ -26,8 +26,13 @@ class InscriptionController extends Controller {
 
 
 
-    public function inscription_1() 
-    {
+    public function inscription_1() {
+        
+        if (isset($_SESSION['user'])) {
+        
+            $this->redirectToRoute('accueil'); // si ok envoie page 2    
+        }
+        
         if(isset($_POST['suivant'])) {  
 
             $mail = $_POST['wuser']['mail'];
