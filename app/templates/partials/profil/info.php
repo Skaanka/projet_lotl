@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row media">
             <div class="col-md-12 espacementProfil">
-                <div class="media-left media-middle ">
+                <div class="media-left media-middle col-md-4">
                     <img id="avatarInscr" class="media-object img-circle" src="<?= $this->assetUrl('img/uploads/' . $this->e($_SESSION['user']['avatar']) .'') ?>" alt="avatar de <?php echo $this->e($_SESSION['user']['prenom']) ?>">
                 </div>
                 <div class="media-body media-body-cheat col-md-6 col-md-offset-2">
