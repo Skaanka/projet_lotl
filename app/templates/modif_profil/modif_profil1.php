@@ -11,7 +11,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">Lord of the links</a>
+			<a class="navbar-brand" href="<?php echo $this->url('accueil') ?>">Lord of the links</a>
             
             <!--    debut "oeil de sauron" -->
             
