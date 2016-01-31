@@ -49,11 +49,11 @@ class InscriptionController extends Controller {
                 $tmp_name = $_FILES['avatar']['tmp_name'];
                 $name = time() . "_" . $_FILES['avatar']['name'];
                 $result = move_uploaded_file($tmp_name, "$uploads_dir$name");
-                $_POST['wuser']['avatar'] = $name;            
+                $_POST['wuserInsc']['avatar'] = $name;            
 
-                $_SESSION['wuser'] = $_POST['wuser'];
+                $_SESSION['wuserInsc'] = $_POST['wuser'];
                 //hashage du mdp
-                $_SESSION['wuser']['mot_de_passe'] = password_hash($_SESSION['wuser']['mot_de_passe'], PASSWORD_DEFAULT);
+                $_SESSION['wuserInsc']['mot_de_passe'] = password_hash($_SESSION['wuserInsc']['mot_de_passe'], PASSWORD_DEFAULT);
 
                 //debug($_SESSION['wuser']);die();
                 $this->redirectToRoute('inscription2'); // si ok envoie page 2
@@ -73,15 +73,15 @@ class InscriptionController extends Controller {
         }
         
         if(isset($_POST['suivant2'])) {
-            $_SESSION['diplome'] = $_POST['diplome'];
-            $_SESSION['experience_pro'] = $_POST['experience_pro'];
-            $_SESSION['competence'] = $_POST['competence'];
+            $_SESSION['diplomeInsc'] = $_POST['diplome'];
+            $_SESSION['experience_proInsc'] = $_POST['experience_pro'];
+            $_SESSION['competenceInsc'] = $_POST['competence'];
             
-            $_SESSION['fil_actu'] = $_POST['fil_actu'];
+            $_SESSION['fil_actuInsc'] = $_POST['fil_actu'];
             $date = date("Y-m-d H:i:s");
-            $_SESSION['fil_actu']['date'] = $date;
+            $_SESSION['fil_actuInsc']['date'] = $date;
             
-            $_SESSION['portfolio'] = $_POST['portfolio'];
+            $_SESSION['portfolioInsc'] = $_POST['portfolio'];
 
             $this->redirectToRoute('inscription3'); // si ok envoie page 2
         } elseif (isset($_POST['precedent'])) {
@@ -99,56 +99,56 @@ class InscriptionController extends Controller {
         }
         
         if(isset($_POST['valider'])) {
-            $_SESSION['reseaux_social'] = $_POST['reseaux_social'];
-            $_SESSION['reseaux_pro'] = $_POST['reseaux_pro'];
-            $_SESSION['reseaux_divertissement'] = $_POST['reseaux_divertissement'];
+            $_SESSION['reseaux_socialInsc'] = $_POST['reseaux_social'];
+            $_SESSION['reseaux_proInsc'] = $_POST['reseaux_pro'];
+            $_SESSION['reseaux_divertissementInsc'] = $_POST['reseaux_divertissement'];
 
             // ajout d'un $key => $value (ex :role => membre)
-            $_SESSION['wuser']['role'] = 'membre';
-            $_SESSION['wuser']['validation_inscription'] = 'false';
+            $_SESSION['wuserInsc']['role'] = 'membre';
+            $_SESSION['wuserInsc']['validation_inscription'] = 'false';
 
             $manager = new UserManager();
 
             // insert formulaire 1
-            $manager->insert($_SESSION['wuser'], $stripTags = true); //enregistrement membre dans BDD
-            $mail = $_SESSION['wuser']['mail']; // recuperation du mail dans une variable
+            $manager->insert($_SESSION['wuserInsc'], $stripTags = true); //enregistrement membre dans BDD
+            $mail = $_SESSION['wuserInsc']['mail']; // recuperation du mail dans une variable
             //suite insert formulaire 1
             $manager = new GeneralManager();
             $membre = $manager->findMail($mail);  //recuperation du membre dans la table wusers via le mail
             $id = $membre['id'];
             // insert page formulaire 2
-            $_SESSION['diplome']['id_wuser'] = $id; // ajout d'une $key id_wuser dans la SESSION['diplome']
+            $_SESSION['diplomeInsc']['id_wuser'] = $id; // ajout d'une $key id_wuser dans la SESSION['diplome']
             $manager = new DiplomeManager(); //selection de la table Diplome
-            $manager->insert($_SESSION['diplome'], $stripTags = true);
+            $manager->insert($_SESSION['diplomeInsc'], $stripTags = true);
 
-            $_SESSION['experience_pro']['id_wuser'] = $id; // ajout d'une $key id_wuser dans la SESSION['experience_pro']
+            $_SESSION['experience_proInsc']['id_wuser'] = $id; // ajout d'une $key id_wuser dans la SESSION['experience_pro']
             $manager = new Experience_proManager(); //selection de la table experience_pros
-            $manager->insert($_SESSION['experience_pro'], $stripTags = true);
+            $manager->insert($_SESSION['experience_proInsc'], $stripTags = true);
 
-            $_SESSION['competence']['id_wuser'] = $id; // ajout d'une $key id_wuser dans la SESSION['competence']
+            $_SESSION['competenceInsc']['id_wuser'] = $id; // ajout d'une $key id_wuser dans la SESSION['competence']
             $manager = new CompetenceManager(); //selection de la table competences
-            $manager->insert($_SESSION['competence'], $stripTags = true);
+            $manager->insert($_SESSION['competenceInsc'], $stripTags = true);
 
-            $_SESSION['fil_actu']['id_wuser'] = $id; // ajout d'une $key id_wuser dans la SESSION['fil_actu']
+            $_SESSION['fil_actuInsc']['id_wuser'] = $id; // ajout d'une $key id_wuser dans la SESSION['fil_actu']
             $manager = new Fil_actuManager(); //selection de la table fil_actus
-            $manager->insert($_SESSION['fil_actu'], $stripTags = true);
+            $manager->insert($_SESSION['fil_actuInsc'], $stripTags = true);
 
-            $_SESSION['portfolio']['id_wuser'] = $id; // ajout d'une $key id_wuser dans la SESSION['portfolio']
+            $_SESSION['portfolioInsc']['id_wuser'] = $id; // ajout d'une $key id_wuser dans la SESSION['portfolio']
             $manager = new PortfolioManager(); //selection de la table portfolios
-            $manager->insert($_SESSION['portfolio'], $stripTags = true);
+            $manager->insert($_SESSION['portfolioInsc'], $stripTags = true);
 
             // insert page formulaire 3
-            $_SESSION['reseaux_social']['id_wuser'] = $id; // ajout d'une $key id_wuser dans la SESSION['reseaux_social']
+            $_SESSION['reseaux_socialInsc']['id_wuser'] = $id; // ajout d'une $key id_wuser dans la SESSION['reseaux_social']
             $manager = new Reseaux_socialManager(); //selection de la table reseaux_socials
-            $manager->insert($_SESSION['reseaux_social'], $stripTags = true);
+            $manager->insert($_SESSION['reseaux_socialInsc'], $stripTags = true);
 
-            $_SESSION['reseaux_pro']['id_wuser'] = $id; // ajout d'une $key id_wuser dans la SESSION['reseaux_pro']
+            $_SESSION['reseaux_proInsc']['id_wuser'] = $id; // ajout d'une $key id_wuser dans la SESSION['reseaux_pro']
             $manager = new Reseaux_proManager(); //selection de la table reseaux_pros
-            $manager->insert($_SESSION['reseaux_pro'], $stripTags = true);
+            $manager->insert($_SESSION['reseaux_proInsc'], $stripTags = true);
 
-            $_SESSION['reseaux_divertissement']['id_wuser'] = $id; // ajout d'une $key id_wuser dans la SESSION['reseaux_divertissement']
+            $_SESSION['reseaux_divertissementInsc']['id_wuser'] = $id; // ajout d'une $key id_wuser dans la SESSION['reseaux_divertissement']
             $manager = new Reseaux_divertissementManager(); //selection de la table reseaux_divertissements
-            $manager->insert($_SESSION['reseaux_divertissement'], $stripTags = true);
+            $manager->insert($_SESSION['reseaux_divertissementInsc'], $stripTags = true);
 
             Helper::mail("saurondumordorlouviers@gmail.com", "Une demande d'inscritption à été effectué sur LOTL", "Veuillez valider ou non l'inscritpion."); // l'envoi de mail vers la BAL de l'admin pour toute nouvelle demande d'inscription sur le site
 
