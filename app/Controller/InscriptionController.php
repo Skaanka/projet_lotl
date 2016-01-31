@@ -101,6 +101,16 @@ class InscriptionController extends Controller {
             $_SESSION['reseaux_socialInsc'] = $_POST['reseaux_social'];
             $_SESSION['reseaux_proInsc'] = $_POST['reseaux_pro'];
             $_SESSION['reseaux_divertissementInsc'] = $_POST['reseaux_divertissement'];
+            
+            //nettoyage des espace en debut et fin de chaine de caractére            
+            $_SESSION['wuserInsc'] = array_map('trim', $_SESSION['wuserInsc']);
+            $_SESSION['diplomeInsc'] = array_map('trim', $_SESSION['diplomeInsc']);
+            $_SESSION['experience_proInsc'] = array_map('trim', $_SESSION['experience_proInsc']);
+            $_SESSION['fil_actuInsc'] = array_map('trim', $_SESSION['fil_actuInsc']);
+            $_SESSION['portfolioInsc'] = array_map('trim', $_SESSION['portfolioInsc']);
+            $_SESSION['reseaux_socialInsc'] = array_map('trim', $_SESSION['reseaux_socialInsc']);
+            $_SESSION['reseaux_proInsc'] = array_map('trim', $_SESSION['reseaux_proInsc']);
+            $_SESSION['reseaux_divertissementInsc'] = array_map('trim', $_SESSION['reseaux_divertissementInsc']);
 
             // ajout d'un $key => $value (ex :role => membre)
             $_SESSION['wuserInsc']['role'] = 'membre';
