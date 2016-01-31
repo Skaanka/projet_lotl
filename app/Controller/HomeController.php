@@ -39,12 +39,11 @@ class HomeController extends Controller {
                 $token = md5(uniqid(rand(), true));
                 $tableautoken = array('token' => $token, 'id_wuser' => $id );
                 //debug($tableautoken);debug($token);die;
-                //$manager = new TokenManager();
                 $manager->insert($tableautoken);
 
                 // envoi email
                 $lien = $this->generateUrl('nouveau', ['token' => $token, 'id' => $id]);
-                Helper::mail($result['mail'], "Demande de nouveau mot de passe", '<a href="http://projet_lotl' . $lien . '">Lien</a>');
+                Helper::mail($result['mail'], "Demande de nouveau mot de passe", '<a href="projet_lotl' . $lien . '">Lien</a>');
 
             }
         }

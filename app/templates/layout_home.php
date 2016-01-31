@@ -43,7 +43,6 @@
         <?= $this->section('navBar') ?>
         
         <?= $this->section('validation') ?>
-
         <?= $this->section('main_content') ?>
         
         
