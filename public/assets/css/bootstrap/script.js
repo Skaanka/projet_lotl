@@ -1,6 +1,3 @@
-
-
-
 var melanger = (function( $ ) {
     'use strict';
     var maGrille = $('#grid'), //localiser l'élément à trier
@@ -92,11 +89,3 @@ $(document).ready(function()
                   {
     melanger.init(); //filtrer le portfolio
 });
-
-$('.carousel').carousel();
-
-
-
-
-
-

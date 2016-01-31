@@ -75,6 +75,18 @@ abstract class Manager
 
 		return $sth->fetch();
 	}
+    
+    /* ***************************************************************************************************************** */
+    public function findMail($mail)
+	{
+
+		$sql = "SELECT * FROM wusers WHERE mail = :mail LIMIT 1";
+		$sth = $this->dbh->prepare($sql);
+		$sth->bindValue(":mail", $mail);
+		$sth->execute();
+
+		return $sth->fetch();
+	}
 
 	/**
 	 * Récupère toutes les lignes de la table

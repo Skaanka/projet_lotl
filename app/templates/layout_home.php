@@ -1,6 +1,6 @@
+
 <!DOCTYPE html>
 <html lang="fr">
-    
     <head>
         <meta charset="utf-8"> 
 
@@ -13,21 +13,23 @@
         <meta name="description" content="">  
 
         <title><?= $this->e($title) ?></title>
-
+        
         <!--Feuilles de style-->
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        
+
 
         <!--Feuilles de style-->
         <link href="<?= $this->assetUrl('css/bootstrap/bootstrap.css') ?>" rel="stylesheet">
-        <link href="<?= $this->assetUrl('css/style.css') ?>" rel="stylesheet">
+        <link href="<?= $this->assetUrl('css/home/style.css') ?>" rel="stylesheet">
+         <link href="<?= $this->assetUrl('css/animate.min.css') ?>" rel="stylesheet">
+        <!--fichier font google -->
+        <script src="//use.edgefonts.net/kotta-one.js"></script> 
 
-        <!--Favicon trop stylé-->
-        <link rel="icon" href="<?= $this->assetUrl('img/sonic_ring.gif') ?>" />
 
         <!--font awesome-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel='stylesheet' href="https://fonts.googleapis.com/css?family=Indie+Flower|Droid+Sans:400,700'" type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
 
         <!--Support des éléments HTML5 et des mediaqueries pour IE8 et précédents : HTML5 shiv et Respond.js-->
         <!--[if lt IE 9]>
@@ -36,42 +38,28 @@
 <![endif]-->
     </head>
     <body>
+
+
         <?= $this->section('navBar') ?>
-
-        <?= $this->section('carousel') ?>
-
-
-
-        <!-- menu navbar en dropdown -->
-        <?php echo $this->section('filtre') ?>
-        <!-- Fin menu navbar en dropdown --> 
         
-
-       
-        <!-- Début container -->
-        <div class="container-fluid no-padding">
-
-
-            <div id="content" class="col-md-12 no-padding">
-                <?= $this->section('main_content') ?>
+        <?= $this->section('validation') ?>
+        <?= $this->section('main_content') ?>
+        
+        
+        
+        <div id="footerHome" class="container-fluid no-padding">
+            <div class="col-xs-6 col-sm-offset-8 col-sm-1  col-lg-offset-8 col-lg-1 text-center hauteurFooter">
+                <a href="mailto:saurondumordorlouviers@gmail.com">Contact</a>
             </div>
-
-        </div> 
-        <!-- Fin container -->
-        
-        <div id="footer" class="container-fluid no-padding">
+            <div class="col-xs-6 col-sm-1 col-lg-1 text-center hauteurFooter">
+                <a href="http://www.jesuistondev.fr/" target="_blank">JeSuisTonDev.fr</a>
+            </div>
         </div>
-
         <!-- Liaison bilbliothèque javascript bootstrap et Jquery -->
-<!--        <script type="text/javascript" src="<?= $this->assetUrl('js/eye.js') ?>"></script>-->
-        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="<?= $this->assetUrl('js/bootstrap.min.js') ?>"></script>
-        <script src="<?= $this->assetUrl('js/jquery.shuffle.min.js') ?>"></script>
-        <script type="text/javascript" src="<?= $this->assetUrl('js/script.js') ?>"></script>
-        
-       
-
-
+        <!--Scripts-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     </body>
 </html>
