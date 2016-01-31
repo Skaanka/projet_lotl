@@ -44,7 +44,7 @@ class AccueilController extends Controller {
             $date = date("Y-m-d H:i:s");
             //debug($date);die();
             $manager = new Fil_actuManager();
-            $manager->update(['message' => $_POST['texte_actu'], 'date' => $date], $_SESSION['user']['id']);
+            $manager->update(['message' => $_POST['texte_actu'], 'date' => $date], $_SESSION['user']['id'], $stripTags = true);
             
             $this->redirectToRoute('accueil');
         }

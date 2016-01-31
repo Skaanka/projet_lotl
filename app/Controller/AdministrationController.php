@@ -36,7 +36,7 @@ class AdministrationController extends Controller {
         $user = $user_manager->find($id); // recuperation du profil a mettre a jour
 
         $user['validation_inscription'] = "true"; // passe le parametre du profil false vers true
-        $user_manager->update($user, $id); // update du profil
+        $user_manager->update($user, $id, $stripTags = true); // update du profil
 
         $mail = $user['mail'];
         //Helper::mail($mail, "Votre inscription a été effectué sur LOTL", "Connecter vous maintenant -> URL SITE WEB");

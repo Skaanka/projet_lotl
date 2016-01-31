@@ -100,8 +100,8 @@
             <?php //debug($membres);die(); ?>
             <?php if ($fil_actu['id'] != '1') { ?>
 			<div class="item text-center">
-				<h1>Nouveau chez <?php echo $fil_actu['prenom'] ?></h1>
-				<p><?php echo $fil_actu['message'] ?></p>
+				<h1>Nouveau chez <?php echo $this->e($fil_actu['prenom']) ?></h1>
+				<p><?php echo $this->e($fil_actu['message']) ?></p>
 				<div class="carousel-caption">
 
 				</div>
@@ -148,7 +148,7 @@
 					<?php //debug($membres);die();?>
                     <?php if ( $membre['validation_inscription'] == 'true' && $membre['nom'] != 'Sauron' && $membre['nom'] != $_SESSION['user']['nom']) { ?>
 
-					<li class="row col-md-4 offset-1 " data-groups='["all", "<?php if (!empty($membre["psn"])) { echo 'psn'; } ?>", "<?php if (!empty($membre["xboxlive"])) { echo 'xbox'; } ?>", "<?php if (!empty($membre["steam"])) { echo 'steam'; } ?>", "<?php if (!empty($membre["battlenet"])) { echo 'battle'; }?>", "<?php if (!empty($membre["compte_nintendo"])) { echo 'nintendo'; } ?>", "<?php if (!empty($membre["origin"])) { echo 'origin'; } ?>", "<?php if (!empty($membre["linkedin"])) { echo 'linkedin'; } ?>", "<?php if (!empty($membre["viadeo"])) { echo 'viadeo'; } ?>", "<?php if (!empty($membre["xing"])) { echo 'xing'; } ?>", "<?php if (!empty($membre["muxi"])) { echo 'muxy'; } ?>", "<?php if (!empty($membre["github"])) { echo 'github'; } ?>", "<?php if (!empty($membre["facebook"])) { echo 'facebook'; } ?>", "<?php if (!empty($membre["twitter"])) { echo 'twitter'; } ?>", "<?php if (!empty($membre["youtube"])) { echo 'youtube'; } ?>", "<?php if (!empty($membre["google"])) { echo 'google+'; } ?>", "<?php if (!empty($membre["skype"])) { echo 'skype'; } ?>", "<?php if (!empty($membre["instagram"])) { echo 'instagram'; } ?>", "<?php if (!empty($membre["pinterest"])) { echo 'pinterest'; } ?>", "<?php if (!empty($membre["deezer"])) { echo 'deezer'; } ?>", "<?php if (!empty($membre["spotify"])) { echo 'spotify'; } ?>", "<?php if (!empty($membre["viber"])) { echo 'viber'; } ?>"]'>
+					<li class="row col-md-4 offset-1 " data-groups='["all", "<?php if (!empty($this->e($membre["psn"]))) { echo 'psn'; } ?>", "<?php if (!empty($this->e($membre["xboxlive"]))) { echo 'xbox'; } ?>", "<?php if (!empty($this->e($membre["steam"]))) { echo 'steam'; } ?>", "<?php if (!empty($this->e($membre["battlenet"]))) { echo 'battle'; }?>", "<?php if (!empty($this->e($membre["compte_nintendo"]))) { echo 'nintendo'; } ?>", "<?php if (!empty($this->e($membre["origin"]))) { echo 'origin'; } ?>", "<?php if (!empty($this->e($membre["linkedin"]))) { echo 'linkedin'; } ?>", "<?php if (!empty($this->e($membre["viadeo"]))) { echo 'viadeo'; } ?>", "<?php if (!empty($this->e($membre["xing"]))) { echo 'xing'; } ?>", "<?php if (!empty($this->e($membre["muxi"]))) { echo 'muxy'; } ?>", "<?php if (!empty($this->e($membre["github"]))) { echo 'github'; } ?>", "<?php if (!empty($this->e($membre["facebook"]))) { echo 'facebook'; } ?>", "<?php if (!empty($this->e($membre["twitter"]))) { echo 'twitter'; } ?>", "<?php if (!empty($this->e($membre["youtube"]))) { echo 'youtube'; } ?>", "<?php if (!empty($this->e($membre["google"]))) { echo 'google+'; } ?>", "<?php if (!empty($this->e($membre["skype"]))) { echo 'skype'; } ?>", "<?php if (!empty($this->e($membre["instagram"]))) { echo 'instagram'; } ?>", "<?php if (!empty($this->e($membre["pinterest"]))) { echo 'pinterest'; } ?>", "<?php if (!empty($this->e($membre["deezer"]))) { echo 'deezer'; } ?>", "<?php if (!empty($this->e($membre["spotify"]))) { echo 'spotify'; } ?>", "<?php if (!empty($this->e($membre["viber"]))) { echo 'viber'; } ?>"]'>
 						<figure class="portfolio-items">
 							<a href="#" data-toggle="modal" data-target="#myModal<?php echo $membre['id']?>">
 
@@ -161,8 +161,8 @@
 
 										<!-- fin contenue image  / début lettrage -->
 										<div class="espacement col-md-5 col-sm-5 col-xs-4">
-											<h3 classe="row col-md-4 offset-2"><?php echo $membre['prenom']?> <?php echo $membre['nom']?></h3>
-											<div class="row"><?php echo $membre['citation']?></div>
+											<h3 classe="row col-md-4 offset-2"><?php echo $this->e($membre['prenom'])?> <?php echo $this->e($membre['nom'])?></h3>
+											<div class="row"><?php echo $this->e($membre['citation'])?></div>
 
 										</div>
 									</div><br>

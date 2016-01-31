@@ -1,7 +1,7 @@
 <div id="tabMembrePro<?php echo $membre['id']?>" class="tab-pane fade">
     <div class="container-fluid">
 
-        <h3 class="text-center espacementProfil">Vous trouverez ici les réseaux professionnel que <?php echo $membre['prenom']?> utilise.</h3>
+        <h3 class="text-center espacementProfil">Vous trouverez ici les réseaux professionnel que <?php echo $this->e($membre['prenom'])?> utilise.</h3>
 
         <div class="panel panel-default col-md-12 espacementProfil">
             <div class="panel-body">
@@ -16,7 +16,7 @@
                             <img src="<?= $this->assetUrl('img/icons/linkedin_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $membre['linkedin']?>
+                            <?php echo $this->e($membre['linkedin'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -30,7 +30,7 @@
                             <img src="<?= $this->assetUrl('img/icons/viadeo_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $membre['viadeo']?>
+                            <?php echo $this->e($membre['viadeo'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -44,7 +44,7 @@
                             <img src="<?= $this->assetUrl('img/icons/xing_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $membre['xing']?>
+                            <?php echo $this->e($membre['xing'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -58,7 +58,7 @@
                             <img src="<?= $this->assetUrl('img/icons/muxi_logo.jpg') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $membre['muxi']?>
+                            <?php echo $this->e($membre['muxi'])?>
                         </div>
                     </div>
                     <?php } ?>
@@ -72,7 +72,7 @@
                             <img src="<?= $this->assetUrl('img/icons/github_logo.png') ?>" class="iconeMembre">
                         </div>
                         <div class="well well-sm col-md-8">
-                            <?php echo $membre['github']?>
+                            <?php echo $this->e($membre['github'])?>
                         </div>
                     </div>
                     <?php } ?>

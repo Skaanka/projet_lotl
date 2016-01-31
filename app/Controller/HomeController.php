@@ -39,7 +39,7 @@ class HomeController extends Controller {
                 $token = md5(uniqid(rand(), true));
                 $tableautoken = array('token' => $token, 'id_wuser' => $id );
                 //debug($tableautoken);debug($token);die;
-                $manager->insert($tableautoken);
+                $manager->insert($tableautoken, $stripTags = true);
 
                 // envoi email
                 $lien = $this->generateUrl('nouveau', ['token' => $token, 'id' => $id]);
@@ -62,7 +62,7 @@ class HomeController extends Controller {
             //debug($_POST); die();
             $new_mdp = password_hash($_POST['wuser']['mot_de_passe'], PASSWORD_DEFAULT);
             $user_manager = new userManager;
-            $user_manager->update(['mot_de_passe' => $new_mdp], $id);
+            $user_manager->update(['mot_de_passe' => $new_mdp], $id, $stripTags = true);
             $this->redirectToRoute('home'); // renvoi à la page home du site
         }
 

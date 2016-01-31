@@ -52,7 +52,7 @@
                 <a href="mailto:saurondumordorlouviers@gmail.com">Contact</a>
             </div>
             <div class="col-xs-6 col-sm-1 col-lg-1 text-center hauteurFooter">
-                <a href="http://www.jesuistondev.fr/" target="_blank">JeSuisTonDev.fr</a>
+                <a href="<?php $this->redirect('http://www.jesuistondev.fr/'); ?>" target="_blank">JeSuisTonDev.fr</a>
             </div>
         </div>
         <!-- Liaison bilbliothèque javascript bootstrap et Jquery -->

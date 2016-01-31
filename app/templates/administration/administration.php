@@ -64,7 +64,7 @@
         <?php if ( $membre['validation_inscription'] === 'false') { ?>
         <?php 
     $true = 'true';
-    echo $membre['prenom'] . " " . $membre['nom'] . " : "; 
+    echo $this->e($membre['prenom']) . " " . $this->e($membre['nom']) . " : "; 
         ?> <a href="<?= $this->url('validationProfil', ['id' => $membre['id']]) ?>">Validation profil</a> <a href="<?= $this->url('RefusProfil', ['id' => $membre['id']]) ?>">Delete profil</a> 
         <br/>
         <?php } ?> <!--fin du if--> 

@@ -86,35 +86,35 @@ class ModifProfilController extends Controller {
             //debug($membre);debug($id);die();
             
             // update formulaire 1
-            $manager->update($_SESSION['updateUser'], $id); //enregistrement membre dans BDD
+            $manager->update($_SESSION['updateUser'], $id, $stripTags = true); //enregistrement membre dans BDD
             
         
             // update page formulaire 2
 			//debug($_SESSION['diplome']);die();
             $manager = new DiplomeManager(); //selection de la table Diplome
-            $manager->update($_SESSION['diplome'], $id);
+            $manager->update($_SESSION['diplome'], $id, $stripTags = true);
             
             $manager = new Experience_proManager(); //selection de la table experience_pros
-            $manager->update($_SESSION['experience_pro'], $id);
+            $manager->update($_SESSION['experience_pro'], $id, $stripTags = true);
             
             $manager = new CompetenceManager(); //selection de la table competences
-            $manager->update($_SESSION['competence'], $id);
+            $manager->update($_SESSION['competence'], $id, $stripTags = true);
             
             $manager = new Fil_actuManager(); //selection de la table fil_actus
-            $manager->update($_SESSION['fil_actu'], $id);
+            $manager->update($_SESSION['fil_actu'], $id, $stripTags = true);
             
             $manager = new PortfolioManager(); //selection de la table portfolios
-            $manager->update($_SESSION['portfolio'], $id);
+            $manager->update($_SESSION['portfolio'], $id, $stripTags = true);
             
             // update page formulaire 3
             $manager = new Reseaux_socialManager(); //selection de la table reseaux_socials
-            $manager->update($_SESSION['reseaux_social'], $id);
+            $manager->update($_SESSION['reseaux_social'], $id, $stripTags = true);
             
             $manager = new Reseaux_proManager(); //selection de la table reseaux_pros
-            $manager->update($_SESSION['reseaux_pro'], $id);
+            $manager->update($_SESSION['reseaux_pro'], $id, $stripTags = true);
             
             $manager = new Reseaux_divertissementManager(); //selection de la table reseaux_divertissements
-            $manager->update($_SESSION['reseaux_divertissement'], $id);
+            $manager->update($_SESSION['reseaux_divertissement'], $id, $stripTags = true);
             
             $this->redirectToRoute('accueil');
             
