@@ -73,7 +73,6 @@
 
 <?php $this->start('carousel') ?>
 <!--<div id="header" class="container-fluid no-padding"><img src="<?php echo $this->assetUrl('img/bandeau.jpg') ?>" alt="" class="img-reponsive col-xs-12 no-padding"></div>-->
-
 <!-- Caroussel -->
 <div id="wrapCar" class="col-md-8 col-md-offset-2">
 	<div id="carousel-example-generic" class="carousel slide " data-ride="carousel">
@@ -121,10 +120,14 @@
 		</a>
 	</div>
 </div>
-
 <!-- Fin du caroussel -->
 <?php $this->stop('carousel') ?>
 
+<?php $this->start('filtre') ?>
+
+<?php require('partials/filtre.php') ?>
+
+<?php $this->stop('filtre') ?>
 
 
 <?php $this->start('main_content') ?>
