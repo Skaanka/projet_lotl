@@ -140,12 +140,12 @@
             <div class="row">
 
             </div>
-            <label id="spanAvatar"for="pics" class=" col-md-3 col-xs-3">Avatar</label>
+            <label id="spanAvatar"for="pics" class=" col-md-3 col-xs-8">Avatar</label>
             <div class="col-md-6 col-xs-6">
                 <input type="file" class="" id="pics" name="avatar">
             </div>
             <div id="bouton" class="row">
-                <div class="col-md-offset-9 col-xs-offset-9 marginTop5Bottom10">
+                <div class="col-md-offset-9 col-xs-offset-7 marginTop5Bottom10">
                     <input type="submit" class="btn btn-primary btn-navbut" name="suivant" value="Page suivante">
                 </div>
             </div>
