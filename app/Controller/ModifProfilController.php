@@ -23,8 +23,13 @@ use \Manager\Reseaux_socialManager;
 class ModifProfilController extends Controller {
     
     
-    public function modif_profil1() 
-    {
+    public function modif_profil1() {
+        
+        if (!isset($_SESSION['user'])) {
+            $this->redirectToRoute('home'); // si ok envoie page 2    
+        }
+        
+        
         if(isset($_POST['suivant'])) {  
             
             $update_profil = $_POST['wuser'];
@@ -48,8 +53,12 @@ class ModifProfilController extends Controller {
         $this->show('modif_profil/modif_profil1'); // redirection si erreur
     }
     
-    public function modif_profil2() 
-    {
+    public function modif_profil2() {
+        
+        if (!isset($_SESSION['user'])) {
+            $this->redirectToRoute('home'); // si ok envoie page 2    
+        }
+        
         if(isset($_POST['suivant2'])) {
             
             $_SESSION['diplome'] = $_POST['diplome'];
@@ -70,8 +79,12 @@ class ModifProfilController extends Controller {
         $this->show('modif_profil/modif_profil2'); // redirection si erreur
     }
     
-    public function modif_profil3() 
-    {
+    public function modif_profil3() {
+        
+        if (!isset($_SESSION['user'])) {
+            $this->redirectToRoute('home'); // si ok envoie page 2    
+        }
+        
         if(isset($_POST['valider'])) {
             
             $_SESSION['reseaux_social'] = $_POST['reseaux_social'];

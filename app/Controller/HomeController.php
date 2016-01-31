@@ -14,8 +14,8 @@ use \Manager\TokenManager;
 class HomeController extends Controller {
 
 	public function home() {
-        if (isset($_SESSION['user'])) {
         
+        if (isset($_SESSION['user'])) {
             $this->redirectToRoute('accueil'); // si ok envoie page 2    
         }
         
