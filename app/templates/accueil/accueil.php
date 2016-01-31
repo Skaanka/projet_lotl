@@ -49,7 +49,7 @@
 				</button>
 
 				<!-- Modal -->
-                <?php require('partials/modal_profil.php') ?>
+                <?php include('C:\xampp\htdocs\projet_lotl\app/templates/partials/modal_profil.php') ?>
 
 
 
@@ -59,7 +59,7 @@
 				</button>
 
 				<!-- Modal -->
-				<?php require('partials/modal_postActu.php') ?>
+				<?php include('C:\xampp\htdocs\projet_lotl\app/templates/partials/modal_postActu.php') ?>
 
 
 

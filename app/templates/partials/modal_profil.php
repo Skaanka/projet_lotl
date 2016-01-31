@@ -26,16 +26,16 @@
 
 
                     <!-- Divertissements -->
-                    <?php require('profil/divertissements.php') ?>
+                    <?php include('profil/divertissements.php') ?>
                     <!-- Fin contenu onglet divertissements -->
 
 
                     <!-- Pro -->
-                    <?php require('profil/pro.php') ?>
+                    <?php include('profil/pro.php') ?>
 
 
                     <!-- Sociaux -->
-                    <?php require('profil/sociaux.php') ?>
+                    <?php include('profil/sociaux.php') ?>
                     <!-- Fin du contenu onglet réseaux sociaux -->
                 </div>
 

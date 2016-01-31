@@ -14,8 +14,6 @@
 			<a class="navbar-brand" href="<?php echo $this->url('accueil') ?>">Lord of the links</a>
             
             <!--    debut "oeil de sauron" -->
-            
-           
                 <div class="eye">
                     <div class="iris">
                         <div class="pupil">
@@ -25,8 +23,6 @@
   <!--<div class="eyeshine"></div>-->
                     <div class="lids"></div>
                 </div>
-            
-            
             <!-- fin "oeil de sauron" -->
             
 		</div>
@@ -48,7 +44,7 @@
 				</button>
 
 				<!-- Modal -->
-                <?php require('partials/modal_profil.php') ?>
+                <?php include('C:\xampp\htdocs\projet_lotl\app/templates/partials/modal_profil.php') ?>
 
 
 
@@ -58,7 +54,7 @@
 				</button>
 
 				<!-- Modal -->
-				<?php require('partials/modal_postActu.php') ?>
+				<?php include('C:\xampp\htdocs\projet_lotl\app/templates/partials/modal_postActu.php') ?>
 
 
 
