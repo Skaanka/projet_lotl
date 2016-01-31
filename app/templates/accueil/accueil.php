@@ -97,7 +97,7 @@
 				</div>
 			</div>
 			<?php foreach ($fil_actus as $fil_actu) { ?>
-            <?php //debug($membres);die(); ?>
+            <?php //debug($fil_actus);die(); ?>
             <?php if ($fil_actu['id'] != '1') { ?>
 			<div class="item text-center">
 				<h1>Nouveau chez <?php echo $this->e($fil_actu['prenom']) ?></h1>
