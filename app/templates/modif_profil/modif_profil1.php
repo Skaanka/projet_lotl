@@ -11,7 +11,7 @@
 
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 margintop10">
-                    <img src="<?= $this->assetUrl('/img/Avatar-512.png') ?>" id="avatar" class="img-responsive img-circle" alt="Responsive image" >
+                    <img src="<?= $this->assetUrl("img/uploads/" . $_SESSION['user']["avatar"] . "") ?>" id="avatar" class="img-responsive img-circle" alt="Responsive image" >
                 </div>
 
             </div>
