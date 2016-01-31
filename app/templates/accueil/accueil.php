@@ -162,7 +162,7 @@
 
 										<!-- fin contenue image  / début lettrage -->
 										<div class="espacement col-md-5 col-sm-5 col-xs-4">
-											<h3 classe="row col-md-4 offset-2"><?php echo $this->e($membre['prenom'])?> <?php echo $this->e($membre['nom'])?></h3>
+											<h3 class="row"><?php echo $this->e($membre['prenom'])?> <?php echo $this->e($membre['nom'])?></h3>
 											<div class="row"><?php echo $this->e($membre['citation'])?></div>
 
 										</div>

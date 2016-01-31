@@ -4,7 +4,7 @@
         <div class="row media">
             <div class="col-md-12 espacementProfil">
                 <div class="media-left media-middle col-md-3 col-md-offset-1">
-                    <img class="media-object img-circle" src="<?= $this->assetUrl("img/uploads/" . $this->e($membre["avatar"]) . "")?>" alt="...">
+                    <img class="media-object img-circle" src="<?= $this->assetUrl("img/uploads/" . $this->e($membre["avatar"]) . "")?>" alt="avatar de <?php echo $this->e($membre["avatar"]) ?>">
                 </div>
                 <div class="media-body media-body-cheat col-md-6 col-md-offset-2">
                     <h2 class="media-heading"><?php echo $this->e($membre['prenom'])?><br><?php echo $this->e($membre['nom'])?></h2>

@@ -13,7 +13,7 @@
                             <h4>PSN</h4>
                         </div>
                         <div class="col-md-2">
-                            <img src="<?= $this->assetUrl('img/icons/PSN_logo.png') ?>" class="iconeMembre">
+                            <img src="<?= $this->assetUrl('img/icons/PSN_logo.png') ?>" class="iconeMembre" alt="logo psn">
                         </div>
                         <div class="well well-sm col-md-8">
                             <?php echo $this->e($_SESSION['user']['psn'])?>
@@ -27,7 +27,7 @@
                             <h4>XboxLive</h4>
                         </div>
                         <div class="col-md-2">
-                            <img src="<?= $this->assetUrl('img/icons/Xbox_logo.png') ?>" class="iconeMembre">
+                            <img src="<?= $this->assetUrl('img/icons/Xbox_logo.png') ?>" class="iconeMembre" alt="logo xbox">
                         </div>
                         <div class="well well-sm col-md-8">
                             <?php echo $this->e($_SESSION['user']['xboxlive'])?>
@@ -41,7 +41,7 @@
                             <h4>Steam</h4>
                         </div>
                         <div class="col-md-2">
-                            <img src="<?= $this->assetUrl('img/icons/Steam_logo.png') ?>" class="iconeMembre">
+                            <img src="<?= $this->assetUrl('img/icons/Steam_logo.png') ?>" class="iconeMembre" alt="logo steam">
                         </div>
                         <div class="well well-sm col-md-8">
                             <?php echo $this->e($_SESSION['user']['steam'])?>
@@ -55,7 +55,7 @@
                             <h4>Battle.net</h4>
                         </div>
                         <div class="col-md-2">
-                            <img src="<?= $this->assetUrl('img/icons/battlenet_logo.png') ?>" class="iconeMembre">
+                            <img src="<?= $this->assetUrl('img/icons/battlenet_logo.png') ?>" class="iconeMembre" alt="logo battle.net">
                         </div>
                         <div class="well well-sm col-md-8">
                             <?php echo $this->e($_SESSION['user']['battlenet'])?>
@@ -69,7 +69,7 @@
                             <h4>Origin</h4>
                         </div>
                         <div class="col-md-2">
-                            <img src="<?= $this->assetUrl('img/icons/origin1_logo.png') ?>" class="iconeMembre">
+                            <img src="<?= $this->assetUrl('img/icons/origin1_logo.png') ?>" class="iconeMembre" alt="logo origin">
                         </div>
                         <div class="well well-sm col-md-8">
                             <?php echo $this->e($_SESSION['user']['origin'])?>
@@ -83,7 +83,7 @@
                             <h4>Nintendo</h4>
                         </div>
                         <div class="col-md-2">
-                            <img src="<?= $this->assetUrl('img/icons/Nintendo_logo.png') ?>" class="iconeMembre">
+                            <img src="<?= $this->assetUrl('img/icons/Nintendo_logo.png') ?>" class="iconeMembre" alt="logo nintendo">
                         </div>
                         <div class="well well-sm col-md-8">
                             <?php echo $this->e($_SESSION['user']['compte_nintendo'])?>

@@ -14,7 +14,7 @@
                             <h4>LinkedIn</h4>
                         </div>
                         <div class="col-md-2">
-                            <img src="<?= $this->assetUrl('img/icons/linkedin_logo.png') ?>" class="iconeMembre">
+                            <img src="<?= $this->assetUrl('img/icons/linkedin_logo.png') ?>" class="iconeMembre" alt="logo linkedin">
                         </div>
                         <div class="well well-sm col-md-8">
                             <?php echo $this->e($_SESSION['user']['linkedin'])?>
@@ -28,7 +28,7 @@
                             <h4>Viadéo</h4>
                         </div>
                         <div class="col-md-2">
-                            <img src="<?= $this->assetUrl('img/icons/viadeo_logo.png') ?>" class="iconeMembre">
+                            <img src="<?= $this->assetUrl('img/icons/viadeo_logo.png') ?>" class="iconeMembre" alt="logo viadeo">
                         </div>
                         <div class="well well-sm col-md-8">
                             <?php echo $this->e($_SESSION['user']['viadeo'])?>
@@ -42,7 +42,7 @@
                             <h4>Xing</h4>
                         </div>
                         <div class="col-md-2">
-                            <img src="<?= $this->assetUrl('img/icons/xing_logo.png') ?>" class="iconeMembre">
+                            <img src="<?= $this->assetUrl('img/icons/xing_logo.png') ?>" class="iconeMembre" alt="logo xing">
                         </div>
                         <div class="well well-sm col-md-8">
                             <?php echo $this->e($_SESSION['user']['xing'])?>
@@ -56,7 +56,7 @@
                             <h4>Muxi</h4>
                         </div>
                         <div class="col-md-2">
-                            <img src="<?= $this->assetUrl('img/icons/muxi_logo.jpg') ?>" class="iconeMembre">
+                            <img src="<?= $this->assetUrl('img/icons/muxi_logo.jpg') ?>" class="iconeMembre" alt="logo muxy">
                         </div>
                         <div class="well well-sm col-md-8">
                             <?php echo $this->e($_SESSION['user']['muxi'])?>
@@ -70,7 +70,7 @@
                             <h4>GitHub</h4>
                         </div>
                         <div class="col-md-2">
-                            <img src="<?= $this->assetUrl('img/icons/github_logo.png') ?>" class="iconeMembre">
+                            <img src="<?= $this->assetUrl('img/icons/github_logo.png') ?>" class="iconeMembre" alt="logo github">
                         </div>
                         <div class="well well-sm col-md-8">
                             <?php echo $this->e($_SESSION['user']['github'])?>
